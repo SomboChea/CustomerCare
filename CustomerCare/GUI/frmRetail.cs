@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CustomerCare
 {
-    public partial class Form1 : Form
+    public partial class frmRetail : Form
     {
-        public Form1()
+        public frmRetail()
         {
             InitializeComponent();
         }
