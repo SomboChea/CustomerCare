@@ -21,12 +21,10 @@ namespace CustomerCare
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmLogin());
 
-            string cols = "ret_id, ret_name, owner, pc_id, sk_id, ks_id, st, tel1,tel2, tel3, side, staff_id";
-
-            foreach (string temp in Converter.InsertToSQL("tbl_mstretail", cols, "mst"))
-            {
-                File.AppendAllText("sql.txt", temp);
-            }
+            Database.DBName = "test";
+            Database.Open();
+            bool x = Database.Update("users", "name='mean',age=19,gender='female'", "id=5");
+            Console.Write(x);
 
             Console.Read();
         }

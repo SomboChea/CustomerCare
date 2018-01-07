@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="Core\BaseConnection.cs" />
     <Compile Include="Core\BaseHelper.cs" />
-    <Compile Include="Core\Connection.cs" />
+    <Compile Include="Core\Database.cs" />
     <Compile Include="Core\Helpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
