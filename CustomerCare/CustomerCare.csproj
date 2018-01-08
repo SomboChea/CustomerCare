@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Components\Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Components\Alert.Designer.cs">
+      <DependentUpon>Alert.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmHcp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     <Compile Include="STR\Mum.cs" />
     <Compile Include="STR\People.cs" />
     <Compile Include="STR\Staff.cs" />
+    <EmbeddedResource Include="GUI\Components\Alert.resx">
+      <DependentUpon>Alert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmHcp.resx">
       <DependentUpon>frmHcp.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,7 +152,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GUI\Components\" />
     <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>

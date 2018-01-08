@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SMLOGX.Core;
+using CustomerCare.GUI.Components;
 
 namespace CustomerCare
 {
@@ -20,25 +21,23 @@ namespace CustomerCare
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmLogin());
+            Alert d = new Alert();
+            d.Title = "Error @495";
+            d.Message = "This is a big error on machine code!";
+            //Application.Run(d);
 
-            Database.DBName = "test";
-            Database.Open();
-            //bool x = Database.Update("users", "name='mean',age=19,gender='female'", "id=5");
-            //bool x = Database.Delete("users", "id=3");
-            //object x = Database.QueryScalar("SELECT * FROM users");
-            //DataTable dt = Database.QueryModel("SELECT * FROM users");
-            //foreach (DataRow row in dt.Rows)
-            //    Console.WriteLine(row["name"] + "");
-            //object userID = 0;
-            //Database.User.Username = "me";
-            //Database.User.Password = "me";
-            //Database.User.RoleId = 9;
-            //bool x = Database.User.Login(ref userID);
-            bool x = Database.User.Register("username,password,age");
-            Console.WriteLine(x);
+            if (d.ShowDialog() == DialogResult.OK)
+            {
+                Console.Write("True");
+            }
+            else
+            {
+                Console.Write("False");
+            }
+            //Database.DBName = "test";
+            //Database.Open();
 
-            Console.Read();
+            //Console.Read();
         }
     }
 }
