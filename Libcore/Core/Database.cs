@@ -15,6 +15,7 @@ namespace SMLOGX.Core
         private static SqlConnection _setCon = null;
         private static SqlCommand cmd = new SqlCommand();
         private static SqlDataReader reader = null;
+        private static SqlDataAdapter adapter = null;
 
         public static bool hasOpen { get { return _hasOpen; } }
         private static bool _hasOpen = false;
@@ -24,6 +25,8 @@ namespace SMLOGX.Core
         public static string DBName { get; set; } = "CustomerCare";
         public static string Username { get; set; } = "sa";
         public static string Password { get; set; } = "sa";
+
+        /** Open OK **/
 
         public static void Open(bool useAuthentication = false)
         {
@@ -43,12 +46,16 @@ namespace SMLOGX.Core
             }
         }
 
+        /** Close OK **/
+
         public static void Close()
         {
             if (_setCon.Equals(null))
                 _setCon.Close();
             return;
         }
+
+        /** ExitReader OK **/
 
         private static void ExitReader()
         {
@@ -67,6 +74,8 @@ namespace SMLOGX.Core
         {
             return _hasExec > 0;
         }
+
+        /** CreateDB OK **/
 
         public static bool CreateDB(string dbname)
         {
@@ -88,6 +97,8 @@ namespace SMLOGX.Core
             return false;
         }
 
+        /** CreateTable OK **/
+
         public static bool CreateTable(string sql)
         {
             if (_hasOpen)
@@ -108,14 +119,22 @@ namespace SMLOGX.Core
             return false;
         }
 
-        public static bool Delete(string table, string where = "")
+        /** Delete OK **/
+
+        public static bool Delete(string table, string where = "", SqlParameter[] parameter = null)
         {
             if (_hasOpen)
             {
                 try
                 {
-                    where = !where.Equals("") || !where.Equals(null) ? "WHERE " + where : where;
+                    where = !where.Equals("") || !where.Equals(null) ? " WHERE " + where : where;
                     cmd.CommandText = "DELETE FROM " + table + where;
+                    if (parameter != null)
+                        cmd.Parameters.AddRange(parameter);
+
+                    _hasExec = cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+                    return hasExec();
                 }
                 catch (Exception ex)
                 {
@@ -124,6 +143,8 @@ namespace SMLOGX.Core
             }
             return false;
         }
+
+        /** Insert OK **/
 
         public static bool Insert(string table, string columns, params object[] data)
         {
@@ -151,7 +172,9 @@ namespace SMLOGX.Core
             return false;
         }
 
-        public static bool Update(string table, string data, string where = "")
+        /** Update OK **/
+
+        public static bool Update(string table, string data, string where = "", SqlParameter[] parameter = null)
         {
             if (_hasOpen)
             {
@@ -159,6 +182,9 @@ namespace SMLOGX.Core
                 {
                     where = !where.Equals("") || !where.Equals(null) ? "WHERE " + where : where;
                     cmd.CommandText = "UPDATE " + table + " SET " + data + where;
+                    if (parameter != null)
+                        cmd.Parameters.AddRange(parameter);
+
                     _hasExec = cmd.ExecuteNonQuery();
                     return hasExec();
                 }
@@ -171,6 +197,7 @@ namespace SMLOGX.Core
         }
 
         /** Other Toolset **/
+        /** getColumns OK **/
 
         public static string getColumns(string table, bool includePrimaryCol = false)
 
@@ -210,15 +237,88 @@ namespace SMLOGX.Core
         }
 
         /** Models **/
+        /** Query Model OK **/
 
         public static DataTable QueryModel(string sql)
         {
-            throw new NotImplementedException();
+            if (_hasOpen)
+            {
+                try
+                {
+                    DataTable dt = new DataTable();
+                    adapter = new SqlDataAdapter(sql, _setCon);
+                    adapter.Fill(dt);
+                    adapter.Dispose();
+                    return dt;
+                }
+                catch (Exception ex)
+                {
+                    Log.Write(ex.Message, "Database.QueryModel");
+                }
+            }
+            return null;
         }
 
-        public static object QueryScalar(string sql)
+        /** Query Scalar OK **/
+
+        public static object QueryScalar(string sql, SqlParameter[] parameter = null)
         {
-            throw new NotImplementedException();
+            if (_hasOpen)
+            {
+                try
+                {
+                    cmd.CommandText = sql;
+                    if (parameter != null)
+                        cmd.Parameters.AddRange(parameter);
+
+                    object b = cmd.ExecuteScalar();
+                    cmd.Dispose();
+                    return b;
+                }
+                catch (Exception ex)
+                {
+                    Log.Write(ex.Message, "Database.QueryScalar");
+                }
+            }
+            return null;
+        }
+
+        /** Users **/
+
+        public static class User
+        {
+            public static string Table { get; set; } = "users";
+            public static string Username { get; set; }
+            public static string Password { get; set; }
+            public static int RoleId { get; set; } = 0;
+            public static string Where { get; set; } = " Username = '" + Paramaters[0] + "' AND Password = '" + Paramaters[1] + "'";
+            public static string[] Paramaters = { "@Username", "@Password" };
+
+            public static bool Login(ref object userID)
+            {
+                if (_hasOpen)
+                {
+                    try
+                    {
+                        cmd.CommandText = "SELECT * FROM " + Table + "WHERE " + Where;
+                        cmd.Parameters.AddWithValue("@Username", Username);
+                        cmd.Parameters.AddWithValue("@Password", Password);
+                        userID = cmd.ExecuteScalar();
+                        return Convert.ToBoolean(userID);
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Write(ex.Message, "Database.User.Login");
+                    }
+                }
+
+                return false;
+            }
+
+            public static bool Register()
+            {
+                return false;
+            }
         }
     }
 }

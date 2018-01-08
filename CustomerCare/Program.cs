@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -23,8 +24,12 @@ namespace CustomerCare
 
             Database.DBName = "test";
             Database.Open();
-            bool x = Database.Update("users", "name='mean',age=19,gender='female'", "id=5");
-            Console.Write(x);
+            //bool x = Database.Update("users", "name='mean',age=19,gender='female'", "id=5");
+            //bool x = Database.Delete("users", "id=3");
+            //object x = Database.QueryScalar("SELECT * FROM users");
+            //DataTable dt = Database.QueryModel("SELECT * FROM users");
+            //foreach (DataRow row in dt.Rows)
+            //    Console.WriteLine(row["name"] + "");
 
             Console.Read();
         }
