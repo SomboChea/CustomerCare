@@ -21,23 +21,7 @@ namespace CustomerCare
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Alert d = new Alert();
-            d.Title = "Error @495";
-            d.Message = "This is a big error on machine code!";
-            //Application.Run(d);
-
-            if (d.ShowDialog() == DialogResult.OK)
-            {
-                Console.Write("True");
-            }
-            else
-            {
-                Console.Write("False");
-            }
-            //Database.DBName = "test";
-            //Database.Open();
-
-            //Console.Read();
+            Application.Run(new frmHcp());
         }
     }
 }
