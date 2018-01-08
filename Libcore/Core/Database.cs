@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,26 +18,78 @@ namespace SMLOGX.Core
         private static SqlDataReader reader = null;
         private static SqlDataAdapter adapter = null;
 
-        public static bool hasOpen { get { return _hasOpen; } }
+        public static bool HasOpen { get { return _hasOpen; } }
         private static bool _hasOpen = false;
         private static int _hasExec { get; set; } = 0;
 
+        /** Config Server **/
         public static string Server { get; set; } = "localhost";
         public static string DBName { get; set; } = "CustomerCare";
-        public static string Username { get; set; } = "sa";
+        public static string UserId { get; set; } = "sa";
         public static string Password { get; set; } = "sa";
+        private static string[] Sections = { "Windows Authentication", "SQL Server Authentication" };
 
-        /** Open OK **/
+        /// <summary>
+        /// Setting Configuration DB Server
+        /// </summary>
+        public static bool SetConfigDB(bool isAuth = false, string configPath = "config", string ext = "db")
+        {
+            try
+            {
+                MParser config = new MParser(configPath + "." + ext);
+                int idx = isAuth ? 1 : 0;
+                config.Write("Server", Server, Sections[idx]);
+                config.Write("DBName", DBName, Sections[idx]);
+                if (isAuth)
+                {
+                    config.Write("UserId", UserId, Sections[idx]);
+                    config.Write("Password", Password, Sections[idx]);
+                }
 
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex.Message, "Database.setConfigDB");
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Load Configuration DB Server
+        /// </summary>
+        private static void GetConfigDB(bool isAuth = false, string configPath = "config", string ext = "db")
+        {
+            string path = configPath + "." + ext;
+            MParser config;
+            if (File.Exists(path))
+            {
+                config = new MParser(path);
+                int idx = isAuth ? 1 : 0;
+                Server = config.Read("Server", Sections[idx]);
+                DBName = config.Read("DBName", Sections[idx]);
+                if (isAuth)
+                {
+                    UserId = config.Read("UserId", Sections[idx]);
+                    Password = config.Read("Password", Sections[idx]);
+                }
+            }
+            return;
+        }
+
+        /// <summary>
+        /// Open Database Connection
+        /// </summary>
         public static void Open(bool useAuthentication = false)
         {
-            string conString = useAuthentication ? "Server = " + Server + ";Database = " + DBName + ";User Id = " + Username + ";Password = " + Password : "Server = " + Server + ";Database = " + DBName + ";Trusted_Connection=True";
+            GetConfigDB(useAuthentication);
+            string conString = useAuthentication ? "Server = " + Server + ";Database = " + DBName + ";User Id = " + UserId + ";Password = " + Password : "Server = " + Server + ";Database = " + DBName + ";Trusted_Connection=True";
             try
             {
                 _setCon = new SqlConnection(conString);
                 _setCon.Open();
                 cmd.Connection = _setCon;
-
                 _hasOpen = true;
             }
             catch (Exception ex)
@@ -46,17 +99,22 @@ namespace SMLOGX.Core
             }
         }
 
-        /** Close OK **/
-
+        /// <summary>
+        /// Close Database Connection
+        /// </summary>
         public static void Close()
         {
             if (_setCon.Equals(null))
+            {
                 _setCon.Close();
+                GetConnection.Close();
+            }
             return;
         }
 
-        /** ExitReader OK **/
-
+        /// <summary>
+        /// Exit Reader & Cmd
+        /// </summary>
         private static void ExitReader()
         {
             try
@@ -70,13 +128,17 @@ namespace SMLOGX.Core
             }
         }
 
-        private static bool hasExec()
+        /// <summary>
+        /// Has Executed
+        /// </summary>
+        private static bool HasExec()
         {
             return _hasExec > 0;
         }
 
-        /** CreateDB OK **/
-
+        /// <summary>
+        /// Create DB
+        /// </summary>
         public static bool CreateDB(string dbname)
         {
             if (_hasOpen)
@@ -86,7 +148,7 @@ namespace SMLOGX.Core
                     cmd.CommandText = "CREATE DATABASE " + dbname;
                     _hasExec = cmd.ExecuteNonQuery();
                     cmd.Dispose();
-                    return hasExec();
+                    return HasExec();
                 }
                 catch (Exception ex)
                 {
@@ -97,8 +159,9 @@ namespace SMLOGX.Core
             return false;
         }
 
-        /** CreateTable OK **/
-
+        /// <summary>
+        /// Create Table
+        /// </summary>
         public static bool CreateTable(string sql)
         {
             if (_hasOpen)
@@ -108,7 +171,7 @@ namespace SMLOGX.Core
                     cmd.CommandText = sql;
                     _hasExec = cmd.ExecuteNonQuery();
                     cmd.Dispose();
-                    return hasExec();
+                    return HasExec();
                 }
                 catch (Exception ex)
                 {
@@ -119,8 +182,9 @@ namespace SMLOGX.Core
             return false;
         }
 
-        /** Delete OK **/
-
+        /// <summary>
+        /// Delete
+        /// </summary>
         public static bool Delete(string table, string where = "", SqlParameter[] parameter = null)
         {
             if (_hasOpen)
@@ -134,7 +198,7 @@ namespace SMLOGX.Core
 
                     _hasExec = cmd.ExecuteNonQuery();
                     cmd.Dispose();
-                    return hasExec();
+                    return HasExec();
                 }
                 catch (Exception ex)
                 {
@@ -144,8 +208,9 @@ namespace SMLOGX.Core
             return false;
         }
 
-        /** Insert OK **/
-
+        /// <summary>
+        /// Insert
+        /// </summary>
         public static bool Insert(string table, string columns, params object[] data)
         {
             if (_hasOpen)
@@ -161,7 +226,7 @@ namespace SMLOGX.Core
                     cmd.CommandText = "INSERT INTO " + table + "(" + columns + ") VALUES(" + final_data + ");";
                     _hasExec = cmd.ExecuteNonQuery();
                     cmd.Dispose();
-                    return hasExec();
+                    return HasExec();
                 }
                 catch (Exception ex)
                 {
@@ -172,8 +237,9 @@ namespace SMLOGX.Core
             return false;
         }
 
-        /** Update OK **/
-
+        /// <summary>
+        /// Update
+        /// </summary>
         public static bool Update(string table, string data, string where = "", SqlParameter[] parameter = null)
         {
             if (_hasOpen)
@@ -186,7 +252,7 @@ namespace SMLOGX.Core
                         cmd.Parameters.AddRange(parameter);
 
                     _hasExec = cmd.ExecuteNonQuery();
-                    return hasExec();
+                    return HasExec();
                 }
                 catch (Exception ex)
                 {
@@ -196,11 +262,10 @@ namespace SMLOGX.Core
             return false;
         }
 
-        /** Other Toolset **/
-        /** getColumns OK **/
-
-        public static string getColumns(string table, bool includePrimaryCol = false)
-
+        /// <summary>
+        /// Get Columns
+        /// </summary>
+        public static string GetColumns(string table, bool includePrimaryCol = false)
         {
             if (_hasOpen)
             {
@@ -231,14 +296,17 @@ namespace SMLOGX.Core
             return null;
         }
 
-        public static object getMatched()
+        /// <summary>
+        /// Get Matching
+        /// </summary>
+        public static object GetMatched()
         {
             return null;
         }
 
-        /** Models **/
-        /** Query Model OK **/
-
+        /// <summary>
+        /// QueryModel
+        /// </summary>
         public static DataTable QueryModel(string sql)
         {
             if (_hasOpen)
@@ -259,8 +327,9 @@ namespace SMLOGX.Core
             return null;
         }
 
-        /** Query Scalar OK **/
-
+        /// <summary>
+        /// QueryScalar
+        /// </summary>
         public static object QueryScalar(string sql, SqlParameter[] parameter = null)
         {
             if (_hasOpen)
@@ -283,26 +352,69 @@ namespace SMLOGX.Core
             return null;
         }
 
-        /** Users **/
+        /// <summary>
+        /// Get DataSet
+        /// </summary>
+        public static DataSet GetDataSet(string sql)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(sql, _setCon);
+                adapter.Fill(ds);
+                adapter.Dispose();
 
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex.Message, "Database.GetDataSet");
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Get Last Insert ID
+        /// </summary>
+        public static int GetLastId(string table)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT IDENT_CURRENT('" + table + "')";
+                object rex = cmd.ExecuteScalar();
+                cmd.Dispose();
+                return Convert.ToInt32(rex);
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex.Message, "Database.GetLastId");
+            }
+
+            return 0;
+        }
+
+        /// <summary>
+        /// Class User for Setting up
+        /// </summary>
         public static class User
         {
             public static string Table { get; set; } = "users";
             public static string Username { get; set; }
             public static string Password { get; set; }
             public static int RoleId { get; set; } = 0;
-            public static string Where { get; set; } = " Username = '" + Paramaters[0] + "' AND Password = '" + Paramaters[1] + "'";
-            public static string[] Paramaters = { "@Username", "@Password" };
+            public static string Where { get; set; }
 
+            /// <summary>
+            /// Login
+            /// </summary>
             public static bool Login(ref object userID)
             {
                 if (_hasOpen)
                 {
                     try
                     {
-                        cmd.CommandText = "SELECT * FROM " + Table + "WHERE " + Where;
-                        cmd.Parameters.AddWithValue("@Username", Username);
-                        cmd.Parameters.AddWithValue("@Password", Password);
+                        Where = " username = '" + Username + "' AND password = '" + Password + "'";
+                        cmd.CommandText = "SELECT * FROM " + Table + " WHERE " + Where;
                         userID = cmd.ExecuteScalar();
                         return Convert.ToBoolean(userID);
                     }
@@ -315,8 +427,23 @@ namespace SMLOGX.Core
                 return false;
             }
 
-            public static bool Register()
+            /// <summary>
+            /// Register
+            /// </summary>
+            public static bool Register(string cols = null)
             {
+                if (_hasOpen)
+                {
+                    try
+                    {
+                        return Insert(Table, cols == null ? GetColumns("table") : cols, Username, Password, RoleId);
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Write(ex.Message, "Database.User.Register");
+                    }
+                }
+
                 return false;
             }
         }

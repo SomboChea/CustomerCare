@@ -30,6 +30,13 @@ namespace CustomerCare
             //DataTable dt = Database.QueryModel("SELECT * FROM users");
             //foreach (DataRow row in dt.Rows)
             //    Console.WriteLine(row["name"] + "");
+            //object userID = 0;
+            //Database.User.Username = "me";
+            //Database.User.Password = "me";
+            //Database.User.RoleId = 9;
+            //bool x = Database.User.Login(ref userID);
+            bool x = Database.User.Register("username,password,age");
+            Console.WriteLine(x);
 
             Console.Read();
         }
