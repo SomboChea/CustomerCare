@@ -55,6 +55,12 @@
     <Compile Include="GUI\Components\Alert.Designer.cs">
       <DependentUpon>Alert.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Components\Item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Components\Item.Designer.cs">
+      <DependentUpon>Item.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmHcp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     <EmbeddedResource Include="GUI\Components\Alert.resx">
       <DependentUpon>Alert.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Components\Item.resx">
+      <DependentUpon>Item.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmHcp.resx">
       <DependentUpon>frmHcp.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +171,18 @@
       <Project>{d97eee8f-e111-4bfe-a61d-1a477733d656}</Project>
       <Name>Libcore</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-shop-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

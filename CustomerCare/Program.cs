@@ -21,7 +21,7 @@ namespace CustomerCare
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHcp());
+            Application.Run(new frmMain());
         }
     }
 }
