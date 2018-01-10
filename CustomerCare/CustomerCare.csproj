@@ -113,6 +113,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="STR\Hcp.cs" />
     <Compile Include="STR\Kid.cs" />
+    <Compile Include="STR\MenuList.cs" />
     <Compile Include="STR\Mum.cs" />
     <Compile Include="STR\People.cs" />
     <Compile Include="STR\Staff.cs" />
