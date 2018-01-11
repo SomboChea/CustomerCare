@@ -53,5 +53,10 @@ namespace CustomerCare
             txtPassword.txtValue.PasswordChar = showPass ? '\0' : '*';
             btnShowHide.Text = showPass ? "H" : "V";
         }
+
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            App.Overlay(new frmDBSetting(), new GUI.Components.Overlay());
+        }
     }
 }

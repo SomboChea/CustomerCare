@@ -23,10 +23,11 @@ namespace SMLOGX.Core
         private static int _hasExec { get; set; } = 0;
 
         /** Config Server **/
-        public static string Server { get; set; } = "localhost";
-        public static string DBName { get; set; } = "CustomerCare";
-        public static string UserId { get; set; } = "sa";
-        public static string Password { get; set; } = "sa";
+        public static string Server { get; set; }
+        public static string DBName { get; set; }
+        public static bool AuthType { get; set; } = false;
+        public static string UserId { get; set; }
+        public static string Password { get; set; }
         private static string[] Sections = { "Windows Authentication", "SQL Server Authentication" };
 
         /// <summary>
@@ -45,6 +46,7 @@ namespace SMLOGX.Core
                     config.Write("UserId", UserId, Sections[idx]);
                     config.Write("Password", Password, Sections[idx]);
                 }
+                config.Write("AuthType", isAuth + "", "Authentication");
 
                 return true;
             }
@@ -57,9 +59,17 @@ namespace SMLOGX.Core
         }
 
         /// <summary>
+        /// Load Configuration DB Server Public
+        /// </summary>
+        public static void GetConfigDB(bool auth)
+        {
+            _GetConfigDB(auth, true);
+        }
+
+        /// <summary>
         /// Load Configuration DB Server
         /// </summary>
-        private static void GetConfigDB(bool isAuth = false, string configPath = "config", string ext = "db")
+        private static void _GetConfigDB(bool isAuth = false, bool readOnly = false, string configPath = "config", string ext = "db")
         {
             string path = configPath + "." + ext;
             MParser config;
@@ -69,6 +79,7 @@ namespace SMLOGX.Core
                 int idx = isAuth ? 1 : 0;
                 Server = config.Read("Server", Sections[idx]);
                 DBName = config.Read("DBName", Sections[idx]);
+                AuthType = readOnly ? isAuth : Convert.ToBoolean(config.Read("AuthType", "Authentication"));
                 if (isAuth)
                 {
                     UserId = config.Read("UserId", Sections[idx]);
@@ -83,7 +94,7 @@ namespace SMLOGX.Core
         /// </summary>
         public static void Open(bool useAuthentication = false)
         {
-            GetConfigDB(useAuthentication);
+            _GetConfigDB(useAuthentication);
             string conString = useAuthentication ? "Server = " + Server + ";Database = " + DBName + ";User Id = " + UserId + ";Password = " + Password : "Server = " + Server + ";Database = " + DBName + ";Trusted_Connection=True";
             try
             {
@@ -104,12 +115,9 @@ namespace SMLOGX.Core
         /// </summary>
         public static void Close()
         {
-            if (_setCon.Equals(null))
-            {
-                _setCon.Close();
-                GetConnection.Close();
-            }
-            return;
+            _hasOpen = false;
+            _setCon.Close();
+            GetConnection.Close();
         }
 
         /// <summary>

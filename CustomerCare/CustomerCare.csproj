@@ -61,6 +61,12 @@
     <Compile Include="GUI\Components\Item.Designer.cs">
       <DependentUpon>Item.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Components\Overlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Components\Overlay.Designer.cs">
+      <DependentUpon>Overlay.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Components\TextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -72,6 +78,12 @@
     </Compile>
     <Compile Include="GUI\frmCallList.Designer.cs">
       <DependentUpon>frmCallList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDBSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDBSetting.Designer.cs">
+      <DependentUpon>frmDBSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmHcp.cs">
       <SubType>Form</SubType>
@@ -141,8 +153,14 @@
     <EmbeddedResource Include="GUI\Components\Item.resx">
       <DependentUpon>Item.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Components\Overlay.resx">
+      <DependentUpon>Overlay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Components\TextBox.resx">
       <DependentUpon>TextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDBSetting.resx">
+      <DependentUpon>frmDBSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmHcp.resx">
       <DependentUpon>frmHcp.cs</DependentUpon>
@@ -211,6 +229,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

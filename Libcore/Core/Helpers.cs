@@ -308,10 +308,23 @@ namespace SMLOGX.Core
     /// </summary>
     public static class App
     {
+        public static void Overlay(Form top, Form down)
+        {
+            Open(down);
+            OpenDialog(top);
+            top.Close();
+            down.Close();
+        }
+
         public static void Open(Form context)
         {
             context.Show();
             return;
+        }
+
+        public static DialogResult OpenDialog(Form context)
+        {
+            return context.ShowDialog();
         }
 
         public static void ExitThread(Form context)

@@ -70,6 +70,7 @@
             this.Memo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -501,12 +502,23 @@
             this.txtSearch.Size = new System.Drawing.Size(343, 31);
             this.txtSearch.TabIndex = 12;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(487, 564);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(139, 25);
+            this.checkBox1.TabIndex = 29;
+            this.checkBox1.Text = "Show All Data";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // frmHcp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1298, 795);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dgView);
@@ -581,5 +593,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Facebook;
         private System.Windows.Forms.DataGridViewTextBoxColumn Memo;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

@@ -36,9 +36,10 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtUsername = new CustomerCare.GUI.Components.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnSetting = new System.Windows.Forms.Button();
             this.txtPassword = new CustomerCare.GUI.Components.TextBox();
+            this.txtUsername = new CustomerCare.GUI.Components.TextBox();
             this.panHead.SuspendLayout();
             this.panContent.SuspendLayout();
             this.SuspendLayout();
@@ -85,7 +86,11 @@
             // 
             this.btnShowHide.BackColor = System.Drawing.Color.White;
             this.btnShowHide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowHide.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnShowHide.FlatAppearance.BorderSize = 0;
+            this.btnShowHide.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnShowHide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnShowHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnShowHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowHide.Location = new System.Drawing.Point(593, 129);
             this.btnShowHide.Name = "btnShowHide";
@@ -113,7 +118,11 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(496, 240);
@@ -144,17 +153,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Username: ";
             // 
-            // txtUsername
-            // 
-            this.txtUsername.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.txtUsername.BackColor = System.Drawing.Color.White;
-            this.txtUsername.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(243, 50);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(381, 44);
-            this.txtUsername.TabIndex = 10;
-            // 
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -162,6 +160,7 @@
             this.btnExit.BackgroundImage = global::CustomerCare.Properties.Resources.shutdown;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Location = new System.Drawing.Point(1048, 658);
@@ -170,6 +169,23 @@
             this.btnExit.TabIndex = 8;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnSetting
+            // 
+            this.btnSetting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSetting.BackColor = System.Drawing.Color.Transparent;
+            this.btnSetting.BackgroundImage = global::CustomerCare.Properties.Resources.Settings_icon;
+            this.btnSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSetting.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnSetting.FlatAppearance.BorderSize = 0;
+            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetting.Location = new System.Drawing.Point(12, 658);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(35, 35);
+            this.btnSetting.TabIndex = 10;
+            this.btnSetting.UseVisualStyleBackColor = false;
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // txtPassword
             // 
@@ -181,12 +197,26 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(343, 44);
             this.txtPassword.TabIndex = 15;
+            this.txtPassword.Value = "";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.txtUsername.BackColor = System.Drawing.Color.White;
+            this.txtUsername.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(243, 50);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(381, 44);
+            this.txtUsername.TabIndex = 10;
+            this.txtUsername.Value = "";
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 705);
+            this.Controls.Add(this.btnSetting);
             this.Controls.Add(this.panContent);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panHead);
@@ -217,6 +247,7 @@
         private System.Windows.Forms.Label label1;
         private GUI.Components.TextBox txtUsername;
         private GUI.Components.TextBox txtPassword;
+        private System.Windows.Forms.Button btnSetting;
     }
 }
 
