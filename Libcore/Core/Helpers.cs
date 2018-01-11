@@ -158,6 +158,17 @@ namespace SMLOGX.Core
                 diff += 7;
             return dt.AddDays(-1 * diff).Date;
         }
+
+        /// <summary>
+        /// Binding Source
+        /// </summary>
+        public static BindingSource Binding(object val)
+        {
+            return new BindingSource
+            {
+                DataSource = val
+            };
+        }
     }
 
     /// <summary>

@@ -89,18 +89,20 @@
             // 
             // txtName
             // 
+            this.txtName.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(215, 53);
             this.txtName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(343, 27);
+            this.txtName.Size = new System.Drawing.Size(343, 31);
             this.txtName.TabIndex = 1;
             // 
             // txtOwner
             // 
+            this.txtOwner.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOwner.Location = new System.Drawing.Point(215, 114);
             this.txtOwner.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtOwner.Name = "txtOwner";
-            this.txtOwner.Size = new System.Drawing.Size(343, 27);
+            this.txtOwner.Size = new System.Drawing.Size(343, 31);
             this.txtOwner.TabIndex = 3;
             // 
             // label2
@@ -115,16 +117,17 @@
             // 
             // txtLocation
             // 
+            this.txtLocation.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLocation.Location = new System.Drawing.Point(215, 41);
             this.txtLocation.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(343, 27);
+            this.txtLocation.Size = new System.Drawing.Size(343, 31);
             this.txtLocation.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 41);
+            this.label3.Location = new System.Drawing.Point(21, 41);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 21);
@@ -133,16 +136,17 @@
             // 
             // txtDist
             // 
+            this.txtDist.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDist.Location = new System.Drawing.Point(215, 95);
             this.txtDist.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDist.Name = "txtDist";
-            this.txtDist.Size = new System.Drawing.Size(343, 27);
+            this.txtDist.Size = new System.Drawing.Size(343, 31);
             this.txtDist.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(44, 95);
+            this.label4.Location = new System.Drawing.Point(21, 95);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 21);
@@ -151,16 +155,17 @@
             // 
             // txtComm
             // 
+            this.txtComm.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComm.Location = new System.Drawing.Point(215, 153);
             this.txtComm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtComm.Name = "txtComm";
-            this.txtComm.Size = new System.Drawing.Size(343, 27);
+            this.txtComm.Size = new System.Drawing.Size(343, 31);
             this.txtComm.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(44, 153);
+            this.label5.Location = new System.Drawing.Point(21, 153);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 21);
@@ -169,16 +174,17 @@
             // 
             // txtST
             // 
+            this.txtST.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtST.Location = new System.Drawing.Point(215, 204);
             this.txtST.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtST.Name = "txtST";
-            this.txtST.Size = new System.Drawing.Size(343, 27);
+            this.txtST.Size = new System.Drawing.Size(343, 31);
             this.txtST.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(44, 204);
+            this.label6.Location = new System.Drawing.Point(21, 204);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 21);
@@ -187,10 +193,11 @@
             // 
             // txtTel1
             // 
+            this.txtTel1.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel1.Location = new System.Drawing.Point(208, 48);
             this.txtTel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtTel1.Name = "txtTel1";
-            this.txtTel1.Size = new System.Drawing.Size(343, 27);
+            this.txtTel1.Size = new System.Drawing.Size(343, 31);
             this.txtTel1.TabIndex = 13;
             // 
             // label7
@@ -205,10 +212,11 @@
             // 
             // txtTel2
             // 
+            this.txtTel2.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel2.Location = new System.Drawing.Point(208, 105);
             this.txtTel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtTel2.Name = "txtTel2";
-            this.txtTel2.Size = new System.Drawing.Size(343, 27);
+            this.txtTel2.Size = new System.Drawing.Size(343, 31);
             this.txtTel2.TabIndex = 15;
             // 
             // label8
@@ -223,10 +231,11 @@
             // 
             // txtFB
             // 
+            this.txtFB.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFB.Location = new System.Drawing.Point(208, 217);
             this.txtFB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFB.Name = "txtFB";
-            this.txtFB.Size = new System.Drawing.Size(343, 27);
+            this.txtFB.Size = new System.Drawing.Size(343, 31);
             this.txtFB.TabIndex = 19;
             // 
             // label9
@@ -241,10 +250,11 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(208, 159);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(343, 27);
+            this.txtEmail.Size = new System.Drawing.Size(343, 31);
             this.txtEmail.TabIndex = 17;
             // 
             // label10
@@ -259,10 +269,12 @@
             // 
             // txtMemo
             // 
+            this.txtMemo.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMemo.Location = new System.Drawing.Point(41, 42);
             this.txtMemo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtMemo.Multiline = true;
             this.txtMemo.Name = "txtMemo";
+            this.txtMemo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtMemo.Size = new System.Drawing.Size(509, 87);
             this.txtMemo.TabIndex = 21;
             // 
@@ -482,10 +494,11 @@
             // 
             // txtSearch
             // 
+            this.txtSearch.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(134, 560);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(343, 27);
+            this.txtSearch.Size = new System.Drawing.Size(343, 31);
             this.txtSearch.TabIndex = 12;
             // 
             // frmHcp

@@ -15,7 +15,6 @@ namespace CustomerCare
 {
     public partial class frmMain : Form
     {
-        private string[] menu = { "Dashboard", "Call List", "Hospital", "Retail", "Staff", "Mum", "Kids", "Users", "Other" };
         private Color[] menuColor = { Color.DeepSkyBlue, Color.DeepPink, Color.DodgerBlue, Color.Crimson, Color.DeepPink, Color.DeepSkyBlue, Color.Chocolate, Color.Crimson, Color.DeepPink, Color.DodgerBlue, Color.Aqua, Color.Bisque };
         private List<ItemList> menuItem = new List<ItemList>();
 
