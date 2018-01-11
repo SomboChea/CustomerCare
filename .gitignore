@@ -4,6 +4,8 @@
 # User-specific files
 *.suo
 *.user
+Program.cs
+CustomerCare/Program.cs
 *.userosscache
 *.sln.docstates
 
