@@ -32,9 +32,9 @@
             this.lbTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.checkedListOptions = new System.Windows.Forms.CheckedListBox();
-            this.textBox1 = new CustomerCare.GUI.Components.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.listRoles = new System.Windows.Forms.ListBox();
+            this.txtPosition = new CustomerCare.GUI.Components.TextBox();
             this.panHead.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +44,7 @@
             this.panHead.Controls.Add(this.lbTitle);
             this.panHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panHead.Location = new System.Drawing.Point(0, 0);
-            this.panHead.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panHead.Margin = new System.Windows.Forms.Padding(4);
             this.panHead.Name = "panHead";
             this.panHead.Size = new System.Drawing.Size(800, 78);
             this.panHead.TabIndex = 1;
@@ -85,30 +85,21 @@
             this.checkedListOptions.Name = "checkedListOptions";
             this.checkedListOptions.Size = new System.Drawing.Size(470, 418);
             this.checkedListOptions.TabIndex = 5;
+            this.checkedListOptions.SelectedIndexChanged += new System.EventHandler(this.checkedListOptions_SelectedIndexChanged);
             // 
-            // textBox1
+            // btnAdd
             // 
-            this.textBox1.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(146, 105);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 9, 5, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(447, 48);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Value = "";
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(601, 105);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 48);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.BackColor = System.Drawing.Color.White;
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Location = new System.Drawing.Point(601, 105);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(183, 48);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // listRoles
             // 
@@ -122,20 +113,32 @@
             this.listRoles.TabIndex = 7;
             this.listRoles.SelectedIndexChanged += new System.EventHandler(this.listRoles_SelectedIndexChanged);
             // 
+            // txtPosition
+            // 
+            this.txtPosition.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.txtPosition.BackColor = System.Drawing.Color.White;
+            this.txtPosition.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPosition.Location = new System.Drawing.Point(146, 105);
+            this.txtPosition.Margin = new System.Windows.Forms.Padding(5, 9, 5, 9);
+            this.txtPosition.Name = "txtPosition";
+            this.txtPosition.Size = new System.Drawing.Size(447, 48);
+            this.txtPosition.TabIndex = 3;
+            this.txtPosition.Value = "";
+            // 
             // frmPosition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 632);
             this.Controls.Add(this.listRoles);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.checkedListOptions);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.panHead);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPosition";
             this.Text = "frmPosition";
             this.Load += new System.EventHandler(this.frmPosition_Load);
@@ -150,10 +153,10 @@
 
         private System.Windows.Forms.Panel panHead;
         private System.Windows.Forms.Label lbTitle;
-        private Components.TextBox textBox1;
+        private Components.TextBox txtPosition;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox checkedListOptions;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ListBox listRoles;
     }
 }

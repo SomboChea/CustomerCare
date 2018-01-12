@@ -17,6 +17,12 @@ namespace CustomerCare.GUI
         public frmPosition()
         {
             InitializeComponent();
+
+            Database.Server = "localhost";
+            Database.DBName = "CustomerCare";
+            Database.Open();
+
+            loadAllOptions();
         }
 
         private void loadRoles()
@@ -27,25 +33,41 @@ namespace CustomerCare.GUI
                 listRoles.Items.Add(row["pos_en"]);
         }
 
+        private List<Options> all_options = new List<Options>();
+
+        private List<Options> list = new List<Options>();
+
+        private void loadAllOptions()
+        {
+            DataTable all = Database.QueryModel("SELECT * FROM tbl_options");
+            foreach (DataRow temp in all.Rows)
+            {
+                all_options.Add(new Options()
+                {
+                    option_id = int.Parse(temp["option_id"] + ""),
+                    option_name = temp["option_name"] + ""
+                });
+            }
+        }
+
         private void loadOptions(string position = "")
         {
             checkedListOptions.Items.Clear();
+            list.Clear();
             DataTable admin = Database.QueryModel("SELECT * FROM viewRoleAccessOptions WHERE pos_en = '" + position + "'");
-            DataTable all = Database.QueryModel("SELECT * FROM tbl_options");
             bool isCheck = false;
-            List<Options> list = new List<Options>();
 
-            foreach (DataRow temp in all.Rows)
+            foreach (Options temp in all_options)
             {
                 foreach (DataRow temp2 in admin.Rows)
                 {
-                    isCheck = temp["option_name"].Equals(temp2["option_name"]);
+                    isCheck = temp.option_name.Equals(temp2["option_name"]);
                     if (isCheck)
                     {
                         list.Add(new Options()
                         {
-                            option_id = int.Parse(temp["option_id"] + ""),
-                            option_name = temp["option_name"] + ""
+                            option_id = int.Parse(temp.option_id + ""),
+                            option_name = temp.option_name + ""
                         });
 
                         admin.Rows.Remove(temp2);
@@ -53,17 +75,13 @@ namespace CustomerCare.GUI
                     }
                 }
 
-                checkedListOptions.Items.Add(temp["option_name"], isCheck);
+                checkedListOptions.Items.Add(temp.option_name, isCheck);
                 isCheck = false;
             }
         }
 
         private void frmPosition_Load(object sender, EventArgs e)
         {
-            Database.Server = "localhost";
-            Database.DBName = "CustomerCare";
-            Database.Open();
-
             loadRoles();
             loadOptions();
         }
@@ -71,6 +89,40 @@ namespace CustomerCare.GUI
         private void listRoles_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadOptions(listRoles.SelectedItem.ToString());
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Save();
+        }
+
+        private List<Options> getChecked()
+        {
+            //List<Options> list = new List<Options>();
+            //foreach (string )
+            //{
+            //    list.Add(new Options()
+            //    {
+            //    });
+            //}
+            return list;
+        }
+
+        private void Save()
+        {
+            Database.Insert("tbl_pos", "pos_en", txtPosition.txtValue.Text);
+            foreach (Options temp in list)
+            {
+                Database.Insert("tbl_access_options", "pos_id, option_id", Database.GetLastId("tbl_pos") + "," + temp.option_id);
+            }
+
+            MessageBox.Show("Successfully!");
+            loadRoles();
+            loadOptions();
+        }
+
+        private void checkedListOptions_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }
