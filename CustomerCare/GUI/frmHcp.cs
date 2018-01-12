@@ -30,6 +30,7 @@ namespace CustomerCare
             string memo = txtMemo.Text;
 
             dgView.Rows.Add(id, hcpIdentity[0], hcpIdentity[1], address[0], address[1], address[2], address[3], tels[0], tels[1], econtact[0], econtact[1], memo);
+            Database.Insert();
         }
     }
 }
