@@ -32,11 +32,8 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtOwner = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtLocation = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDist = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtComm = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtST = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -71,6 +68,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cblocation = new System.Windows.Forms.ComboBox();
+            this.cbcommune = new System.Windows.Forms.ComboBox();
+            this.cbdistrict = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -96,6 +96,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(343, 31);
             this.txtName.TabIndex = 1;
+            this.txtName.Tag = "Name";
             // 
             // txtOwner
             // 
@@ -105,6 +106,7 @@
             this.txtOwner.Name = "txtOwner";
             this.txtOwner.Size = new System.Drawing.Size(343, 31);
             this.txtOwner.TabIndex = 3;
+            this.txtOwner.Tag = "Owner";
             // 
             // label2
             // 
@@ -116,15 +118,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Owner: ";
             // 
-            // txtLocation
-            // 
-            this.txtLocation.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLocation.Location = new System.Drawing.Point(215, 41);
-            this.txtLocation.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(343, 31);
-            this.txtLocation.TabIndex = 5;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -135,15 +128,6 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Location: ";
             // 
-            // txtDist
-            // 
-            this.txtDist.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDist.Location = new System.Drawing.Point(215, 95);
-            this.txtDist.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtDist.Name = "txtDist";
-            this.txtDist.Size = new System.Drawing.Size(343, 31);
-            this.txtDist.TabIndex = 7;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -153,15 +137,6 @@
             this.label4.Size = new System.Drawing.Size(71, 21);
             this.label4.TabIndex = 6;
             this.label4.Text = "District: ";
-            // 
-            // txtComm
-            // 
-            this.txtComm.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComm.Location = new System.Drawing.Point(215, 153);
-            this.txtComm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtComm.Name = "txtComm";
-            this.txtComm.Size = new System.Drawing.Size(343, 31);
-            this.txtComm.TabIndex = 9;
             // 
             // label5
             // 
@@ -181,6 +156,7 @@
             this.txtST.Name = "txtST";
             this.txtST.Size = new System.Drawing.Size(343, 31);
             this.txtST.TabIndex = 11;
+            this.txtST.Tag = "ST";
             // 
             // label6
             // 
@@ -200,6 +176,7 @@
             this.txtTel1.Name = "txtTel1";
             this.txtTel1.Size = new System.Drawing.Size(343, 31);
             this.txtTel1.TabIndex = 13;
+            this.txtTel1.Tag = "Tel";
             // 
             // label7
             // 
@@ -219,6 +196,7 @@
             this.txtTel2.Name = "txtTel2";
             this.txtTel2.Size = new System.Drawing.Size(343, 31);
             this.txtTel2.TabIndex = 15;
+            this.txtTel2.Tag = "Tel 2";
             // 
             // label8
             // 
@@ -238,6 +216,7 @@
             this.txtFB.Name = "txtFB";
             this.txtFB.Size = new System.Drawing.Size(343, 31);
             this.txtFB.TabIndex = 19;
+            this.txtFB.Tag = "Facebook";
             // 
             // label9
             // 
@@ -257,6 +236,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(343, 31);
             this.txtEmail.TabIndex = 17;
+            this.txtEmail.Tag = "Email";
             // 
             // label10
             // 
@@ -278,16 +258,17 @@
             this.txtMemo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtMemo.Size = new System.Drawing.Size(509, 87);
             this.txtMemo.TabIndex = 21;
+            this.txtMemo.Tag = "Memo";
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox1.Controls.Add(this.cbdistrict);
+            this.groupBox1.Controls.Add(this.cbcommune);
+            this.groupBox1.Controls.Add(this.cblocation);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtLocation);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtDist);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtComm);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtST);
             this.groupBox1.Location = new System.Drawing.Point(34, 223);
@@ -410,6 +391,7 @@
             this.dgView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgView.Size = new System.Drawing.Size(1219, 177);
             this.dgView.TabIndex = 28;
+            this.dgView.DoubleClick += new System.EventHandler(this.dgView_DoubleClick);
             // 
             // ID
             // 
@@ -512,12 +494,42 @@
             this.checkBox1.Text = "Show All Data";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // cblocation
+            // 
+            this.cblocation.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
+            this.cblocation.FormattingEnabled = true;
+            this.cblocation.Location = new System.Drawing.Point(215, 39);
+            this.cblocation.Name = "cblocation";
+            this.cblocation.Size = new System.Drawing.Size(343, 32);
+            this.cblocation.TabIndex = 12;
+            this.cblocation.Tag = "Location";
+            // 
+            // cbcommune
+            // 
+            this.cbcommune.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
+            this.cbcommune.FormattingEnabled = true;
+            this.cbcommune.Location = new System.Drawing.Point(215, 151);
+            this.cbcommune.Name = "cbcommune";
+            this.cbcommune.Size = new System.Drawing.Size(343, 32);
+            this.cbcommune.TabIndex = 12;
+            this.cbcommune.Tag = "Commune";
+            // 
+            // cbdistrict
+            // 
+            this.cbdistrict.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
+            this.cbdistrict.FormattingEnabled = true;
+            this.cbdistrict.Location = new System.Drawing.Point(215, 93);
+            this.cbdistrict.Name = "cbdistrict";
+            this.cbdistrict.Size = new System.Drawing.Size(343, 32);
+            this.cbdistrict.TabIndex = 12;
+            this.cbdistrict.Tag = "District";
+            // 
             // frmHcp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1298, 795);
+            this.ClientSize = new System.Drawing.Size(1298, 749);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label11);
@@ -535,6 +547,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HCP FORM";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmHcp_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -555,11 +568,8 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtOwner;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtLocation;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDist;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtComm;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtST;
         private System.Windows.Forms.Label label6;
@@ -594,5 +604,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Facebook;
         private System.Windows.Forms.DataGridViewTextBoxColumn Memo;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox cbdistrict;
+        private System.Windows.Forms.ComboBox cbcommune;
+        private System.Windows.Forms.ComboBox cblocation;
     }
 }
