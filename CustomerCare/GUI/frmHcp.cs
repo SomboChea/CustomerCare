@@ -100,7 +100,7 @@ namespace CustomerCare
         {
             dgView.Rows.Clear();
             cblocation.DataSource = null;
-            helper.FillGridviewWithoutDataTable("Select top 20 * from viewHcp order by ID desc", dgView);
+            helper.FillGridviewWithoutDataTable("Select top 10 * from viewHcp order by ID desc", dgView);
             helper.FillComboBox(cblocation, "pc_name", "pc_id", "Select * from tbl_provinces");
             id = (Database.GetLastId("tbl_hcp") + 1) + "";
 
@@ -166,7 +166,7 @@ namespace CustomerCare
             dgView.Rows.Clear();
             if (txtSearch.Text.Trim() == "")
             {
-                helper.FillGridviewWithoutDataTable("Select top 20 * from viewHcp order by id desc", dgView);
+                helper.FillGridviewWithoutDataTable("Select top 10 * from viewHcp order by id desc", dgView);
 
             }
             else
@@ -179,15 +179,21 @@ namespace CustomerCare
 
         private void panel1_Scroll(object sender, ScrollEventArgs e)
         {
-            //label1.Text = e.NewValue + "  " + (panel1.VerticalScroll.Maximum - panel1.VerticalScroll.LargeChange);
-            if (e.NewValue == 0)
+            
+            label1.Text = panel1.VerticalScroll.LargeChange+"  "+e.NewValue + "  " + (panel1.VerticalScroll.Maximum - panel1.VerticalScroll.LargeChange);
+            if (e.NewValue == 0 || txtSearch.Text.Trim()!="")
                 return;
-            if (e.NewValue >= (panel1.VerticalScroll.Maximum - panel1.VerticalScroll.LargeChange)) 
+            if (e.NewValue >= (panel1.VerticalScroll.Maximum - panel1.VerticalScroll.LargeChange))
             {
-                string sql = "Select * from viewHcp where ID<" + dgView.Rows[dgView.Rows.Count - 1].Cells[0].Value;
+                panel1.Cursor = Cursors.WaitCursor;
+                string sql = "Select top 10 * from viewHcp where ID<" + dgView.Rows[dgView.Rows.Count - 1].Cells[0].Value + " order by ID desc";
                 //txtMemo.Text = sql;
                 helper.FillGridviewWithoutDataTable(sql, dgView);
+                if (Database.QueryScalar("Select count(*) from viewHcp").ToString().Equals(dgView.Rows.Count + ""))
+                    MessageBox.Show("Load All Rows", "HCP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
+            panel1.Cursor = Cursors.Default;
         }
     }
 }
@@ -217,7 +223,7 @@ class helper : Helpers
         }
 
 
-        dgheight += dgView.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + 50;
+        dgheight += dgView.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + 30;
         dgView.Size = new Size(dgView.Size.Width, int.Parse(Math.Ceiling(dgheight) + ""));
     }
 
