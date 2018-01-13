@@ -1,0 +1,20 @@
+SELECT
+	h.hcp_id AS ID,
+	h.hcp_memo AS Memo,
+	h.hcp_name AS hcpName,
+	h.hcp_owner AS Owner,
+	h.hcp_tel1 AS Tel,
+	h.hcp_tel2 AS Tel2,
+	h.hcp_email AS Email,
+	h.hcp_fb AS Facebook,
+	dbo.tbl_provinces.pc_name AS Location,
+	dbo.tbl_ks.ks_name AS District,
+	dbo.tbl_sk.sk_name AS Commune,
+	concat ( dbo.tbl_address.st_road, ' , ', dbo.tbl_address.hs_info ) AS ST,
+	h.address_id AS AddrID 
+FROM
+	dbo.tbl_hcp AS h
+	INNER JOIN dbo.tbl_address ON h.address_id = dbo.tbl_address.address_id
+	INNER JOIN dbo.tbl_sk ON dbo.tbl_address.sk_id = dbo.tbl_sk.sk_id
+	INNER JOIN dbo.tbl_ks ON dbo.tbl_sk.ks_id = dbo.tbl_ks.ks_id
+	INNER JOIN dbo.tbl_provinces ON dbo.tbl_ks.pc_id = dbo.tbl_provinces.pc_id

@@ -25,19 +25,21 @@ namespace CustomerCare
             //dgView.DataSource = Database.GetDataSet("Select * from tbl_mststaff").Tables[0];
         }
 
+
         public string id { get; set; }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             {
-                //id++;
-                //string[] hcpIdentity = { txtName.Text, txtOwner.Text };
-                //string[] address = { txtLocation.Text, txtDist.Text, txtComm.Text, txtST.Text };
-                //string[] tels = { txtTel1.Text, txtTel2.Text };
-                //string[] econtact = { txtEmail.Text, txtFB.Text };
-                //string memo = txtMemo.Text;
-                //MessageBox.Show(txtName.Parent.Text);
+       
+                string[] hcpIdentity = { txtName.Text, txtOwner.Text };
+                string[] address = { cblocation.Text, cbdistrict.Text, cbcommune.Text, txtST.Text };
+                string[] tels = { txtTel1.Text, txtTel2.Text };
+                string[] econtact = { txtEmail.Text, txtFB.Text };
+                string memo = txtMemo.Text;
+                MessageBox.Show(txtName.Parent.Text);
 
-                //dgView.Rows.Add(id, hcpIdentity[0], hcpIdentity[1], address[0], address[1], address[2], address[3], tels[0], tels[1], econtact[0], econtact[1], memo);
+                dgView.Rows.Add(id, hcpIdentity[0], hcpIdentity[1], address[0], address[1], address[2], address[3], tels[0], tels[1], econtact[0], econtact[1], memo);
             }
             helper.ClearRed(this);
             if (!helper.CheckExist(txtName, txtST, txtTel1, cbcommune, cbdistrict, cblocation))
@@ -45,12 +47,15 @@ namespace CustomerCare
 
             bool checknum = false;
             if (Database.QueryModel("Select Count(*) from tbl_mststaff where " + txtTel1 + " in(Tel_per1,Tel_per2) and staff_id!=" + id) + "" == "0")
+
             {
                 helper.SetRedbox(txtTel1);
             }
             if (txtTel2.Text.Trim().Equals(""))
             {
+
                 if (Database.QueryModel("Select Count(*) from tbl_mststaff where " + txtTel2 + " in(Tel_per1,Tel_per2) and staff_id!=" + id) + "" == "0")
+
                 {
                     helper.SetRedbox(txtTel1);
                 }
@@ -92,12 +97,12 @@ namespace CustomerCare
             helper.FillGridviewWithoutDataTable("Select top 20 * from viewHcp order by ID desc", dgView);
             helper.FillComboBox(cblocation, "pc_name", "pc_id", "Select * from tbl_provinces");
             id = (Database.GetLastId("tbl_hcp") + 1) + "";
+
         }
 
         void Clear(Control main)
         {
             foreach (Control ctrl in main.Controls)
-            {
                 if (ctrl is ComboBox)
                 {
                     try
@@ -112,7 +117,8 @@ namespace CustomerCare
                 else if (ctrl is TextBox)
                     ctrl.Text = "";
             }
-        }
+        
+
         private void cblocation_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbdistrict.DataSource = null;
@@ -120,7 +126,9 @@ namespace CustomerCare
             helper.FillComboBox(cbdistrict, "ks_name", "ks_id", "Select * from tbl_ks where pc_id=" + cblocation.SelectedValue);
         }
 
+
         private void cbdistrict_SelectedIndexChanged(object sender, EventArgs e)
+
         {
             cbcommune.DataSource = null;
             helper.FillComboBox(cbcommune, "sk_name", "sk_id", "Select * from tbl_sk where ks_id=" + cbdistrict.SelectedValue);
@@ -149,11 +157,13 @@ namespace CustomerCare
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
+            dgView.Rows.Clear();
             if (txtSearch.Text.Trim() == "")
             {
 
                 DataTable dt = Database.QueryModel("Select top 20 * from viewHcp order by id desc");
                 foreach (DataRow row in dt.Rows)
+
                 {
                     List<object> obj = new List<object>();
                     foreach (DataGridViewColumn col in dgView.Columns)
@@ -167,7 +177,7 @@ namespace CustomerCare
             else
             {
 
-                DataTable dt = Database.QueryModel("Select * from viewHcp where hcp_name like '%" + txtSearch.Text + "%'");
+                DataTable dt = Database.QueryModel("Select * from viewHcp where hcpName like '%" + txtSearch.Text + "%'");
                 foreach (DataRow row in dt.Rows)
                 {
                     List<object> obj = new List<object>();

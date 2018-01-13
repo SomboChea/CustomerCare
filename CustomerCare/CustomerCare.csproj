@@ -115,6 +115,12 @@
     <Compile Include="GUI\frmMum.Designer.cs">
       <DependentUpon>frmMum.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmPosition.Designer.cs">
+      <DependentUpon>frmPosition.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmRetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,7 @@
     <Compile Include="STR\Kid.cs" />
     <Compile Include="STR\MenuList.cs" />
     <Compile Include="STR\Mum.cs" />
+    <Compile Include="STR\Options.cs" />
     <Compile Include="STR\People.cs" />
     <Compile Include="STR\Staff.cs" />
     <EmbeddedResource Include="GUI\Components\Alert.resx">
@@ -173,6 +180,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMum.resx">
+      <DependentUpon>frmMum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPosition.resx">
+      <DependentUpon>frmPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmRetail.resx">
+      <DependentUpon>frmRetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmStaff.resx">
       <DependentUpon>frmStaff.cs</DependentUpon>
