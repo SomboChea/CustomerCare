@@ -232,8 +232,11 @@ namespace SMLOGX.Core
                     string final_data = data.Length > 1 ? MString.implode(",", "'", data) : MString.implode(",", "'", MString.explode(data[0] + "", ','));
 
                     cmd.CommandText = "INSERT INTO " + table + "(" + columns + ") VALUES(" + final_data + ");";
+                    // System.Windows.Forms.MessageBox.Show(cmd.CommandText);
                     _hasExec = cmd.ExecuteNonQuery();
                     cmd.Dispose();
+                   
+
                     return HasExec();
                 }
                 catch (Exception ex)
@@ -254,7 +257,7 @@ namespace SMLOGX.Core
             {
                 try
                 {
-                    where = !where.Equals("") || !where.Equals(null) ? "WHERE " + where : where;
+                    where = !where.Equals("") || !where.Equals(null) ? " WHERE " + where : where;
                     cmd.CommandText = "UPDATE " + table + " SET " + data + where;
                     if (parameter != null)
                         cmd.Parameters.AddRange(parameter);
@@ -347,7 +350,7 @@ namespace SMLOGX.Core
                     cmd.CommandText = sql;
                     if (parameter != null)
                         cmd.Parameters.AddRange(parameter);
-
+                
                     object b = cmd.ExecuteScalar();
                     cmd.Dispose();
                     return b;

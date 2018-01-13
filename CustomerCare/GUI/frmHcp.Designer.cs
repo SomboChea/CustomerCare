@@ -47,6 +47,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtMemo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbdistrict = new System.Windows.Forms.ComboBox();
+            this.cbcommune = new System.Windows.Forms.ComboBox();
+            this.cblocation = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -54,11 +57,12 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.dgView = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AddrID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hcpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Owner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dist = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.District = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Commune = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ST = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tel2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,14 +72,13 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.cblocation = new System.Windows.Forms.ComboBox();
-            this.cbcommune = new System.Windows.Forms.ComboBox();
-            this.cbdistrict = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgView)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -96,7 +99,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(343, 31);
             this.txtName.TabIndex = 1;
-            this.txtName.Tag = "Name";
+            this.txtName.Tag = "hcpName";
             // 
             // txtOwner
             // 
@@ -196,7 +199,7 @@
             this.txtTel2.Name = "txtTel2";
             this.txtTel2.Size = new System.Drawing.Size(343, 31);
             this.txtTel2.TabIndex = 15;
-            this.txtTel2.Tag = "Tel 2";
+            this.txtTel2.Tag = "Tel2";
             // 
             // label8
             // 
@@ -280,6 +283,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Address";
             // 
+            // cbdistrict
+            // 
+            this.cbdistrict.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
+            this.cbdistrict.FormattingEnabled = true;
+            this.cbdistrict.Location = new System.Drawing.Point(215, 93);
+            this.cbdistrict.Name = "cbdistrict";
+            this.cbdistrict.Size = new System.Drawing.Size(343, 32);
+            this.cbdistrict.TabIndex = 13;
+            this.cbdistrict.Tag = "District";
+            this.cbdistrict.SelectedIndexChanged += new System.EventHandler(this.cbdistrict_SelectedIndexChanged);
+            // 
+            // cbcommune
+            // 
+            this.cbcommune.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
+            this.cbcommune.FormattingEnabled = true;
+            this.cbcommune.Location = new System.Drawing.Point(215, 151);
+            this.cbcommune.Name = "cbcommune";
+            this.cbcommune.Size = new System.Drawing.Size(343, 32);
+            this.cbcommune.TabIndex = 14;
+            this.cbcommune.Tag = "Commune";
+            // 
+            // cblocation
+            // 
+            this.cblocation.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
+            this.cblocation.FormattingEnabled = true;
+            this.cblocation.Location = new System.Drawing.Point(215, 39);
+            this.cblocation.Name = "cblocation";
+            this.cblocation.Size = new System.Drawing.Size(343, 32);
+            this.cblocation.TabIndex = 12;
+            this.cblocation.Tag = "Location";
+            this.cblocation.SelectedIndexChanged += new System.EventHandler(this.cblocation_SelectedIndexChanged);
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -362,19 +397,17 @@
             // 
             this.dgView.AllowUserToAddRows = false;
             this.dgView.AllowUserToDeleteRows = false;
-            this.dgView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgView.BackgroundColor = System.Drawing.Color.White;
             this.dgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
+            this.AddrID,
             this.hcpName,
             this.Owner,
             this.Location,
-            this.Dist,
-            this.Comm,
+            this.District,
+            this.Commune,
             this.ST,
             this.Tel,
             this.Tel2,
@@ -382,22 +415,30 @@
             this.Facebook,
             this.Memo});
             this.dgView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgView.Location = new System.Drawing.Point(34, 605);
+            this.dgView.Location = new System.Drawing.Point(0, 0);
             this.dgView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgView.MultiSelect = false;
             this.dgView.Name = "dgView";
             this.dgView.ReadOnly = true;
             this.dgView.RowTemplate.Height = 24;
+            this.dgView.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgView.Size = new System.Drawing.Size(1219, 177);
+            this.dgView.Size = new System.Drawing.Size(1231, 140);
             this.dgView.TabIndex = 28;
-            this.dgView.DoubleClick += new System.EventHandler(this.dgView_DoubleClick);
+            this.dgView.Click += new System.EventHandler(this.dgView_Click);
             // 
             // ID
             // 
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
+            // 
+            // AddrID
+            // 
+            this.AddrID.HeaderText = "AddrID";
+            this.AddrID.Name = "AddrID";
+            this.AddrID.ReadOnly = true;
+            this.AddrID.Visible = false;
             // 
             // hcpName
             // 
@@ -417,17 +458,17 @@
             this.Location.Name = "Location";
             this.Location.ReadOnly = true;
             // 
-            // Dist
+            // District
             // 
-            this.Dist.HeaderText = "Dist";
-            this.Dist.Name = "Dist";
-            this.Dist.ReadOnly = true;
+            this.District.HeaderText = "Dist";
+            this.District.Name = "District";
+            this.District.ReadOnly = true;
             // 
-            // Comm
+            // Commune
             // 
-            this.Comm.HeaderText = "Comm";
-            this.Comm.Name = "Comm";
-            this.Comm.ReadOnly = true;
+            this.Commune.HeaderText = "Comm";
+            this.Commune.Name = "Commune";
+            this.Commune.ReadOnly = true;
             // 
             // ST
             // 
@@ -483,6 +524,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(343, 31);
             this.txtSearch.TabIndex = 12;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // checkBox1
             // 
@@ -494,35 +536,15 @@
             this.checkBox1.Text = "Show All Data";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // cblocation
+            // panel1
             // 
-            this.cblocation.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
-            this.cblocation.FormattingEnabled = true;
-            this.cblocation.Location = new System.Drawing.Point(215, 39);
-            this.cblocation.Name = "cblocation";
-            this.cblocation.Size = new System.Drawing.Size(343, 32);
-            this.cblocation.TabIndex = 12;
-            this.cblocation.Tag = "Location";
-            // 
-            // cbcommune
-            // 
-            this.cbcommune.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
-            this.cbcommune.FormattingEnabled = true;
-            this.cbcommune.Location = new System.Drawing.Point(215, 151);
-            this.cbcommune.Name = "cbcommune";
-            this.cbcommune.Size = new System.Drawing.Size(343, 32);
-            this.cbcommune.TabIndex = 12;
-            this.cbcommune.Tag = "Commune";
-            // 
-            // cbdistrict
-            // 
-            this.cbdistrict.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
-            this.cbdistrict.FormattingEnabled = true;
-            this.cbdistrict.Location = new System.Drawing.Point(215, 93);
-            this.cbdistrict.Name = "cbdistrict";
-            this.cbdistrict.Size = new System.Drawing.Size(343, 32);
-            this.cbdistrict.TabIndex = 12;
-            this.cbdistrict.Tag = "District";
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.dgView);
+            this.panel1.Location = new System.Drawing.Point(34, 597);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1231, 243);
+            this.panel1.TabIndex = 30;
+            this.panel1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panel1_Scroll);
             // 
             // frmHcp
             // 
@@ -530,10 +552,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1298, 749);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.dgView);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox4);
@@ -557,6 +579,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgView)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -591,21 +614,23 @@
         private System.Windows.Forms.DataGridView dgView;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox cbdistrict;
+        private System.Windows.Forms.ComboBox cbcommune;
+        private System.Windows.Forms.ComboBox cblocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AddrID;
         private System.Windows.Forms.DataGridViewTextBoxColumn hcpName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Owner;
         private System.Windows.Forms.DataGridViewTextBoxColumn Location;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dist;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Comm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn District;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Commune;
         private System.Windows.Forms.DataGridViewTextBoxColumn ST;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Facebook;
         private System.Windows.Forms.DataGridViewTextBoxColumn Memo;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox cbdistrict;
-        private System.Windows.Forms.ComboBox cbcommune;
-        private System.Windows.Forms.ComboBox cblocation;
+        private System.Windows.Forms.Panel panel1;
     }
 }

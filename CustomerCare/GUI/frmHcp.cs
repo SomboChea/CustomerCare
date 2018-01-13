@@ -20,10 +20,12 @@ namespace CustomerCare
             Database.Server = "localhost";
             Database.DBName = "CustomerCare";
             Database.Open();
+
+
             //dgView.DataSource = Database.GetDataSet("Select * from tbl_mststaff").Tables[0];
         }
 
-
+        public string id { get; set; }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             {
@@ -42,13 +44,13 @@ namespace CustomerCare
                 return;
 
             bool checknum = false;
-            if(Database.QueryModel("Select Count(*) from tbl_mststaff where "+txtTel1+" in(Tel_per1,Tel_per2)").Rows.Count>0)
+            if (Database.QueryModel("Select Count(*) from tbl_mststaff where " + txtTel1 + " in(Tel_per1,Tel_per2) and staff_id!=" + id) + "" == "0")
             {
                 helper.SetRedbox(txtTel1);
             }
             if (txtTel2.Text.Trim().Equals(""))
             {
-                if (Database.QueryModel("Select Count(*) from tbl_mststaff where "+txtTel2+" in(Tel_per1,Tel_per2)").Rows.Count > 0)
+                if (Database.QueryModel("Select Count(*) from tbl_mststaff where " + txtTel2 + " in(Tel_per1,Tel_per2) and staff_id!=" + id) + "" == "0")
                 {
                     helper.SetRedbox(txtTel1);
                 }
@@ -58,82 +60,221 @@ namespace CustomerCare
                 MessageBox.Show("Telephone Number is Exist !", "STOP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
+
+            if (btnAdd.Text == "Add")
+            {
+                string columns = "hcp_name,hcp_owner,address_id,hcp_tel1,hcp_tel2,hcp_email,hcp_fb,hcp_memo";
+                Database.QueryScalar("Insert into tbl_address values(" + cbcommune.SelectedValue + ",'" + txtST.Text + "','');");
+                Database.Insert("tbl_hcp", columns, txtName.Text, txtOwner.Text, Database.GetLastId("tbl_address"), txtTel1.Text, txtTel2.Text, txtEmail.Text, txtFB.Text, txtMemo.Text);
+            }
+            if (btnAdd.Text == "Update")
+            {
+                string data = "[hcp_name] = N'" + txtName.Text + "', [hcp_owner] = N'" + txtOwner.Text + "',  [hcp_tel1] = '" + txtTel1.Text + "', [hcp_tel2] = '" + txtTel2.Text + "', [hcp_email] = '" + txtEmail.Text + "', [hcp_fb] = N'" + txtFB.Text + "', [hcp_memo] = N'" + txtMemo.Text + "'";
+                Database.Update("tbl_hcp", data, " hcp_id=" + id);
+                Database.Update("tbl_address", " sk_id=" + cbcommune.SelectedValue + " ,st_road=" + txtST.Text);
+                btnAdd.Text = "Add";
+            }
+            id = (Database.GetLastId("tbl_hcp") + 1) + "";
+            Clear(this);
+            frmHcp_Load(null, null);
+
         }
 
         private void dgView_DoubleClick(object sender, EventArgs e)
         {
-            if (dgView.SelectedRows.Count > 0)
-                helper.AutoFilltextboxfromDatagridview(dgView.SelectedRows[0], this);
+
         }
 
         private void frmHcp_Load(object sender, EventArgs e)
         {
+            dgView.Rows.Clear();
+            cblocation.DataSource = null;
+            helper.FillGridviewWithoutDataTable("Select top 20 * from viewHcp order by ID desc", dgView);
+            helper.FillComboBox(cblocation, "pc_name", "pc_id", "Select * from tbl_provinces");
+            id = (Database.GetLastId("tbl_hcp") + 1) + "";
+        }
 
+        void Clear(Control main)
+        {
+            foreach (Control ctrl in main.Controls)
+            {
+                if (ctrl is ComboBox)
+                {
+                    try
+                    {
+                        ((ComboBox)ctrl).SelectedIndex = 0;
+                    }
+                    catch (Exception)
+                    { }
+                }
+                else if (ctrl is GroupBox)
+                    Clear(ctrl);
+                else if (ctrl is TextBox)
+                    ctrl.Text = "";
+            }
+        }
+        private void cblocation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbdistrict.DataSource = null;
+            cbcommune.DataSource = null;
+            helper.FillComboBox(cbdistrict, "ks_name", "ks_id", "Select * from tbl_ks where pc_id=" + cblocation.SelectedValue);
+        }
+
+        private void cbdistrict_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbcommune.DataSource = null;
+            helper.FillComboBox(cbcommune, "sk_name", "sk_id", "Select * from tbl_sk where ks_id=" + cbdistrict.SelectedValue);
+        }
+
+        private void dgView_Click(object sender, EventArgs e)
+        {
+            if (dgView.SelectedRows.Count > 0)
+            {
+                helper.AutoFilltextboxfromDatagridview(dgView.SelectedRows[0], this);
+                cblocation.Text = dgView.SelectedRows[0].Cells["Location"].Value + "";
+                cbdistrict.Text = dgView.SelectedRows[0].Cells["District"].Value + "";
+                cbcommune.Text = dgView.SelectedRows[0].Cells["Commune"].Value + "";
+                btnAdd.Text = "Update";
+                id = dgView.SelectedRows[0].Cells["ID"].Value + "";
+            }
+        }
+
+        private void dgView_Scroll(object sender, ScrollEventArgs e)
+        {
+            //if (e.ScrollOrientation != ScrollOrientation.VerticalScroll)
+            //    return;
+            label1.Text = e.OldValue + "";
+            label2.Text = e.NewValue + "";
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text.Trim() == "")
+            {
+
+                DataTable dt = Database.QueryModel("Select top 20 * from viewHcp order by id desc");
+                foreach (DataRow row in dt.Rows)
+                {
+                    List<object> obj = new List<object>();
+                    foreach (DataGridViewColumn col in dgView.Columns)
+                    {
+                        obj.Add(row[col.Name]);
+                    }
+                    dgView.Rows.Add(obj.ToArray());
+                }
+
+            }
+            else
+            {
+
+                DataTable dt = Database.QueryModel("Select * from viewHcp where hcp_name like '%" + txtSearch.Text + "%'");
+                foreach (DataRow row in dt.Rows)
+                {
+                    List<object> obj = new List<object>();
+                    foreach (DataGridViewColumn col in dgView.Columns)
+                    {
+                        obj.Add(row[col.Name]);
+                    }
+                    dgView.Rows.Add(obj.ToArray());
+                }
+
+            }
+        }
+
+        private void panel1_Scroll(object sender, ScrollEventArgs e)
+        {
+            MessageBox.Show("scrool");
+        }
+    }
+}
+
+class helper : Helpers
+{
+    /// <summary>
+    /// note : DatagridviewColumn Name must be match with Database Table ColumnName
+    /// </summary>
+    /// <param name="sql"></param>
+    /// <param name="dgView"></param>
+    public static void FillGridviewWithoutDataTable(string sql, DataGridView dgView)
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            DataTable dt = Database.QueryModel("Select top 20 * from viewHcp order by id desc");
+            foreach (DataRow row in dt.Rows)
+            {
+                List<object> obj = new List<object>();
+                foreach (DataGridViewColumn col in dgView.Columns)
+                {
+                    obj.Add(row[col.Name]);
+                }
+                dgView.Rows.Add(obj.ToArray());
+            }
         }
     }
 
-    class helper : Helpers
-    { 
-       
-        public static bool CheckExist(params Control[] ctrls)
+    public static bool CheckExist(params Control[] ctrls)
+    {
+        bool check = true;
+        foreach (Control ctrl in ctrls)
         {
-            bool check = true;
-            foreach(Control ctrl in ctrls)
-            {
-                if (ctrl.Text.Trim() != "")
-                    continue;
-                SetRedbox(ctrl);
-                check = false;
-            }
+            if (ctrl.Text.Trim() != "")
+                continue;
+            SetRedbox(ctrl);
+            check = false;
+        }
 
-            return check;
-        }
-        public static void SetRedbox(Control ctrl)
+        return check;
+    }
+    public static void SetRedbox(Control ctrl)
+    {
+        Label redlabel = new Label();
+        redlabel.Size = new Size(ctrl.Size.Width + 4, ctrl.Size.Height + 4);
+        redlabel.Location = new Point(ctrl.Location.X - 2, ctrl.Location.Y - 2);
+        redlabel.BackColor = Color.Red;
+        redlabel.Tag = "Clear";
+        ctrl.Parent.Controls.Add(redlabel);
+    }
+    public static void AutoFilltextboxfromDatagridview(DataGridViewRow selectedrow, Control main)
+    {
+        foreach (Control ctrl in main.Controls)
         {
-            Label redlabel = new Label();
-            redlabel.Size = new Size(ctrl.Size.Width + 4, ctrl.Size.Height + 4);
-            redlabel.Location = new Point(ctrl.Location.X - 2, ctrl.Location.Y - 2);
-            redlabel.BackColor = Color.Red;
-            redlabel.Tag = "Clear";
-            ctrl.Parent.Controls.Add(redlabel);
-        }
-        public static void AutoFilltextboxfromDatagridview(DataGridViewRow selectedrow,Control main)
-        {
-            foreach (Control ctrl in main.Controls)
+            if (ctrl is GroupBox || ctrl is Panel)
             {
-                if (ctrl is GroupBox || ctrl is Panel)
-                {
-                    AutoFilltextboxfromDatagridview(selectedrow, ctrl);
-                }
-                try {
-                    ctrl.Text = selectedrow.Cells[ctrl.Tag+""].Value+"";
-                }
-                catch (Exception) { }
+                AutoFilltextboxfromDatagridview(selectedrow, ctrl);
+                    continue;
+            }
+            if (ctrl is ComboBox)
+                continue;
+            try
+            {
+               
+                ctrl.Text = selectedrow.Cells[ctrl.Tag + ""].Value + "";
+            }
+            catch (Exception) { }
+        }
+    }
+    public static void ClearRed(Control main)
+    {
+        foreach (Control ctrl in main.Controls)
+        {
+            if (ctrl is GroupBox || ctrl is Panel)
+            {
+                ClearRed(ctrl);
+            }
+            if (ctrl.Tag == "Clear")
+            {
+                ctrl.Visible = false;
             }
         }
-        public static void ClearRed(Control main)
+        foreach (Control ctrl in main.Controls)
         {
-            foreach(Control ctrl in  main.Controls)
+            if (ctrl is GroupBox || ctrl is Panel)
             {
-                if(ctrl is GroupBox || ctrl is Panel)
-                {
-                    ClearRed(ctrl);
-                }
-                if (ctrl.Tag == "Clear")
-                {
-                    ctrl.Visible = false;
-                }
+                ClearRed(ctrl);
             }
-            foreach (Control ctrl in main.Controls)
+            if (ctrl.Tag == "Clear")
             {
-                if (ctrl is GroupBox || ctrl is Panel)
-                {
-                    ClearRed(ctrl);
-                }
-                if (ctrl.Tag == "Clear")
-                {
-                    main.Controls.Remove(ctrl);
-                }
+                main.Controls.Remove(ctrl);
             }
         }
     }
