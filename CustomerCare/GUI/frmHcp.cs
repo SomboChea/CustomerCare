@@ -20,11 +20,17 @@ namespace CustomerCare
             Database.Server = "localhost";
             Database.DBName = "CustomerCare";
             Database.Open();
-
-
+            panel1.HorizontalScroll.Visible = false;
+            panel1.HorizontalScroll.Enabled = false;
+            panel1.AutoScroll = true;
+            panel1.MouseWheel += Panel1_MouseWheel;
             //dgView.DataSource = Database.GetDataSet("Select * from tbl_mststaff").Tables[0];
         }
 
+        private void Panel1_MouseWheel(object sender, MouseEventArgs e)
+        {
+            panel1_Scroll(sender, new ScrollEventArgs(ScrollEventType.EndScroll, panel1.VerticalScroll.Value));
+        }
 
         public string id { get; set; }
 
@@ -151,8 +157,8 @@ namespace CustomerCare
         {
             //if (e.ScrollOrientation != ScrollOrientation.VerticalScroll)
             //    return;
-            label1.Text = e.OldValue + "";
-            label2.Text = e.NewValue + "";
+           
+       
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -160,40 +166,28 @@ namespace CustomerCare
             dgView.Rows.Clear();
             if (txtSearch.Text.Trim() == "")
             {
-
-                DataTable dt = Database.QueryModel("Select top 20 * from viewHcp order by id desc");
-                foreach (DataRow row in dt.Rows)
-
-                {
-                    List<object> obj = new List<object>();
-                    foreach (DataGridViewColumn col in dgView.Columns)
-                    {
-                        obj.Add(row[col.Name]);
-                    }
-                    dgView.Rows.Add(obj.ToArray());
-                }
+                helper.FillGridviewWithoutDataTable("Select top 20 * from viewHcp order by id desc", dgView);
 
             }
             else
             {
 
-                DataTable dt = Database.QueryModel("Select * from viewHcp where hcpName like '%" + txtSearch.Text + "%'");
-                foreach (DataRow row in dt.Rows)
-                {
-                    List<object> obj = new List<object>();
-                    foreach (DataGridViewColumn col in dgView.Columns)
-                    {
-                        obj.Add(row[col.Name]);
-                    }
-                    dgView.Rows.Add(obj.ToArray());
-                }
+                helper.FillGridviewWithoutDataTable("Select * from viewHcp where hcpName like '%" + txtSearch.Text + "%'",dgView);
 
             }
         }
 
         private void panel1_Scroll(object sender, ScrollEventArgs e)
         {
-            MessageBox.Show("scrool");
+            //label1.Text = e.NewValue + "  " + (panel1.VerticalScroll.Maximum - panel1.VerticalScroll.LargeChange);
+            if (e.NewValue == 0)
+                return;
+            if (e.NewValue >= (panel1.VerticalScroll.Maximum - panel1.VerticalScroll.LargeChange)) 
+            {
+                string sql = "Select * from viewHcp where ID<" + dgView.Rows[dgView.Rows.Count - 1].Cells[0].Value;
+                //txtMemo.Text = sql;
+                helper.FillGridviewWithoutDataTable(sql, dgView);
+            }
         }
     }
 }
@@ -207,19 +201,24 @@ class helper : Helpers
     /// <param name="dgView"></param>
     public static void FillGridviewWithoutDataTable(string sql, DataGridView dgView)
     {
-        for (int i = 0; i < 20; i++)
+        double dgheight = dgView.ColumnHeadersHeight;
+
+
+        DataTable dt = Database.QueryModel(sql);
+        foreach (DataRow row in dt.Rows)
         {
-            DataTable dt = Database.QueryModel("Select top 20 * from viewHcp order by id desc");
-            foreach (DataRow row in dt.Rows)
+
+            List<object> obj = new List<object>();
+            foreach (DataGridViewColumn col in dgView.Columns)
             {
-                List<object> obj = new List<object>();
-                foreach (DataGridViewColumn col in dgView.Columns)
-                {
-                    obj.Add(row[col.Name]);
-                }
-                dgView.Rows.Add(obj.ToArray());
+                obj.Add(row[col.Name]);
             }
+            dgView.Rows.Add(obj.ToArray());
         }
+
+
+        dgheight += dgView.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + 50;
+        dgView.Size = new Size(dgView.Size.Width, int.Parse(Math.Ceiling(dgheight) + ""));
     }
 
     public static bool CheckExist(params Control[] ctrls)
@@ -251,13 +250,13 @@ class helper : Helpers
             if (ctrl is GroupBox || ctrl is Panel)
             {
                 AutoFilltextboxfromDatagridview(selectedrow, ctrl);
-                    continue;
+                continue;
             }
             if (ctrl is ComboBox)
                 continue;
             try
             {
-               
+
                 ctrl.Text = selectedrow.Cells[ctrl.Tag + ""].Value + "";
             }
             catch (Exception) { }

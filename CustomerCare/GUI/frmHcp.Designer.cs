@@ -397,7 +397,10 @@
             // 
             this.dgView.AllowUserToAddRows = false;
             this.dgView.AllowUserToDeleteRows = false;
+            this.dgView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgView.BackgroundColor = System.Drawing.Color.White;
             this.dgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -415,7 +418,7 @@
             this.Facebook,
             this.Memo});
             this.dgView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgView.Location = new System.Drawing.Point(0, 0);
+            this.dgView.Location = new System.Drawing.Point(4, 3);
             this.dgView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgView.MultiSelect = false;
             this.dgView.Name = "dgView";
@@ -423,7 +426,7 @@
             this.dgView.RowTemplate.Height = 24;
             this.dgView.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgView.Size = new System.Drawing.Size(1231, 140);
+            this.dgView.Size = new System.Drawing.Size(1231, 107);
             this.dgView.TabIndex = 28;
             this.dgView.Click += new System.EventHandler(this.dgView_Click);
             // 
@@ -538,11 +541,10 @@
             // 
             // panel1
             // 
-            this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.dgView);
-            this.panel1.Location = new System.Drawing.Point(34, 597);
+            this.panel1.Location = new System.Drawing.Point(34, 608);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1231, 243);
+            this.panel1.Size = new System.Drawing.Size(1231, 129);
             this.panel1.TabIndex = 30;
             this.panel1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panel1_Scroll);
             // 
