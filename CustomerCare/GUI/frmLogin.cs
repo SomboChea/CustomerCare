@@ -17,6 +17,8 @@ namespace CustomerCare
         {
             InitializeComponent();
             txtPassword.txtValue.PasswordChar = '*';
+            txtPassword.txtValue.KeyPress += new KeyPressEventHandler(txtPassword_KeyPress);
+            txtUsername.txtValue.KeyPress += new KeyPressEventHandler(txtUsername_KeyPress);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -57,6 +59,28 @@ namespace CustomerCare
         private void btnSetting_Click(object sender, EventArgs e)
         {
             App.Overlay(new frmDBSetting(), new GUI.Components.Overlay());
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                txtPassword.txtValue.Focus();
+            if(e.KeyChar==27)
+            {
+                txtPassword.txtValue.Text = "";
+                txtUsername.txtValue.Text = "";
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                btnLogin_Click(null, null);
+            if (e.KeyChar == 27)
+            {
+                txtPassword.txtValue.Text = "";
+                txtUsername.txtValue.Text = "";
+            }
         }
     }
 }

@@ -198,6 +198,7 @@
             this.txtPassword.Size = new System.Drawing.Size(343, 44);
             this.txtPassword.TabIndex = 15;
             this.txtPassword.Value = "";
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // txtUsername
             // 
@@ -210,6 +211,7 @@
             this.txtUsername.Size = new System.Drawing.Size(381, 44);
             this.txtUsername.TabIndex = 10;
             this.txtUsername.Value = "";
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // frmLogin
             // 
