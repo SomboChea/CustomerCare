@@ -40,7 +40,7 @@
             this.lbTitle.Font = new System.Drawing.Font("AKbalthom KhmerLer", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.Location = new System.Drawing.Point(12, 9);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(106, 34);
+            this.lbTitle.Size = new System.Drawing.Size(131, 43);
             this.lbTitle.TabIndex = 0;
             this.lbTitle.Text = "Alert Title";
             // 
@@ -84,18 +84,18 @@
             this.txtMsg.BackColor = System.Drawing.SystemColors.Control;
             this.txtMsg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMsg.Font = new System.Drawing.Font("AKbalthom KhmerLer", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMsg.Location = new System.Drawing.Point(12, 64);
+            this.txtMsg.Location = new System.Drawing.Point(20, 64);
             this.txtMsg.Multiline = true;
             this.txtMsg.Name = "txtMsg";
             this.txtMsg.ReadOnly = true;
-            this.txtMsg.Size = new System.Drawing.Size(578, 57);
+            this.txtMsg.Size = new System.Drawing.Size(570, 57);
             this.txtMsg.TabIndex = 4;
             this.txtMsg.Text = "This is a message string!";
             this.txtMsg.TextChanged += new System.EventHandler(this.txtMsg_TextChanged);
             // 
             // Alert
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;

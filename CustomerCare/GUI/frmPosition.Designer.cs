@@ -55,10 +55,10 @@
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.ForeColor = System.Drawing.Color.White;
-            this.lbTitle.Location = new System.Drawing.Point(210, 18);
+            this.lbTitle.Location = new System.Drawing.Point(165, 9);
             this.lbTitle.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(383, 44);
+            this.lbTitle.Size = new System.Drawing.Size(485, 56);
             this.lbTitle.TabIndex = 1;
             this.lbTitle.Text = "Position and Options";
             // 
@@ -69,7 +69,7 @@
             this.label1.Location = new System.Drawing.Point(13, 118);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 21);
+            this.label1.Size = new System.Drawing.Size(153, 23);
             this.label1.TabIndex = 4;
             this.label1.Text = "Position Name:";
             // 
@@ -83,7 +83,7 @@
             this.checkedListOptions.FormattingEnabled = true;
             this.checkedListOptions.Location = new System.Drawing.Point(318, 194);
             this.checkedListOptions.Name = "checkedListOptions";
-            this.checkedListOptions.Size = new System.Drawing.Size(470, 418);
+            this.checkedListOptions.Size = new System.Drawing.Size(470, 405);
             this.checkedListOptions.TabIndex = 5;
             this.checkedListOptions.SelectedIndexChanged += new System.EventHandler(this.checkedListOptions_SelectedIndexChanged);
             // 
@@ -106,10 +106,10 @@
             this.listRoles.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listRoles.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.listRoles.FormattingEnabled = true;
-            this.listRoles.ItemHeight = 21;
+            this.listRoles.ItemHeight = 23;
             this.listRoles.Location = new System.Drawing.Point(12, 194);
             this.listRoles.Name = "listRoles";
-            this.listRoles.Size = new System.Drawing.Size(300, 420);
+            this.listRoles.Size = new System.Drawing.Size(300, 391);
             this.listRoles.TabIndex = 7;
             this.listRoles.SelectedIndexChanged += new System.EventHandler(this.listRoles_SelectedIndexChanged);
             // 
@@ -118,16 +118,16 @@
             this.txtPosition.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.txtPosition.BackColor = System.Drawing.Color.White;
             this.txtPosition.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosition.Location = new System.Drawing.Point(146, 105);
+            this.txtPosition.Location = new System.Drawing.Point(175, 105);
             this.txtPosition.Margin = new System.Windows.Forms.Padding(5, 9, 5, 9);
             this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(447, 48);
+            this.txtPosition.Size = new System.Drawing.Size(418, 48);
             this.txtPosition.TabIndex = 3;
             this.txtPosition.Value = "";
             // 
             // frmPosition
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 632);
             this.Controls.Add(this.listRoles);
@@ -140,6 +140,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPosition";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPosition";
             this.Load += new System.EventHandler(this.frmPosition_Load);
             this.panHead.ResumeLayout(false);
