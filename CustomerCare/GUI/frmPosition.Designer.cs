@@ -1,4 +1,4 @@
-﻿namespace CustomerCare.GUI
+﻿namespace CustomerCare
 {
     partial class frmPosition
     {
@@ -154,7 +154,7 @@
 
         private System.Windows.Forms.Panel panHead;
         private System.Windows.Forms.Label lbTitle;
-        private Components.TextBox txtPosition;
+        private GUI.Components.TextBox txtPosition;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox checkedListOptions;
         private System.Windows.Forms.Button btnAdd;

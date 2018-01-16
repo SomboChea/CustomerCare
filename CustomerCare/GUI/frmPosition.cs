@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
-namespace CustomerCare.GUI
+namespace CustomerCare
 {
     public partial class frmPosition : Form
     {
