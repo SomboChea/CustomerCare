@@ -31,8 +31,6 @@
             this.panHead = new System.Windows.Forms.Panel();
             this.lbTitle = new System.Windows.Forms.Label();
             this.panContent = new System.Windows.Forms.Panel();
-            this.txtPassword = new CustomerCare.GUI.Components.TextBox();
-            this.txtUsername = new CustomerCare.GUI.Components.TextBox();
             this.btnShowHide = new System.Windows.Forms.Button();
             this.chkRemember = new System.Windows.Forms.CheckBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -40,6 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
+            this.txtPassword = new CustomerCare.GUI.Components.TextBox();
+            this.txtUsername = new CustomerCare.GUI.Components.TextBox();
             this.panHead.SuspendLayout();
             this.panContent.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +63,7 @@
             this.lbTitle.Location = new System.Drawing.Point(403, 18);
             this.lbTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(369, 56);
+            this.lbTitle.Size = new System.Drawing.Size(292, 44);
             this.lbTitle.TabIndex = 1;
             this.lbTitle.Text = "Customer Care";
             // 
@@ -81,30 +81,6 @@
             this.panContent.Name = "panContent";
             this.panContent.Size = new System.Drawing.Size(761, 328);
             this.panContent.TabIndex = 9;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.txtPassword.BackColor = System.Drawing.Color.White;
-            this.txtPassword.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(260, 128);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(326, 44);
-            this.txtPassword.TabIndex = 15;
-            this.txtPassword.Value = "";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.txtUsername.BackColor = System.Drawing.Color.White;
-            this.txtUsername.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(260, 56);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(364, 44);
-            this.txtUsername.TabIndex = 10;
-            this.txtUsername.Value = "";
             // 
             // btnShowHide
             // 
@@ -131,9 +107,9 @@
             this.chkRemember.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkRemember.FlatAppearance.BorderSize = 0;
             this.chkRemember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkRemember.Location = new System.Drawing.Point(260, 196);
+            this.chkRemember.Location = new System.Drawing.Point(243, 196);
             this.chkRemember.Name = "chkRemember";
-            this.chkRemember.Size = new System.Drawing.Size(193, 27);
+            this.chkRemember.Size = new System.Drawing.Size(157, 25);
             this.chkRemember.TabIndex = 13;
             this.chkRemember.Text = "Remember Login";
             this.chkRemember.UseVisualStyleBackColor = true;
@@ -149,7 +125,7 @@
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(500, 242);
+            this.btnLogin.Location = new System.Drawing.Point(496, 240);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(124, 39);
             this.btnLogin.TabIndex = 12;
@@ -161,9 +137,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(65, 134);
+            this.label2.Location = new System.Drawing.Point(88, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 37);
+            this.label2.Size = new System.Drawing.Size(150, 30);
             this.label2.TabIndex = 10;
             this.label2.Text = "Password  : ";
             // 
@@ -171,11 +147,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(65, 56);
+            this.label1.Location = new System.Drawing.Point(88, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 37);
+            this.label1.Size = new System.Drawing.Size(147, 30);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Username : ";
+            this.label1.Text = "Username: ";
             // 
             // btnExit
             // 
@@ -211,9 +187,35 @@
             this.btnSetting.UseVisualStyleBackColor = false;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
+            // txtPassword
+            // 
+            this.txtPassword.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.txtPassword.BackColor = System.Drawing.Color.White;
+            this.txtPassword.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(243, 128);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(343, 44);
+            this.txtPassword.TabIndex = 15;
+            this.txtPassword.Value = "";
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.txtUsername.BackColor = System.Drawing.Color.White;
+            this.txtUsername.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(243, 50);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(381, 44);
+            this.txtUsername.TabIndex = 10;
+            this.txtUsername.Value = "";
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
+            // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 705);
             this.Controls.Add(this.btnSetting);

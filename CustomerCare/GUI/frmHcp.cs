@@ -24,6 +24,7 @@ namespace CustomerCare
             panel1.HorizontalScroll.Enabled = false;
             panel1.AutoScroll = true;
             panel1.MouseWheel += Panel1_MouseWheel;
+            addevent(this);
             //dgView.DataSource = Database.GetDataSet("Select * from tbl_mststaff").Tables[0];
         }
 
@@ -37,15 +38,14 @@ namespace CustomerCare
         private void btnAdd_Click(object sender, EventArgs e)
         {
             {
-       
-                string[] hcpIdentity = { txtName.Text, txtOwner.Text };
-                string[] address = { cblocation.Text, cbdistrict.Text, cbcommune.Text, txtST.Text };
-                string[] tels = { txtTel1.Text, txtTel2.Text };
-                string[] econtact = { txtEmail.Text, txtFB.Text };
-                string memo = txtMemo.Text;
-                MessageBox.Show(txtName.Parent.Text);
+                //string[] hcpIdentity = { txtName.Text, txtOwner.Text };
+                //string[] address = { cblocation.Text, cbdistrict.Text, cbcommune.Text, txtST.Text };
+                //string[] tels = { txtTel1.Text, txtTel2.Text };
+                //string[] econtact = { txtEmail.Text, txtFB.Text };
+                //string memo = txtMemo.Text;
+                //MessageBox.Show(txtName.Parent.Text);
 
-                dgView.Rows.Add(id, hcpIdentity[0], hcpIdentity[1], address[0], address[1], address[2], address[3], tels[0], tels[1], econtact[0], econtact[1], memo);
+                //dgView.Rows.Add(id, hcpIdentity[0], hcpIdentity[1], address[0], address[1], address[2], address[3], tels[0], tels[1], econtact[0], econtact[1], memo);
             }
             helper.ClearRed(this);
             if (!helper.CheckExist(txtName, txtST, txtTel1, cbcommune, cbdistrict, cblocation))
@@ -122,8 +122,21 @@ namespace CustomerCare
                     Clear(ctrl);
                 else if (ctrl is TextBox)
                     ctrl.Text = "";
+        }
+
+        void addevent(Control main)
+        {
+            foreach (Control ctrl in main.Controls)
+            {
+                if (ctrl is GroupBox || ctrl is Panel)
+                {
+                    addevent(ctrl);
+                    continue;
+                }
+                ctrl.KeyPress += new KeyPressEventHandler(frmHcp_KeyPress);
             }
-        
+        }
+    
 
         private void cblocation_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -142,15 +155,7 @@ namespace CustomerCare
 
         private void dgView_Click(object sender, EventArgs e)
         {
-            if (dgView.SelectedRows.Count > 0)
-            {
-                helper.AutoFilltextboxfromDatagridview(dgView.SelectedRows[0], this);
-                cblocation.Text = dgView.SelectedRows[0].Cells["Location"].Value + "";
-                cbdistrict.Text = dgView.SelectedRows[0].Cells["District"].Value + "";
-                cbcommune.Text = dgView.SelectedRows[0].Cells["Commune"].Value + "";
-                btnAdd.Text = "Update";
-                id = dgView.SelectedRows[0].Cells["ID"].Value + "";
-            }
+           
         }
 
         private void dgView_Scroll(object sender, ScrollEventArgs e)
@@ -180,7 +185,7 @@ namespace CustomerCare
         private void panel1_Scroll(object sender, ScrollEventArgs e)
         {
             
-            label1.Text = panel1.VerticalScroll.LargeChange+"  "+e.NewValue + "  " + (panel1.VerticalScroll.Maximum - panel1.VerticalScroll.LargeChange);
+            //label1.Text = panel1.VerticalScroll.LargeChange+"  "+e.NewValue + "  " + (panel1.VerticalScroll.Maximum - panel1.VerticalScroll.LargeChange);
             if (e.NewValue == 0 || txtSearch.Text.Trim()!="")
                 return;
             if (e.NewValue >= (panel1.VerticalScroll.Maximum - panel1.VerticalScroll.LargeChange))
@@ -194,6 +199,28 @@ namespace CustomerCare
 
             }
             panel1.Cursor = Cursors.Default;
+        }
+
+        private void dgView_DoubleClick_1(object sender, EventArgs e)
+        {
+            if (dgView.SelectedRows.Count > 0)
+            {
+                helper.AutoFilltextboxfromDatagridview(dgView.SelectedRows[0], this);
+                cblocation.Text = dgView.SelectedRows[0].Cells["Location"].Value + "";
+                cbdistrict.Text = dgView.SelectedRows[0].Cells["District"].Value + "";
+                cbcommune.Text = dgView.SelectedRows[0].Cells["Commune"].Value + "";
+                btnAdd.Text = "Update";
+                id = dgView.SelectedRows[0].Cells["ID"].Value + "";
+            }
+        }
+
+        private void frmHcp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //MessageBox.Show("dsdsd");
+           if(e.KeyChar==27)
+            {
+                Clear(this);
+            }
         }
     }
 }
