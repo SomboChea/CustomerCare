@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -166,6 +167,17 @@ namespace SMLOGX.Core
             {
                 DataSource = val
             };
+        }
+        public static void FillDatagridviewColumn(DataGridView dg, string sql)
+        {
+            DataTable dt = Database.QueryModel(sql);
+            foreach (DataColumn col in dt.Columns)
+            {
+                DataGridViewColumn dgcol = new DataGridViewColumn(new DataGridViewTextBoxCell());
+                dgcol.Name = col.Caption;
+                dgcol.HeaderText = col.Caption;
+                dg.Columns.Add(dgcol);
+            }
         }
     }
 
@@ -466,4 +478,5 @@ namespace SMLOGX.Core
             return data;
         }
     }
+   
 }

@@ -117,20 +117,12 @@ namespace CustomerCare
             }
             panel1.Cursor = Cursors.Default;
         }
-    }
 
-    class function:helper
-    {
-        public static void FillDatagridviewColumn(DataGridView dg,string sql)
+        private class function : Helpers
         {
-            DataTable dt = Database.QueryModel(sql);
-            foreach(DataColumn col in dt.Columns)
-            {
-                DataGridViewColumn dgcol = new DataGridViewColumn(new DataGridViewTextBoxCell());
-                dgcol.Name = col.Caption;
-                dgcol.HeaderText = col.Caption;
-                dg.Columns.Add(dgcol);
-            }
+
         }
     }
+
+    
 }

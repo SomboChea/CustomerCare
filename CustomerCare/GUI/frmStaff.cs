@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SMLOGX.Core;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace CustomerCare
         public frmStaff()
         {
             InitializeComponent();
+
+            Database.Server = "localhost";
+            Database.DBName = "CustomerCare";
+            Database.Open();
+
+          
         }
     }
 }
