@@ -16,6 +16,24 @@ namespace SMLOGX.Core
     /// </summary>
     public class Helpers
     {
+        public static void Clear(Control main)
+        {
+            foreach (Control ctrl in main.Controls)
+                if (ctrl is ComboBox)
+                {
+                    try
+                    {
+                        ((ComboBox)ctrl).SelectedIndex = 0;
+                    }
+                    catch (Exception)
+                    { }
+                }
+                else if (ctrl is GroupBox || ctrl is Panel || ctrl is UserControl)
+                    Clear(ctrl);
+                else if (ctrl is TextBox)
+                    ctrl.Text = "";
+        }
+
         /// <summary>
         /// This is A function Use to Upload Photo into Specific Directory
         /// </summary>

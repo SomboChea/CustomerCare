@@ -43,9 +43,9 @@
             this.panHead.SuspendLayout();
             this.panContent.SuspendLayout();
             this.SuspendLayout();
-            //
+            // 
             // panHead
-            //
+            // 
             this.panHead.BackColor = System.Drawing.Color.DodgerBlue;
             this.panHead.Controls.Add(this.lbTitle);
             this.panHead.Dock = System.Windows.Forms.DockStyle.Top;
@@ -53,22 +53,22 @@
             this.panHead.Name = "panHead";
             this.panHead.Size = new System.Drawing.Size(1095, 80);
             this.panHead.TabIndex = 0;
-            //
+            // 
             // lbTitle
-            //
+            // 
             this.lbTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.ForeColor = System.Drawing.Color.White;
-            this.lbTitle.Location = new System.Drawing.Point(403, 18);
+            this.lbTitle.Location = new System.Drawing.Point(364, 9);
             this.lbTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(369, 56);
             this.lbTitle.TabIndex = 1;
             this.lbTitle.Text = "Customer Care";
-            //
+            // 
             // panContent
-            //
+            // 
             this.panContent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panContent.Controls.Add(this.txtPassword);
             this.panContent.Controls.Add(this.txtUsername);
@@ -81,33 +81,33 @@
             this.panContent.Name = "panContent";
             this.panContent.Size = new System.Drawing.Size(761, 328);
             this.panContent.TabIndex = 9;
-            //
+            // 
             // txtPassword
-            //
+            // 
             this.txtPassword.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(260, 128);
+            this.txtPassword.Location = new System.Drawing.Point(289, 134);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(326, 44);
+            this.txtPassword.Size = new System.Drawing.Size(343, 44);
             this.txtPassword.TabIndex = 15;
             this.txtPassword.Value = "";
-            //
+            // 
             // txtUsername
-            //
+            // 
             this.txtUsername.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.txtUsername.BackColor = System.Drawing.Color.White;
             this.txtUsername.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(260, 56);
+            this.txtUsername.Location = new System.Drawing.Point(289, 56);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(364, 44);
+            this.txtUsername.Size = new System.Drawing.Size(381, 44);
             this.txtUsername.TabIndex = 10;
             this.txtUsername.Value = "";
-            //
+            // 
             // btnShowHide
-            //
+            // 
             this.btnShowHide.BackColor = System.Drawing.Color.White;
             this.btnShowHide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowHide.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
@@ -116,30 +116,30 @@
             this.btnShowHide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnShowHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnShowHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowHide.Location = new System.Drawing.Point(593, 129);
+            this.btnShowHide.Location = new System.Drawing.Point(639, 136);
             this.btnShowHide.Name = "btnShowHide";
             this.btnShowHide.Size = new System.Drawing.Size(31, 43);
             this.btnShowHide.TabIndex = 14;
             this.btnShowHide.Text = "V";
             this.btnShowHide.UseVisualStyleBackColor = false;
             this.btnShowHide.Click += new System.EventHandler(this.btnShowHide_Click);
-            //
+            // 
             // chkRemember
-            //
+            // 
             this.chkRemember.AutoSize = true;
             this.chkRemember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.chkRemember.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkRemember.FlatAppearance.BorderSize = 0;
             this.chkRemember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkRemember.Location = new System.Drawing.Point(260, 196);
+            this.chkRemember.Location = new System.Drawing.Point(289, 200);
             this.chkRemember.Name = "chkRemember";
             this.chkRemember.Size = new System.Drawing.Size(193, 27);
             this.chkRemember.TabIndex = 13;
             this.chkRemember.Text = "Remember Login";
             this.chkRemember.UseVisualStyleBackColor = true;
-            //
+            // 
             // btnLogin
-            //
+            // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
@@ -149,16 +149,16 @@
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(500, 242);
+            this.btnLogin.Location = new System.Drawing.Point(546, 243);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(124, 39);
             this.btnLogin.TabIndex = 12;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            //
+            // 
             // label2
-            //
+            // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(65, 134);
@@ -166,9 +166,9 @@
             this.label2.Size = new System.Drawing.Size(185, 37);
             this.label2.TabIndex = 10;
             this.label2.Text = "Password  : ";
-            //
+            // 
             // label1
-            //
+            // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(65, 56);
@@ -176,9 +176,9 @@
             this.label1.Size = new System.Drawing.Size(186, 37);
             this.label1.TabIndex = 8;
             this.label1.Text = "Username : ";
-            //
+            // 
             // btnExit
-            //
+            // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.BackgroundImage = global::CustomerCare.Properties.Resources.shutdown;
@@ -193,9 +193,9 @@
             this.btnExit.TabIndex = 8;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            //
+            // 
             // btnSetting
-            //
+            // 
             this.btnSetting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSetting.BackColor = System.Drawing.Color.Transparent;
             this.btnSetting.BackgroundImage = global::CustomerCare.Properties.Resources.Settings_icon;
@@ -210,33 +210,9 @@
             this.btnSetting.TabIndex = 10;
             this.btnSetting.UseVisualStyleBackColor = false;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
-            //
-            // txtPassword
-            //
-            this.txtPassword.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.txtPassword.BackColor = System.Drawing.Color.White;
-            this.txtPassword.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(243, 128);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(343, 44);
-            this.txtPassword.TabIndex = 15;
-            this.txtPassword.Value = "";
-            //
-            // txtUsername
-            //
-            this.txtUsername.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.txtUsername.BackColor = System.Drawing.Color.White;
-            this.txtUsername.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(243, 50);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(381, 44);
-            this.txtUsername.TabIndex = 10;
-            this.txtUsername.Value = "";
-            //
+            // 
             // frmLogin
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 705);
@@ -255,6 +231,7 @@
             this.panContent.ResumeLayout(false);
             this.panContent.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         #endregion Windows Form Designer generated code

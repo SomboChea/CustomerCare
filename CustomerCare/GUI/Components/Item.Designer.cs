@@ -39,9 +39,9 @@
             // 
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(105, 43);
+            this.lbTitle.Location = new System.Drawing.Point(105, 39);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(92, 32);
+            this.lbTitle.Size = new System.Drawing.Size(116, 40);
             this.lbTitle.TabIndex = 1;
             this.lbTitle.Text = "Home";
             this.lbTitle.Click += new System.EventHandler(this.Item_Click);

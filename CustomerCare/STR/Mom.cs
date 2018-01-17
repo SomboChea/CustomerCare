@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomerCare
 {
-    public class Mum : People
+    public class Mom : People
     {
         public string Rec_Date { get; set; }
         public string Tel { get; set; }
