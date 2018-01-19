@@ -25,12 +25,13 @@ namespace CustomerCare
             panel1.HorizontalScroll.Visible = false;
             panel1.AutoScroll = true;
 
-            function.Upload_Photo("", function.Path_Prefix + "Staff\\");
+            //bool t=System.IO.File.Exists(function.Path_Prefix+"Staff\\computer1.png");
+
 
             function.FillDatagridviewColumn(dataGridView1, "Select top 1 * from viewStaff");
             dataGridView1.Columns["Photo"].Width = 0;
             StaffID = int.Parse(Database.GetLastId("tbl_mststaff") + "") + 1;
-            //MessageBox.Show(StaffID + "");
+            //MessageBox.Show(t + "");
             panel1.MouseWheel += Panel1_MouseWheel;
         }
 
@@ -59,7 +60,7 @@ namespace CustomerCare
         public object StaffID { get; set; }
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-
+           // MessageBox.Show(dataGridView1.CurrentRow.Cells["Photo"].Value + "");
             function.AutoFilltextboxfromDatagridview(dataGridView1.CurrentRow, this);
             dthiredate.Value = DateTime.Parse(dataGridView1.CurrentRow.Cells["Hire Date"].Value + "");
 
@@ -101,7 +102,9 @@ namespace CustomerCare
             }
             // 
             bool Execute=true;
-            string imgname = function.Upload_Photo(imgPath,function.Path_Prefix+"Staff\\");
+            
+                string imgname = imgPath==""?"": function.Upload_Photo(imgPath, function.Path_Prefix + "Staff\\");
+            
             if (btnadd.Text == "Add")
             {
                 string columns = "[name_en], [name_kh], [pos_id], [emp_date], [tel_per1], [tel_per2], [tel_com], [email], [photo], [emp_note], [other]";
