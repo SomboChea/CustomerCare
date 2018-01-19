@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dthiredate = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtother = new System.Windows.Forms.TextBox();
@@ -43,6 +45,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnbrowse = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbPos = new System.Windows.Forms.ComboBox();
             this.txtKhName = new System.Windows.Forms.TextBox();
@@ -66,6 +69,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.dthiredate);
+            this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.txtother);
@@ -74,10 +79,27 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(656, 230);
+            this.groupBox4.Size = new System.Drawing.Size(656, 244);
             this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Other Information";
+            // 
+            // dthiredate
+            // 
+            this.dthiredate.Location = new System.Drawing.Point(178, 213);
+            this.dthiredate.Name = "dthiredate";
+            this.dthiredate.Size = new System.Drawing.Size(283, 24);
+            this.dthiredate.TabIndex = 24;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(22, 218);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 19);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Hire Date";
             // 
             // label4
             // 
@@ -107,6 +129,7 @@
             this.txtother.Name = "txtother";
             this.txtother.Size = new System.Drawing.Size(457, 45);
             this.txtother.TabIndex = 23;
+            this.txtother.Tag = "Other";
             // 
             // txtNote
             // 
@@ -116,6 +139,7 @@
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(457, 80);
             this.txtNote.TabIndex = 21;
+            this.txtNote.Tag = "Note";
             // 
             // groupBox3
             // 
@@ -153,6 +177,7 @@
             this.txttelcom.Name = "txttelcom";
             this.txttelcom.Size = new System.Drawing.Size(346, 24);
             this.txttelcom.TabIndex = 21;
+            this.txttelcom.Tag = "Tel Com";
             // 
             // label7
             // 
@@ -171,6 +196,7 @@
             this.txttel1.Name = "txttel1";
             this.txttel1.Size = new System.Drawing.Size(346, 24);
             this.txttel1.TabIndex = 13;
+            this.txttel1.Tag = "Tel 1";
             // 
             // label8
             // 
@@ -189,6 +215,7 @@
             this.txttel2.Name = "txttel2";
             this.txttel2.Size = new System.Drawing.Size(346, 24);
             this.txttel2.TabIndex = 15;
+            this.txttel2.Tag = "Tel 2";
             // 
             // label10
             // 
@@ -207,9 +234,11 @@
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(346, 24);
             this.txtemail.TabIndex = 17;
+            this.txtemail.Tag = "Email";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnbrowse);
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.cbPos);
             this.groupBox2.Controls.Add(this.txtKhName);
@@ -226,10 +255,21 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Information";
             // 
+            // btnbrowse
+            // 
+            this.btnbrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbrowse.Location = new System.Drawing.Point(534, 167);
+            this.btnbrowse.Name = "btnbrowse";
+            this.btnbrowse.Size = new System.Drawing.Size(101, 36);
+            this.btnbrowse.TabIndex = 8;
+            this.btnbrowse.Text = "Browse ...";
+            this.btnbrowse.UseVisualStyleBackColor = true;
+            this.btnbrowse.Click += new System.EventHandler(this.btnbrowse_Click);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CustomerCare.Properties.Resources.setec_logo_color1;
-            this.pictureBox1.Location = new System.Drawing.Point(528, 38);
+            this.pictureBox1.Image = global::CustomerCare.Properties.Resources.employee;
+            this.pictureBox1.Location = new System.Drawing.Point(528, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(107, 133);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -243,6 +283,7 @@
             this.cbPos.Name = "cbPos";
             this.cbPos.Size = new System.Drawing.Size(301, 27);
             this.cbPos.TabIndex = 6;
+            this.cbPos.Tag = "Position";
             // 
             // txtKhName
             // 
@@ -251,6 +292,7 @@
             this.txtKhName.Name = "txtKhName";
             this.txtKhName.Size = new System.Drawing.Size(301, 24);
             this.txtKhName.TabIndex = 5;
+            this.txtKhName.Tag = "Name in Khmer";
             // 
             // label11
             // 
@@ -269,6 +311,7 @@
             this.txtEnName.Name = "txtEnName";
             this.txtEnName.Size = new System.Drawing.Size(301, 24);
             this.txtEnName.TabIndex = 1;
+            this.txtEnName.Tag = "Name in English";
             // 
             // label1
             // 
@@ -313,9 +356,12 @@
             this.btnadd.TabIndex = 30;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = false;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -323,10 +369,14 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 9);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1190, 166);
             this.dataGridView1.TabIndex = 35;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // txtsearch
             // 
@@ -334,6 +384,7 @@
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(275, 24);
             this.txtsearch.TabIndex = 36;
+            this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             // 
             // label5
             // 
@@ -355,6 +406,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1210, 198);
             this.panel1.TabIndex = 38;
+            this.panel1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panel1_Scroll);
             // 
             // frmStaff
             // 
@@ -374,6 +426,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmStaff";
             this.Text = "STAFF FORM";
+            this.Load += new System.EventHandler(this.frmStaff_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -418,5 +471,8 @@
         private System.Windows.Forms.TextBox txtsearch;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DateTimePicker dthiredate;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnbrowse;
     }
 }

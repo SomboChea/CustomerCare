@@ -222,101 +222,99 @@ namespace CustomerCare
                 Clear(this);
             }
         }
-    }
-
-
-    public class helper : Helpers
-    {
-        /// <summary>
-        /// note : DatagridviewColumn Name must be match with Database Table ColumnName
-        /// </summary>
-        /// <param name="sql"></param>
-        /// <param name="dgView"></param>
-        public static void FillGridviewWithoutDataTable(string sql, DataGridView dgView)
+        public class helper : Helpers
         {
-            double dgheight = dgView.ColumnHeadersHeight;
-
-
-            DataTable dt = Database.QueryModel(sql);
-            foreach (DataRow row in dt.Rows)
+            /// <summary>
+            /// note : DatagridviewColumn Name must be match with Database Table ColumnName
+            /// </summary>
+            /// <param name="sql"></param>
+            /// <param name="dgView"></param>
+            public static void FillGridviewWithoutDataTable(string sql, DataGridView dgView)
             {
+                double dgheight = dgView.ColumnHeadersHeight;
 
-                List<object> obj = new List<object>();
-                foreach (DataGridViewColumn col in dgView.Columns)
+
+                DataTable dt = Database.QueryModel(sql);
+                foreach (DataRow row in dt.Rows)
                 {
-                    obj.Add(row[col.Name]);
+
+                    List<object> obj = new List<object>();
+                    foreach (DataGridViewColumn col in dgView.Columns)
+                    {
+                        obj.Add(row[col.Name]);
+                    }
+                    dgView.Rows.Add(obj.ToArray());
                 }
-                dgView.Rows.Add(obj.ToArray());
+
+
+                dgheight += dgView.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + 30;
+                dgView.Size = new Size(dgView.Size.Width, int.Parse(Math.Ceiling(dgheight) + ""));
             }
 
-
-            dgheight += dgView.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + 30;
-            dgView.Size = new Size(dgView.Size.Width, int.Parse(Math.Ceiling(dgheight) + ""));
-        }
-
-        public static bool CheckExist(params Control[] ctrls)
-        {
-            bool check = true;
-            foreach (Control ctrl in ctrls)
+            public static bool CheckExist(params Control[] ctrls)
             {
-                if (ctrl.Text.Trim() != "")
-                    continue;
-                SetRedbox(ctrl);
-                check = false;
+                bool check = true;
+                foreach (Control ctrl in ctrls)
+                {
+                    if (ctrl.Text.Trim() != "")
+                        continue;
+                    SetRedbox(ctrl);
+                    check = false;
+                }
+
+                return check;
             }
-
-            return check;
-        }
-        public static void SetRedbox(Control ctrl)
-        {
-            Label redlabel = new Label();
-            redlabel.Size = new Size(ctrl.Size.Width + 4, ctrl.Size.Height + 4);
-            redlabel.Location = new Point(ctrl.Location.X - 2, ctrl.Location.Y - 2);
-            redlabel.BackColor = Color.Red;
-            redlabel.Tag = "Clear";
-            ctrl.Parent.Controls.Add(redlabel);
-        }
-        public static void AutoFilltextboxfromDatagridview(DataGridViewRow selectedrow, Control main)
-        {
-            foreach (Control ctrl in main.Controls)
+            public static void SetRedbox(Control ctrl)
             {
-                if (ctrl is GroupBox || ctrl is Panel)
-                {
-                    AutoFilltextboxfromDatagridview(selectedrow, ctrl);
-                    continue;
-                }
-                if (ctrl is ComboBox)
-                    continue;
-                try
-                {
-
-                    ctrl.Text = selectedrow.Cells[ctrl.Tag + ""].Value + "";
-                }
-                catch (Exception) { }
+                Label redlabel = new Label();
+                redlabel.Size = new Size(ctrl.Size.Width + 4, ctrl.Size.Height + 4);
+                redlabel.Location = new Point(ctrl.Location.X - 2, ctrl.Location.Y - 2);
+                redlabel.BackColor = Color.Red;
+                redlabel.Tag = "Clear";
+                ctrl.Parent.Controls.Add(redlabel);
             }
-        }
-        public static void ClearRed(Control main)
-        {
-            foreach (Control ctrl in main.Controls)
+            public static void AutoFilltextboxfromDatagridview(DataGridViewRow selectedrow, Control main)
             {
-                if (ctrl is GroupBox || ctrl is Panel)
+                foreach (Control ctrl in main.Controls)
                 {
-                    ClearRed(ctrl);
-                }
-                if (ctrl.Tag == "Clear")
-                {
-                    ctrl.Visible = false;
+                    if (ctrl is GroupBox || ctrl is Panel)
+                    {
+                        AutoFilltextboxfromDatagridview(selectedrow, ctrl);
+                        continue;
+                    }
+                    if (ctrl is ComboBox)
+                        continue;
+                    try
+                    {
+
+                        ctrl.Text = selectedrow.Cells[ctrl.Tag + ""].Value + "";
+                    }
+                    catch (Exception) { }
                 }
             }
-            foreach (Control ctrl in main.Controls)
+            public static void ClearRed(Control main)
             {
-                if (ctrl is GroupBox || ctrl is Panel)
+                foreach (Control ctrl in main.Controls)
                 {
-                    ClearRed(ctrl);
+                    if (ctrl is GroupBox || ctrl is Panel)
+                    {
+                        ClearRed(ctrl);
+                    }
+                    if (ctrl.Tag == "Clear")
+                    {
+                        ctrl.Visible = false;
+                    }
                 }
-                if (ctrl.Tag == "Clear")
+                foreach (Control ctrl in main.Controls)
                 {
-                    main.Controls.Remove(ctrl);
+                    if (ctrl is GroupBox || ctrl is Panel)
+                    {
+                        ClearRed(ctrl);
+                    }
+                    if (ctrl.Tag == "Clear")
+                    {
+                        main.Controls.Remove(ctrl);
+                    }
                 }
             }
         }

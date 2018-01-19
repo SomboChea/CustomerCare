@@ -227,8 +227,9 @@ namespace SMLOGX.Core
                 {
                     int count = data.Length > 1 ? data.Length : MString.explode(data[0] + "", ',').Length;
                     if (count != MString.explode(columns, ',').Length)
+                    {
                         return false;
-
+                    }
                     string final_data = data.Length > 1 ? MString.implode(",", "'", data) : MString.implode(",", "'", MString.explode(data[0] + "", ','));
 
                     cmd.CommandText = "INSERT INTO " + table + "(" + columns + ") VALUES(" + final_data + ");";
@@ -236,6 +237,48 @@ namespace SMLOGX.Core
                     _hasExec = cmd.ExecuteNonQuery();
                     cmd.Dispose();
                    
+
+                    return HasExec();
+                }
+                catch (Exception ex)
+                {
+                    Log.Write(ex.Message, "Database.Insert");
+                }
+            }
+
+            return false;
+        }
+
+        // My Add
+        public static bool Update(string table,string WhereClause, string columns, params object[] data)
+        {
+            if (_hasOpen)
+            {
+                try
+                {
+                    int count = data.Length > 1 ? data.Length : MString.explode(data[0] + "", ',').Length;
+                    if (count != MString.explode(columns, ',').Length)
+                        return false;
+
+                    //string final_data = data.Length > 1 ? MString.implode(",", "'", data) : MString.implode(",", "'", MString.explode(data[0] + "", ','));
+                    object[] values = data.Length > 1 ? data : data[0].ToString().Split(',');
+                    string[] column = columns.Split(',');
+                   
+                    List<String> datas = new List<string>();
+                    for(int i=0;i<column.Length;i++)
+                    {
+                        string temp =column[i]+"='"+values[i]+"'";
+                        datas.Add(temp);
+                    }
+
+                    //cmd.CommandText = "INSERT INTO " + table + "(" + columns + ") VALUES(" + final_data + ");";
+                    cmd.CommandText = "Update "+table+" set "+String.Join(",",datas)+" "+WhereClause;
+                    // System.Windows.Forms.MessageBox.Show(cmd.CommandText);
+                    //System.Windows.Forms.MessageBox.Show(cmd.CommandText + "\n" + final_data);
+                    //return false;
+                    _hasExec = cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+
 
                     return HasExec();
                 }
@@ -324,6 +367,7 @@ namespace SMLOGX.Core
             {
                 try
                 {
+
                     DataTable dt = new DataTable();
                     adapter = new SqlDataAdapter(sql, _setCon);
                     adapter.Fill(dt);
@@ -332,7 +376,7 @@ namespace SMLOGX.Core
                 }
                 catch (Exception ex)
                 {
-                    Log.Write(ex.Message, "Database.QueryModel");
+                    Log.Write(ex.Message, "Database.QueryModel\n      "+sql);
                 }
             }
             return null;
