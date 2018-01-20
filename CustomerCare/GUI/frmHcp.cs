@@ -188,7 +188,7 @@ namespace CustomerCare
         }
     }
 
-    class helper : Helpers
+    internal class helper : Helpers
     {
         /// <summary>
         /// note : DatagridviewColumn Name must be match with Database Table ColumnName
@@ -227,6 +227,7 @@ namespace CustomerCare
 
             return check;
         }
+
         public static void SetRedbox(Control ctrl)
         {
             Label redlabel = new Label();
@@ -236,6 +237,7 @@ namespace CustomerCare
             redlabel.Tag = "Clear";
             ctrl.Parent.Controls.Add(redlabel);
         }
+
         public static void AutoFilltextboxfromDatagridview(DataGridViewRow selectedrow, Control main)
         {
             foreach (Control ctrl in main.Controls)
@@ -254,6 +256,7 @@ namespace CustomerCare
                 catch (Exception) { }
             }
         }
+
         public static void ClearRed(Control main)
         {
             foreach (Control ctrl in main.Controls)
@@ -280,3 +283,4 @@ namespace CustomerCare
             }
         }
     }
+}
