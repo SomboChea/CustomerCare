@@ -17,7 +17,7 @@ namespace SMLOGX.Core
     /// </summary>
     public class Helpers
     {
-        public static string Path_Prefix { get; set; }= "D:\\SN1.2 C#\\CustomerCare\\CustomerCare\\bin\\Debug\\Image\\";
+        public static string Path_Prefix { get; set; }= ".\\Image\\";
         public static void Clear(Control main)
         {
             foreach (Control ctrl in main.Controls)

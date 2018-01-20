@@ -135,12 +135,12 @@ namespace CustomerCare
             OpenFileDialog opf = new OpenFileDialog();
             opf.Title = "Browse Staff Image ...";
             opf.Filter = "Image PNG (*.png)|*.png|Image JPG (*.jpg)|*.jpg";
-            opf.AutoUpgradeEnabled = true;
-            opf.CheckFileExists = true;
-            opf.CheckPathExists = true;
-            opf.DereferenceLinks = true;
+            //opf.AutoUpgradeEnabled = true;
+            //opf.CheckFileExists = true;
+            //opf.CheckPathExists = true;
+            //opf.DereferenceLinks = true;
             opf.Multiselect = false;
-            opf.ShowHelp = true;
+            //opf.ShowHelp = true;
             if (opf.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.ImageLocation = opf.FileName;
