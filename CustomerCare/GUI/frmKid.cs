@@ -110,27 +110,22 @@ namespace CustomerCare
                 panel1.Cursor = Cursors.WaitCursor;
                 string sql = "Select top 10 * from viewKid where ID<" + dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[0].Value + " order by ID desc";
                 //txtMemo.Text = sql;
-                helper.FillGridviewWithoutDataTable(sql, dataGridView1);
+                function.FillGridviewWithoutDataTable(sql, dataGridView1);
                 if (Database.QueryScalar("Select count(*) from viewKid").ToString().Equals(dataGridView1.Rows.Count + ""))
                     MessageBox.Show("Load All Rows", "Kid", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             panel1.Cursor = Cursors.Default;
         }
-    }
 
-    class function:helper
-    {
-        public static void FillDatagridviewColumn(DataGridView dg,string sql)
+        /// <summary>
+        /// Dont Delete this class
+        /// </summary>
+        private class function : frmHcp.helper
         {
-            DataTable dt = Database.QueryModel(sql);
-            foreach(DataColumn col in dt.Columns)
-            {
-                DataGridViewColumn dgcol = new DataGridViewColumn(new DataGridViewTextBoxCell());
-                dgcol.Name = col.Caption;
-                dgcol.HeaderText = col.Caption;
-                dg.Columns.Add(dgcol);
-            }
+
         }
     }
+
+    
 }
