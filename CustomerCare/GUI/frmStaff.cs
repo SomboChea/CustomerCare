@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,22 +52,19 @@ namespace CustomerCare
             StaffID = int.Parse(Database.GetLastId("tbl_mststaff")+"")+1;
         }
 
-        private void frmStaff_Load(object sender, EventArgs e)
-        {
-            function.FillGridviewWithoutDataTable("Select top 20 * from viewStaff order by ID desc",dataGridView1);
-            function.FillComboBox(cbPos, "pos_en", "pos_id", "Select * from tbl_pos");
-        }
+       
 
         public object StaffID { get; set; }
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-           // MessageBox.Show(dataGridView1.CurrentRow.Cells["Photo"].Value + "");
+            MessageBox.Show(dataGridView1.CurrentRow.Cells["Photo"].Value + "");
             function.AutoFilltextboxfromDatagridview(dataGridView1.CurrentRow, this);
             dthiredate.Value = DateTime.Parse(dataGridView1.CurrentRow.Cells["Hire Date"].Value + "");
 
             try
             {
                 // Add Image
+                MessageBox.Show(function.Path_Prefix + "Staff\\" + dataGridView1.SelectedRows[0].Cells["Photo"].Value+" "+File.Exists(function.Path_Prefix + "Staff\\" + dataGridView1.SelectedRows[0].Cells["Photo"].Value));
                 pictureBox1.Image = Image.FromFile(function.Path_Prefix+"Staff\\"+dataGridView1.SelectedRows[0].Cells["Photo"].Value);
             }
             catch (Exception)
@@ -75,6 +73,7 @@ namespace CustomerCare
                 //MessageBox.Show("");
             }
             btnadd.Text = "Update";
+            imgname = dataGridView1.CurrentRow.Cells["Photo"].Value+"";
             StaffID = dataGridView1.CurrentRow.Cells["ID"].Value;
         }
 
@@ -85,7 +84,7 @@ namespace CustomerCare
             function.ClearRed(this);
             if (!function.CheckExist(txtEnName, txttel1, dthiredate, cbPos))
                 return;
-            if (Database.QueryModel("SELECT * from tbl_mststaff where '" + txttel1.Text.Trim() + "' in (tel_per1,tel_per2) and staff_id!="+StaffID).Rows.Count > 0)
+            if (Database.QueryModel("SELECT * from tbl_mststaff where '" + txttel1.Text.Trim() + "' in (tel_per1,tel_per2) and staff_id!=" + StaffID).Rows.Count > 0)
             {
                 function.SetRedbox(txttel1);
                 return;
@@ -101,16 +100,16 @@ namespace CustomerCare
                 }
             }
             // 
-            bool Execute=true;
-            
-                string imgname = imgPath==""?"": function.Upload_Photo(imgPath, function.Path_Prefix + "Staff\\");
-            
+            bool Execute = true;
+            if (PicChange)
+                imgname = imgPath == "" ? "" : function.Upload_Photo(imgPath, function.Path_Prefix + "Staff\\");
+
             if (btnadd.Text == "Add")
             {
                 string columns = "[name_en], [name_kh], [pos_id], [emp_date], [tel_per1], [tel_per2], [tel_com], [email], [photo], [emp_note], [other]";
-                Execute= Database.Insert("tbl_mststaff", columns, txtEnName.Text,txtKhName.Text,cbPos.SelectedValue,dthiredate.Value,txttel1.Text,txttel2.Text,txttelcom.Text,txtemail.Text,imgname,txtNote.Text,txtother.Text);
+                Execute = Database.Insert("tbl_mststaff", columns, txtEnName.Text, txtKhName.Text, cbPos.SelectedValue, dthiredate.Value, txttel1.Text, txttel2.Text, txttelcom.Text, txtemail.Text, imgname, txtNote.Text, txtother.Text);
             }
-            if(btnadd.Text=="Update")
+            if (btnadd.Text == "Update")
             {
                 string columns = "[name_en], [name_kh], [pos_id], [emp_date], [tel_per1], [tel_per2], [tel_com], [email], [photo], [emp_note], [other]";
                 Execute = Database.Update("tbl_mststaff", "Where staff_id=" + StaffID, columns, txtEnName.Text, txtKhName.Text, cbPos.SelectedValue, dthiredate.Value, txttel1.Text, txttel2.Text, txttelcom.Text, txtemail.Text, imgname, txtNote.Text, txtother.Text);
@@ -124,8 +123,11 @@ namespace CustomerCare
             btnadd.Text = "Add";
             Clear();
             frmStaff_Load(null, null);
+            PicChange = false;
         }
 
+        public bool PicChange { get; set; } = false;
+        public string imgname { get; set; } = "";
         public string imgPath { get; set; } = "";
         private void btnbrowse_Click(object sender, EventArgs e)
         {
@@ -143,6 +145,7 @@ namespace CustomerCare
             {
                 pictureBox1.ImageLocation = opf.FileName;
                 imgPath = opf.FileName;
+                PicChange = true;
             }
         }
 
@@ -169,9 +172,16 @@ namespace CustomerCare
             }
             
         }
+        private void frmStaff_Load(object sender, EventArgs e)
+        {
+            function.FillGridviewWithoutDataTable("Select top 20 * from viewStaff order by ID desc", dataGridView1);
+            function.FillComboBox(cbPos, "pos_en", "pos_id", "Select * from tbl_pos");
+            //function.Upload_Pic(@"C:\Users\DELL\Desktop\OldRam.PNG", function.Path_Prefix+"Staff\\");
+            //function.Upload_Photo(@"C:\Users\DELL\Desktop\OldRam.PNG", function.Path_Prefix + "Staff\\");
+        }
     }
     public class function : frmHcp.helper
     {
-
+       
     }
 }
