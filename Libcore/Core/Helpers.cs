@@ -17,7 +17,7 @@ namespace SMLOGX.Core
     /// </summary>
     public class Helpers
     {
-        public static string Path_Prefix { get; set; }=".\\Image\\";
+        public static string Path_Prefix { get; set; }= ".\\Image\\";
         public static void Clear(Control main)
         {
             foreach (Control ctrl in main.Controls)
@@ -44,8 +44,8 @@ namespace SMLOGX.Core
         /// <returns>Return a name and extension of Image in Directory_path</returns>
         public static string Upload_Photo(string filepath, string Directory_Path)
         {
-            try
-            {
+            //try
+            //{
                 string[] filesplit = filepath.Split('\\');
                 string filename = filesplit[filesplit.Length - 1];
                 string imgpath = Directory_Path + filename;
@@ -57,7 +57,7 @@ namespace SMLOGX.Core
 
                 if (File.Exists(imgpath))
                 {
-                    DialogResult diag = MessageBox.Show("File : \n" + filepath + Environment.NewLine + " is Already Exist ! \nDo you want to Replace file" + Environment.NewLine + "\n\nYes : Replace File" + Environment.NewLine + "No : Auto Rename file" + Environment.NewLine + "Cancel : Abort", "File Exist", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                    DialogResult diag = MessageBox.Show("File : \n" + imgpath + Environment.NewLine + " is Already Exist ! \nDo you want to Replace file" + Environment.NewLine + "\n\nYes : Replace File" + Environment.NewLine + "No : Auto Rename file" + Environment.NewLine + "Cancel : Abort", "File Exist", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
                     for (int i = 1; File.Exists(imgpath); i++)
                     {
                         if (diag == DialogResult.Yes)
@@ -75,15 +75,16 @@ namespace SMLOGX.Core
                         }
                     }
                 }
+                MessageBox.Show(filepath);
                 File.Copy(filepath, imgpath);
-                MessageBox.Show(filename," \n"+filepath+"\n"+imgpath);
+                
                 return filename;
-            }
-            catch (Exception ex)
-            {
-                Log.Write(ex.Message, "Helpers.Upload_Photo");
-            }
-            return null;
+            //}
+            //catch (Exception ex)
+            //{
+            //    Log.Write(ex.Message, "Helpers.Upload_Photo");
+            //}
+            //return null;
         }
 
         /// <summary>
