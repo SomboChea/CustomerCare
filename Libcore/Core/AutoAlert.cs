@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SMLOGX.Core
 {
-    public interface IHelper
+    public interface IAutoAlert
     {
-        void Show();
+        void Alert(string message, string when);
     }
 }

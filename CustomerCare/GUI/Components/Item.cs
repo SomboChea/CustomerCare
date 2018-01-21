@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CustomerCare.STR;
+using SMLOGX.Core;
 
 namespace CustomerCare.GUI.Components
 {

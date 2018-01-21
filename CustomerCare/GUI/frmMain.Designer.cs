@@ -30,12 +30,12 @@
         {
             this.panMain = new System.Windows.Forms.FlowLayoutPanel();
             this.panHead = new System.Windows.Forms.Panel();
-            this.picClose = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbTitle = new System.Windows.Forms.Label();
+            this.btnMinz = new System.Windows.Forms.PictureBox();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.panHead.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panMain
@@ -51,41 +51,14 @@
             // 
             this.panHead.BackColor = System.Drawing.Color.DodgerBlue;
             this.panHead.Controls.Add(this.lbTitle);
-            this.panHead.Controls.Add(this.pictureBox1);
+            this.panHead.Controls.Add(this.btnMinz);
             this.panHead.Controls.Add(this.picClose);
             this.panHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panHead.Location = new System.Drawing.Point(0, 0);
-            this.panHead.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panHead.Margin = new System.Windows.Forms.Padding(4);
             this.panHead.Name = "panHead";
             this.panHead.Size = new System.Drawing.Size(1193, 57);
             this.panHead.TabIndex = 1;
-            // 
-            // picClose
-            // 
-            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Image = global::CustomerCare.Properties.Resources.close_button;
-            this.picClose.Location = new System.Drawing.Point(1150, 13);
-            this.picClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(30, 30);
-            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picClose.TabIndex = 0;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::CustomerCare.Properties.Resources.remove;
-            this.pictureBox1.Location = new System.Drawing.Point(1102, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // lbTitle
             // 
@@ -94,13 +67,41 @@
             this.lbTitle.ForeColor = System.Drawing.Color.White;
             this.lbTitle.Location = new System.Drawing.Point(9, 11);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(160, 33);
+            this.lbTitle.Size = new System.Drawing.Size(200, 40);
             this.lbTitle.TabIndex = 2;
             this.lbTitle.Text = "Dashboard";
             // 
+            // btnMinz
+            // 
+            this.btnMinz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinz.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinz.Image = global::CustomerCare.Properties.Resources.remove;
+            this.btnMinz.Location = new System.Drawing.Point(1102, 13);
+            this.btnMinz.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinz.Name = "btnMinz";
+            this.btnMinz.Size = new System.Drawing.Size(35, 30);
+            this.btnMinz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMinz.TabIndex = 1;
+            this.btnMinz.TabStop = false;
+            this.btnMinz.Click += new System.EventHandler(this.btnMinz_Click);
+            // 
+            // picClose
+            // 
+            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClose.Image = global::CustomerCare.Properties.Resources.close_button;
+            this.picClose.Location = new System.Drawing.Point(1150, 13);
+            this.picClose.Margin = new System.Windows.Forms.Padding(4);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(30, 30);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picClose.TabIndex = 0;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1193, 720);
             this.ControlBox = false;
@@ -116,8 +117,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panHead.ResumeLayout(false);
             this.panHead.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -127,7 +128,7 @@
         private System.Windows.Forms.FlowLayoutPanel panMain;
         private System.Windows.Forms.Panel panHead;
         private System.Windows.Forms.PictureBox picClose;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnMinz;
         private System.Windows.Forms.Label lbTitle;
     }
 }

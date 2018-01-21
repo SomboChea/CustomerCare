@@ -23,17 +23,18 @@ namespace CustomerCare
             panel1.HorizontalScroll.Visible = false;
             panel1.AutoScroll = true;
             panel1.MouseWheel += Panel1_MouseWheel;
-            KidID = (int.Parse(Database.GetLastId("tbl_Kid")+"")+1)+"";
+            KidID = (int.Parse(Database.GetLastId("tbl_Kid") + "") + 1) + "";
             function.FillDatagridviewColumn(dataGridView1, "Select * from viewKid order by ID desc");
             //MessageBox.Show(Database.HasOpen + "");
         }
 
         private void Panel1_MouseWheel(object sender, MouseEventArgs e)
         {
-            panel1_Scroll(panel1,new ScrollEventArgs(ScrollEventType.LargeIncrement, panel1.VerticalScroll.Value));
+            panel1_Scroll(panel1, new ScrollEventArgs(ScrollEventType.LargeIncrement, panel1.VerticalScroll.Value));
         }
 
         public string KidID { get; set; }
+
         private void frmKid_Load(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
@@ -44,13 +45,14 @@ namespace CustomerCare
         {
             DataGridViewRow selectedrow = dataGridView1.SelectedRows[0];
             txtName.Text = selectedrow.Cells["Name"].Value + "";
-            txtorder.Text = selectedrow.Cells["Order"].Value + "";
+            txtorder.Text = selectedrow.Cells["Mom_ID"].Value + "";
             rmale.Checked = selectedrow.Cells["Gender"].Value.Equals("Male");
             dtpicker.Value = DateTime.Parse(selectedrow.Cells["Date of Birth"].Value + "");
             btnadd.Text = "Update";
             KidID = dataGridView1.SelectedRows[0].Cells[0].Value + "";
         }
-        void Clear()
+
+        private void Clear()
         {
             txtName.Text = "";
             txtorder.Text = "";
@@ -59,11 +61,12 @@ namespace CustomerCare
             btnadd.Text = "Add";
             function.ClearRed(this);
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (!function.CheckExist(txtName, txtorder, dtpicker))
                 return;
-            if(Database.QueryModel("Select * from viewKid where Name like '"+txtName.Text.Trim()+"' and ID !=" + KidID).Rows.Count > 0)
+            if (Database.QueryModel("Select * from viewKid where Name like '" + txtName.Text.Trim() + "' and ID !=" + KidID).Rows.Count > 0)
             {
                 MessageBox.Show("Name Exist", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 function.SetRedbox(txtName);
@@ -71,11 +74,11 @@ namespace CustomerCare
             }
             if (btnadd.Text == "Add")
             {
-                Database.Insert("tbl_Kid", "[kid_name], [kid_dob], [kid_sex], [kid_order]",txtName.Text,dtpicker.Value,rmale.Checked?"Male":"Female",txtorder.Text);
+                Database.Insert("tbl_Kid", "[kid_name], [kid_dob], [kid_sex], [mom_id]", txtName.Text, dtpicker.Value, rmale.Checked ? "Male" : "Female", txtorder.Text);
             }
             if (btnadd.Text == "Update")
             {
-                Database.Update("tbl_Kid", "[kid_name] = N'" + txtName.Text + "', [kid_dob] = '" + dtpicker.Value + "', [kid_sex] = N'" + (rmale.Checked ? "Male" : "Female") + "', [kid_order] = N'" + txtorder.Text + "'", "kid_ID=" + KidID);
+                Database.Update("tbl_Kid", "[kid_name] = N'" + txtName.Text + "', [kid_dob] = '" + dtpicker.Value + "', [kid_sex] = N'" + (rmale.Checked ? "Male" : "Female") + "', [mom_id] = N'" + txtorder.Text + "'", "kid_ID=" + KidID);
             }
             btnadd.Text = "Add";
             Clear();
@@ -113,7 +116,6 @@ namespace CustomerCare
                 function.FillGridviewWithoutDataTable(sql, dataGridView1);
                 if (Database.QueryScalar("Select count(*) from viewKid").ToString().Equals(dataGridView1.Rows.Count + ""))
                     MessageBox.Show("Load All Rows", "Kid", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
             panel1.Cursor = Cursors.Default;
         }
@@ -123,9 +125,6 @@ namespace CustomerCare
         /// </summary>
         private class function : frmHcp.helper
         {
-
         }
     }
-
-    
 }

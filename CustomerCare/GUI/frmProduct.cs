@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace CustomerCare.GUI
+namespace CustomerCare
 {
     public partial class frmProduct : Form
     {

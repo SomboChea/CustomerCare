@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\AutoAlert.cs" />
+    <Compile Include="Core\BaseAutoAlert.cs" />
     <Compile Include="Core\BaseConnection.cs" />
     <Compile Include="Core\BaseHelper.cs" />
     <Compile Include="Core\Database.cs" />

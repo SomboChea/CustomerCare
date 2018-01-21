@@ -73,6 +73,12 @@
     <Compile Include="GUI\Components\TextBox.Designer.cs">
       <DependentUpon>TextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAddress.Designer.cs">
+      <DependentUpon>frmAddress.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmCallList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,7 @@
     <Compile Include="STR\Options.cs" />
     <Compile Include="STR\People.cs" />
     <Compile Include="STR\Staff.cs" />
+    <Compile Include="STR\Tag.cs" />
     <EmbeddedResource Include="GUI\Components\Alert.resx">
       <DependentUpon>Alert.cs</DependentUpon>
     </EmbeddedResource>

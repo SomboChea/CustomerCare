@@ -1,4 +1,4 @@
-﻿namespace CustomerCare.GUI
+﻿namespace CustomerCare
 {
     partial class frmProduct
     {
@@ -131,7 +131,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private Components.TextBox txtName;
+        private GUI.Components.TextBox txtName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.Button btnAdd;

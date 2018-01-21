@@ -15,9 +15,10 @@ namespace SMLOGX.Core
     /// <summary>
     /// Helpers
     /// </summary>
-    public class Helpers
+    public class Helpers : IHelper
     {
-        public static string Path_Prefix { get; set; }= ".\\Image\\";
+        public static string Path_Prefix { get; set; } = ".\\Image\\";
+
         public static void Clear(Control main)
         {
             foreach (Control ctrl in main.Controls)
@@ -46,39 +47,39 @@ namespace SMLOGX.Core
         {
             //try
             //{
-                string[] filesplit = filepath.Split('\\');
-                string filename = filesplit[filesplit.Length - 1];
-                string imgpath = Directory_Path + filename;
+            string[] filesplit = filepath.Split('\\');
+            string filename = filesplit[filesplit.Length - 1];
+            string imgpath = Directory_Path + filename;
 
-                if (!Directory.Exists(Directory_Path))
-                {
-                    Directory.CreateDirectory(Directory_Path);
-                }
+            if (!Directory.Exists(Directory_Path))
+            {
+                Directory.CreateDirectory(Directory_Path);
+            }
 
-                if (File.Exists(imgpath))
+            if (File.Exists(imgpath))
+            {
+                DialogResult diag = MessageBox.Show("File : \n" + imgpath + Environment.NewLine + " is Already Exist ! \nDo you want to Replace file" + Environment.NewLine + "\n\nYes : Replace File" + Environment.NewLine + "No : Auto Rename file" + Environment.NewLine + "Cancel : Abort", "File Exist", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                for (int i = 1; File.Exists(imgpath); i++)
                 {
-                    DialogResult diag = MessageBox.Show("File : \n" + imgpath + Environment.NewLine + " is Already Exist ! \nDo you want to Replace file" + Environment.NewLine + "\n\nYes : Replace File" + Environment.NewLine + "No : Auto Rename file" + Environment.NewLine + "Cancel : Abort", "File Exist", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-                    for (int i = 1; File.Exists(imgpath); i++)
+                    if (diag == DialogResult.Yes)
                     {
-                        if (diag == DialogResult.Yes)
-                        {
-                            File.Delete(imgpath);
-                            break;
-                        }
-                        else if (diag == DialogResult.No)
-                        {
-                            imgpath = Directory_Path + filename.Split('.')[0] + "-" + i + "." + filename.Split('.')[filename.Split('.').Length - 1];
-                        }
-                        else
-                        {
-                            return "";
-                        }
+                        File.Delete(imgpath);
+                        break;
+                    }
+                    else if (diag == DialogResult.No)
+                    {
+                        imgpath = Directory_Path + filename.Split('.')[0] + "-" + i + "." + filename.Split('.')[filename.Split('.').Length - 1];
+                    }
+                    else
+                    {
+                        return "";
                     }
                 }
-                MessageBox.Show(filepath);
-                File.Copy(filepath, imgpath);
-                
-                return filename;
+            }
+            MessageBox.Show(filepath);
+            File.Copy(filepath, imgpath);
+
+            return filename;
             //}
             //catch (Exception ex)
             //{
@@ -188,6 +189,7 @@ namespace SMLOGX.Core
                 DataSource = val
             };
         }
+
         public static void FillDatagridviewColumn(DataGridView dg, string sql)
         {
             DataTable dt = Database.QueryModel(sql);
@@ -198,6 +200,11 @@ namespace SMLOGX.Core
                 dgcol.HeaderText = col.Caption;
                 dg.Columns.Add(dgcol);
             }
+        }
+
+        public void Show()
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -295,7 +302,7 @@ namespace SMLOGX.Core
     public static class Log
     {
         private static string path = "logs.txt";
-        private static string stateLine = "[ " + DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString() + " ] @ ";
+        private static string stateLine = "[ " + DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString() + " ] => [FROM " + Environment.UserDomainName + "." + Environment.UserName + "] @ ";
 
         [MethodImpl(MethodImplOptions.NoInlining)]
         private static string GetCurrentMethod()
@@ -360,6 +367,18 @@ namespace SMLOGX.Core
         public static void ExitThread(Form context)
         {
             new ApplicationContext(context).ExitThread();
+            return;
+        }
+
+        public static void Minimized(Form context)
+        {
+            context.WindowState = FormWindowState.Minimized;
+            return;
+        }
+
+        public static void Maximized(Form context)
+        {
+            context.WindowState = FormWindowState.Maximized;
             return;
         }
 
@@ -498,5 +517,4 @@ namespace SMLOGX.Core
             return data;
         }
     }
-   
 }

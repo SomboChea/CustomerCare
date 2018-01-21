@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomerCare.Core
+namespace SMLOGX.Core
 {
-    public interface BaseConnection
+    public interface IConnection
     {
         /** DML Statements **/
 

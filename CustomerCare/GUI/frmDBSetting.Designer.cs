@@ -55,7 +55,7 @@
             this.panHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panHead.Location = new System.Drawing.Point(0, 0);
             this.panHead.Name = "panHead";
-            this.panHead.Size = new System.Drawing.Size(840, 80);
+            this.panHead.Size = new System.Drawing.Size(840, 72);
             this.panHead.TabIndex = 1;
             // 
             // lbTitle
@@ -64,10 +64,10 @@
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.ForeColor = System.Drawing.Color.White;
-            this.lbTitle.Location = new System.Drawing.Point(250, 17);
+            this.lbTitle.Location = new System.Drawing.Point(250, 15);
             this.lbTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(323, 44);
+            this.lbTitle.Size = new System.Drawing.Size(411, 56);
             this.lbTitle.TabIndex = 1;
             this.lbTitle.Text = "Database Setting";
             // 
@@ -79,9 +79,9 @@
             this.cbAuth.Items.AddRange(new object[] {
             "Windows Authentication",
             "SQL Server Authentication"});
-            this.cbAuth.Location = new System.Drawing.Point(334, 175);
+            this.cbAuth.Location = new System.Drawing.Point(355, 157);
             this.cbAuth.Name = "cbAuth";
-            this.cbAuth.Size = new System.Drawing.Size(346, 31);
+            this.cbAuth.Size = new System.Drawing.Size(356, 39);
             this.cbAuth.TabIndex = 2;
             this.cbAuth.SelectedIndexChanged += new System.EventHandler(this.cbAuth_SelectedIndexChanged);
             // 
@@ -89,27 +89,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(154, 178);
+            this.label1.Location = new System.Drawing.Point(98, 159);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 23);
+            this.label1.Size = new System.Drawing.Size(208, 31);
             this.label1.TabIndex = 3;
             this.label1.Text = "Authentication :";
             // 
             // txtServer
             // 
             this.txtServer.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServer.Location = new System.Drawing.Point(334, 122);
+            this.txtServer.Location = new System.Drawing.Point(355, 109);
             this.txtServer.Name = "txtServer";
-            this.txtServer.Size = new System.Drawing.Size(346, 32);
+            this.txtServer.Size = new System.Drawing.Size(356, 38);
             this.txtServer.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(157, 125);
+            this.label2.Location = new System.Drawing.Point(101, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 23);
+            this.label2.Size = new System.Drawing.Size(199, 31);
             this.label2.TabIndex = 5;
             this.label2.Text = "Server Name   :";
             // 
@@ -124,9 +124,9 @@
             this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(425, 429);
+            this.btnSave.Location = new System.Drawing.Point(425, 384);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(105, 33);
+            this.btnSave.Size = new System.Drawing.Size(105, 30);
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -143,9 +143,9 @@
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(576, 429);
+            this.btnClose.Location = new System.Drawing.Point(576, 384);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(105, 33);
+            this.btnClose.Size = new System.Drawing.Size(105, 30);
             this.btnClose.TabIndex = 10;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -155,9 +155,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(157, 231);
+            this.label5.Location = new System.Drawing.Point(101, 207);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 23);
+            this.label5.Size = new System.Drawing.Size(198, 31);
             this.label5.TabIndex = 14;
             this.label5.Text = "Database        :";
             // 
@@ -166,9 +166,9 @@
             this.cbDB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDB.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDB.FormattingEnabled = true;
-            this.cbDB.Location = new System.Drawing.Point(334, 228);
+            this.cbDB.Location = new System.Drawing.Point(355, 204);
             this.cbDB.Name = "cbDB";
-            this.cbDB.Size = new System.Drawing.Size(346, 31);
+            this.cbDB.Size = new System.Drawing.Size(356, 39);
             this.cbDB.TabIndex = 13;
             // 
             // panUser
@@ -178,35 +178,35 @@
             this.panUser.Controls.Add(this.label4);
             this.panUser.Controls.Add(this.label3);
             this.panUser.Enabled = false;
-            this.panUser.Location = new System.Drawing.Point(236, 278);
+            this.panUser.Location = new System.Drawing.Point(254, 249);
             this.panUser.Name = "panUser";
-            this.panUser.Size = new System.Drawing.Size(457, 119);
+            this.panUser.Size = new System.Drawing.Size(457, 106);
             this.panUser.TabIndex = 15;
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(146, 68);
+            this.txtPassword.Location = new System.Drawing.Point(146, 61);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(298, 32);
+            this.txtPassword.Size = new System.Drawing.Size(298, 38);
             this.txtPassword.TabIndex = 16;
             // 
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(146, 17);
+            this.txtUsername.Location = new System.Drawing.Point(146, 15);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(298, 32);
+            this.txtUsername.Size = new System.Drawing.Size(298, 38);
             this.txtUsername.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 71);
+            this.label4.Location = new System.Drawing.Point(9, 64);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 23);
+            this.label4.Size = new System.Drawing.Size(150, 31);
             this.label4.TabIndex = 14;
             this.label4.Text = "Password  :";
             // 
@@ -214,9 +214,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 20);
+            this.label3.Location = new System.Drawing.Point(9, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 23);
+            this.label3.Size = new System.Drawing.Size(150, 31);
             this.label3.TabIndex = 13;
             this.label3.Text = "Username :";
             // 
@@ -231,9 +231,9 @@
             this.btnTest.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.btnTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTest.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTest.Location = new System.Drawing.Point(35, 429);
+            this.btnTest.Location = new System.Drawing.Point(35, 384);
             this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(147, 33);
+            this.btnTest.Size = new System.Drawing.Size(147, 30);
             this.btnTest.TabIndex = 16;
             this.btnTest.Text = "Test Connection";
             this.btnTest.UseVisualStyleBackColor = false;
@@ -241,10 +241,10 @@
             // 
             // frmDBSetting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(840, 483);
+            this.ClientSize = new System.Drawing.Size(840, 432);
             this.ControlBox = false;
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.panUser);
@@ -257,7 +257,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbAuth);
             this.Controls.Add(this.panHead);
-            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;

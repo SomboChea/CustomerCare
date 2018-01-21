@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CustomerCare
 {
-    public partial class frmCallList : Form
+    public partial class frmAddress : Form
     {
-        public frmCallList()
+        public frmAddress()
         {
             InitializeComponent();
         }
