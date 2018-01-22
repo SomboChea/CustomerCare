@@ -1,13 +1,7 @@
 ﻿using SMLOGX.Core;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CustomerCare
@@ -27,7 +21,6 @@ namespace CustomerCare
             panel1.AutoScroll = true;
 
             //bool t=System.IO.File.Exists(function.Path_Prefix+"Staff\\computer1.png");
-
 
             function.FillDatagridviewColumn(dataGridView1, "Select top 1 * from viewStaff");
             dataGridView1.Columns["Photo"].Width = 0;
@@ -49,12 +42,11 @@ namespace CustomerCare
             btnadd.Text = "Add";
             dthiredate.Value = DateTime.Now;
             imgPath = "";
-            StaffID = int.Parse(Database.GetLastId("tbl_mststaff")+"")+1;
+            StaffID = int.Parse(Database.GetLastId("tbl_mststaff") + "") + 1;
         }
 
-       
-
         public object StaffID { get; set; }
+
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
             MessageBox.Show(dataGridView1.CurrentRow.Cells["Photo"].Value + "");
@@ -64,8 +56,8 @@ namespace CustomerCare
             try
             {
                 // Add Image
-                MessageBox.Show(function.Path_Prefix + "Staff\\" + dataGridView1.SelectedRows[0].Cells["Photo"].Value+" "+File.Exists(function.Path_Prefix + "Staff\\" + dataGridView1.SelectedRows[0].Cells["Photo"].Value));
-                pictureBox1.Image = Image.FromFile(function.Path_Prefix+"Staff\\"+dataGridView1.SelectedRows[0].Cells["Photo"].Value);
+                MessageBox.Show(function.Path_Prefix + "Staff\\" + dataGridView1.SelectedRows[0].Cells["Photo"].Value + " " + File.Exists(function.Path_Prefix + "Staff\\" + dataGridView1.SelectedRows[0].Cells["Photo"].Value));
+                pictureBox1.Image = Image.FromFile(function.Path_Prefix + "Staff\\" + dataGridView1.SelectedRows[0].Cells["Photo"].Value);
             }
             catch (Exception)
             {
@@ -73,7 +65,7 @@ namespace CustomerCare
                 //MessageBox.Show("");
             }
             btnadd.Text = "Update";
-            imgname = dataGridView1.CurrentRow.Cells["Photo"].Value+"";
+            imgname = dataGridView1.CurrentRow.Cells["Photo"].Value + "";
             StaffID = dataGridView1.CurrentRow.Cells["ID"].Value;
         }
 
@@ -88,7 +80,6 @@ namespace CustomerCare
             {
                 function.SetRedbox(txttel1);
                 return;
-
             }
             if (txttel2.Text.Trim() != "")
             {
@@ -96,10 +87,9 @@ namespace CustomerCare
                 {
                     function.SetRedbox(txttel2);
                     return;
-
                 }
             }
-            // 
+            //
             bool Execute = true;
             if (PicChange)
                 imgname = imgPath == "" ? "" : function.Upload_Photo(imgPath, function.Path_Prefix + "Staff\\");
@@ -129,6 +119,7 @@ namespace CustomerCare
         public bool PicChange { get; set; } = false;
         public string imgname { get; set; } = "";
         public string imgPath { get; set; } = "";
+
         private void btnbrowse_Click(object sender, EventArgs e)
         {
             imgPath = "";
@@ -158,7 +149,7 @@ namespace CustomerCare
             }
             else
             {
-                function.FillGridviewWithoutDataTable("select * from viewStaff where [Name in Khmer] like '%"+txtsearch.Text+"%' and [Name in English] like '%"+txtsearch.Text+"%'", dataGridView1);
+                function.FillGridviewWithoutDataTable("select * from viewStaff where [Name in Khmer] like '%" + txtsearch.Text + "%' and [Name in English] like '%" + txtsearch.Text + "%'", dataGridView1);
             }
         }
 
@@ -168,10 +159,10 @@ namespace CustomerCare
                 return;
             if (e.NewValue > (panel1.VerticalScroll.Maximum - panel1.VerticalScroll.LargeChange))
             {
-                function.FillGridviewWithoutDataTable("select * from viewStaff where ID<"+dataGridView1.Rows[dataGridView1.Rows.Count].Cells["ID"].Value, dataGridView1);
+                function.FillGridviewWithoutDataTable("select * from viewStaff where ID<" + dataGridView1.Rows[dataGridView1.Rows.Count].Cells["ID"].Value, dataGridView1);
             }
-            
         }
+
         private void frmStaff_Load(object sender, EventArgs e)
         {
             function.FillGridviewWithoutDataTable("Select top 20 * from viewStaff order by ID desc", dataGridView1);
@@ -180,8 +171,8 @@ namespace CustomerCare
             //function.Upload_Photo(@"C:\Users\DELL\Desktop\OldRam.PNG", function.Path_Prefix + "Staff\\");
         }
     }
+
     public class function : frmHcp.helper
     {
-       
     }
 }

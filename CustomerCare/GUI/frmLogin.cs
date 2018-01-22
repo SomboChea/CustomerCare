@@ -1,12 +1,5 @@
 ﻿using SMLOGX.Core;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CustomerCare
@@ -65,7 +58,7 @@ namespace CustomerCare
         {
             if (e.KeyChar == 13)
                 txtPassword.txtValue.Focus();
-            if(e.KeyChar==27)
+            if (e.KeyChar == 27)
             {
                 txtPassword.txtValue.Text = "";
                 txtUsername.txtValue.Text = "";

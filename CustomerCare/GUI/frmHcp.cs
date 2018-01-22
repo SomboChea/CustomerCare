@@ -1,12 +1,8 @@
 ﻿using SMLOGX.Core;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CustomerCare
@@ -59,7 +55,6 @@ namespace CustomerCare
             }
             if (txtTel2.Text.Trim().Equals(""))
             {
-
                 if (Database.QueryModel("Select Count(*) from tbl_mststaff where " + txtTel2 + " in(Tel_per1,Tel_per2) and staff_id!=" + id) + "" == "0")
 
                 {
@@ -88,12 +83,10 @@ namespace CustomerCare
             id = (Database.GetLastId("tbl_hcp") + 1) + "";
             Clear(this);
             frmHcp_Load(null, null);
-
         }
 
         private void dgView_DoubleClick(object sender, EventArgs e)
         {
-
         }
 
         private void frmHcp_Load(object sender, EventArgs e)
@@ -103,10 +96,9 @@ namespace CustomerCare
             helper.FillGridviewWithoutDataTable("Select top 10 * from viewHcp order by ID desc", dgView);
             helper.FillComboBox(cblocation, "pc_name", "pc_id", "Select * from tbl_provinces");
             id = (Database.GetLastId("tbl_hcp") + 1) + "";
-
         }
 
-        void Clear(Control main)
+        private void Clear(Control main)
         {
             foreach (Control ctrl in main.Controls)
                 if (ctrl is ComboBox)
@@ -124,7 +116,7 @@ namespace CustomerCare
                     ctrl.Text = "";
         }
 
-        void addevent(Control main)
+        private void addevent(Control main)
         {
             foreach (Control ctrl in main.Controls)
             {
@@ -137,14 +129,12 @@ namespace CustomerCare
             }
         }
 
-
         private void cblocation_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbdistrict.DataSource = null;
             cbcommune.DataSource = null;
             helper.FillComboBox(cbdistrict, "ks_name", "ks_id", "Select * from tbl_ks where pc_id=" + cblocation.SelectedValue);
         }
-
 
         private void cbdistrict_SelectedIndexChanged(object sender, EventArgs e)
 
@@ -155,15 +145,12 @@ namespace CustomerCare
 
         private void dgView_Click(object sender, EventArgs e)
         {
-
         }
 
         private void dgView_Scroll(object sender, ScrollEventArgs e)
         {
             //if (e.ScrollOrientation != ScrollOrientation.VerticalScroll)
             //    return;
-
-
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -172,19 +159,15 @@ namespace CustomerCare
             if (txtSearch.Text.Trim() == "")
             {
                 helper.FillGridviewWithoutDataTable("Select top 10 * from viewHcp order by id desc", dgView);
-
             }
             else
             {
-
                 helper.FillGridviewWithoutDataTable("Select * from viewHcp where hcpName like '%" + txtSearch.Text + "%'", dgView);
-
             }
         }
 
         private void panel1_Scroll(object sender, ScrollEventArgs e)
         {
-
             //label1.Text = panel1.VerticalScroll.LargeChange+"  "+e.NewValue + "  " + (panel1.VerticalScroll.Maximum - panel1.VerticalScroll.LargeChange);
             if (e.NewValue == 0 || txtSearch.Text.Trim() != "")
                 return;
@@ -196,7 +179,6 @@ namespace CustomerCare
                 helper.FillGridviewWithoutDataTable(sql, dgView);
                 if (Database.QueryScalar("Select count(*) from viewHcp").ToString().Equals(dgView.Rows.Count + ""))
                     MessageBox.Show("Load All Rows", "HCP", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
             panel1.Cursor = Cursors.Default;
         }
@@ -222,6 +204,7 @@ namespace CustomerCare
                 Clear(this);
             }
         }
+
         public class helper : Helpers
         {
             /// <summary>
@@ -233,11 +216,9 @@ namespace CustomerCare
             {
                 double dgheight = dgView.ColumnHeadersHeight;
 
-
                 DataTable dt = Database.QueryModel(sql);
                 foreach (DataRow row in dt.Rows)
                 {
-
                     List<object> obj = new List<object>();
                     foreach (DataGridViewColumn col in dgView.Columns)
                     {
@@ -245,7 +226,6 @@ namespace CustomerCare
                     }
                     dgView.Rows.Add(obj.ToArray());
                 }
-
 
                 dgheight += dgView.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + 30;
                 dgView.Size = new Size(dgView.Size.Width, int.Parse(Math.Ceiling(dgheight) + ""));
@@ -264,6 +244,7 @@ namespace CustomerCare
 
                 return check;
             }
+
             public static void SetRedbox(Control ctrl)
             {
                 Label redlabel = new Label();
@@ -273,6 +254,7 @@ namespace CustomerCare
                 redlabel.Tag = "Clear";
                 ctrl.Parent.Controls.Add(redlabel);
             }
+
             public static void AutoFilltextboxfromDatagridview(DataGridViewRow selectedrow, Control main)
             {
                 foreach (Control ctrl in main.Controls)
@@ -286,12 +268,12 @@ namespace CustomerCare
                         continue;
                     try
                     {
-
                         ctrl.Text = selectedrow.Cells[ctrl.Tag + ""].Value + "";
                     }
                     catch (Exception) { }
                 }
             }
+
             public static void ClearRed(Control main)
             {
                 foreach (Control ctrl in main.Controls)

@@ -79,6 +79,12 @@
     <Compile Include="GUI\frmAddress.Designer.cs">
       <DependentUpon>frmAddress.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmCalling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCalling.Designer.cs">
+      <DependentUpon>frmCalling.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmCallList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Components\TextBox.resx">
       <DependentUpon>TextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCalling.resx">
+      <DependentUpon>frmCalling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCallList.resx">
+      <DependentUpon>frmCallList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDBSetting.resx">
       <DependentUpon>frmDBSetting.cs</DependentUpon>
