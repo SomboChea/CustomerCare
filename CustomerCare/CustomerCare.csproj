@@ -73,6 +73,12 @@
     <Compile Include="GUI\Components\TextBox.Designer.cs">
       <DependentUpon>TextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmAddLoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAddLoc.Designer.cs">
+      <DependentUpon>frmAddLoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmAddress.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Components\TextBox.resx">
       <DependentUpon>TextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmAddLoc.resx">
+      <DependentUpon>frmAddLoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmCalling.resx">
       <DependentUpon>frmCalling.cs</DependentUpon>

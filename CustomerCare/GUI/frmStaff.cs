@@ -170,9 +170,10 @@ namespace CustomerCare
             //function.Upload_Pic(@"C:\Users\DELL\Desktop\OldRam.PNG", function.Path_Prefix+"Staff\\");
             //function.Upload_Photo(@"C:\Users\DELL\Desktop\OldRam.PNG", function.Path_Prefix + "Staff\\");
         }
+        public class function : frmHcp.helper
+        {
+        }
     }
 
-    public class function : frmHcp.helper
-    {
-    }
+   
 }
