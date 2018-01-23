@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CustomerCare
 {
-    public partial class frmAddPos : Form
+    public partial class frmAddLoc : Form
     {
         class function : frmHcp.helper
         {
@@ -22,12 +22,12 @@ namespace CustomerCare
                 lb.DataSource = Database.QueryModel(sql);
             }
         }
-        public frmAddPos()
+        public frmAddLoc()
         {
             InitializeComponent();
             Database.Server = "localhost";
             Database.DBName = "CustomerCare";
-            //Database.Open();
+            Database.Open();
 
             Clear();
         }
@@ -122,6 +122,26 @@ namespace CustomerCare
                 btnComm.Enabled = false;
                 return;
             }
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            ListBox listBox =(ListBox) ((ContextMenuStrip)sender).SourceControl;
+            mnuDelete.Enabled = true;
+            mnuUpdate.Enabled = true;
+            if (listBox.SelectedIndices.Count <= 0)
+            {
+                mnuDelete.Enabled = false;
+                mnuUpdate.Enabled = false;
+                return;
+            }
+
+        }
+
+        private void mnuUpdate_Click(object sender, EventArgs e)
+        {
+            ContextMenuStrip ctrl = (ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent();
+            MessageBox.Show(ctrl.SourceControl.Name);
         }
     }
     

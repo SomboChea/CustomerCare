@@ -1,6 +1,6 @@
 ﻿namespace CustomerCare
 {
-    partial class frmAddPos
+    partial class frmAddLoc
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtpro = new System.Windows.Forms.TextBox();
             this.listPro = new System.Windows.Forms.ListBox();
@@ -40,6 +41,11 @@
             this.btnPro = new System.Windows.Forms.Button();
             this.btnDis = new System.Windows.Forms.Button();
             this.btnComm = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mnuUpdate = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -61,6 +67,7 @@
             // 
             // listPro
             // 
+            this.listPro.ContextMenuStrip = this.contextMenuStrip1;
             this.listPro.FormattingEnabled = true;
             this.listPro.ItemHeight = 22;
             this.listPro.Location = new System.Drawing.Point(28, 119);
@@ -88,6 +95,7 @@
             // 
             // listDis
             // 
+            this.listDis.ContextMenuStrip = this.contextMenuStrip1;
             this.listDis.FormattingEnabled = true;
             this.listDis.ItemHeight = 22;
             this.listDis.Location = new System.Drawing.Point(220, 119);
@@ -115,6 +123,7 @@
             // 
             // listComm
             // 
+            this.listComm.ContextMenuStrip = this.contextMenuStrip1;
             this.listComm.FormattingEnabled = true;
             this.listComm.ItemHeight = 22;
             this.listComm.Location = new System.Drawing.Point(414, 119);
@@ -152,7 +161,35 @@
             this.btnComm.UseVisualStyleBackColor = true;
             this.btnComm.Click += new System.EventHandler(this.btnComm_Click);
             // 
-            // frmAddPos
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuUpdate,
+            this.toolStripSeparator1,
+            this.mnuDelete});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 76);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // mnuUpdate
+            // 
+            this.mnuUpdate.Name = "mnuUpdate";
+            this.mnuUpdate.Size = new System.Drawing.Size(152, 22);
+            this.mnuUpdate.Text = "Update";
+            this.mnuUpdate.Click += new System.EventHandler(this.mnuUpdate_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(109, 6);
+            // 
+            // mnuDelete
+            // 
+            this.mnuDelete.Name = "mnuDelete";
+            this.mnuDelete.Size = new System.Drawing.Size(112, 22);
+            this.mnuDelete.Text = "Delete";
+            // 
+            // frmAddLoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -171,9 +208,10 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.Name = "frmAddPos";
+            this.Name = "frmAddLoc";
             this.Text = "frmAddPos";
             this.Load += new System.EventHandler(this.frmAddPos_Load);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,5 +231,9 @@
         private System.Windows.Forms.Button btnPro;
         private System.Windows.Forms.Button btnDis;
         private System.Windows.Forms.Button btnComm;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mnuUpdate;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem mnuDelete;
     }
 }
