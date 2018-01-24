@@ -16,5 +16,10 @@ namespace CustomerCare
         {
             InitializeComponent();
         }
+
+        private void frmCalling_Load(object sender, EventArgs e)
+        {
+            textBox1.ContextMenuStrip = contextMenuStrip1; ;
+        }
     }
 }
