@@ -20,8 +20,8 @@ namespace SMLOGX.Core
         private static int _hasExec { get; set; } = 0;
 
         /** Config Server **/
-        public static string Server { get; set; }
-        public static string DBName { get; set; }
+        public static string Server { get; set; } = "localhost";
+        public static string DBName { get; set; } = "CustomerCare";
         public static bool AuthType { get; set; } = false;
         public static string UserId { get; set; }
         public static string Password { get; set; }
@@ -230,7 +230,8 @@ namespace SMLOGX.Core
                     string final_data = data.Length > 1 ? MString.implode(",", "'", data) : MString.implode(",", "'", MString.explode(data[0] + "", ','));
 
                     cmd.CommandText = "INSERT INTO " + table + "(" + columns + ") VALUES(" + final_data + ");";
-                    // System.Windows.Forms.MessageBox.Show(cmd.CommandText);
+                    //System.Windows.Forms.MessageBox.Show(cmd.CommandText);
+
                     _hasExec = cmd.ExecuteNonQuery();
                     cmd.Dispose();
 

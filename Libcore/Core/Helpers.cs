@@ -225,7 +225,7 @@ namespace SMLOGX.Core
 
         public static string implode(string imp, string strCase, params object[] values)
         {
-            return strCase + String.Join("'" + imp + "'", values) + strCase;
+            return strCase + String.Join("N'" + imp + "'", values) + strCase;
         }
 
         public static string TrimStart(string value)

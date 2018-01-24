@@ -96,13 +96,14 @@ namespace CustomerCare
 
             if (btnadd.Text == "Add")
             {
-                string columns = "[name_en], [name_kh], [pos_id], [emp_date], [tel_per1], [tel_per2], [tel_com], [email], [photo], [emp_note], [other]";
-                Execute = Database.Insert("tbl_mststaff", columns, txtEnName.Text, txtKhName.Text, cbPos.SelectedValue, dthiredate.Value, txttel1.Text, txttel2.Text, txttelcom.Text, txtemail.Text, imgname, txtNote.Text, txtother.Text);
+                string columns = "[name_en], [name_kh], [pos_id], [emp_date], [tel_per1], [tel_per2], [tel_com], [email], [photo], [emp_note]";
+                Execute = Database.Insert("tbl_mststaff", columns, txtEnName.Text, txtKhName.Text, cbPos.SelectedValue, dthiredate.Value, txttel1.Text, txttel2.Text, txttelcom.Text, txtemail.Text, imgname, txtNote.Text);
             }
             if (btnadd.Text == "Update")
             {
-                string columns = "[name_en], [name_kh], [pos_id], [emp_date], [tel_per1], [tel_per2], [tel_com], [email], [photo], [emp_note], [other]";
-                Execute = Database.Update("tbl_mststaff", "Where staff_id=" + StaffID, columns, txtEnName.Text, txtKhName.Text, cbPos.SelectedValue, dthiredate.Value, txttel1.Text, txttel2.Text, txttelcom.Text, txtemail.Text, imgname, txtNote.Text, txtother.Text);
+                string columns = "[name_en], [name_kh], [pos_id], [emp_date], [tel_per1], [tel_per2], [tel_com], [email], [photo], [emp_note]";
+
+                Execute = Database.Update("tbl_mststaff", "Where staff_id=" + StaffID, columns, txtEnName.Text, txtKhName.Text, cbPos.SelectedValue, dthiredate.Value, txttel1.Text, txttel2.Text, txttelcom.Text, txtemail.Text, imgname, txtNote.Text);
             }
             if (!Execute)
             {
@@ -165,15 +166,15 @@ namespace CustomerCare
 
         private void frmStaff_Load(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
             function.FillGridviewWithoutDataTable("Select top 20 * from viewStaff order by ID desc", dataGridView1);
             function.FillComboBox(cbPos, "pos_en", "pos_id", "Select * from tbl_pos");
             //function.Upload_Pic(@"C:\Users\DELL\Desktop\OldRam.PNG", function.Path_Prefix+"Staff\\");
             //function.Upload_Photo(@"C:\Users\DELL\Desktop\OldRam.PNG", function.Path_Prefix + "Staff\\");
         }
+
         public class function : frmHcp.helper
         {
         }
     }
-
-   
 }
