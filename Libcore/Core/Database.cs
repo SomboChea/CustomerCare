@@ -230,7 +230,8 @@ namespace SMLOGX.Core
                     string final_data = data.Length > 1 ? MString.implode(",", "'", data) : MString.implode(",", "'", MString.explode(data[0] + "", ','));
 
                     cmd.CommandText = "INSERT INTO " + table + "(" + columns + ") VALUES(" + final_data + ");";
-                    // System.Windows.Forms.MessageBox.Show(cmd.CommandText);
+                    //System.Windows.Forms.MessageBox.Show(cmd.CommandText);
+                    //return true;
                     _hasExec = cmd.ExecuteNonQuery();
                     cmd.Dispose();
 
@@ -263,13 +264,13 @@ namespace SMLOGX.Core
                     List<String> datas = new List<string>();
                     for (int i = 0; i < column.Length; i++)
                     {
-                        string temp = column[i] + "='" + values[i] + "'";
+                        string temp = column[i] + "=N'" + values[i] + "'";
                         datas.Add(temp);
                     }
 
                     //cmd.CommandText = "INSERT INTO " + table + "(" + columns + ") VALUES(" + final_data + ");";
                     cmd.CommandText = "Update " + table + " set " + String.Join(",", datas) + " " + WhereClause;
-                    // System.Windows.Forms.MessageBox.Show(cmd.CommandText);
+                     System.Windows.Forms.MessageBox.Show(cmd.CommandText);
                     //System.Windows.Forms.MessageBox.Show(cmd.CommandText + "\n" + final_data);
                     //return false;
                     _hasExec = cmd.ExecuteNonQuery();

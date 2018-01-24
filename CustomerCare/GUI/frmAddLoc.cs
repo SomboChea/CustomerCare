@@ -128,11 +128,11 @@ namespace CustomerCare
         {
             ListBox listBox =(ListBox) ((ContextMenuStrip)sender).SourceControl;
             mnuDelete.Enabled = true;
-            mnuUpdate.Enabled = true;
+            //mnuUpdate.Enabled = true;
             if (listBox.SelectedIndices.Count <= 0)
             {
                 mnuDelete.Enabled = false;
-                mnuUpdate.Enabled = false;
+              //  mnuUpdate.Enabled = false;
                 return;
             }
 
@@ -140,8 +140,17 @@ namespace CustomerCare
 
         private void mnuUpdate_Click(object sender, EventArgs e)
         {
+            //ContextMenuStrip ctrl = (ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent();
+            //Control main = ctrl.SourceControl;
+            
+        }
+
+        private void mnuDelete_Click(object sender, EventArgs e)
+        {
             ContextMenuStrip ctrl = (ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent();
-            MessageBox.Show(ctrl.SourceControl.Name);
+            ListBox main = (ListBox)ctrl.SourceControl;
+
+            // Delete or Change status
         }
     }
     
