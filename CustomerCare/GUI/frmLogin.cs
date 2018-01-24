@@ -21,6 +21,8 @@ namespace CustomerCare
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Database.DBName = "CustomerCare";
+
             Database.Open();
             string[] user = { txtUsername.Value, txtPassword.Value };
             object userID = 0;

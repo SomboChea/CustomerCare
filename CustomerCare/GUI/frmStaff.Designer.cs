@@ -88,7 +88,7 @@
             // 
             this.dthiredate.Location = new System.Drawing.Point(178, 213);
             this.dthiredate.Name = "dthiredate";
-            this.dthiredate.Size = new System.Drawing.Size(283, 24);
+            this.dthiredate.Size = new System.Drawing.Size(283, 28);
             this.dthiredate.TabIndex = 24;
             // 
             // label6
@@ -97,7 +97,7 @@
             this.label6.Location = new System.Drawing.Point(22, 218);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 19);
+            this.label6.Size = new System.Drawing.Size(89, 21);
             this.label6.TabIndex = 22;
             this.label6.Text = "Hire Date";
             // 
@@ -107,7 +107,7 @@
             this.label4.Location = new System.Drawing.Point(22, 155);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 19);
+            this.label4.Size = new System.Drawing.Size(68, 21);
             this.label4.TabIndex = 22;
             this.label4.Text = "Other: ";
             // 
@@ -117,7 +117,7 @@
             this.label3.Location = new System.Drawing.Point(22, 47);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 19);
+            this.label3.Size = new System.Drawing.Size(147, 21);
             this.label3.TabIndex = 22;
             this.label3.Text = "Employee Note: ";
             // 
@@ -166,7 +166,7 @@
             this.label12.Location = new System.Drawing.Point(20, 164);
             this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 19);
+            this.label12.Size = new System.Drawing.Size(84, 21);
             this.label12.TabIndex = 20;
             this.label12.Text = "Tel com: ";
             // 
@@ -175,7 +175,7 @@
             this.txttelcom.Location = new System.Drawing.Point(122, 161);
             this.txttelcom.Margin = new System.Windows.Forms.Padding(4);
             this.txttelcom.Name = "txttelcom";
-            this.txttelcom.Size = new System.Drawing.Size(346, 24);
+            this.txttelcom.Size = new System.Drawing.Size(346, 28);
             this.txttelcom.TabIndex = 21;
             this.txttelcom.Tag = "Tel Com";
             // 
@@ -185,7 +185,7 @@
             this.label7.Location = new System.Drawing.Point(20, 59);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 19);
+            this.label7.Size = new System.Drawing.Size(93, 21);
             this.label7.TabIndex = 12;
             this.label7.Text = "Tel Line 1: ";
             // 
@@ -194,7 +194,7 @@
             this.txttel1.Location = new System.Drawing.Point(122, 56);
             this.txttel1.Margin = new System.Windows.Forms.Padding(4);
             this.txttel1.Name = "txttel1";
-            this.txttel1.Size = new System.Drawing.Size(346, 24);
+            this.txttel1.Size = new System.Drawing.Size(346, 28);
             this.txttel1.TabIndex = 13;
             this.txttel1.Tag = "Tel 1";
             // 
@@ -204,7 +204,7 @@
             this.label8.Location = new System.Drawing.Point(21, 111);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 19);
+            this.label8.Size = new System.Drawing.Size(93, 21);
             this.label8.TabIndex = 14;
             this.label8.Text = "Tel Line 2: ";
             // 
@@ -213,7 +213,7 @@
             this.txttel2.Location = new System.Drawing.Point(123, 108);
             this.txttel2.Margin = new System.Windows.Forms.Padding(4);
             this.txttel2.Name = "txttel2";
-            this.txttel2.Size = new System.Drawing.Size(346, 24);
+            this.txttel2.Size = new System.Drawing.Size(346, 28);
             this.txttel2.TabIndex = 15;
             this.txttel2.Tag = "Tel 2";
             // 
@@ -223,7 +223,7 @@
             this.label10.Location = new System.Drawing.Point(20, 214);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 19);
+            this.label10.Size = new System.Drawing.Size(62, 21);
             this.label10.TabIndex = 16;
             this.label10.Text = "Email: ";
             // 
@@ -232,7 +232,7 @@
             this.txtemail.Location = new System.Drawing.Point(122, 211);
             this.txtemail.Margin = new System.Windows.Forms.Padding(4);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(346, 24);
+            this.txtemail.Size = new System.Drawing.Size(346, 28);
             this.txtemail.TabIndex = 17;
             this.txtemail.Tag = "Email";
             // 
@@ -281,16 +281,17 @@
             this.cbPos.FormattingEnabled = true;
             this.cbPos.Location = new System.Drawing.Point(193, 142);
             this.cbPos.Name = "cbPos";
-            this.cbPos.Size = new System.Drawing.Size(301, 27);
+            this.cbPos.Size = new System.Drawing.Size(301, 29);
             this.cbPos.TabIndex = 6;
             this.cbPos.Tag = "Position";
             // 
             // txtKhName
             // 
+            this.txtKhName.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
             this.txtKhName.Location = new System.Drawing.Point(193, 92);
             this.txtKhName.Margin = new System.Windows.Forms.Padding(4);
             this.txtKhName.Name = "txtKhName";
-            this.txtKhName.Size = new System.Drawing.Size(301, 24);
+            this.txtKhName.Size = new System.Drawing.Size(301, 37);
             this.txtKhName.TabIndex = 5;
             this.txtKhName.Tag = "Name in Khmer";
             // 
@@ -300,7 +301,7 @@
             this.label11.Location = new System.Drawing.Point(28, 92);
             this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(122, 19);
+            this.label11.Size = new System.Drawing.Size(145, 21);
             this.label11.TabIndex = 4;
             this.label11.Text = "Name in Khmer: ";
             // 
@@ -309,7 +310,7 @@
             this.txtEnName.Location = new System.Drawing.Point(193, 38);
             this.txtEnName.Margin = new System.Windows.Forms.Padding(4);
             this.txtEnName.Name = "txtEnName";
-            this.txtEnName.Size = new System.Drawing.Size(301, 24);
+            this.txtEnName.Size = new System.Drawing.Size(301, 28);
             this.txtEnName.TabIndex = 1;
             this.txtEnName.Tag = "Name in English";
             // 
@@ -319,7 +320,7 @@
             this.label1.Location = new System.Drawing.Point(28, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 19);
+            this.label1.Size = new System.Drawing.Size(147, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name in English: ";
             // 
@@ -329,7 +330,7 @@
             this.label2.Location = new System.Drawing.Point(28, 142);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 19);
+            this.label2.Size = new System.Drawing.Size(82, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "Position: ";
             // 
@@ -382,7 +383,7 @@
             // 
             this.txtsearch.Location = new System.Drawing.Point(942, 495);
             this.txtsearch.Name = "txtsearch";
-            this.txtsearch.Size = new System.Drawing.Size(275, 24);
+            this.txtsearch.Size = new System.Drawing.Size(275, 28);
             this.txtsearch.TabIndex = 36;
             this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             // 
@@ -392,7 +393,7 @@
             this.label5.Location = new System.Drawing.Point(858, 498);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 19);
+            this.label5.Size = new System.Drawing.Size(77, 21);
             this.label5.TabIndex = 37;
             this.label5.Text = "Search: ";
             // 
@@ -410,7 +411,7 @@
             // 
             // frmStaff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1248, 738);
