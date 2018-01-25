@@ -264,13 +264,13 @@ namespace SMLOGX.Core
                     List<String> datas = new List<string>();
                     for (int i = 0; i < column.Length; i++)
                     {
-                        string temp = column[i] + "='" + values[i] + "'";
+                        string temp = column[i] + "=N'" + values[i] + "'";
                         datas.Add(temp);
                     }
 
                     //cmd.CommandText = "INSERT INTO " + table + "(" + columns + ") VALUES(" + final_data + ");";
                     cmd.CommandText = "Update " + table + " set " + String.Join(",", datas) + " " + WhereClause;
-                    // System.Windows.Forms.MessageBox.Show(cmd.CommandText);
+                     System.Windows.Forms.MessageBox.Show(cmd.CommandText);
                     //System.Windows.Forms.MessageBox.Show(cmd.CommandText + "\n" + final_data);
                     //return false;
                     _hasExec = cmd.ExecuteNonQuery();

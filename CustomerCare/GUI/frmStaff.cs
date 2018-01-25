@@ -49,14 +49,14 @@ namespace CustomerCare
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            MessageBox.Show(dataGridView1.CurrentRow.Cells["Photo"].Value + "");
+            //MessageBox.Show(dataGridView1.CurrentRow.Cells["Photo"].Value + "");
             function.AutoFilltextboxfromDatagridview(dataGridView1.CurrentRow, this);
             dthiredate.Value = DateTime.Parse(dataGridView1.CurrentRow.Cells["Hire Date"].Value + "");
 
             try
             {
                 // Add Image
-                MessageBox.Show(function.Path_Prefix + "Staff\\" + dataGridView1.SelectedRows[0].Cells["Photo"].Value + " " + File.Exists(function.Path_Prefix + "Staff\\" + dataGridView1.SelectedRows[0].Cells["Photo"].Value));
+                //MessageBox.Show(function.Path_Prefix + "Staff\\" + dataGridView1.SelectedRows[0].Cells["Photo"].Value + " " + File.Exists(function.Path_Prefix + "Staff\\" + dataGridView1.SelectedRows[0].Cells["Photo"].Value));
                 pictureBox1.Image = Image.FromFile(function.Path_Prefix + "Staff\\" + dataGridView1.SelectedRows[0].Cells["Photo"].Value);
             }
             catch (Exception)
