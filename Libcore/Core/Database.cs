@@ -239,7 +239,7 @@ namespace SMLOGX.Core
                 }
                 catch (Exception ex)
                 {
-                    Log.Write(ex.Message, "Database.Insert");
+                    Log.Write(ex.Message, "Database.Insert"+" \n"+cmd.CommandText);
                 }
             }
 

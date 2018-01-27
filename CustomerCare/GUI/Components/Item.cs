@@ -1,10 +1,13 @@
 ﻿using CustomerCare.STR;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace CustomerCare.GUI.Components
 {
+    [ToolboxItem(true)]
+    [ToolboxBitmap( "octicons_github.bmp")]
     public partial class Item : UserControl
     {
         private Form context;

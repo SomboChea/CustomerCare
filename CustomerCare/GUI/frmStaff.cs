@@ -8,9 +8,12 @@ namespace CustomerCare
 {
     public partial class frmStaff : Form
     {
+        
         public frmStaff()
         {
             InitializeComponent();
+
+            
 
             Database.Server = "localhost";
             Database.DBName = "CustomerCare";

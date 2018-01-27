@@ -225,6 +225,7 @@ namespace SMLOGX.Core
 
         public static string implode(string imp, string strCase, params object[] values)
         {
+            //Console.WriteLine(values[0]);
             return "N"+strCase + String.Join("'" + imp + "N'", values) + strCase;
 
         }
