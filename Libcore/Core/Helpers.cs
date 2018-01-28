@@ -582,10 +582,38 @@ namespace SMLOGX.Core
             return dt;
         }
 
-        public static void Insert_DB_From_Excel(string sheetname, string target_table, string Excel_Columns, string DB_Columns)
+        public static object QueryScalar(string sql)
         {
-            DataTable dtsheet = GetModel(sheetname);
+            OleDbCommand cmd = new OleDbCommand(sql, Conn);
+            object obj = cmd.ExecuteScalar();
+            cmd.Dispose();
+            return obj;
+        }
 
+        public static DataTable QueryModel(string sql)
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter(sql, Conn);
+            DataTable dt = new DataTable();
+            adapt.Fill(dt);
+
+            return dt;
+        }
+
+        public static void Insert_ForeignerTable(string Sheet, string Exc_Primary)
+        {
+            DataTable dt = QueryModel("Select * from [Native$]");
+            foreach (DataRow row in dt.Rows)
+            {
+                string value1 = "" + Database.QueryScalar("Select ClassID from Class where ClassName='" + row["ClassName"] + "'");
+                string value2 = "" + Database.QueryScalar("Select PersonID from Person where PersonName like '" + row["Name"] + "'");
+                Database.Insert("ClassDetail", "ClassID,PersonID,Room", value1, value2, row["Room"]);
+            }
+        }
+
+        public static void Insert_DB_From_Excel(string sql, string target_table, string Excel_Columns, string DB_Columns)
+        {
+            //DataTable dtsheet = GetModel(sheetname);
+            DataTable dtsheet = QueryModel(sql);
             foreach (DataRow row in dtsheet.Rows)
             {
                 string[] all_cols = Excel_Columns.Split(',');
@@ -602,8 +630,8 @@ namespace SMLOGX.Core
                 string value = all_cols.Length > 1 ? string.Join(",", values.ToArray()) : "N'" + row[all_cols[0]] + "'";
                 Console.WriteLine(value);
 
-                if (!Database.Insert(target_table, DB_Columns, value))
-                    MessageBox.Show("Failed");
+                //if (!Database.Insert(target_table, DB_Columns, value))
+                //    MessageBox.Show("Failed");
             }
         }
     }
