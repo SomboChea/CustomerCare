@@ -53,6 +53,7 @@
             // 
             // txtpro
             // 
+            this.txtpro.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.txtpro.Location = new System.Drawing.Point(28, 72);
             this.txtpro.Name = "txtpro";
             this.txtpro.Size = new System.Drawing.Size(151, 31);
@@ -152,7 +153,7 @@
             this.btnComm.UseVisualStyleBackColor = true;
             this.btnComm.Click += new System.EventHandler(this.btnComm_Click);
             // 
-            // frmAddPos
+            // frmAddress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -171,7 +172,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.Name = "frmAddPos";
+            this.Name = "frmAddress";
             this.Text = "frmAddPos";
             this.Load += new System.EventHandler(this.frmAddPos_Load);
             this.ResumeLayout(false);

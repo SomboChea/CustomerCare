@@ -17,15 +17,6 @@ namespace SMLOGX.Core
     /// </summary>
     public class Helpers : IHelper
     {
-        public static Region Circle(Control control)
-        {
-            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
-            gp.AddEllipse(0, 0, control.Width - 2, control.Height - 2);
-            Region rg = new Region(gp);
-            control.Region = rg;
-            return rg;
-        }
-
         public static string Path_Prefix { get; set; } = ".\\Image\\";
 
         public static void Clear(Control main)
@@ -234,7 +225,9 @@ namespace SMLOGX.Core
 
         public static string implode(string imp, string strCase, params object[] values)
         {
-            return "N" + strCase + String.Join("'" + imp + "N'", values) + strCase;
+            //Console.WriteLine(values[0]);
+            return "N"+strCase + String.Join("'" + imp + "N'", values) + strCase;
+
         }
 
         public static string TrimStart(string value)
