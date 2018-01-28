@@ -33,8 +33,6 @@
             this.lbTitle = new System.Windows.Forms.Label();
             this.btnMinz = new System.Windows.Forms.PictureBox();
             this.picClose = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new CustomerCare.GUI.Components.TextBox();
-            this.panMain.SuspendLayout();
             this.panHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
@@ -42,7 +40,6 @@
             // 
             // panMain
             // 
-            this.panMain.Controls.Add(this.textBox1);
             this.panMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panMain.Location = new System.Drawing.Point(0, 57);
             this.panMain.Margin = new System.Windows.Forms.Padding(10);
@@ -70,7 +67,7 @@
             this.lbTitle.ForeColor = System.Drawing.Color.White;
             this.lbTitle.Location = new System.Drawing.Point(9, 11);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(160, 33);
+            this.lbTitle.Size = new System.Drawing.Size(200, 40);
             this.lbTitle.TabIndex = 2;
             this.lbTitle.Text = "Dashboard";
             // 
@@ -102,23 +99,9 @@
             this.picClose.TabStop = false;
             this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(4, 7);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Reg = null;
-            this.textBox1.Size = new System.Drawing.Size(492, 44);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TestColor = "";
-            this.textBox1.Value = "";
-            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1193, 720);
             this.ControlBox = false;
@@ -132,7 +115,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panMain.ResumeLayout(false);
             this.panHead.ResumeLayout(false);
             this.panHead.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinz)).EndInit();
@@ -148,6 +130,5 @@
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.PictureBox btnMinz;
         private System.Windows.Forms.Label lbTitle;
-        private GUI.Components.TextBox textBox1;
     }
 }

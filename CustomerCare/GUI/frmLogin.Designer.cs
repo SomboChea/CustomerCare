@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panHead = new System.Windows.Forms.Panel();
             this.lbTitle = new System.Windows.Forms.Label();
             this.panContent = new System.Windows.Forms.Panel();
@@ -89,6 +90,9 @@
             this.txtPassword.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(289, 134);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.txtPassword.MyBackColor = System.Drawing.SystemColors.Control;
+            this.txtPassword.MyBorderColor = System.Drawing.Color.White;
+            this.txtPassword.MyMulti = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(343, 44);
             this.txtPassword.TabIndex = 15;
@@ -101,6 +105,9 @@
             this.txtUsername.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(289, 56);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.txtUsername.MyBackColor = System.Drawing.SystemColors.Control;
+            this.txtUsername.MyBorderColor = System.Drawing.Color.White;
+            this.txtUsername.MyMulti = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(381, 44);
             this.txtUsername.TabIndex = 10;
@@ -222,6 +229,7 @@
             this.Controls.Add(this.panHead);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

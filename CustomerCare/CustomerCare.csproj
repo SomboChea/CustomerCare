@@ -36,6 +36,9 @@
   <PropertyGroup>
     <StartupObject>CustomerCare.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -326,6 +329,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
