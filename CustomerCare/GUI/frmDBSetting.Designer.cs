@@ -64,7 +64,7 @@
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.ForeColor = System.Drawing.Color.White;
-            this.lbTitle.Location = new System.Drawing.Point(250, 15);
+            this.lbTitle.Location = new System.Drawing.Point(225, 4);
             this.lbTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(411, 56);
@@ -109,9 +109,9 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(101, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 31);
+            this.label2.Size = new System.Drawing.Size(206, 31);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Server Name   :";
+            this.label2.Text = "Server Name    :";
             // 
             // btnSave
             // 
@@ -124,7 +124,7 @@
             this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(425, 384);
+            this.btnSave.Location = new System.Drawing.Point(457, 394);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(105, 30);
             this.btnSave.TabIndex = 9;
@@ -143,7 +143,7 @@
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(576, 384);
+            this.btnClose.Location = new System.Drawing.Point(608, 394);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(105, 30);
             this.btnClose.TabIndex = 10;
@@ -157,9 +157,9 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(101, 207);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(198, 31);
+            this.label5.Size = new System.Drawing.Size(205, 31);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Database        :";
+            this.label5.Text = "Database         :";
             // 
             // cbDB
             // 
@@ -178,26 +178,26 @@
             this.panUser.Controls.Add(this.label4);
             this.panUser.Controls.Add(this.label3);
             this.panUser.Enabled = false;
-            this.panUser.Location = new System.Drawing.Point(254, 249);
+            this.panUser.Location = new System.Drawing.Point(254, 264);
             this.panUser.Name = "panUser";
-            this.panUser.Size = new System.Drawing.Size(457, 106);
+            this.panUser.Size = new System.Drawing.Size(457, 114);
             this.panUser.TabIndex = 15;
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(146, 61);
+            this.txtPassword.Location = new System.Drawing.Point(158, 61);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(298, 38);
+            this.txtPassword.Size = new System.Drawing.Size(286, 38);
             this.txtPassword.TabIndex = 16;
             // 
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(146, 15);
+            this.txtUsername.Location = new System.Drawing.Point(158, 15);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(298, 38);
+            this.txtUsername.Size = new System.Drawing.Size(286, 38);
             this.txtUsername.TabIndex = 15;
             // 
             // label4
@@ -231,7 +231,7 @@
             this.btnTest.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.btnTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTest.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTest.Location = new System.Drawing.Point(35, 384);
+            this.btnTest.Location = new System.Drawing.Point(39, 394);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(147, 30);
             this.btnTest.TabIndex = 16;
@@ -244,7 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(840, 432);
+            this.ClientSize = new System.Drawing.Size(840, 448);
             this.ControlBox = false;
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.panUser);

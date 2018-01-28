@@ -33,24 +33,28 @@
             // 
             // txtValue
             // 
-            this.txtValue.BackColor = System.Drawing.Color.White;
+            this.txtValue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtValue.BackColor = System.Drawing.SystemColors.Control;
             this.txtValue.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtValue.Location = new System.Drawing.Point(7, 7);
+            this.txtValue.Location = new System.Drawing.Point(4, 4);
+            this.txtValue.Multiline = true;
             this.txtValue.Name = "txtValue";
-            this.txtValue.Size = new System.Drawing.Size(479, 30);
+            this.txtValue.Size = new System.Drawing.Size(463, 42);
             this.txtValue.TabIndex = 0;
             // 
             // TextBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.txtValue);
             this.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.Name = "TextBox";
-            this.Size = new System.Drawing.Size(492, 44);
+            this.Size = new System.Drawing.Size(470, 50);
             this.ResumeLayout(false);
             this.PerformLayout();
 
