@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.OleDb;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -526,5 +527,93 @@ namespace SMLOGX.Core
 
             return data;
         }
+        public class Excel
+        {
+            public static OleDbConnection Conn;
+            public static void open(string path)
+            {
+                string ConnectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source='" + path + "';Extended Properties='Excel 8.0;HDR=Yes;'";
+                Conn = new OleDbConnection(ConnectionString);
+                Conn.Open();
+            }
+            public static DataTable GetModel(string Sheetname)
+            {
+                OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [" + Sheetname + "$]", Conn);
+                DataTable dt = new DataTable();
+                adapt.Fill(dt);
+
+                return dt;
+            }
+
+            public static void Insert_DB_From_Excel(string sheetname, string target_table, string Excel_Columns, string DB_Columns)
+            {
+                DataTable dtsheet = GetModel(sheetname);
+
+                foreach (DataRow row in dtsheet.Rows)
+                {
+                    string[] all_cols = Excel_Columns.Split(',');
+                    List<string> values = new List<string>();
+                    if (all_cols.Length > 1)
+                    {
+                        foreach (string temp in all_cols)
+                        {
+                            values.Add(row[temp] + "");
+                            //MessageBox.Show(row["Name"] + "");
+                            //Console.WriteLine(row[temp]);
+                        }
+                    }
+                    string value = all_cols.Length > 1 ? string.Join(",", values.ToArray()) : "N'" + row[all_cols[0]] + "'";
+                    Console.WriteLine(value);
+
+                    if (!Database.Insert(target_table, DB_Columns, value))
+                        MessageBox.Show("Failed");
+                }
+            }
+        }
     }
+
+    public class Excels
+    {
+        public static OleDbConnection Conn;
+        public static void open(string path)
+        {
+            string ConnectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source='" + path + "';Extended Properties='Excel 8.0;HDR=Yes;'";
+            Conn = new OleDbConnection(ConnectionString);
+            Conn.Open();
+        }
+        public static DataTable GetModel(string Sheetname)
+        {
+            OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [" + Sheetname + "$]", Conn);
+            DataTable dt = new DataTable();
+            adapt.Fill(dt);
+
+            return dt;
+        }
+
+        public static void Insert_DB_From_Excel(string sheetname, string target_table, string Excel_Columns, string DB_Columns)
+        {
+            DataTable dtsheet = GetModel(sheetname);
+
+            foreach (DataRow row in dtsheet.Rows)
+            {
+                string[] all_cols = Excel_Columns.Split(',');
+                List<string> values = new List<string>();
+                if (all_cols.Length > 1)
+                {
+                    foreach (string temp in all_cols)
+                    {
+                        values.Add(row[temp] + "");
+                        //MessageBox.Show(row["Name"] + "");
+                        //Console.WriteLine(row[temp]);
+                    }
+                }
+                string value = all_cols.Length > 1 ? string.Join(",", values.ToArray()) : "N'" + row[all_cols[0]] + "'";
+                Console.WriteLine(value);
+
+                if (!Database.Insert(target_table, DB_Columns, value))
+                    MessageBox.Show("Failed");
+            }
+        }
+    }
+
 }
