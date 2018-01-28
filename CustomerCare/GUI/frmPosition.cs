@@ -135,5 +135,10 @@ namespace CustomerCare
         {
             btnAdd.Text = "Update";
         }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

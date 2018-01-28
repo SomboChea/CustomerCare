@@ -56,6 +56,18 @@
     <Compile Include="GUI\Components\Alert.Designer.cs">
       <DependentUpon>Alert.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Components\ImageButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Components\ImageButton.Designer.cs">
+      <DependentUpon>ImageButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Components\SMXButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Components\SMXButton.Designer.cs">
+      <DependentUpon>SMXButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Components\Item.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,6 +176,9 @@
     <Compile Include="GUI\frmUser.Designer.cs">
       <DependentUpon>frmUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Initiailizing.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUI\ucDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,6 +197,13 @@
     <Compile Include="STR\Tag.cs" />
     <EmbeddedResource Include="GUI\Components\Alert.resx">
       <DependentUpon>Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Components\ImageButton.resx">
+      <DependentUpon>ImageButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Components\SMXButton.resx">
+      <DependentUpon>SMXButton.cs</DependentUpon>
+      <LastGenOutput>SMXButton1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Components\Item.resx">
       <DependentUpon>Item.cs</DependentUpon>
@@ -230,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmStaff.resx">
       <DependentUpon>frmStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Initiailizing.resx">
+      <DependentUpon>Initiailizing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>
@@ -289,6 +314,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,6 +12,18 @@ namespace CustomerCare.GUI.Components
     {
         private Form context;
 
+        [Category("Alpha")]
+        public string Value { get => lbTitle.Text; set => lbTitle.Text = value; }
+
+        [Category("Alpha")]
+        public Image Icon { get => bigPic.Image; set => bigPic.Image = value; }
+
+        [Category("Alpha")]
+        public Color Bgcolor { get => panPhoto.BackColor; set => panPhoto.BackColor = value; }
+
+        [Category("Alpha")]
+        public Form NewForm { get => context; set => context = value; }
+
         public Item()
         {
             InitializeComponent();
