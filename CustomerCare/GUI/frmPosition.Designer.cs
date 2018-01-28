@@ -123,9 +123,7 @@
             this.txtPosition.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPosition.Location = new System.Drawing.Point(175, 105);
             this.txtPosition.Margin = new System.Windows.Forms.Padding(5, 9, 5, 9);
-            this.txtPosition.MyBackColor = System.Drawing.SystemColors.Control;
-            this.txtPosition.MyBorderColor = System.Drawing.Color.White;
-            this.txtPosition.MyMulti = true;
+            
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(418, 48);
             this.txtPosition.TabIndex = 3;
