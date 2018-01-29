@@ -20,7 +20,7 @@ namespace CustomerCare
         {
             InitializeComponent(InitSize);
             this.timerLoading.Tick += new System.EventHandler(this.timerStop);
-            SMLOGX.Core.Helpers.Circle(this);
+            
             timerLoading.Interval = this.Interval;
         }
 
