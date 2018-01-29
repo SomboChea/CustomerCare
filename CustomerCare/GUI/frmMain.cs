@@ -47,8 +47,6 @@ namespace CustomerCare
                     menuItem.Add(new ItemList(new frmProduct(), tags[j].TagTitle, "Images\\product.png", menuColor[j]));
                 else if (tags[j].TagName == "user")
                     menuItem.Add(new ItemList(new frmUser(), tags[j].TagTitle, "Images\\user.png", menuColor[j]));
-                //else
-                //menuItem.Add(new ItemList(new Alert(), "Exit", "Images\\category.png", Color.Crimson));
             }
 
             for (int i = 0; i < menuItem.Count; i++)
@@ -57,7 +55,9 @@ namespace CustomerCare
 
         private void picClose_Click(object sender, EventArgs e)
         {
-            App.ExitAll();
+            //App.ExitAll();
+            this.Dispose();
+            Temp.frm_login.Show();
         }
 
         private void btnMinz_Click(object sender, EventArgs e)

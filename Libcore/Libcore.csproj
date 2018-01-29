@@ -52,6 +52,7 @@
     <Compile Include="Core\BaseConnection.cs" />
     <Compile Include="Core\BaseHelper.cs" />
     <Compile Include="Core\BaseSystem.cs" />
+    <Compile Include="Core\Config.cs" />
     <Compile Include="Core\Database.cs" />
     <Compile Include="Core\Helpers.cs" />
     <Compile Include="Core\IBaseSystem.cs" />

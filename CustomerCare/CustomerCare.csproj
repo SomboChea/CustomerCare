@@ -198,6 +198,7 @@
     <Compile Include="STR\People.cs" />
     <Compile Include="STR\Staff.cs" />
     <Compile Include="STR\Tag.cs" />
+    <Compile Include="STR\Temp.cs" />
     <EmbeddedResource Include="GUI\Components\Alert.resx">
       <DependentUpon>Alert.cs</DependentUpon>
     </EmbeddedResource>

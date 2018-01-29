@@ -108,6 +108,25 @@ namespace SMLOGX.Core
         }
 
         /// <summary>
+        /// Test Database Connection
+        /// </summary>
+        public static bool Test(Config config, bool isAuth = false)
+        {
+            try
+            {
+                string conString = isAuth ? "Server = " + config.Server + ";Database = " + config.DBName + ";User Id = " + config.UserId + ";Password = " + config.Password : "Server = " + config.Server + ";Database = " + config.DBName + ";Trusted_Connection=True";
+                SqlConnection conn = new SqlConnection(conString);
+                conn.Open();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex.Message, "Database.Test");
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Close Database Connection
         /// </summary>
         public static void Close()
@@ -239,7 +258,7 @@ namespace SMLOGX.Core
                 }
                 catch (Exception ex)
                 {
-                    Log.Write(ex.Message, "Database.Insert"+" \n"+cmd.CommandText);
+                    Log.Write(ex.Message, "Database.Insert" + " \n" + cmd.CommandText);
                 }
             }
 

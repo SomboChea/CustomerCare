@@ -28,233 +28,322 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rfemale = new System.Windows.Forms.RadioButton();
-            this.rmale = new System.Windows.Forms.RadioButton();
-            this.txtorder = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtpicker = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btncancel = new System.Windows.Forms.Button();
-            this.btnadd = new System.Windows.Forms.Button();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtWhy = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbProduct = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dateDOB = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.cbGender = new System.Windows.Forms.ComboBox();
+            this.txtKidName = new System.Windows.Forms.TextBox();
+            this.listKids = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnDeleteKid = new System.Windows.Forms.Button();
+            this.btnAddKid = new System.Windows.Forms.Button();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.gbSelectPro = new System.Windows.Forms.GroupBox();
+            this.rdUsed = new System.Windows.Forms.RadioButton();
+            this.rdNotUsed = new System.Windows.Forms.RadioButton();
+            this.groupBox4.SuspendLayout();
+            this.gbSelectPro.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtName
+            // groupBox4
             // 
-            this.txtName.Location = new System.Drawing.Point(106, 59);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(391, 24);
-            this.txtName.TabIndex = 3;
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox4.Controls.Add(this.gbSelectPro);
+            this.groupBox4.Controls.Add(this.txtWhy);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.cbProduct);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.dateDOB);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.cbGender);
+            this.groupBox4.Controls.Add(this.txtKidName);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.ForeColor = System.Drawing.Color.Black;
+            this.groupBox4.Location = new System.Drawing.Point(13, 12);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox4.Size = new System.Drawing.Size(1004, 344);
+            this.groupBox4.TabIndex = 27;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Kids";
             // 
-            // label1
+            // txtWhy
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 59);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Name: ";
+            this.txtWhy.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWhy.Location = new System.Drawing.Point(95, 224);
+            this.txtWhy.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtWhy.Multiline = true;
+            this.txtWhy.Name = "txtWhy";
+            this.txtWhy.Size = new System.Drawing.Size(901, 107);
+            this.txtWhy.TabIndex = 13;
+            this.txtWhy.Tag = "";
             // 
-            // groupBox1
+            // label14
             // 
-            this.groupBox1.Controls.Add(this.rfemale);
-            this.groupBox1.Controls.Add(this.rmale);
-            this.groupBox1.Location = new System.Drawing.Point(30, 112);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(467, 100);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Gender";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(9, 224);
+            this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(55, 21);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Why: ";
             // 
-            // rfemale
+            // cbProduct
             // 
-            this.rfemale.AutoSize = true;
-            this.rfemale.Location = new System.Drawing.Point(289, 46);
-            this.rfemale.Name = "rfemale";
-            this.rfemale.Size = new System.Drawing.Size(78, 23);
-            this.rfemale.TabIndex = 1;
-            this.rfemale.Text = "Female";
-            this.rfemale.UseVisualStyleBackColor = true;
+            this.cbProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbProduct.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
+            this.cbProduct.FormattingEnabled = true;
+            this.cbProduct.Location = new System.Drawing.Point(661, 142);
+            this.cbProduct.Name = "cbProduct";
+            this.cbProduct.Size = new System.Drawing.Size(335, 37);
+            this.cbProduct.TabIndex = 11;
             // 
-            // rmale
+            // label13
             // 
-            this.rmale.AutoSize = true;
-            this.rmale.Checked = true;
-            this.rmale.Location = new System.Drawing.Point(122, 46);
-            this.rmale.Name = "rmale";
-            this.rmale.Size = new System.Drawing.Size(62, 23);
-            this.rmale.TabIndex = 0;
-            this.rmale.TabStop = true;
-            this.rmale.Text = "Male";
-            this.rmale.UseVisualStyleBackColor = true;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(567, 149);
+            this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(86, 21);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "Product: ";
             // 
-            // txtorder
+            // dateDOB
             // 
-            this.txtorder.Location = new System.Drawing.Point(658, 122);
-            this.txtorder.Name = "txtorder";
-            this.txtorder.Size = new System.Drawing.Size(339, 24);
-            this.txtorder.TabIndex = 6;
+            this.dateDOB.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
+            this.dateDOB.Location = new System.Drawing.Point(180, 149);
+            this.dateDOB.Name = "dateDOB";
+            this.dateDOB.Size = new System.Drawing.Size(328, 37);
+            this.dateDOB.TabIndex = 9;
             // 
-            // label2
+            // label12
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(537, 62);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 19);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Date of Birth:";
-            // 
-            // dtpicker
-            // 
-            this.dtpicker.Location = new System.Drawing.Point(658, 62);
-            this.dtpicker.Name = "dtpicker";
-            this.dtpicker.Size = new System.Drawing.Size(339, 24);
-            this.dtpicker.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(537, 122);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 19);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Order:";
-            // 
-            // btncancel
-            // 
-            this.btncancel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btncancel.FlatAppearance.BorderSize = 0;
-            this.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncancel.Location = new System.Drawing.Point(860, 174);
-            this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(137, 38);
-            this.btncancel.TabIndex = 29;
-            this.btncancel.Text = "Cancel";
-            this.btncancel.UseVisualStyleBackColor = false;
-            this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
-            // 
-            // btnadd
-            // 
-            this.btnadd.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnadd.FlatAppearance.BorderSize = 0;
-            this.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnadd.Location = new System.Drawing.Point(658, 174);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(146, 38);
-            this.btnadd.TabIndex = 28;
-            this.btnadd.Text = "Add";
-            this.btnadd.UseVisualStyleBackColor = false;
-            this.btnadd.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(106, 263);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(275, 24);
-            this.textBox12.TabIndex = 30;
-            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(9, 158);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(127, 21);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Record date: ";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(22, 266);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(9, 42);
+            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 19);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "Search: ";
+            this.label11.Size = new System.Drawing.Size(101, 21);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Kid Name: ";
             // 
-            // dataGridView1
+            // cbGender
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(989, 160);
-            this.dataGridView1.TabIndex = 34;
-            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGender.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
+            this.cbGender.Location = new System.Drawing.Point(180, 94);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(184, 37);
+            this.cbGender.TabIndex = 6;
             // 
-            // panel1
+            // txtKidName
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtKidName.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKidName.Location = new System.Drawing.Point(180, 36);
+            this.txtKidName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtKidName.Name = "txtKidName";
+            this.txtKidName.Size = new System.Drawing.Size(328, 37);
+            this.txtKidName.TabIndex = 5;
+            this.txtKidName.Tag = "";
+            // 
+            // listKids
+            // 
+            this.listKids.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(26, 293);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(998, 196);
-            this.panel1.TabIndex = 35;
-            this.panel1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panel1_Scroll);
+            this.listKids.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listKids.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listKids.FullRowSelect = true;
+            this.listKids.GridLines = true;
+            this.listKids.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listKids.Location = new System.Drawing.Point(12, 402);
+            this.listKids.MultiSelect = false;
+            this.listKids.Name = "listKids";
+            this.listKids.Size = new System.Drawing.Size(1005, 169);
+            this.listKids.TabIndex = 3;
+            this.listKids.UseCompatibleStateImageBehavior = false;
+            this.listKids.View = System.Windows.Forms.View.Details;
+            this.listKids.DoubleClick += new System.EventHandler(this.listKids_DoubleClick);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 133;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Gender";
+            this.columnHeader2.Width = 130;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "DOB";
+            this.columnHeader3.Width = 140;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Product";
+            this.columnHeader4.Width = 159;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 100);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 21);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Gender: ";
+            // 
+            // btnDeleteKid
+            // 
+            this.btnDeleteKid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnDeleteKid.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnDeleteKid.FlatAppearance.BorderSize = 0;
+            this.btnDeleteKid.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.Control;
+            this.btnDeleteKid.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btnDeleteKid.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.btnDeleteKid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteKid.Location = new System.Drawing.Point(896, 362);
+            this.btnDeleteKid.Name = "btnDeleteKid";
+            this.btnDeleteKid.Size = new System.Drawing.Size(121, 34);
+            this.btnDeleteKid.TabIndex = 2;
+            this.btnDeleteKid.Text = "Remove";
+            this.btnDeleteKid.UseVisualStyleBackColor = false;
+            this.btnDeleteKid.Click += new System.EventHandler(this.btnDeleteKid_Click);
+            // 
+            // btnAddKid
+            // 
+            this.btnAddKid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAddKid.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnAddKid.FlatAppearance.BorderSize = 0;
+            this.btnAddKid.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.Control;
+            this.btnAddKid.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btnAddKid.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.btnAddKid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddKid.Location = new System.Drawing.Point(755, 362);
+            this.btnAddKid.Name = "btnAddKid";
+            this.btnAddKid.Size = new System.Drawing.Size(121, 34);
+            this.btnAddKid.TabIndex = 0;
+            this.btnAddKid.Text = "Add kid";
+            this.btnAddKid.UseVisualStyleBackColor = false;
+            this.btnAddKid.Click += new System.EventHandler(this.btnAddKid_Click);
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Why";
+            this.columnHeader5.Width = 436;
+            // 
+            // gbSelectPro
+            // 
+            this.gbSelectPro.Controls.Add(this.rdNotUsed);
+            this.gbSelectPro.Controls.Add(this.rdUsed);
+            this.gbSelectPro.Location = new System.Drawing.Point(571, 27);
+            this.gbSelectPro.Name = "gbSelectPro";
+            this.gbSelectPro.Size = new System.Drawing.Size(425, 94);
+            this.gbSelectPro.TabIndex = 15;
+            this.gbSelectPro.TabStop = false;
+            this.gbSelectPro.Text = "Product [Used / Not]";
+            // 
+            // rdUsed
+            // 
+            this.rdUsed.AutoSize = true;
+            this.rdUsed.Location = new System.Drawing.Point(73, 48);
+            this.rdUsed.Name = "rdUsed";
+            this.rdUsed.Size = new System.Drawing.Size(73, 25);
+            this.rdUsed.TabIndex = 0;
+            this.rdUsed.TabStop = true;
+            this.rdUsed.Text = "Used";
+            this.rdUsed.UseVisualStyleBackColor = true;
+            // 
+            // rdNotUsed
+            // 
+            this.rdNotUsed.AutoSize = true;
+            this.rdNotUsed.Location = new System.Drawing.Point(263, 48);
+            this.rdNotUsed.Name = "rdNotUsed";
+            this.rdNotUsed.Size = new System.Drawing.Size(109, 25);
+            this.rdNotUsed.TabIndex = 1;
+            this.rdNotUsed.TabStop = true;
+            this.rdNotUsed.Text = "Not Used";
+            this.rdNotUsed.UseVisualStyleBackColor = true;
             // 
             // frmKid
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1030, 501);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.btncancel);
-            this.Controls.Add(this.btnadd);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dtpicker);
-            this.Controls.Add(this.txtorder);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1030, 583);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.listKids);
+            this.Controls.Add(this.btnAddKid);
+            this.Controls.Add(this.btnDeleteKid);
             this.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmKid";
-            this.Text = "KID FORM";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "MOM {Name} KIDS";
             this.Load += new System.EventHandler(this.frmKid_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.gbSelectPro.ResumeLayout(false);
+            this.gbSelectPro.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rfemale;
-        private System.Windows.Forms.RadioButton rmale;
-        private System.Windows.Forms.TextBox txtorder;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtpicker;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btncancel;
-        private System.Windows.Forms.Button btnadd;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox gbSelectPro;
+        private System.Windows.Forms.RadioButton rdNotUsed;
+        private System.Windows.Forms.RadioButton rdUsed;
+        private System.Windows.Forms.TextBox txtWhy;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cbProduct;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DateTimePicker dateDOB;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cbGender;
+        private System.Windows.Forms.TextBox txtKidName;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ListView listKids;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Button btnDeleteKid;
+        private System.Windows.Forms.Button btnAddKid;
     }
 }

@@ -527,15 +527,18 @@ namespace SMLOGX.Core
 
             return data;
         }
+
         public class Excel
         {
             public static OleDbConnection Conn;
+
             public static void open(string path)
             {
                 string ConnectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source='" + path + "';Extended Properties='Excel 8.0;HDR=Yes;'";
                 Conn = new OleDbConnection(ConnectionString);
                 Conn.Open();
             }
+
             public static DataTable GetModel(string Sheetname)
             {
                 OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [" + Sheetname + "$]", Conn);
@@ -572,15 +575,20 @@ namespace SMLOGX.Core
         }
     }
 
+    /// <summary>
+    /// Excel files converter
+    /// </summary>
     public class Excels
     {
         public static OleDbConnection Conn;
-        public static void open(string path)
+
+        public static void Open(string path)
         {
             string ConnectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source='" + path + "';Extended Properties='Excel 8.0;HDR=Yes;'";
             Conn = new OleDbConnection(ConnectionString);
             Conn.Open();
         }
+
         public static DataTable GetModel(string Sheetname)
         {
             OleDbDataAdapter adapt = new OleDbDataAdapter("Select * from [" + Sheetname + "$]", Conn);
@@ -615,5 +623,4 @@ namespace SMLOGX.Core
             }
         }
     }
-
 }

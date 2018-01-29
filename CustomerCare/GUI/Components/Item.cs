@@ -7,7 +7,7 @@ using System.Windows.Forms;
 namespace CustomerCare.GUI.Components
 {
     [ToolboxItem(true)]
-    [ToolboxBitmap( "octicons_github.bmp")]
+    [ToolboxBitmap("octicons_github.bmp")]
     public partial class Item : UserControl
     {
         private Form context;
@@ -49,7 +49,7 @@ namespace CustomerCare.GUI.Components
 
         private void Item_Click(object sender, EventArgs e)
         {
-            context.ShowDialog();
+            context.Show();
         }
     }
 }

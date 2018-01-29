@@ -1,4 +1,5 @@
-﻿using SMLOGX.Core;
+﻿using CustomerCare.STR;
+using SMLOGX.Core;
 using System;
 using System.Windows.Forms;
 
@@ -21,8 +22,7 @@ namespace CustomerCare
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Database.DBName = "CustomerCare";
-
+            //Database.DBName = "CustomerCare";
             Database.Open();
             string[] user = { txtUsername.Value, txtPassword.Value };
             object userID = 0;
@@ -30,10 +30,12 @@ namespace CustomerCare
             Database.User.Username = user[0];
             Database.User.Password = user[1];
 
-            if (Database.User.Login(ref userID) || 1 == 1)
+            if (Database.User.Login(ref userID))
             {
-                //MessageBox.Show("User ID: " + userID + " - Login Successfully!");
+                Temp.staff_id = int.Parse(Database.QueryScalar("SELECT staff_id FROM tbl_users WHERE user_id = " + userID) + "");
+                Temp.staff_name = Database.QueryScalar("SELECT name_en FROM tbl_mststaff WHERE staff_id = " + Temp.staff_id) + "";
                 new frmMain().Show();
+                Temp.frm_login = this;
                 this.Hide();
             }
             else

@@ -1,5 +1,6 @@
 ﻿using SMLOGX.Core;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace CustomerCare
@@ -13,8 +14,6 @@ namespace CustomerCare
         {
             InitializeComponent();
             Database.Open();
-
-            Database.Close();
             loadSetting();
         }
 
@@ -24,13 +23,6 @@ namespace CustomerCare
             cbAuth.SelectedIndex = Database.AuthType ? 1 : 0;
             txtUsername.Text = Database.UserId;
             txtPassword.Text = Database.Password;
-
-            if (Database.HasOpen)
-            {
-                Helpers.FillComboBox(cbDB, "name", "name", "SELECT name FROM [master].[sys].[databases];");
-                if (!Database.DBName.Equals(""))
-                    cbDB.SelectedValue = Database.DBName;
-            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -45,25 +37,24 @@ namespace CustomerCare
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            Database.Server = txtServer.Text;
-            Database.DBName = cbDB.SelectedValue + "";
+            Config config = new Config
+            {
+                Server = txtServer.Text,
+                DBName = "CustomerCare"
+            };
 
+            bool isAuth = false;
             if (cbAuth.SelectedIndex == 1)
             {
-                Database.UserId = txtUsername.Text;
-                Database.Password = txtPassword.Text;
+                config.UserId = txtUsername.Text;
+                config.Password = txtPassword.Text;
+                isAuth = true;
             }
 
-            Database.Open(cbAuth.SelectedIndex == 1);
-
-            if (Database.HasOpen)
-            {
-                MessageBox.Show("Tested");
-            }
+            if (Database.Test(config, isAuth))
+                MessageBox.Show("Connection Successful!", "Connection Testing", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             else
-            {
-                MessageBox.Show("Failed");
-            }
+                MessageBox.Show("Connection Failed!", "Connection Testing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void Save(bool auth)
@@ -71,7 +62,7 @@ namespace CustomerCare
             try
             {
                 Database.Server = txtServer.Text;
-                Database.DBName = cbDB.SelectedValue + "";
+                Database.DBName = "CustomerCare";
 
                 Database.UserId = txtUsername.Text;
                 Database.Password = txtPassword.Text;

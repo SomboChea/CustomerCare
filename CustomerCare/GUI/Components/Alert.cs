@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SMLOGX.Core;
+using System;
 using System.Windows.Forms;
 
 namespace CustomerCare.GUI.Components

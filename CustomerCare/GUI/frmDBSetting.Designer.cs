@@ -36,8 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbDB = new System.Windows.Forms.ComboBox();
             this.panUser = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -151,26 +149,6 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(101, 207);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(205, 31);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Database         :";
-            // 
-            // cbDB
-            // 
-            this.cbDB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDB.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbDB.FormattingEnabled = true;
-            this.cbDB.Location = new System.Drawing.Point(355, 204);
-            this.cbDB.Name = "cbDB";
-            this.cbDB.Size = new System.Drawing.Size(356, 39);
-            this.cbDB.TabIndex = 13;
-            // 
             // panUser
             // 
             this.panUser.Controls.Add(this.txtPassword);
@@ -178,7 +156,7 @@
             this.panUser.Controls.Add(this.label4);
             this.panUser.Controls.Add(this.label3);
             this.panUser.Enabled = false;
-            this.panUser.Location = new System.Drawing.Point(254, 264);
+            this.panUser.Location = new System.Drawing.Point(256, 202);
             this.panUser.Name = "panUser";
             this.panUser.Size = new System.Drawing.Size(457, 114);
             this.panUser.TabIndex = 15;
@@ -248,8 +226,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.panUser);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.cbDB);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label2);
@@ -286,8 +262,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbDB;
         private System.Windows.Forms.Panel panUser;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
