@@ -1,4 +1,5 @@
-﻿using SMLOGX.Core;
+﻿using CustomerCare.STR;
+using SMLOGX.Core;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,9 +14,9 @@ namespace CustomerCare
         {
             InitializeComponent();
 
-            Database.Server = "localhost";
-            Database.DBName = "CustomerCare";
-            Database.Open();
+            //Database.Server = "localhost";
+            //Database.DBName = "CustomerCare";
+            //Database.Open();
             panel1.HorizontalScroll.Visible = false;
             panel1.HorizontalScroll.Enabled = false;
             panel1.AutoScroll = true;
@@ -100,6 +101,7 @@ namespace CustomerCare
 
         private void Clear(Control main)
         {
+            btnAdd.Text = "Add";
             foreach (Control ctrl in main.Controls)
                 if (ctrl is ComboBox)
                 {
@@ -301,9 +303,41 @@ namespace CustomerCare
             }
         }
 
-        private void picClose_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void btnClose_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnClose.BackColor = Color.Crimson;
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = panHead.BackColor;
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Crimson;
+        }
+
+        private void picLogo_Click(object sender, EventArgs e)
+        {
+            Temp.frm_luanch.ShowDialog();
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void panHead_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void cbcommune_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

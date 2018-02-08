@@ -95,8 +95,8 @@
             this.txtPassword.MyMulti = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(343, 44);
-            this.txtPassword.TabIndex = 15;
-            this.txtPassword.Value = "";
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.Value = "ms";
             // 
             // txtUsername
             // 
@@ -110,8 +110,8 @@
             this.txtUsername.MyMulti = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(381, 44);
-            this.txtUsername.TabIndex = 10;
-            this.txtUsername.Value = "";
+            this.txtUsername.TabIndex = 0;
+            this.txtUsername.Value = "sombochea";
             // 
             // btnShowHide
             // 
@@ -123,9 +123,9 @@
             this.btnShowHide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnShowHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnShowHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowHide.Location = new System.Drawing.Point(639, 136);
+            this.btnShowHide.Location = new System.Drawing.Point(639, 134);
             this.btnShowHide.Name = "btnShowHide";
-            this.btnShowHide.Size = new System.Drawing.Size(31, 43);
+            this.btnShowHide.Size = new System.Drawing.Size(31, 44);
             this.btnShowHide.TabIndex = 14;
             this.btnShowHide.Text = "V";
             this.btnShowHide.UseVisualStyleBackColor = false;
@@ -141,7 +141,7 @@
             this.chkRemember.Location = new System.Drawing.Point(289, 200);
             this.chkRemember.Name = "chkRemember";
             this.chkRemember.Size = new System.Drawing.Size(193, 27);
-            this.chkRemember.TabIndex = 13;
+            this.chkRemember.TabIndex = 2;
             this.chkRemember.Text = "Remember Login";
             this.chkRemember.UseVisualStyleBackColor = true;
             // 
@@ -159,7 +159,7 @@
             this.btnLogin.Location = new System.Drawing.Point(546, 243);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(124, 39);
-            this.btnLogin.TabIndex = 12;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);

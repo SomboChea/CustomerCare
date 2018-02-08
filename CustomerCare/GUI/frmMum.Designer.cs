@@ -52,15 +52,25 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panMomList = new System.Windows.Forms.Panel();
-            this.dataMoms = new System.Windows.Forms.DataGridView();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.dataMoms = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hcpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rec_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exptDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tel2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tel3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.momFB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panContent.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panMomList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataMoms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataMoms)).BeginInit();
             this.SuspendLayout();
             // 
             // panContent
@@ -306,7 +316,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(1056, 436);
+            this.btnDelete.Location = new System.Drawing.Point(1056, 424);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(133, 40);
             this.btnDelete.TabIndex = 11;
@@ -343,16 +353,6 @@
             this.panMomList.Size = new System.Drawing.Size(1177, 270);
             this.panMomList.TabIndex = 1;
             // 
-            // dataMoms
-            // 
-            this.dataMoms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataMoms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataMoms.Location = new System.Drawing.Point(0, 0);
-            this.dataMoms.Name = "dataMoms";
-            this.dataMoms.RowTemplate.Height = 24;
-            this.dataMoms.Size = new System.Drawing.Size(1177, 270);
-            this.dataMoms.TabIndex = 2;
-            // 
             // picClose
             // 
             this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -379,13 +379,106 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(899, 436);
+            this.button1.Location = new System.Drawing.Point(899, 424);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 40);
             this.button1.TabIndex = 12;
             this.button1.Text = "Add Kid";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnAddKid_Click);
+            // 
+            // dataMoms
+            // 
+            this.dataMoms.AllowUserToAddRows = false;
+            this.dataMoms.AllowUserToDeleteRows = false;
+            this.dataMoms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataMoms.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataMoms.BackgroundColor = System.Drawing.Color.White;
+            this.dataMoms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataMoms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.hcpName,
+            this.Rec_date,
+            this.exptDate,
+            this.Location,
+            this.Tel,
+            this.Tel2,
+            this.tel3,
+            this.Email,
+            this.momFB});
+            this.dataMoms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataMoms.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataMoms.Location = new System.Drawing.Point(0, 0);
+            this.dataMoms.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dataMoms.MultiSelect = false;
+            this.dataMoms.Name = "dataMoms";
+            this.dataMoms.ReadOnly = true;
+            this.dataMoms.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataMoms.RowTemplate.Height = 24;
+            this.dataMoms.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataMoms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataMoms.Size = new System.Drawing.Size(1177, 270);
+            this.dataMoms.TabIndex = 29;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // hcpName
+            // 
+            this.hcpName.HeaderText = "Name";
+            this.hcpName.Name = "hcpName";
+            this.hcpName.ReadOnly = true;
+            // 
+            // Rec_date
+            // 
+            this.Rec_date.HeaderText = "Rec_Date";
+            this.Rec_date.Name = "Rec_date";
+            this.Rec_date.ReadOnly = true;
+            // 
+            // exptDate
+            // 
+            this.exptDate.HeaderText = "Expt_Date";
+            this.exptDate.Name = "exptDate";
+            this.exptDate.ReadOnly = true;
+            // 
+            // Location
+            // 
+            this.Location.HeaderText = "Location";
+            this.Location.Name = "Location";
+            this.Location.ReadOnly = true;
+            // 
+            // Tel
+            // 
+            this.Tel.HeaderText = "Tel 1";
+            this.Tel.Name = "Tel";
+            this.Tel.ReadOnly = true;
+            // 
+            // Tel2
+            // 
+            this.Tel2.HeaderText = "Tel 2";
+            this.Tel2.Name = "Tel2";
+            this.Tel2.ReadOnly = true;
+            // 
+            // tel3
+            // 
+            this.tel3.HeaderText = "Tel 3";
+            this.tel3.Name = "tel3";
+            this.tel3.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // momFB
+            // 
+            this.momFB.HeaderText = "Facebook";
+            this.momFB.Name = "momFB";
+            this.momFB.ReadOnly = true;
             // 
             // frmMum
             // 
@@ -413,8 +506,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panMomList.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataMoms)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataMoms)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -439,7 +532,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTel3;
         private System.Windows.Forms.Panel panMomList;
-        private System.Windows.Forms.DataGridView dataMoms;
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.DateTimePicker dateEpt;
         private System.Windows.Forms.Label label5;
@@ -448,5 +540,16 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataMoms;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hcpName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rec_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exptDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Location;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn momFB;
     }
 }

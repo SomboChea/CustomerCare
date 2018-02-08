@@ -49,7 +49,7 @@ namespace CustomerCare.GUI.Components
 
         private void Item_Click(object sender, EventArgs e)
         {
-            context.Show();
+            context.ShowDialog();
         }
     }
 }

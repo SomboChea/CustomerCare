@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtOwner = new System.Windows.Forms.TextBox();
@@ -73,14 +78,19 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.picClose = new System.Windows.Forms.PictureBox();
+            this.panHead = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgView)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            this.panHead.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -160,7 +170,7 @@
             this.txtST.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtST.Multiline = true;
             this.txtST.Name = "txtST";
-            this.txtST.Size = new System.Drawing.Size(343, 84);
+            this.txtST.Size = new System.Drawing.Size(343, 47);
             this.txtST.TabIndex = 11;
             this.txtST.Tag = "ST";
             // 
@@ -170,9 +180,9 @@
             this.label6.Location = new System.Drawing.Point(21, 208);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 23);
+            this.label6.Size = new System.Drawing.Size(111, 23);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Info: ";
+            this.label6.Text = "Street No: ";
             // 
             // txtTel1
             // 
@@ -262,7 +272,7 @@
             this.txtMemo.Multiline = true;
             this.txtMemo.Name = "txtMemo";
             this.txtMemo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtMemo.Size = new System.Drawing.Size(509, 87);
+            this.txtMemo.Size = new System.Drawing.Size(509, 109);
             this.txtMemo.TabIndex = 21;
             this.txtMemo.Tag = "Memo";
             // 
@@ -277,17 +287,19 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtST);
-            this.groupBox1.Location = new System.Drawing.Point(34, 223);
+            this.groupBox1.Location = new System.Drawing.Point(33, 271);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox1.Size = new System.Drawing.Size(592, 309);
+            this.groupBox1.Size = new System.Drawing.Size(592, 277);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Address";
             // 
             // cbdistrict
             // 
+            this.cbdistrict.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbdistrict.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbdistrict.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
             this.cbdistrict.FormattingEnabled = true;
             this.cbdistrict.Location = new System.Drawing.Point(215, 93);
@@ -299,6 +311,8 @@
             // 
             // cbcommune
             // 
+            this.cbcommune.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbcommune.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbcommune.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
             this.cbcommune.FormattingEnabled = true;
             this.cbcommune.Location = new System.Drawing.Point(215, 151);
@@ -306,9 +320,12 @@
             this.cbcommune.Size = new System.Drawing.Size(343, 37);
             this.cbcommune.TabIndex = 14;
             this.cbcommune.Tag = "Commune";
+            this.cbcommune.SelectedIndexChanged += new System.EventHandler(this.cbcommune_SelectedIndexChanged);
             // 
             // cblocation
             // 
+            this.cblocation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cblocation.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cblocation.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
             this.cblocation.FormattingEnabled = true;
             this.cblocation.Location = new System.Drawing.Point(215, 39);
@@ -325,11 +342,11 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtOwner);
-            this.groupBox2.Location = new System.Drawing.Point(34, 27);
+            this.groupBox2.Location = new System.Drawing.Point(33, 91);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox2.Size = new System.Drawing.Size(592, 179);
+            this.groupBox2.Size = new System.Drawing.Size(592, 162);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Information";
@@ -345,11 +362,11 @@
             this.groupBox3.Controls.Add(this.txtFB);
             this.groupBox3.Controls.Add(this.txtEmail);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Location = new System.Drawing.Point(655, 27);
+            this.groupBox3.Location = new System.Drawing.Point(655, 91);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox3.Size = new System.Drawing.Size(598, 283);
+            this.groupBox3.Size = new System.Drawing.Size(598, 266);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Contacts";
@@ -358,11 +375,11 @@
             // 
             this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox4.Controls.Add(this.txtMemo);
-            this.groupBox4.Location = new System.Drawing.Point(655, 334);
+            this.groupBox4.Location = new System.Drawing.Point(655, 371);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox4.Size = new System.Drawing.Size(598, 151);
+            this.groupBox4.Size = new System.Drawing.Size(598, 177);
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Memo";
@@ -373,10 +390,10 @@
             this.btnAdd.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(863, 511);
+            this.btnAdd.Location = new System.Drawing.Point(863, 558);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(176, 37);
+            this.btnAdd.Size = new System.Drawing.Size(176, 43);
             this.btnAdd.TabIndex = 26;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -388,10 +405,10 @@
             this.btnCancel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(1076, 511);
+            this.btnCancel.Location = new System.Drawing.Point(1077, 558);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(176, 37);
+            this.btnCancel.Size = new System.Drawing.Size(176, 43);
             this.btnCancel.TabIndex = 27;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -400,11 +417,24 @@
             // 
             this.dgView.AllowUserToAddRows = false;
             this.dgView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("AKbalthom KhmerLer", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
+            this.dgView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgView.BackgroundColor = System.Drawing.Color.White;
+            this.dgView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -420,16 +450,37 @@
             this.Email,
             this.Facebook,
             this.Memo});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgView.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgView.Location = new System.Drawing.Point(4, 3);
             this.dgView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgView.MultiSelect = false;
             this.dgView.Name = "dgView";
             this.dgView.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(3);
+            this.dgView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgView.RowTemplate.Height = 24;
             this.dgView.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgView.Size = new System.Drawing.Size(1211, 107);
+            this.dgView.Size = new System.Drawing.Size(1211, 108);
             this.dgView.TabIndex = 28;
             this.dgView.Click += new System.EventHandler(this.dgView_Click);
             this.dgView.DoubleClick += new System.EventHandler(this.dgView_DoubleClick_1);
@@ -516,7 +567,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(29, 564);
+            this.label11.Location = new System.Drawing.Point(29, 568);
             this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(89, 23);
@@ -526,7 +577,7 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(134, 560);
+            this.txtSearch.Location = new System.Drawing.Point(134, 564);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(343, 37);
@@ -536,7 +587,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(487, 564);
+            this.checkBox1.Location = new System.Drawing.Point(484, 568);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(172, 27);
             this.checkBox1.TabIndex = 29;
@@ -549,26 +600,68 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dgView);
-            this.panel1.Location = new System.Drawing.Point(34, 608);
+            this.panel1.Location = new System.Drawing.Point(34, 627);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1219, 129);
+            this.panel1.Size = new System.Drawing.Size(1219, 114);
             this.panel1.TabIndex = 30;
             this.panel1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panel1_Scroll);
             // 
-            // picClose
+            // panHead
             // 
-            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Image = global::CustomerCare.Properties.Resources.close_button;
-            this.picClose.Location = new System.Drawing.Point(1255, 13);
-            this.picClose.Margin = new System.Windows.Forms.Padding(4);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(30, 30);
-            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picClose.TabIndex = 31;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            this.panHead.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panHead.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panHead.Controls.Add(this.picLogo);
+            this.panHead.Controls.Add(this.label12);
+            this.panHead.Controls.Add(this.btnClose);
+            this.panHead.Location = new System.Drawing.Point(0, 0);
+            this.panHead.Name = "panHead";
+            this.panHead.Size = new System.Drawing.Size(1298, 55);
+            this.panHead.TabIndex = 31;
+            this.panHead.Paint += new System.Windows.Forms.PaintEventHandler(this.panHead_Paint);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(62, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(122, 34);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Hospital";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // picLogo
+            // 
+            this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picLogo.Image = global::CustomerCare.Properties.Resources.Tiles;
+            this.picLogo.Location = new System.Drawing.Point(0, 0);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(55, 55);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 8;
+            this.picLogo.TabStop = false;
+            this.picLogo.Click += new System.EventHandler(this.picLogo_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = global::CustomerCare.Properties.Resources.Close_32;
+            this.btnClose.Location = new System.Drawing.Point(1243, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(55, 55);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnClose.TabIndex = 4;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnClose_MouseDown);
+            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
             // frmHcp
             // 
@@ -576,7 +669,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1298, 749);
-            this.Controls.Add(this.picClose);
+            this.Controls.Add(this.panHead);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.txtSearch);
@@ -606,7 +699,10 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgView)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            this.panHead.ResumeLayout(false);
+            this.panHead.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -659,6 +755,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Facebook;
         private System.Windows.Forms.DataGridViewTextBoxColumn Memo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox picClose;
+        private System.Windows.Forms.Panel panHead;
+        private System.Windows.Forms.PictureBox btnClose;
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Label label12;
     }
 }

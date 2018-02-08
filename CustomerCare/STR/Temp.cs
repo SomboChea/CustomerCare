@@ -12,5 +12,9 @@ namespace CustomerCare.STR
         public static int staff_id { get; set; }
         public static string staff_name { get; set; }
         public static Form frm_login { get; set; }
+        public static Form frm_luanch { get { return new GUI.frmQuickLuanch(); } }
+        public static Form frm_hcp { get; set; }
+        public static Form frm_retail { get; set; }
+        public static Form frm_mom { get; set; }
     }
 }

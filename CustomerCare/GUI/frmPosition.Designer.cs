@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panHead = new System.Windows.Forms.Panel();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.lbTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.checkedListOptions = new System.Windows.Forms.CheckedListBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.listRoles = new System.Windows.Forms.ListBox();
             this.txtPosition = new CustomerCare.GUI.Components.TextBox();
-            this.picClose = new System.Windows.Forms.PictureBox();
             this.panHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,20 @@
             this.panHead.Name = "panHead";
             this.panHead.Size = new System.Drawing.Size(800, 78);
             this.panHead.TabIndex = 1;
+            // 
+            // picClose
+            // 
+            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClose.Image = global::CustomerCare.Properties.Resources.close_button;
+            this.picClose.Location = new System.Drawing.Point(742, 24);
+            this.picClose.Margin = new System.Windows.Forms.Padding(4);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(30, 30);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picClose.TabIndex = 2;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // lbTitle
             // 
@@ -123,25 +137,13 @@
             this.txtPosition.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPosition.Location = new System.Drawing.Point(175, 105);
             this.txtPosition.Margin = new System.Windows.Forms.Padding(5, 9, 5, 9);
-            
+            this.txtPosition.MyBackColor = System.Drawing.SystemColors.Control;
+            this.txtPosition.MyBorderColor = System.Drawing.Color.White;
+            this.txtPosition.MyMulti = true;
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(418, 48);
             this.txtPosition.TabIndex = 3;
             this.txtPosition.Value = "";
-            // 
-            // picClose
-            // 
-            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Image = global::CustomerCare.Properties.Resources.close_button;
-            this.picClose.Location = new System.Drawing.Point(739, 18);
-            this.picClose.Margin = new System.Windows.Forms.Padding(4);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(40, 40);
-            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picClose.TabIndex = 2;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // frmPosition
             // 

@@ -26,15 +26,28 @@ namespace CustomerCare
             for (int j = 0; j < tags.Length; j++)
             {
                 if (tags[j].TagName == "home")
+                {
                     menuItem.Add(new ItemList(null, tags[j].TagTitle, "Images\\home.png", menuColor[j]));
+                }
                 else if (tags[j].TagName == "call_list")
-                    menuItem.Add(new ItemList(new frmCallList(), tags[j].TagTitle, "Images\\call_list.png", menuColor[j]));
+                {
+                    menuItem.Add(new ItemList(null, tags[j].TagTitle, "Images\\call_list.png", menuColor[j]));
+                }
                 else if (tags[j].TagName == "hcp")
-                    menuItem.Add(new ItemList(new frmHcp(), tags[j].TagTitle, "Images\\hcp.png", menuColor[j]));
+                {
+                    Temp.frm_hcp = new frmHcp();
+                    menuItem.Add(new ItemList(Temp.frm_hcp, tags[j].TagTitle, "Images\\hcp.png", menuColor[j]));
+                }
                 else if (tags[j].TagName == "retail")
-                    menuItem.Add(new ItemList(new frmRetail(), tags[j].TagTitle, "Images\\retail.png", menuColor[j]));
+                {
+                    Temp.frm_retail = new frmRetail();
+                    menuItem.Add(new ItemList(Temp.frm_retail, tags[j].TagTitle, "Images\\retail.png", menuColor[j]));
+                }
                 else if (tags[j].TagName == "mom")
-                    menuItem.Add(new ItemList(new frmMum(), tags[j].TagTitle, "Images\\mum.png", menuColor[j]));
+                {
+                    Temp.frm_mom = new frmMum();
+                    menuItem.Add(new ItemList(Temp.frm_mom, tags[j].TagTitle, "Images\\mum.png", menuColor[j]));
+                }
                 else if (tags[j].TagName == "kid")
                     menuItem.Add(new ItemList(new frmKid(), tags[j].TagTitle, "Images\\kid.png", menuColor[j]));
                 else if (tags[j].TagName == "staff")
@@ -55,14 +68,51 @@ namespace CustomerCare
 
         private void picClose_Click(object sender, EventArgs e)
         {
-            //App.ExitAll();
-            this.Dispose();
-            Temp.frm_login.Show();
         }
 
         private void btnMinz_Click(object sender, EventArgs e)
         {
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Temp.frm_login.Show();
+        }
+
+        private void btnClose_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnClose.BackColor = Color.Crimson;
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Crimson;
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = panHead.BackColor;
+        }
+
+        private void btnMini_Click(object sender, EventArgs e)
+        {
             App.Minimized(this);
+        }
+
+        private void btnMini_MouseEnter(object sender, EventArgs e)
+        {
+            btnMini.BackColor = Color.DeepSkyBlue;
+        }
+
+        private void btnMini_MouseLeave(object sender, EventArgs e)
+        {
+            btnMini.BackColor = panHead.BackColor;
+        }
+
+        private void picLogo_Click(object sender, EventArgs e)
+        {
+            Temp.frm_luanch.ShowDialog();
         }
     }
 }

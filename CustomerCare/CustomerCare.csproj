@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{92A5E55A-8E0E-4CAF-A48E-5D94B2675882}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>CustomerCare</RootNamespace>
     <AssemblyName>CustomerCare</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -23,6 +23,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,11 +54,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\BETA\frmCallDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BETA\frmCallDetail.Designer.cs">
+      <DependentUpon>frmCallDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BETA\frmCallQueue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BETA\frmCallQueue.Designer.cs">
+      <DependentUpon>frmCallQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BETA\UC_CALL_QUEUE\ucDataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\BETA\UC_CALL_QUEUE\ucDataGridView.Designer.cs">
+      <DependentUpon>ucDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BETA\UC_CALL_QUEUE\ucPregnent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\BETA\UC_CALL_QUEUE\ucPregnent.Designer.cs">
+      <DependentUpon>ucPregnent.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Components\Alert.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Components\Alert.Designer.cs">
       <DependentUpon>Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Components\Blur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Components\Blur.Designer.cs">
+      <DependentUpon>Blur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Components\Clock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Components\Clock.Designer.cs">
+      <DependentUpon>Clock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Components\ComOverlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Components\ComOverlay.Designer.cs">
+      <DependentUpon>ComOverlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Components\Demo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Components\Demo.Designer.cs">
+      <DependentUpon>Demo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Components\frmUserOnline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Components\frmUserOnline.Designer.cs">
+      <DependentUpon>frmUserOnline.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Components\ImageButton.cs">
       <SubType>UserControl</SubType>
@@ -82,6 +137,18 @@
     </Compile>
     <Compile Include="GUI\Components\Overlay.Designer.cs">
       <DependentUpon>Overlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Components\smxClose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Components\smxClose.Designer.cs">
+      <DependentUpon>smxClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Components\smxItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Components\smxItem.Designer.cs">
+      <DependentUpon>smxItem.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Components\TextBox.cs">
       <SubType>UserControl</SubType>
@@ -161,6 +228,12 @@
     <Compile Include="GUI\frmProduct.Designer.cs">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmQuickLuanch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQuickLuanch.Designer.cs">
+      <DependentUpon>frmQuickLuanch.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmRetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,8 +272,35 @@
     <Compile Include="STR\Staff.cs" />
     <Compile Include="STR\Tag.cs" />
     <Compile Include="STR\Temp.cs" />
+    <EmbeddedResource Include="GUI\BETA\frmCallDetail.resx">
+      <DependentUpon>frmCallDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BETA\frmCallQueue.resx">
+      <DependentUpon>frmCallQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BETA\UC_CALL_QUEUE\ucDataGridView.resx">
+      <DependentUpon>ucDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BETA\UC_CALL_QUEUE\ucPregnent.resx">
+      <DependentUpon>ucPregnent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Components\Alert.resx">
       <DependentUpon>Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Components\Blur.resx">
+      <DependentUpon>Blur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Components\Clock.resx">
+      <DependentUpon>Clock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Components\ComOverlay.resx">
+      <DependentUpon>ComOverlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Components\Demo.resx">
+      <DependentUpon>Demo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Components\frmUserOnline.resx">
+      <DependentUpon>frmUserOnline.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Components\ImageButton.resx">
       <DependentUpon>ImageButton.cs</DependentUpon>
@@ -214,6 +314,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Components\Overlay.resx">
       <DependentUpon>Overlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Components\smxClose.resx">
+      <DependentUpon>smxClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Components\smxItem.resx">
+      <DependentUpon>smxItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Components\TextBox.resx">
       <DependentUpon>TextBox.cs</DependentUpon>
@@ -250,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQuickLuanch.resx">
+      <DependentUpon>frmQuickLuanch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmRetail.resx">
       <DependentUpon>frmRetail.cs</DependentUpon>
@@ -333,6 +442,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app_icon.ico" />
+    <None Include="Resources\Staff.png" />
+    <None Include="Resources\Location.png" />
+    <None Include="Resources\Settings.png" />
+    <None Include="Resources\Kid.png" />
+    <None Include="Resources\Female-03.png" />
+    <None Include="Resources\User_Settings.png" />
+    <None Include="Resources\Hospital.png" />
+    <None Include="Resources\Retail.png" />
+    <None Include="Resources\Conference-Call-011.png" />
+    <None Include="Resources\Minus.png" />
+    <None Include="Resources\Close_128_35.png" />
+    <None Include="Resources\Box_32_2.png" />
+    <None Include="Resources\Box_32.png" />
+    <None Include="Resources\Maximize-WF.png" />
+    <None Include="Resources\Tiles_32.png" />
+    <None Include="Resources\Close_32.png" />
+    <None Include="Resources\Conference-Call-01.png" />
+    <None Include="Resources\CloseX.png" />
+    <None Include="Resources\Tiles.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
