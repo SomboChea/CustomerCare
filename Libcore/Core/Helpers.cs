@@ -177,47 +177,47 @@ namespace SMLOGX.Core
         /// <returns>Return a name and extension of Image in Directory_path</returns>
         public static string Upload_Photo(string filepath, string Directory_Path)
         {
-            //try
-            //{
-            string[] filesplit = filepath.Split('\\');
-            string filename = filesplit[filesplit.Length - 1];
-            string imgpath = Directory_Path + filename;
-
-            if (!Directory.Exists(Directory_Path))
+            try
             {
-                Directory.CreateDirectory(Directory_Path);
-            }
+                string[] filesplit = filepath.Split('\\');
+                string filename = filesplit[filesplit.Length - 1];
+                string imgpath = Directory_Path + filename;
 
-            if (File.Exists(imgpath))
-            {
-                DialogResult diag = MessageBox.Show("File : \n" + imgpath + Environment.NewLine + " is Already Exist ! \nDo you want to Replace file" + Environment.NewLine + "\n\nYes : Replace File" + Environment.NewLine + "No : Auto Rename file" + Environment.NewLine + "Cancel : Abort", "File Exist", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-                for (int i = 1; File.Exists(imgpath); i++)
+                if (!Directory.Exists(Directory_Path))
                 {
-                    if (diag == DialogResult.Yes)
+                    Directory.CreateDirectory(Directory_Path);
+                }
+
+                if (File.Exists(imgpath))
+                {
+                    DialogResult diag = MessageBox.Show("File : \n" + imgpath + Environment.NewLine + " is Already Exist ! \nDo you want to Replace file" + Environment.NewLine + "\n\nYes : Replace File" + Environment.NewLine + "No : Auto Rename file" + Environment.NewLine + "Cancel : Abort", "File Exist", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                    for (int i = 1; File.Exists(imgpath); i++)
                     {
-                        File.Delete(imgpath);
-                        break;
-                    }
-                    else if (diag == DialogResult.No)
-                    {
-                        imgpath = Directory_Path + filename.Split('.')[0] + "-" + i + "." + filename.Split('.')[filename.Split('.').Length - 1];
-                    }
-                    else
-                    {
-                        return "";
+                        if (diag == DialogResult.Yes)
+                        {
+                            File.Delete(imgpath);
+                            break;
+                        }
+                        else if (diag == DialogResult.No)
+                        {
+                            imgpath = Directory_Path + filename.Split('.')[0] + "-" + i + "." + filename.Split('.')[filename.Split('.').Length - 1];
+                        }
+                        else
+                        {
+                            return "";
+                        }
                     }
                 }
-            }
-            MessageBox.Show(filepath);
-            File.Copy(filepath, imgpath);
+                MessageBox.Show(filepath);
+                File.Copy(filepath, imgpath);
 
-            return filename;
-            //}
-            //catch (Exception ex)
-            //{
-            //    Log.Write(ex.Message, "Helpers.Upload_Photo");
-            //}
-            //return null;
+                return filename;
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex.Message, "Helpers.Upload_Photo");
+            }
+            return null;
         }
 
         /// <summary>

@@ -156,29 +156,11 @@
     <Compile Include="GUI\Components\TextBox.Designer.cs">
       <DependentUpon>TextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmAddLoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmAddLoc.Designer.cs">
-      <DependentUpon>frmAddLoc.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\frmAddress.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmAddress.Designer.cs">
       <DependentUpon>frmAddress.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmCalling.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmCalling.Designer.cs">
-      <DependentUpon>frmCalling.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmCallList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmCallList.Designer.cs">
-      <DependentUpon>frmCallList.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmDBSetting.cs">
       <SubType>Form</SubType>
@@ -326,12 +308,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmAddress.resx">
       <DependentUpon>frmAddress.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmCalling.resx">
-      <DependentUpon>frmCalling.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmCallList.resx">
-      <DependentUpon>frmCallList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDBSetting.resx">
       <DependentUpon>frmDBSetting.cs</DependentUpon>

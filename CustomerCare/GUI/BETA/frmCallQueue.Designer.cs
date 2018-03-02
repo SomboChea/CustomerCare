@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCallQueue));
-            this.btnPregnent = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.tableMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.btnFollowup = new System.Windows.Forms.Button();
-            this.btnNewmom = new System.Windows.Forms.Button();
+            this.btnStep = new System.Windows.Forms.Button();
+            this.btnPregnent = new System.Windows.Forms.Button();
             this.panHead = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,6 +48,61 @@
             this.panMenu.SuspendLayout();
             this.SuspendLayout();
             // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.DeepPink;
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNew.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnNew.FlatAppearance.BorderSize = 0;
+            this.btnNew.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Crimson;
+            this.btnNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.Location = new System.Drawing.Point(3, 3);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(354, 71);
+            this.btnNew.TabIndex = 0;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNewmom_Click);
+            // 
+            // tableMenu
+            // 
+            this.tableMenu.ColumnCount = 3;
+            this.tableMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableMenu.Controls.Add(this.btnStep, 2, 0);
+            this.tableMenu.Controls.Add(this.btnPregnent, 1, 0);
+            this.tableMenu.Controls.Add(this.btnNew, 0, 0);
+            this.tableMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableMenu.Location = new System.Drawing.Point(0, 0);
+            this.tableMenu.Name = "tableMenu";
+            this.tableMenu.RowCount = 1;
+            this.tableMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableMenu.Size = new System.Drawing.Size(1081, 77);
+            this.tableMenu.TabIndex = 1;
+            // 
+            // btnStep
+            // 
+            this.btnStep.BackColor = System.Drawing.Color.DeepPink;
+            this.btnStep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnStep.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnStep.FlatAppearance.BorderSize = 0;
+            this.btnStep.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Crimson;
+            this.btnStep.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
+            this.btnStep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStep.ForeColor = System.Drawing.Color.White;
+            this.btnStep.Location = new System.Drawing.Point(723, 3);
+            this.btnStep.Name = "btnStep";
+            this.btnStep.Size = new System.Drawing.Size(355, 71);
+            this.btnStep.TabIndex = 2;
+            this.btnStep.Text = "Step";
+            this.btnStep.UseVisualStyleBackColor = false;
+            this.btnStep.Click += new System.EventHandler(this.btnFollowup_Click);
+            // 
             // btnPregnent
             // 
             this.btnPregnent.BackColor = System.Drawing.Color.DeepPink;
@@ -59,68 +114,13 @@
             this.btnPregnent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
             this.btnPregnent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPregnent.ForeColor = System.Drawing.Color.White;
-            this.btnPregnent.Location = new System.Drawing.Point(3, 3);
+            this.btnPregnent.Location = new System.Drawing.Point(363, 3);
             this.btnPregnent.Name = "btnPregnent";
             this.btnPregnent.Size = new System.Drawing.Size(354, 71);
-            this.btnPregnent.TabIndex = 0;
+            this.btnPregnent.TabIndex = 1;
             this.btnPregnent.Text = "Pregnent";
             this.btnPregnent.UseVisualStyleBackColor = false;
             this.btnPregnent.Click += new System.EventHandler(this.btnPregnent_Click);
-            // 
-            // tableMenu
-            // 
-            this.tableMenu.ColumnCount = 3;
-            this.tableMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableMenu.Controls.Add(this.btnFollowup, 2, 0);
-            this.tableMenu.Controls.Add(this.btnNewmom, 1, 0);
-            this.tableMenu.Controls.Add(this.btnPregnent, 0, 0);
-            this.tableMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableMenu.Location = new System.Drawing.Point(0, 0);
-            this.tableMenu.Name = "tableMenu";
-            this.tableMenu.RowCount = 1;
-            this.tableMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableMenu.Size = new System.Drawing.Size(1081, 77);
-            this.tableMenu.TabIndex = 1;
-            // 
-            // btnFollowup
-            // 
-            this.btnFollowup.BackColor = System.Drawing.Color.DeepPink;
-            this.btnFollowup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFollowup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnFollowup.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnFollowup.FlatAppearance.BorderSize = 0;
-            this.btnFollowup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Crimson;
-            this.btnFollowup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
-            this.btnFollowup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFollowup.ForeColor = System.Drawing.Color.White;
-            this.btnFollowup.Location = new System.Drawing.Point(723, 3);
-            this.btnFollowup.Name = "btnFollowup";
-            this.btnFollowup.Size = new System.Drawing.Size(355, 71);
-            this.btnFollowup.TabIndex = 2;
-            this.btnFollowup.Text = "Follow Up";
-            this.btnFollowup.UseVisualStyleBackColor = false;
-            this.btnFollowup.Click += new System.EventHandler(this.btnFollowup_Click);
-            // 
-            // btnNewmom
-            // 
-            this.btnNewmom.BackColor = System.Drawing.Color.DeepPink;
-            this.btnNewmom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNewmom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNewmom.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnNewmom.FlatAppearance.BorderSize = 0;
-            this.btnNewmom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Crimson;
-            this.btnNewmom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
-            this.btnNewmom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewmom.ForeColor = System.Drawing.Color.White;
-            this.btnNewmom.Location = new System.Drawing.Point(363, 3);
-            this.btnNewmom.Name = "btnNewmom";
-            this.btnNewmom.Size = new System.Drawing.Size(354, 71);
-            this.btnNewmom.TabIndex = 1;
-            this.btnNewmom.Text = "New Mom";
-            this.btnNewmom.UseVisualStyleBackColor = false;
-            this.btnNewmom.Click += new System.EventHandler(this.btnNewmom_Click);
             // 
             // panHead
             // 
@@ -244,15 +244,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnPregnent;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.TableLayoutPanel tableMenu;
         private System.Windows.Forms.Panel panHead;
         private System.Windows.Forms.Panel panMenu;
         private System.Windows.Forms.Panel panContent;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.PictureBox btnMax;
-        private System.Windows.Forms.Button btnFollowup;
-        private System.Windows.Forms.Button btnNewmom;
+        private System.Windows.Forms.Button btnStep;
+        private System.Windows.Forms.Button btnPregnent;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Label label1;
     }

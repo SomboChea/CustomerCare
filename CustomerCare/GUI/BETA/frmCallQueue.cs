@@ -51,15 +51,15 @@ namespace CustomerCare.GUI.BETA
             switch (idx)
             {
                 case 0:
-                    btnPregnent.BackColor = colorState[1];
+                    btnNew.BackColor = colorState[1];
                     break;
 
                 case 1:
-                    btnNewmom.BackColor = colorState[1];
+                    btnPregnent.BackColor = colorState[1];
                     break;
 
                 case 2:
-                    btnFollowup.BackColor = colorState[1];
+                    btnStep.BackColor = colorState[1];
                     break;
             }
             if (!stateLast.Equals(-1))
@@ -73,19 +73,19 @@ namespace CustomerCare.GUI.BETA
 
         private void colorStateReset()
         {
+            btnNew.BackColor = colorState[0];
             btnPregnent.BackColor = colorState[0];
-            btnNewmom.BackColor = colorState[0];
-            btnFollowup.BackColor = colorState[0];
+            btnStep.BackColor = colorState[0];
         }
 
         private void btnPregnent_Click(object sender, EventArgs e)
         {
-            clickState(0);
+            clickState(1);
         }
 
         private void btnNewmom_Click(object sender, EventArgs e)
         {
-            clickState(1);
+            clickState(0);
         }
 
         private void btnFollowup_Click(object sender, EventArgs e)
