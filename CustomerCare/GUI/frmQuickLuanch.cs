@@ -16,6 +16,12 @@ namespace CustomerCare.GUI
         public frmQuickLuanch()
         {
             InitializeComponent();
+            this.LostFocus += FrmQuickLuanch_LostFocus;
+        }
+
+        private void FrmQuickLuanch_LostFocus(object sender, EventArgs e)
+        {
+            this.Hide();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -114,7 +120,7 @@ namespace CustomerCare.GUI
 
         private void frmQuickLuanch_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Escape || e.KeyCode == Keys.LButton)
                 this.Hide();
         }
 

@@ -112,7 +112,7 @@ namespace CustomerCare
 
         private void picLogo_Click(object sender, EventArgs e)
         {
-            Temp.frm_luanch.ShowDialog();
+            Temp.frm_luanch.Show();
         }
     }
 }
