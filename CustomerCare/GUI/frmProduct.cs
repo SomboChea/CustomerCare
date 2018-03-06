@@ -1,5 +1,6 @@
 ﻿using SMLOGX.Core;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CustomerCare
@@ -9,24 +10,38 @@ namespace CustomerCare
         public frmProduct()
         {
             InitializeComponent();
-            Database.Server = "smlogx";
-            Database.DBName = "CustomerCare";
+            cbProductOwner.SelectedIndex = 0;
             Database.Open();
-            Helpers.FillComboBox(cbCategory, "cate_name", "cate_id", "SELECT * FROM tbl_category");
-        }
-
-        private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string name = txtName.txtValue.Text;
-            string desc = txtDesc.Text;
-            int.TryParse(cbCategory.SelectedValue.ToString(), out int cate_id);
-
-            if (Database.Insert("tbl_product", "pro_name,description,cate_id", name, desc, cate_id))
+            string name = txtName.txtValue.Text.Trim();
+            string desc = txtDesc.Text.Trim();
+            if (Database.Insert("tbl_product", "name,description,owner,level", name, desc, cbProductOwner.SelectedIndex, txtLevel.txtValue.Text))
                 MessageBox.Show("Inserted");
+            else
+                MessageBox.Show("Can't Insert!");
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnClose_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnClose.BackColor = Color.Crimson;
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = panHead.BackColor;
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Crimson;
         }
     }
 }
