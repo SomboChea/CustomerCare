@@ -275,9 +275,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(113, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 30);
+            this.label4.Size = new System.Drawing.Size(151, 30);
             this.label4.TabIndex = 0;
-            this.label4.Text = "New to Call";
+            this.label4.Text = "Step to Call";
             // 
             // frmMain
             // 

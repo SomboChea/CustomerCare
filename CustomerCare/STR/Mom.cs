@@ -5,7 +5,6 @@
         public string Rec_Date { get; set; }
         public string Tel { get; set; }
         public string Tel_2 { get; set; } = null;
-        public string Tel_3 { get; set; } = null;
         public string Call_Date { get; set; }
         public string Frm_Source { get; set; }
         public string Ept_Date { get; set; }

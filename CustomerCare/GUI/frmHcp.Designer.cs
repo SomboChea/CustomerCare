@@ -32,6 +32,8 @@
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new CustomerCare.GUI.Components.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -92,12 +94,38 @@
             this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
             this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
+            // textBox1
+            // 
+            this.textBox1.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(157, 120);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.textBox1.MyBackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.MyBorderColor = System.Drawing.SystemColors.Control;
+            this.textBox1.MyMulti = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(470, 50);
+            this.textBox1.TabIndex = 32;
+            this.textBox1.Value = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(64, 134);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 23);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Name: ";
+            // 
             // frmHcp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1298, 749);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panHead);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -111,6 +139,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -119,5 +148,7 @@
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Label label12;
+        private GUI.Components.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
