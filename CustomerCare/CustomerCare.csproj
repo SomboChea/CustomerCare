@@ -54,6 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs" />
     <Compile Include="GUI\BETA\frmCallDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +258,7 @@
     <Compile Include="STR\Staff.cs" />
     <Compile Include="STR\Tag.cs" />
     <Compile Include="STR\Temp.cs" />
+    <EmbeddedResource Include="frmTest.resx" />
     <EmbeddedResource Include="GUI\BETA\frmCallDetail.resx">
       <DependentUpon>frmCallDetail.cs</DependentUpon>
     </EmbeddedResource>
