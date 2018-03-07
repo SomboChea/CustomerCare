@@ -1,0 +1,19 @@
+Create PROCEDURE [dbo].[check_location]
+  @locName VARCHAR(50),
+  @ref_id int
+AS
+BEGIN
+	-- routine body goes here, e.g.
+	-- SELECT 'Navicat for SQL Server'
+	DECLARE @bool int;
+ 	set @bool=(Select id from tbl_location where [name]=@locName);
+	IF @bool>0 BEGIN
+	select @bool;
+END
+ELSE BEGIN
+	Insert into tbl_location (name,refer_id) VALUES(@locName,@ref_id);
+	select IDENT_CURRENT('tbl_location');
+END
+
+
+END
