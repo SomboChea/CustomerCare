@@ -119,7 +119,7 @@ namespace CustomerCare
         /// <summary>
         /// Dont Delete this class
         /// </summary>
-        private class function : frmHcp.helper
+        private class function : frmSources.helper
         {
         }
 

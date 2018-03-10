@@ -6,7 +6,7 @@ namespace CustomerCare
 {
     public partial class frmAddress : Form
     {
-        private class function : frmHcp.helper
+        private class function : frmSources.helper
         {
             public static void FillListBox(ListBox lb, string value, string member, string sql)
             {

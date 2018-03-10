@@ -8,11 +8,17 @@ using System.Windows.Forms;
 
 namespace CustomerCare
 {
-    public partial class frmHcp : Form
+    public partial class frmSources : Form
     {
-        public frmHcp()
+        public frmSources()
         {
             InitializeComponent();
+
+            //Database.Server = "localhost";
+            //Database.DBName = "TelMarketing";
+            //Database.Open();
+
+            Function.SetCombo(cbProvince, cbDistrict, cbCommune, txtAddress);
         }
 
         public class helper : Helpers
@@ -136,6 +142,11 @@ namespace CustomerCare
         private void picLogo_Click(object sender, EventArgs e)
         {
             Temp.frm_luanch.ShowDialog();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Function.AddAddress();
         }
     }
 }

@@ -9,8 +9,8 @@ namespace CustomerCare.STR
 {
     public class Temp
     {
-        public static int staff_id { get; set; }
-        public static string staff_name { get; set; }
+        public static int logger_id { get; set; }
+        public static string logger_fullname { get; set; }
         public static Form frm_login { get; set; }
         public static Form frm_luanch { get { return new GUI.frmQuickLuanch(); } }
         public static Form frm_hcp { get; set; }

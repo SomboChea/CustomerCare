@@ -467,7 +467,7 @@ namespace SMLOGX.Core
         /// </summary>
         public static class User
         {
-            public static string Table { get; set; } = "users";
+            public static string Table { get; set; } = "tbl_user";
             public static string Username { get; set; }
             public static string Password { get; set; }
             public static int RoleId { get; set; } = 0;

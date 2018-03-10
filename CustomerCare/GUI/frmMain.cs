@@ -18,52 +18,58 @@ namespace CustomerCare
         {
             InitializeComponent();
 
-            DataTable dt = Database.QueryModel("EXEC getRoleOptionsById " + 28);
-            Tag[] tags = new Tag[dt.Rows.Count];
-            for (int i = 0; i < tags.Length; i++)
-                tags[i] = new Tag(dt.Rows[i]["tag"] + "", dt.Rows[i]["option_name"] + "");
+            menuItem.Add(new ItemList(null,"Sources", "Images\\home.png", menuColor[0]));
+            panMain.Controls.Add(new Item(menuItem[0]));
 
-            for (int j = 0; j < tags.Length; j++)
-            {
-                if (tags[j].TagName == "home")
-                {
-                    menuItem.Add(new ItemList(null, tags[j].TagTitle, "Images\\home.png", menuColor[j]));
-                }
-                else if (tags[j].TagName == "call_list")
-                {
-                    menuItem.Add(new ItemList(null, tags[j].TagTitle, "Images\\call_list.png", menuColor[j]));
-                }
-                else if (tags[j].TagName == "hcp")
-                {
-                    Temp.frm_hcp = new frmHcp();
-                    menuItem.Add(new ItemList(Temp.frm_hcp, tags[j].TagTitle, "Images\\hcp.png", menuColor[j]));
-                }
-                else if (tags[j].TagName == "retail")
-                {
-                    Temp.frm_retail = new frmRetail();
-                    menuItem.Add(new ItemList(Temp.frm_retail, tags[j].TagTitle, "Images\\retail.png", menuColor[j]));
-                }
-                else if (tags[j].TagName == "mom")
-                {
-                    Temp.frm_mom = new frmMum();
-                    menuItem.Add(new ItemList(Temp.frm_mom, tags[j].TagTitle, "Images\\mum.png", menuColor[j]));
-                }
-                else if (tags[j].TagName == "kid")
-                    menuItem.Add(new ItemList(new frmKid(), tags[j].TagTitle, "Images\\kid.png", menuColor[j]));
-                else if (tags[j].TagName == "staff")
-                    menuItem.Add(new ItemList(new frmStaff(), tags[j].TagTitle, "Images\\staff.png", menuColor[j]));
-                else if (tags[j].TagName == "address")
-                    menuItem.Add(new ItemList(new frmAddress(), tags[j].TagTitle, "Images\\address.png", menuColor[j]));
-                else if (tags[j].TagName == "position")
-                    menuItem.Add(new ItemList(new frmPosition(), tags[j].TagTitle, "Images\\position.png", menuColor[j]));
-                else if (tags[j].TagName == "products")
-                    menuItem.Add(new ItemList(new frmProduct(), tags[j].TagTitle, "Images\\product.png", menuColor[j]));
-                else if (tags[j].TagName == "user")
-                    menuItem.Add(new ItemList(new frmUser(), tags[j].TagTitle, "Images\\user.png", menuColor[j]));
-            }
+            /*
+                        DataTable dt = Database.QueryModel("EXEC getRoleOptionsById " + 28);
+                        Tag[] tags = new Tag[dt.Rows.Count];
+                        for (int i = 0; i < tags.Length; i++)
+                            tags[i] = new Tag(dt.Rows[i]["tag"] + "", dt.Rows[i]["option_name"] + "");
 
-            for (int i = 0; i < menuItem.Count; i++)
-                panMain.Controls.Add(new Item(menuItem[i]));
+                        for (int j = 0; j < tags.Length; j++)
+                        {
+                            if (tags[j].TagName == "home")
+                            {
+                                menuItem.Add(new ItemList(null, tags[j].TagTitle, "Images\\home.png", menuColor[j]));
+                            }
+                            else if (tags[j].TagName == "call_list")
+                            {
+                                menuItem.Add(new ItemList(null, tags[j].TagTitle, "Images\\call_list.png", menuColor[j]));
+                            }
+                            else if (tags[j].TagName == "hcp")
+                            {
+                                Temp.frm_hcp = new frmSources();
+                                menuItem.Add(new ItemList(Temp.frm_hcp, tags[j].TagTitle, "Images\\hcp.png", menuColor[j]));
+                            }
+                            else if (tags[j].TagName == "retail")
+                            {
+                                Temp.frm_retail = new frmRetail();
+                                menuItem.Add(new ItemList(Temp.frm_retail, tags[j].TagTitle, "Images\\retail.png", menuColor[j]));
+                            }
+                            else if (tags[j].TagName == "mom")
+                            {
+                                Temp.frm_mom = new frmMum();
+                                menuItem.Add(new ItemList(Temp.frm_mom, tags[j].TagTitle, "Images\\mum.png", menuColor[j]));
+                            }
+                            else if (tags[j].TagName == "kid")
+                                menuItem.Add(new ItemList(new frmKid(), tags[j].TagTitle, "Images\\kid.png", menuColor[j]));
+                            else if (tags[j].TagName == "staff")
+                                menuItem.Add(new ItemList(new frmStaff(), tags[j].TagTitle, "Images\\staff.png", menuColor[j]));
+                            else if (tags[j].TagName == "address")
+                                menuItem.Add(new ItemList(new frmAddress(), tags[j].TagTitle, "Images\\address.png", menuColor[j]));
+                            else if (tags[j].TagName == "position")
+                                menuItem.Add(new ItemList(new frmPosition(), tags[j].TagTitle, "Images\\position.png", menuColor[j]));
+                            else if (tags[j].TagName == "products")
+                                menuItem.Add(new ItemList(new frmProduct(), tags[j].TagTitle, "Images\\product.png", menuColor[j]));
+                            else if (tags[j].TagName == "user")
+                                menuItem.Add(new ItemList(new frmUser(), tags[j].TagTitle, "Images\\user.png", menuColor[j]));
+                        }
+
+                        for (int i = 0; i < menuItem.Count; i++)
+                            panMain.Controls.Add(new Item(menuItem[i]));
+
+                */
         }
 
         private void picClose_Click(object sender, EventArgs e)
