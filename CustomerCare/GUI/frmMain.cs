@@ -18,8 +18,10 @@ namespace CustomerCare
         {
             InitializeComponent();
 
-            menuItem.Add(new ItemList(null,"Sources", "Images\\home.png", menuColor[0]));
+            menuItem.Add(new ItemList(new frmSources(),"Sources", "Images\\home.png", menuColor[0]));
+            menuItem.Add(new ItemList(new frmMum(), "Mom", "Images\\mum.png", menuColor[1]));
             panMain.Controls.Add(new Item(menuItem[0]));
+            panMain.Controls.Add(new Item(menuItem[1]));
 
             /*
                         DataTable dt = Database.QueryModel("EXEC getRoleOptionsById " + 28);

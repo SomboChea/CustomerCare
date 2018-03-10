@@ -13,11 +13,10 @@ namespace CustomerCare
         public frmSources()
         {
             InitializeComponent();
-
-            //Database.Server = "localhost";
-            //Database.DBName = "TelMarketing";
-            //Database.Open();
-
+            
+            Function.FillComboBox(cbNames, "name", "id", "SELECT * FROM tbl_name");
+            Function.FillComboBox(cbOwners, "name", "id", "SELECT * FROM tbl_name");
+            Function.FillComboBox(cbTypeOf, "type", "id", "SELECT * FROM tbl_refer_type");
             Function.SetCombo(cbProvince, cbDistrict, cbCommune, txtAddress);
         }
 
@@ -146,7 +145,33 @@ namespace CustomerCare
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Function.AddAddress();
+            string name_id = cbNames.SelectedValue+"";
+            string owner_id = cbOwners.SelectedValue + "";
+            string type_id = cbTypeOf.SelectedValue + "";
+            string tel_1 = txtTel_1.Text;
+            string tel_2 = txtTel_2.Text;
+            string email = txtEmail.Text;
+            string image = pbProfile.ImageLocation;
+            string memo = txtMemo.Text;
+
+            string sql = "EXEC InsertRefer " + name_id + "," + owner_id + ",'" + tel_1 + "','" + tel_2 + "','" + image + "','" + email + "','" +  memo + "'," + type_id + "," + Temp.logger_id + "," + Function.AddAddress();
+            if(Database.Exec(sql))
+            {
+                MessageBox.Show("Success");
+            }
+            else
+            {
+                MessageBox.Show("Failed");
+            }
+        }
+
+        private void pbProfile_Click(object sender, EventArgs e)
+        {
+            FileDialog pd = new OpenFileDialog();
+            if(pd.ShowDialog()==DialogResult.OK)
+            {
+                pbProfile.ImageLocation = pd.FileName;
+            }
         }
     }
 }

@@ -33,7 +33,7 @@ namespace CustomerCare
             if (Database.User.Login(ref userID))
             {
                 Temp.logger_id = int.Parse(userID+"");
-                Temp.logger_fullname = Database.QueryScalar("SELECT fullname FROM tbl_user WHERE id = " + Temp.logger_id) + "";
+                Temp.logger_fullname = Database.QueryScalar("SELECT name FROM viewUsers WHERE id = " + Temp.logger_id) + "";
                 new frmMain().Show();
                 Temp.frm_login = this;
                 this.Hide();

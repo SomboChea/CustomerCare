@@ -397,6 +397,29 @@ namespace SMLOGX.Core
         }
 
         /// <summary>
+        /// QueryModel
+        /// </summary>
+        public static bool Exec(string sql_exec)
+        {
+            if (_hasOpen)
+            {
+                try
+                {
+                    cmd.CommandText = sql_exec;
+
+                    int b = cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+                    return Convert.ToBoolean(b);
+                }
+                catch (Exception ex)
+                {
+                    Log.Write(ex.Message, "Database.Exec");
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
         /// QueryScalar
         /// </summary>
         public static object QueryScalar(string sql, SqlParameter[] parameter = null)
