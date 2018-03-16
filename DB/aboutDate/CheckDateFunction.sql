@@ -1,19 +1,19 @@
---select * from viewAllCall where dbo.CheckDateFunc( mom_id, 12,call_date, 'month')=1;
+--select * from viewAllCall where dbo.CheckDateFunc( mom_id, 12,call_date, 'month',call_status)=1;
 
-Create FUNCTION [dbo].[CheckDateFunc]
+CREATE FUNCTION [dbo].[CheckDateFunc]
 ( @momID AS int =4,
 @num as int =7,
 @callDate as datetime,
-  @type AS varchar(10) ='month' 
+  @type AS varchar(10) ='month' ,
+	@status as int
 )
 RETURNS int
 AS
 BEGIN
 	-- routine body goes here, e.g.
 	-- SELECT 'Navicat for SQL Server'
-DECLARE @status as int =(Select top 1 call_status from viewAllCall where call_status=0 and mom_id=@momID and call_date=@callDate);
 
-IF @status is not null begin
+IF @status=0 begin
 	DECLARE @limitdate as date ;
 	
 	IF @type='month' BEGIN
