@@ -156,7 +156,7 @@
             this.panUser.Controls.Add(this.label4);
             this.panUser.Controls.Add(this.label3);
             this.panUser.Enabled = false;
-            this.panUser.Location = new System.Drawing.Point(256, 202);
+            this.panUser.Location = new System.Drawing.Point(254, 215);
             this.panUser.Name = "panUser";
             this.panUser.Size = new System.Drawing.Size(457, 114);
             this.panUser.TabIndex = 15;
@@ -200,7 +200,7 @@
             // 
             // btnTest
             // 
-            this.btnTest.BackColor = System.Drawing.Color.Transparent;
+            this.btnTest.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnTest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTest.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnTest.FlatAppearance.BorderSize = 0;
@@ -209,6 +209,7 @@
             this.btnTest.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.btnTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTest.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTest.ForeColor = System.Drawing.Color.White;
             this.btnTest.Location = new System.Drawing.Point(39, 394);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(147, 30);

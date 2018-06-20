@@ -72,6 +72,7 @@ namespace CustomerCare
                             panMain.Controls.Add(new Item(menuItem[i]));
 
                 */
+
         }
 
         private void picClose_Click(object sender, EventArgs e)

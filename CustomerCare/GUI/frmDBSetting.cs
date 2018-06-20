@@ -40,7 +40,7 @@ namespace CustomerCare
             Config config = new Config
             {
                 Server = txtServer.Text,
-                DBName = "CustomerCare"
+                DBName = "telmarketing"
             };
 
             bool isAuth = false;
@@ -62,7 +62,7 @@ namespace CustomerCare
             try
             {
                 Database.Server = txtServer.Text;
-                Database.DBName = "CustomerCare";
+                Database.DBName = "telmarketing";
 
                 Database.UserId = txtUsername.Text;
                 Database.Password = txtPassword.Text;

@@ -258,9 +258,9 @@
             // btnbrowse
             // 
             this.btnbrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbrowse.Location = new System.Drawing.Point(534, 167);
+            this.btnbrowse.Location = new System.Drawing.Point(528, 167);
             this.btnbrowse.Name = "btnbrowse";
-            this.btnbrowse.Size = new System.Drawing.Size(101, 36);
+            this.btnbrowse.Size = new System.Drawing.Size(107, 36);
             this.btnbrowse.TabIndex = 8;
             this.btnbrowse.Text = "Browse ...";
             this.btnbrowse.UseVisualStyleBackColor = true;
@@ -287,11 +287,11 @@
             // 
             // txtKhName
             // 
-            this.txtKhName.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F);
+            this.txtKhName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtKhName.Location = new System.Drawing.Point(193, 92);
             this.txtKhName.Margin = new System.Windows.Forms.Padding(4);
             this.txtKhName.Name = "txtKhName";
-            this.txtKhName.Size = new System.Drawing.Size(301, 37);
+            this.txtKhName.Size = new System.Drawing.Size(301, 26);
             this.txtKhName.TabIndex = 5;
             this.txtKhName.Tag = "Name in Khmer";
             // 
