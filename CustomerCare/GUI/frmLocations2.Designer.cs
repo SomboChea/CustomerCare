@@ -1,6 +1,6 @@
 ﻿namespace CustomerCare
 {
-    partial class frmLocations
+    partial class frmLocations2
     {
         /// <summary>
         /// Required designer variable.
@@ -36,12 +36,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataLocations = new System.Windows.Forms.DataGridView();
             this.btnCreate = new System.Windows.Forms.Button();
-            this.txtcomm = new System.Windows.Forms.TextBox();
-            this.txtdis = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtpro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbpro = new System.Windows.Forms.ComboBox();
+            this.cmbdis = new System.Windows.Forms.ComboBox();
+            this.cmbcom = new System.Windows.Forms.ComboBox();
             this.panHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLocations)).BeginInit();
@@ -56,7 +56,7 @@
             this.panHead.Controls.Add(this.pictureBox1);
             this.panHead.Controls.Add(this.lbTitle);
             this.panHead.Location = new System.Drawing.Point(0, 0);
-            this.panHead.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panHead.Margin = new System.Windows.Forms.Padding(2);
             this.panHead.Name = "panHead";
             this.panHead.Size = new System.Drawing.Size(862, 45);
             this.panHead.TabIndex = 2;
@@ -72,7 +72,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::CustomerCare.Properties.Resources.Close_32;
             this.btnClose.Location = new System.Drawing.Point(821, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(41, 45);
             this.btnClose.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             this.pictureBox1.Image = global::CustomerCare.Properties.Resources.Tiles;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(41, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -110,7 +110,7 @@
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.ForeColor = System.Drawing.Color.White;
             this.btnRemove.Location = new System.Drawing.Point(592, 236);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(111, 32);
             this.btnRemove.TabIndex = 18;
@@ -125,7 +125,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(592, 128);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 32);
             this.button1.TabIndex = 17;
@@ -141,7 +141,7 @@
             this.dataLocations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataLocations.GridColor = System.Drawing.Color.White;
             this.dataLocations.Location = new System.Drawing.Point(162, 272);
-            this.dataLocations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataLocations.Margin = new System.Windows.Forms.Padding(2);
             this.dataLocations.Name = "dataLocations";
             this.dataLocations.RowTemplate.Height = 24;
             this.dataLocations.Size = new System.Drawing.Size(542, 241);
@@ -155,28 +155,13 @@
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.ForeColor = System.Drawing.Color.White;
             this.btnCreate.Location = new System.Drawing.Point(592, 82);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(111, 32);
             this.btnCreate.TabIndex = 15;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
-            // 
-            // txtcomm
-            // 
-            this.txtcomm.Location = new System.Drawing.Point(322, 174);
-            this.txtcomm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtcomm.Name = "txtcomm";
-            this.txtcomm.Size = new System.Drawing.Size(256, 20);
-            this.txtcomm.TabIndex = 12;
-            // 
-            // txtdis
-            // 
-            this.txtdis.Location = new System.Drawing.Point(322, 129);
-            this.txtdis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtdis.Name = "txtdis";
-            this.txtdis.Size = new System.Drawing.Size(256, 20);
-            this.txtdis.TabIndex = 13;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // label3
             // 
@@ -198,15 +183,6 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "District";
             // 
-            // txtpro
-            // 
-            this.txtpro.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.txtpro.Location = new System.Drawing.Point(322, 82);
-            this.txtpro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtpro.Name = "txtpro";
-            this.txtpro.Size = new System.Drawing.Size(256, 20);
-            this.txtpro.TabIndex = 14;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -217,25 +193,59 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "City / Province";
             // 
-            // frmLocations
+            // cmbpro
+            // 
+            this.cmbpro.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbpro.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbpro.FormattingEnabled = true;
+            this.cmbpro.Items.AddRange(new object[] {
+            "Apple",
+            "Book",
+            "Car"});
+            this.cmbpro.Location = new System.Drawing.Point(265, 81);
+            this.cmbpro.Name = "cmbpro";
+            this.cmbpro.Size = new System.Drawing.Size(284, 21);
+            this.cmbpro.TabIndex = 19;
+            // 
+            // cmbdis
+            // 
+            this.cmbdis.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbdis.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbdis.FormattingEnabled = true;
+            this.cmbdis.Location = new System.Drawing.Point(265, 129);
+            this.cmbdis.Name = "cmbdis";
+            this.cmbdis.Size = new System.Drawing.Size(284, 21);
+            this.cmbdis.TabIndex = 19;
+            // 
+            // cmbcom
+            // 
+            this.cmbcom.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbcom.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbcom.FormattingEnabled = true;
+            this.cmbcom.Location = new System.Drawing.Point(265, 173);
+            this.cmbcom.Name = "cmbcom";
+            this.cmbcom.Size = new System.Drawing.Size(284, 21);
+            this.cmbcom.TabIndex = 19;
+            // 
+            // frmLocations2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(862, 596);
+            this.Controls.Add(this.cmbcom);
+            this.Controls.Add(this.cmbdis);
+            this.Controls.Add(this.cmbpro);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataLocations);
             this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.txtcomm);
-            this.Controls.Add(this.txtdis);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtpro);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "frmLocations";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "frmLocations2";
             this.Text = "frmLocations";
             this.panHead.ResumeLayout(false);
             this.panHead.PerformLayout();
@@ -256,11 +266,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataLocations;
         private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.TextBox txtcomm;
-        private System.Windows.Forms.TextBox txtdis;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtpro;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbpro;
+        private System.Windows.Forms.ComboBox cmbdis;
+        private System.Windows.Forms.ComboBox cmbcom;
     }
 }

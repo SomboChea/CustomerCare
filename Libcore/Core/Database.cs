@@ -332,6 +332,24 @@ namespace SMLOGX.Core
         }
 
         /// <summary>
+        /// Use For Easy Setting Parameter
+        /// replace text "@obj#"
+        /// count from 1
+        /// </summary>
+        /// <param name="datas"></param>
+        /// <returns></returns>
+        public static SqlParameter[] SetParam(params string[] datas)
+        {
+            SqlParameter[] pmts = new SqlParameter[datas.Length];
+            for(int i = 0; i < pmts.Length - 1; i++)
+            {
+                pmts[i].ParameterName = "@obj"+i;
+                pmts[i].Value = datas[i];
+            }
+            return pmts;
+        }
+
+        /// <summary>
         /// Get Columns
         /// </summary>
         public static string GetColumns(string table, bool includePrimaryCol = false)

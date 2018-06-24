@@ -184,6 +184,12 @@
     <Compile Include="GUI\frmHcp.Designer.cs">
       <DependentUpon>frmHcp.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmLocations2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLocations2.Designer.cs">
+      <DependentUpon>frmLocations2.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmLocations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmHcp.resx">
       <DependentUpon>frmHcp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLocations2.resx">
+      <DependentUpon>frmLocations2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLocations.resx">
       <DependentUpon>frmLocations.cs</DependentUpon>
