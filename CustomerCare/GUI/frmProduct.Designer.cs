@@ -37,10 +37,10 @@
             this.cbProductOwner = new System.Windows.Forms.ComboBox();
             this.panHead = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.PictureBox();
             this.txtLevel = new CustomerCare.GUI.Components.TextBox();
             this.txtName = new CustomerCare.GUI.Components.TextBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
             this.panHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -49,7 +49,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 92);
+            this.label1.Location = new System.Drawing.Point(47, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 21);
             this.label1.TabIndex = 0;
@@ -58,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 162);
+            this.label2.Location = new System.Drawing.Point(47, 162);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 21);
             this.label2.TabIndex = 2;
@@ -75,7 +75,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(47, 482);
+            this.btnAdd.Location = new System.Drawing.Point(51, 482);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(478, 59);
             this.btnAdd.TabIndex = 5;
@@ -86,7 +86,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 231);
+            this.label3.Location = new System.Drawing.Point(47, 231);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 21);
             this.label3.TabIndex = 5;
@@ -96,8 +96,8 @@
             // 
             this.txtDesc.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtDesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDesc.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F);
-            this.txtDesc.Location = new System.Drawing.Point(214, 231);
+            this.txtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtDesc.Location = new System.Drawing.Point(218, 231);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(311, 141);
@@ -106,7 +106,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 410);
+            this.label4.Location = new System.Drawing.Point(47, 410);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(146, 21);
             this.label4.TabIndex = 8;
@@ -116,14 +116,14 @@
             // 
             this.cbProductOwner.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbProductOwner.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbProductOwner.Font = new System.Drawing.Font("AKbalthom KhmerLer", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProductOwner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProductOwner.FormattingEnabled = true;
             this.cbProductOwner.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.cbProductOwner.Location = new System.Drawing.Point(214, 403);
+            this.cbProductOwner.Location = new System.Drawing.Point(218, 403);
             this.cbProductOwner.Name = "cbProductOwner";
-            this.cbProductOwner.Size = new System.Drawing.Size(311, 39);
+            this.cbProductOwner.Size = new System.Drawing.Size(311, 28);
             this.cbProductOwner.TabIndex = 4;
             // 
             // panHead
@@ -149,6 +149,36 @@
             this.label12.Size = new System.Drawing.Size(241, 34);
             this.label12.TabIndex = 7;
             this.label12.Text = "Product Addition";
+            // 
+            // txtLevel
+            // 
+            this.txtLevel.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.txtLevel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLevel.Location = new System.Drawing.Point(218, 153);
+            this.txtLevel.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.txtLevel.MyBackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtLevel.MyBorderColor = System.Drawing.Color.WhiteSmoke;
+            this.txtLevel.MyMulti = true;
+            this.txtLevel.Name = "txtLevel";
+            this.txtLevel.Size = new System.Drawing.Size(311, 44);
+            this.txtLevel.TabIndex = 2;
+            this.txtLevel.Value = "";
+            // 
+            // txtName
+            // 
+            this.txtName.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.txtName.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(218, 82);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.txtName.MyBackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtName.MyBorderColor = System.Drawing.Color.WhiteSmoke;
+            this.txtName.MyMulti = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(311, 44);
+            this.txtName.TabIndex = 1;
+            this.txtName.Value = "";
             // 
             // picLogo
             // 
@@ -179,36 +209,6 @@
             this.btnClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnClose_MouseDown);
             this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
             this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
-            // 
-            // txtLevel
-            // 
-            this.txtLevel.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.txtLevel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtLevel.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLevel.Location = new System.Drawing.Point(214, 153);
-            this.txtLevel.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtLevel.MyBackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtLevel.MyBorderColor = System.Drawing.Color.WhiteSmoke;
-            this.txtLevel.MyMulti = true;
-            this.txtLevel.Name = "txtLevel";
-            this.txtLevel.Size = new System.Drawing.Size(311, 44);
-            this.txtLevel.TabIndex = 2;
-            this.txtLevel.Value = "";
-            // 
-            // txtName
-            // 
-            this.txtName.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.txtName.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtName.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(214, 82);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtName.MyBackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtName.MyBorderColor = System.Drawing.Color.WhiteSmoke;
-            this.txtName.MyMulti = true;
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(311, 44);
-            this.txtName.TabIndex = 1;
-            this.txtName.Value = "";
             // 
             // frmProduct
             // 

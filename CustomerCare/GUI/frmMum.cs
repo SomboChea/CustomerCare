@@ -25,7 +25,7 @@ namespace CustomerCare
         private void btnAdd_Click(object sender, System.EventArgs e)
         {
             string name_id = cbNames.SelectedValue+"";
-            string dates = dateEpt.Value.ToShortDateString();
+            string dates = dateEpt.Text;
             string[] tels = { txtTel1.Text, txtTel2.Text};
             string[] econtact = { txtEmail.Text, txtFB.Text };
             string location_id = Function.AddAddress();
@@ -61,6 +61,11 @@ namespace CustomerCare
         {
             cbSources.DataSource = null;
             Function.FillComboBox(cbSources, "name", "id", "SELECT * FROM viewRefers WHERE type_id = " + cbTypeOf.SelectedValue);
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

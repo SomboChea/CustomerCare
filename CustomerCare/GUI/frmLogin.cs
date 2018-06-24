@@ -23,7 +23,7 @@ namespace CustomerCare
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Database.DBName = "TelMarketing";
+            //Database.DBName = "TelMarketing";
             Database.Open();
             string[] user = { txtUsername.Value, txtPassword.Value };
             object userID = 0;
@@ -34,8 +34,8 @@ namespace CustomerCare
             if (Database.User.Login(ref userID))
             {
                 Temp.logger_id = int.Parse(userID+"");
-                Temp.logger_fullname = Database.QueryScalar("SELECT name FROM viewUsers WHERE id = " + Temp.logger_id) + "";
-                new frmMain().Show();
+                Temp.logger_fullname = Database.QueryScalar("SELECT fullname FROM tbl_user WHERE id = " + Temp.logger_id) + "";
+                new frmDashboard().Show();
                 Temp.frm_login = this;
                 this.Hide();
             }
@@ -72,6 +72,7 @@ namespace CustomerCare
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
             if (e.KeyChar == 13)
                 btnLogin_Click(null, null);
             if (e.KeyChar == 27)

@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.panHead = new System.Windows.Forms.Panel();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbNames = new System.Windows.Forms.ComboBox();
@@ -45,29 +43,31 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cbDistrict = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbTypeOf = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cbOwners = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.pbProfile = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtTel_1 = new System.Windows.Forms.TextBox();
-            this.txtTel_2 = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cbOwners = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cbTypeOf = new System.Windows.Forms.ComboBox();
+            this.txtTel_2 = new System.Windows.Forms.TextBox();
+            this.txtTel_1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtMemo = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.pbProfile = new System.Windows.Forms.PictureBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
             this.panHead.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProfile)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
             // panHead
@@ -83,19 +83,6 @@
             this.panHead.Size = new System.Drawing.Size(1298, 55);
             this.panHead.TabIndex = 31;
             // 
-            // picLogo
-            // 
-            this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picLogo.Image = global::CustomerCare.Properties.Resources.Tiles;
-            this.picLogo.Location = new System.Drawing.Point(0, 0);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(55, 55);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 8;
-            this.picLogo.TabStop = false;
-            this.picLogo.Click += new System.EventHandler(this.picLogo_Click);
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -106,24 +93,6 @@
             this.label12.Size = new System.Drawing.Size(122, 34);
             this.label12.TabIndex = 7;
             this.label12.Text = "Sources";
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Image = global::CustomerCare.Properties.Resources.Close_32;
-            this.btnClose.Location = new System.Drawing.Point(1243, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(55, 55);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnClose.TabIndex = 4;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            this.btnClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnClose_MouseDown);
-            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
-            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
             // label1
             // 
@@ -147,22 +116,22 @@
             // 
             this.cbNames.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbNames.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbNames.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F);
+            this.cbNames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cbNames.FormattingEnabled = true;
             this.cbNames.Location = new System.Drawing.Point(199, 43);
             this.cbNames.Name = "cbNames";
-            this.cbNames.Size = new System.Drawing.Size(340, 44);
+            this.cbNames.Size = new System.Drawing.Size(340, 33);
             this.cbNames.TabIndex = 35;
             // 
             // cbProvince
             // 
             this.cbProvince.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbProvince.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbProvince.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F);
+            this.cbProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cbProvince.FormattingEnabled = true;
             this.cbProvince.Location = new System.Drawing.Point(177, 49);
             this.cbProvince.Name = "cbProvince";
-            this.cbProvince.Size = new System.Drawing.Size(390, 44);
+            this.cbProvince.Size = new System.Drawing.Size(390, 33);
             this.cbProvince.TabIndex = 37;
             // 
             // label3
@@ -185,7 +154,7 @@
             this.groupBox1.Controls.Add(this.cbDistrict);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cbProvince);
-            this.groupBox1.Location = new System.Drawing.Point(12, 319);
+            this.groupBox1.Location = new System.Drawing.Point(14, 337);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(590, 303);
             this.groupBox1.TabIndex = 38;
@@ -203,10 +172,10 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F);
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtAddress.Location = new System.Drawing.Point(177, 232);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(390, 44);
+            this.txtAddress.Size = new System.Drawing.Size(390, 30);
             this.txtAddress.TabIndex = 42;
             // 
             // label5
@@ -222,11 +191,11 @@
             // 
             this.cbCommune.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbCommune.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbCommune.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F);
+            this.cbCommune.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cbCommune.FormattingEnabled = true;
             this.cbCommune.Location = new System.Drawing.Point(177, 172);
             this.cbCommune.Name = "cbCommune";
-            this.cbCommune.Size = new System.Drawing.Size(390, 44);
+            this.cbCommune.Size = new System.Drawing.Size(390, 33);
             this.cbCommune.TabIndex = 41;
             // 
             // label4
@@ -242,11 +211,11 @@
             // 
             this.cbDistrict.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbDistrict.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbDistrict.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F);
+            this.cbDistrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cbDistrict.FormattingEnabled = true;
             this.cbDistrict.Location = new System.Drawing.Point(176, 111);
             this.cbDistrict.Name = "cbDistrict";
-            this.cbDistrict.Size = new System.Drawing.Size(390, 44);
+            this.cbDistrict.Size = new System.Drawing.Size(390, 33);
             this.cbDistrict.TabIndex = 39;
             // 
             // groupBox2
@@ -259,34 +228,54 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.cbNames);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 71);
+            this.groupBox2.Location = new System.Drawing.Point(14, 89);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(711, 234);
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Personal Information";
             // 
+            // cbTypeOf
+            // 
+            this.cbTypeOf.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbTypeOf.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbTypeOf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cbTypeOf.FormattingEnabled = true;
+            this.cbTypeOf.Location = new System.Drawing.Point(199, 175);
+            this.cbTypeOf.Name = "cbTypeOf";
+            this.cbTypeOf.Size = new System.Drawing.Size(340, 33);
+            this.cbTypeOf.TabIndex = 44;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(17, 183);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(159, 23);
+            this.label10.TabIndex = 43;
+            this.label10.Text = "Type of Source:";
+            // 
+            // cbOwners
+            // 
+            this.cbOwners.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbOwners.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbOwners.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cbOwners.FormattingEnabled = true;
+            this.cbOwners.Location = new System.Drawing.Point(199, 108);
+            this.cbOwners.Name = "cbOwners";
+            this.cbOwners.Size = new System.Drawing.Size(340, 33);
+            this.cbOwners.TabIndex = 42;
+            // 
             // btnSave
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSave.Location = new System.Drawing.Point(1111, 642);
+            this.btnSave.Location = new System.Drawing.Point(1113, 660);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(156, 50);
             this.btnSave.TabIndex = 40;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // pbProfile
-            // 
-            this.pbProfile.Image = global::CustomerCare.Properties.Resources.employee;
-            this.pbProfile.Location = new System.Drawing.Point(550, 43);
-            this.pbProfile.Name = "pbProfile";
-            this.pbProfile.Size = new System.Drawing.Size(149, 176);
-            this.pbProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbProfile.TabIndex = 41;
-            this.pbProfile.TabStop = false;
-            this.pbProfile.Click += new System.EventHandler(this.pbProfile_Click);
             // 
             // groupBox3
             // 
@@ -297,53 +286,19 @@
             this.groupBox3.Controls.Add(this.txtTel_1);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(729, 71);
+            this.groupBox3.Location = new System.Drawing.Point(731, 89);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(557, 234);
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Contact Information";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 51);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 23);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "Tel Line 1: ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 108);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 23);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "Tel Line 1: ";
-            // 
-            // txtTel_1
-            // 
-            this.txtTel_1.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F);
-            this.txtTel_1.Location = new System.Drawing.Point(148, 43);
-            this.txtTel_1.Name = "txtTel_1";
-            this.txtTel_1.Size = new System.Drawing.Size(390, 44);
-            this.txtTel_1.TabIndex = 43;
-            // 
-            // txtTel_2
-            // 
-            this.txtTel_2.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F);
-            this.txtTel_2.Location = new System.Drawing.Point(148, 100);
-            this.txtTel_2.Name = "txtTel_2";
-            this.txtTel_2.Size = new System.Drawing.Size(390, 44);
-            this.txtTel_2.TabIndex = 44;
-            // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtEmail.Location = new System.Drawing.Point(148, 156);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(390, 44);
+            this.txtEmail.Size = new System.Drawing.Size(390, 30);
             this.txtEmail.TabIndex = 46;
             // 
             // label9
@@ -355,43 +310,46 @@
             this.label9.TabIndex = 45;
             this.label9.Text = "Email: ";
             // 
-            // cbOwners
+            // txtTel_2
             // 
-            this.cbOwners.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbOwners.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbOwners.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F);
-            this.cbOwners.FormattingEnabled = true;
-            this.cbOwners.Location = new System.Drawing.Point(199, 108);
-            this.cbOwners.Name = "cbOwners";
-            this.cbOwners.Size = new System.Drawing.Size(340, 44);
-            this.cbOwners.TabIndex = 42;
+            this.txtTel_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTel_2.Location = new System.Drawing.Point(148, 100);
+            this.txtTel_2.Name = "txtTel_2";
+            this.txtTel_2.Size = new System.Drawing.Size(390, 30);
+            this.txtTel_2.TabIndex = 44;
             // 
-            // label10
+            // txtTel_1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 183);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(159, 23);
-            this.label10.TabIndex = 43;
-            this.label10.Text = "Type of Source:";
+            this.txtTel_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTel_1.Location = new System.Drawing.Point(148, 43);
+            this.txtTel_1.Name = "txtTel_1";
+            this.txtTel_1.Size = new System.Drawing.Size(390, 30);
+            this.txtTel_1.TabIndex = 43;
             // 
-            // cbTypeOf
+            // label8
             // 
-            this.cbTypeOf.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbTypeOf.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbTypeOf.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F);
-            this.cbTypeOf.FormattingEnabled = true;
-            this.cbTypeOf.Location = new System.Drawing.Point(199, 175);
-            this.cbTypeOf.Name = "cbTypeOf";
-            this.cbTypeOf.Size = new System.Drawing.Size(340, 44);
-            this.cbTypeOf.TabIndex = 44;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(16, 108);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 23);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Tel Line 1: ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 51);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 23);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Tel Line 1: ";
             // 
             // groupBox4
             // 
             this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox4.Controls.Add(this.txtMemo);
             this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Location = new System.Drawing.Point(608, 333);
+            this.groupBox4.Location = new System.Drawing.Point(610, 351);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(678, 289);
             this.groupBox4.TabIndex = 47;
@@ -400,7 +358,7 @@
             // 
             // txtMemo
             // 
-            this.txtMemo.Font = new System.Drawing.Font("AKbalthom KhmerLer", 12F);
+            this.txtMemo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtMemo.Location = new System.Drawing.Point(105, 51);
             this.txtMemo.Multiline = true;
             this.txtMemo.Name = "txtMemo";
@@ -415,6 +373,48 @@
             this.label14.Size = new System.Drawing.Size(83, 23);
             this.label14.TabIndex = 34;
             this.label14.Text = "Memo: ";
+            // 
+            // pbProfile
+            // 
+            this.pbProfile.Image = global::CustomerCare.Properties.Resources.employee;
+            this.pbProfile.Location = new System.Drawing.Point(550, 43);
+            this.pbProfile.Name = "pbProfile";
+            this.pbProfile.Size = new System.Drawing.Size(149, 176);
+            this.pbProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbProfile.TabIndex = 41;
+            this.pbProfile.TabStop = false;
+            this.pbProfile.Click += new System.EventHandler(this.pbProfile_Click);
+            // 
+            // picLogo
+            // 
+            this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picLogo.Image = global::CustomerCare.Properties.Resources.Tiles;
+            this.picLogo.Location = new System.Drawing.Point(0, 0);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(55, 55);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 8;
+            this.picLogo.TabStop = false;
+            this.picLogo.Click += new System.EventHandler(this.picLogo_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = global::CustomerCare.Properties.Resources.Close_32;
+            this.btnClose.Location = new System.Drawing.Point(1243, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(55, 55);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnClose.TabIndex = 4;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnClose_MouseDown);
+            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
             // frmSources
             // 
@@ -437,17 +437,17 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panHead.ResumeLayout(false);
             this.panHead.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProfile)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
 
         }

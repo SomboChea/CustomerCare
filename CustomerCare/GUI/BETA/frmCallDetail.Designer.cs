@@ -32,6 +32,7 @@
             this.lbCode = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.clock1 = new CustomerCare.GUI.Components.Clock();
             this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.clock1 = new CustomerCare.GUI.Components.Clock();
             this.panTitle.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -60,7 +60,7 @@
             this.panTitle.Controls.Add(this.lbCode);
             this.panTitle.Location = new System.Drawing.Point(-1, 56);
             this.panTitle.Name = "panTitle";
-            this.panTitle.Size = new System.Drawing.Size(466, 80);
+            this.panTitle.Size = new System.Drawing.Size(308, 80);
             this.panTitle.TabIndex = 1;
             // 
             // lbCode
@@ -99,6 +99,15 @@
             this.label3.Size = new System.Drawing.Size(198, 23);
             this.label3.TabIndex = 8;
             this.label3.Text = "Number of Called: ";
+            // 
+            // clock1
+            // 
+            this.clock1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clock1.Location = new System.Drawing.Point(542, -7);
+            this.clock1.Margin = new System.Windows.Forms.Padding(4);
+            this.clock1.Name = "clock1";
+            this.clock1.Size = new System.Drawing.Size(487, 58);
+            this.clock1.TabIndex = 4;
             // 
             // btnClose
             // 
@@ -150,7 +159,7 @@
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Location = new System.Drawing.Point(45, 346);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(699, 277);
+            this.groupBox1.Size = new System.Drawing.Size(944, 277);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Contact Information";
@@ -262,15 +271,6 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(370, 30);
             this.textBox2.TabIndex = 19;
-            // 
-            // clock1
-            // 
-            this.clock1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clock1.Location = new System.Drawing.Point(542, -7);
-            this.clock1.Margin = new System.Windows.Forms.Padding(4);
-            this.clock1.Name = "clock1";
-            this.clock1.Size = new System.Drawing.Size(487, 58);
-            this.clock1.TabIndex = 4;
             // 
             // frmCallDetail
             // 

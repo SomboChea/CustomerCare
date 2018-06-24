@@ -1,7 +1,6 @@
 ﻿using CustomerCare.STR;
 using System.Drawing;
 using System.Windows.Forms;
-using static CustomerCare.frmSources;
 
 namespace CustomerCare
 {

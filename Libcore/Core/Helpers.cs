@@ -446,6 +446,11 @@ namespace SMLOGX.Core
             return sf.GetMethod().Name;
         }
 
+        public static string GetMethod()
+        {
+            return GetCurrentMethod();
+        }
+
         public static void Write(string text, string logFrom = "Unknow")
         {
             stateLine += logFrom + " <<< ";

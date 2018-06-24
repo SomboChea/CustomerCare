@@ -166,6 +166,12 @@
     <Compile Include="GUI\frmAddress.Designer.cs">
       <DependentUpon>frmAddress.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmDBSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,10 +184,16 @@
     <Compile Include="GUI\frmHcp.Designer.cs">
       <DependentUpon>frmHcp.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmKid.cs">
+    <Compile Include="GUI\frmLocations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmKid.Designer.cs">
+    <Compile Include="GUI\frmLocations.Designer.cs">
+      <DependentUpon>frmLocations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Trash\frmKid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Trash\frmKid.Designer.cs">
       <DependentUpon>frmKid.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmLogin.cs">
@@ -202,10 +214,16 @@
     <Compile Include="GUI\frmMum.Designer.cs">
       <DependentUpon>frmMum.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmPosition.cs">
+    <Compile Include="GUI\frmKids.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmPosition.Designer.cs">
+    <Compile Include="GUI\frmKids.Designer.cs">
+      <DependentUpon>frmKids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Trash\frmPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Trash\frmPosition.Designer.cs">
       <DependentUpon>frmPosition.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmProduct.cs">
@@ -220,10 +238,10 @@
     <Compile Include="GUI\frmQuickLuanch.Designer.cs">
       <DependentUpon>frmQuickLuanch.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmRetail.cs">
+    <Compile Include="GUI\Trash\frmRetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmRetail.Designer.cs">
+    <Compile Include="GUI\Trash\frmRetail.Designer.cs">
       <DependentUpon>frmRetail.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Trash\frmStaff.cs">
@@ -315,13 +333,19 @@
     <EmbeddedResource Include="GUI\frmAddress.resx">
       <DependentUpon>frmAddress.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDBSetting.resx">
       <DependentUpon>frmDBSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmHcp.resx">
       <DependentUpon>frmHcp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmKid.resx">
+    <EmbeddedResource Include="GUI\frmLocations.resx">
+      <DependentUpon>frmLocations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Trash\frmKid.resx">
       <DependentUpon>frmKid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLogin.resx">
@@ -333,7 +357,10 @@
     <EmbeddedResource Include="GUI\frmMum.resx">
       <DependentUpon>frmMum.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmPosition.resx">
+    <EmbeddedResource Include="GUI\frmKids.resx">
+      <DependentUpon>frmKids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Trash\frmPosition.resx">
       <DependentUpon>frmPosition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmProduct.resx">
@@ -342,7 +369,7 @@
     <EmbeddedResource Include="GUI\frmQuickLuanch.resx">
       <DependentUpon>frmQuickLuanch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmRetail.resx">
+    <EmbeddedResource Include="GUI\Trash\frmRetail.resx">
       <DependentUpon>frmRetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmUser.resx">

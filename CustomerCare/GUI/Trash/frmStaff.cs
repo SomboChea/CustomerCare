@@ -1,19 +1,15 @@
 ﻿using SMLOGX.Core;
 using System;
 using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
 
 namespace CustomerCare
 {
     public partial class frmStaff : Form
     {
-        
         public frmStaff()
         {
             InitializeComponent();
-
-            
 
             Database.Server = "localhost";
             Database.DBName = "CustomerCare";

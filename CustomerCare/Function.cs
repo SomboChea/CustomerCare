@@ -1,14 +1,10 @@
 ﻿using SMLOGX.Core;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CustomerCare
 {
-    class Function:Helpers
+    internal class Function : Helpers
     {
         public static ComboBox ComboPro { get; set; }
         public static ComboBox ComboDis { get; set; }
@@ -35,7 +31,6 @@ namespace CustomerCare
 
         private static void ComboPro_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             ComboDis.DataSource = null;
             ComboCom.DataSource = null;
             FillComboBox(ComboDis, "name", "id", "Select * from viewDistricts where refer_id=" + ComboPro.SelectedValue);

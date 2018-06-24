@@ -3,7 +3,6 @@ using CustomerCare.STR;
 using SMLOGX.Core;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -18,7 +17,7 @@ namespace CustomerCare
         {
             InitializeComponent();
 
-            menuItem.Add(new ItemList(new frmSources(),"Sources", "Images\\home.png", menuColor[0]));
+            menuItem.Add(new ItemList(new frmSources(), "Sources", "Images\\home.png", menuColor[0]));
             menuItem.Add(new ItemList(new frmMum(), "Mom", "Images\\mum.png", menuColor[1]));
             panMain.Controls.Add(new Item(menuItem[0]));
             panMain.Controls.Add(new Item(menuItem[1]));
@@ -72,7 +71,6 @@ namespace CustomerCare
                             panMain.Controls.Add(new Item(menuItem[i]));
 
                 */
-
         }
 
         private void picClose_Click(object sender, EventArgs e)
