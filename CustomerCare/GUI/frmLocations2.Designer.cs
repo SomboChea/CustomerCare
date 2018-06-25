@@ -116,6 +116,7 @@
             this.btnRemove.TabIndex = 18;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // button1
             // 
@@ -131,9 +132,12 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataLocations
             // 
+            this.dataLocations.AllowUserToAddRows = false;
+            this.dataLocations.AllowUserToDeleteRows = false;
             this.dataLocations.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -142,8 +146,11 @@
             this.dataLocations.GridColor = System.Drawing.Color.White;
             this.dataLocations.Location = new System.Drawing.Point(162, 272);
             this.dataLocations.Margin = new System.Windows.Forms.Padding(2);
+            this.dataLocations.MultiSelect = false;
             this.dataLocations.Name = "dataLocations";
+            this.dataLocations.ReadOnly = true;
             this.dataLocations.RowTemplate.Height = 24;
+            this.dataLocations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataLocations.Size = new System.Drawing.Size(542, 241);
             this.dataLocations.TabIndex = 16;
             // 
