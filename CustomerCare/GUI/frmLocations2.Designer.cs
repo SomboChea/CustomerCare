@@ -34,7 +34,6 @@
             this.lbTitle = new System.Windows.Forms.Label();
             this.btnRemove = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataLocations = new System.Windows.Forms.DataGridView();
             this.btnCreate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,9 +41,12 @@
             this.cmbpro = new System.Windows.Forms.ComboBox();
             this.cmbdis = new System.Windows.Forms.ComboBox();
             this.cmbcom = new System.Windows.Forms.ComboBox();
+            this.listprovince = new System.Windows.Forms.ListBox();
+            this.listdistrict = new System.Windows.Forms.ListBox();
+            this.listcomm = new System.Windows.Forms.ListBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataLocations)).BeginInit();
             this.SuspendLayout();
             // 
             // panHead
@@ -125,34 +127,14 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(592, 128);
+            this.button1.Location = new System.Drawing.Point(592, 122);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 32);
             this.button1.TabIndex = 17;
-            this.button1.Text = "Close";
+            this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dataLocations
-            // 
-            this.dataLocations.AllowUserToAddRows = false;
-            this.dataLocations.AllowUserToDeleteRows = false;
-            this.dataLocations.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataLocations.BackgroundColor = System.Drawing.Color.White;
-            this.dataLocations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataLocations.GridColor = System.Drawing.Color.White;
-            this.dataLocations.Location = new System.Drawing.Point(162, 272);
-            this.dataLocations.Margin = new System.Windows.Forms.Padding(2);
-            this.dataLocations.MultiSelect = false;
-            this.dataLocations.Name = "dataLocations";
-            this.dataLocations.ReadOnly = true;
-            this.dataLocations.RowTemplate.Height = 24;
-            this.dataLocations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataLocations.Size = new System.Drawing.Size(542, 241);
-            this.dataLocations.TabIndex = 16;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnCreate
             // 
@@ -234,17 +216,71 @@
             this.cmbcom.Size = new System.Drawing.Size(284, 21);
             this.cmbcom.TabIndex = 19;
             // 
+            // listprovince
+            // 
+            this.listprovince.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.listprovince.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.listprovince.FormattingEnabled = true;
+            this.listprovince.ItemHeight = 20;
+            this.listprovince.Location = new System.Drawing.Point(78, 301);
+            this.listprovince.Name = "listprovince";
+            this.listprovince.Size = new System.Drawing.Size(176, 244);
+            this.listprovince.TabIndex = 20;
+            this.listprovince.SelectedIndexChanged += new System.EventHandler(this.listprovince_SelectedIndexChanged);
+            // 
+            // listdistrict
+            // 
+            this.listdistrict.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.listdistrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.listdistrict.FormattingEnabled = true;
+            this.listdistrict.ItemHeight = 20;
+            this.listdistrict.Location = new System.Drawing.Point(303, 301);
+            this.listdistrict.Name = "listdistrict";
+            this.listdistrict.Size = new System.Drawing.Size(176, 244);
+            this.listdistrict.TabIndex = 20;
+            this.listdistrict.SelectedIndexChanged += new System.EventHandler(this.listdistrict_SelectedIndexChanged);
+            // 
+            // listcomm
+            // 
+            this.listcomm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.listcomm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.listcomm.FormattingEnabled = true;
+            this.listcomm.ItemHeight = 20;
+            this.listcomm.Location = new System.Drawing.Point(528, 301);
+            this.listcomm.Name = "listcomm";
+            this.listcomm.Size = new System.Drawing.Size(176, 244);
+            this.listcomm.TabIndex = 20;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Crimson;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(592, 162);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(111, 32);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Close";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmLocations2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(862, 596);
+            this.Controls.Add(this.listcomm);
+            this.Controls.Add(this.listdistrict);
+            this.Controls.Add(this.listprovince);
             this.Controls.Add(this.cmbcom);
             this.Controls.Add(this.cmbdis);
             this.Controls.Add(this.cmbpro);
             this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataLocations);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -257,7 +293,6 @@
             this.panHead.ResumeLayout(false);
             this.panHead.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataLocations)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,7 +306,6 @@
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataLocations;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -279,5 +313,9 @@
         private System.Windows.Forms.ComboBox cmbpro;
         private System.Windows.Forms.ComboBox cmbdis;
         private System.Windows.Forms.ComboBox cmbcom;
+        private System.Windows.Forms.ListBox listprovince;
+        private System.Windows.Forms.ListBox listdistrict;
+        private System.Windows.Forms.ListBox listcomm;
+        private System.Windows.Forms.Button button2;
     }
 }

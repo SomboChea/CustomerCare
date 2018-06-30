@@ -41,25 +41,32 @@ namespace CustomerCare
 
         void ReloadView()
         {
-            dataLocations.DataSource = null;
-            // Query Column Province , District , Commune , CID, DID ,Pid
-            dataLocations.DataSource = Database.QueryModel("select p.name Province,d.name as District , c.name as Commune, c.id cid ,d.id did, p.id pid from (select * from locations where master_id=0) p left JOIN (select * from locations ) d on d.master_id=p.id left join (select * from locations ) c on c.master_id=d.id");
+            //dataLocations.DataSource = null;
+            //// Query Column Province , District , Commune , CID, DID ,Pid
+            //dataLocations.DataSource = Database.QueryModel("select p.name Province,d.name as District , c.name as Commune, c.id cid ,d.id did, p.id pid from (select * from locations where master_id=0) p left JOIN (select * from locations ) d on d.master_id=p.id left join (select * from locations ) c on c.master_id=d.id");
 
-            // hide pid , did , cid
-            dataLocations.Columns["cid"].Visible = false;
-            dataLocations.Columns["did"].Visible = false;
-            dataLocations.Columns["pid"].Visible = false;
+            //// hide pid , did , cid
+            //dataLocations.Columns["cid"].Visible = false;
+            //dataLocations.Columns["did"].Visible = false;
+            //dataLocations.Columns["pid"].Visible = false;
+            
         }
 
         private void refresh()
         {
             cbpro.DataSource = null;
+            listprovince.DataSource = null;
             Helpers.FillComboBox(cbpro,"name","id","Select * from locations where master_id=0");
+            //Helpers.FillComboBox(listprovince,"")
+            Helpers.FillComboBox(listprovince, "name", "id", "Select * from locations where master_id=0");
 
             ReloadView();
+            cbcomm.DataSource = null;
+            cbdis.DataSource = null;
+
         }
 
-        
+
 
         private void Cbdis_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -112,16 +119,37 @@ namespace CustomerCare
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (dataLocations.SelectedRows.Count <= 0)
-                return;
-            string communeid = dataLocations.SelectedRows[0].Cells["cid"].Value+"";
-            string districtid= dataLocations.SelectedRows[0].Cells["did"].Value + "";
-            string provinceid= dataLocations.SelectedRows[0].Cells["pid"].Value + "";
+            //if (dataLocations.SelectedRows.Count <= 0)
+            //    return;
+            //string communeid = dataLocations.SelectedRows[0].Cells["cid"].Value+"";
+            //string districtid= dataLocations.SelectedRows[0].Cells["did"].Value + "";
+            //string provinceid= dataLocations.SelectedRows[0].Cells["pid"].Value + "";
 
             // action remove
 
             // end action
+            
+            refresh();
+        }
 
+        private void listprovince_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listcomm.DataSource = null;
+            listdistrict.DataSource = null;
+
+            Helpers.FillComboBox(listdistrict, "name", "id", "Select * from locations where master_id=" + listprovince.SelectedValue);
+
+        }
+
+        private void listdistrict_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listcomm.DataSource = null;
+            Helpers.FillComboBox(listcomm, "name", "id", "Select * from locations where master_id=" + listdistrict.SelectedValue);
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             refresh();
         }
 

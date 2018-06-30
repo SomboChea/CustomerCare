@@ -250,7 +250,7 @@ namespace SMLOGX.Core
         /// <param name="displaymember">(ColumnName) items you want to show in combobox</param>
         /// <param name="valuemember">(ColumnName) what you get when selecteditem</param>
         /// <param name="sql">SQL Select Command</param>
-        public static void FillComboBox(ComboBox cb, string displaymember, string valuemember, string sql)
+        public static void FillComboBox(ListControl cb, string displaymember, string valuemember, string sql)
         {
             try
             {
