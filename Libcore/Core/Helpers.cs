@@ -338,6 +338,74 @@ namespace SMLOGX.Core
         {
             throw new NotImplementedException();
         }
+
+
+
+
+        public static void ShowMsg(object text)
+        {
+            MessageBox.Show(text + "");
+        }
+        public static void ShowConsole(object text)
+        {
+            Console.WriteLine(text);
+        }
+        public static void SetRedbox(Control txt)
+        {
+            Label redline = new Label();
+            redline.BackColor = Color.Red;
+            redline.Size = new Size(txt.Size.Width + 4, txt.Size.Height + 4);
+            redline.Location = new Point(txt.Location.X - 2, txt.Location.Y - 2);
+            redline.Tag = "RedLine";
+            txt.Parent.Controls.Add(redline);
+        }
+        public static void ClearRedline(Control main)
+        {
+            for (int i = main.Controls.Count - 1; i >= 0; i--)
+            {
+#pragma warning disable CS0252 // Possible unintended reference comparison; left hand side needs cast
+                if (main.Controls[i].Tag == "RedLine")
+#pragma warning restore CS0252 // Possible unintended reference comparison; left hand side needs cast
+                {
+                    main.Controls.Remove(main.Controls[i]);
+                }
+            }
+        }
+        public static bool checkRequire(Control ctrl)
+        {
+            bool result = false;
+            if (ctrl is TextBox)
+            {
+                result = ((TextBox)ctrl).Text.Trim() != "";
+            }
+            if(ctrl is ComboBox)
+            {
+                result = ((ComboBox)ctrl).Text.Trim() != "";
+            }
+            if (!result)
+                SetRedbox(ctrl);
+            return result;
+        }
+        public static bool checkRequire(params Control[] ctrl)
+        {
+            bool check = true;
+            foreach (Control c in ctrl)
+            {
+                check = checkRequire(c) ? check : false;
+            }
+
+            return check;
+        }
+       
+        public static string joinArray(string[] data)
+        {
+            string output = "N'" + String.Join("',N'", data) + "'";
+            return output;
+        }
+
+
+
+
     }
 
     /// <summary>

@@ -40,6 +40,9 @@
             this.comborole = new System.Windows.Forms.ComboBox();
             this.butadd = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.butremove = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -143,11 +146,34 @@
             this.button2.Text = "Close";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(32, 311);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(652, 177);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // butremove
+            // 
+            this.butremove.Location = new System.Drawing.Point(533, 161);
+            this.butremove.Name = "butremove";
+            this.butremove.Size = new System.Drawing.Size(151, 47);
+            this.butremove.TabIndex = 3;
+            this.butremove.Text = "Remove";
+            this.butremove.UseVisualStyleBackColor = true;
+            // 
             // frmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 333);
+            this.ClientSize = new System.Drawing.Size(731, 521);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.butremove);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.butadd);
             this.Controls.Add(this.comborole);
@@ -164,6 +190,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "frmUser";
             this.Text = "frmUser";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +210,7 @@
         private System.Windows.Forms.ComboBox comborole;
         private System.Windows.Forms.Button butadd;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button butremove;
     }
 }

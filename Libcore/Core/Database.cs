@@ -265,6 +265,12 @@ namespace SMLOGX.Core
             return false;
         }
 
+        public static void Delete(string table,string id,string primarycolumn="id")
+        {
+            string sql = "delete from "+table+" where "+primarycolumn+"="+id+"";
+            Database.Exec(sql);
+        }
+
         // My Add
         public static bool Update(string table, string WhereClause, string columns, params object[] data)
         {
