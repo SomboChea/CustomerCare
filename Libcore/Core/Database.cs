@@ -265,12 +265,7 @@ namespace SMLOGX.Core
             return false;
         }
 
-        public static void Delete(string table,string id,string primarycolumn="id")
-        {
-            string sql = "delete from "+table+" where "+primarycolumn+"="+id+"";
-            Database.Exec(sql);
-        }
-
+       
         // My Add
         public static bool Update(string table, string WhereClause, string columns, params object[] data)
         {
@@ -295,7 +290,7 @@ namespace SMLOGX.Core
 
                     //cmd.CommandText = "INSERT INTO " + table + "(" + columns + ") VALUES(" + final_data + ");";
                     cmd.CommandText = "Update " + table + " set " + String.Join(",", datas) + " " + WhereClause;
-                    System.Windows.Forms.MessageBox.Show(cmd.CommandText);
+                    //System.Windows.Forms.MessageBox.Show(cmd.CommandText);
                     //System.Windows.Forms.MessageBox.Show(cmd.CommandText + "\n" + final_data);
                     //return false;
                     _hasExec = cmd.ExecuteNonQuery();

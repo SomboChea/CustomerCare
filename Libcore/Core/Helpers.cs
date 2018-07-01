@@ -391,6 +391,8 @@ namespace SMLOGX.Core
             bool check = true;
             foreach (Control c in ctrl)
             {
+                if (c == null)
+                    return check;
                 check = checkRequire(c) ? check : false;
             }
 

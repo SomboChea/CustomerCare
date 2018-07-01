@@ -42,6 +42,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.butremove = new System.Windows.Forms.Button();
+            this.butedit = new System.Windows.Forms.Button();
+            this.chkedit = new System.Windows.Forms.CheckBox();
+            this.butcl = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 152);
+            this.label3.Location = new System.Drawing.Point(27, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 29);
             this.label3.TabIndex = 0;
@@ -88,7 +91,7 @@
             // 
             // tfpass
             // 
-            this.tfpass.Location = new System.Drawing.Point(249, 149);
+            this.tfpass.Location = new System.Drawing.Point(249, 143);
             this.tfpass.Name = "tfpass";
             this.tfpass.Size = new System.Drawing.Size(233, 35);
             this.tfpass.TabIndex = 1;
@@ -130,7 +133,7 @@
             // 
             // butadd
             // 
-            this.butadd.Location = new System.Drawing.Point(533, 41);
+            this.butadd.Location = new System.Drawing.Point(533, 38);
             this.butadd.Name = "butadd";
             this.butadd.Size = new System.Drawing.Size(151, 47);
             this.butadd.TabIndex = 3;
@@ -160,19 +163,51 @@
             // 
             // butremove
             // 
-            this.butremove.Location = new System.Drawing.Point(533, 161);
+            this.butremove.Location = new System.Drawing.Point(533, 144);
             this.butremove.Name = "butremove";
             this.butremove.Size = new System.Drawing.Size(151, 47);
             this.butremove.TabIndex = 3;
             this.butremove.Text = "Remove";
             this.butremove.UseVisualStyleBackColor = true;
             // 
+            // butedit
+            // 
+            this.butedit.Location = new System.Drawing.Point(533, 91);
+            this.butedit.Name = "butedit";
+            this.butedit.Size = new System.Drawing.Size(151, 47);
+            this.butedit.TabIndex = 3;
+            this.butedit.Text = "Edit";
+            this.butedit.UseVisualStyleBackColor = true;
+            // 
+            // chkedit
+            // 
+            this.chkedit.AutoSize = true;
+            this.chkedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.chkedit.Location = new System.Drawing.Point(249, 185);
+            this.chkedit.Name = "chkedit";
+            this.chkedit.Size = new System.Drawing.Size(116, 21);
+            this.chkedit.TabIndex = 5;
+            this.chkedit.Text = "Edit Password";
+            this.chkedit.UseVisualStyleBackColor = true;
+            // 
+            // butcl
+            // 
+            this.butcl.Location = new System.Drawing.Point(533, 194);
+            this.butcl.Name = "butcl";
+            this.butcl.Size = new System.Drawing.Size(151, 47);
+            this.butcl.TabIndex = 3;
+            this.butcl.Text = "Clear";
+            this.butcl.UseVisualStyleBackColor = true;
+            // 
             // frmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(731, 521);
+            this.Controls.Add(this.chkedit);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.butedit);
+            this.Controls.Add(this.butcl);
             this.Controls.Add(this.butremove);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.butadd);
@@ -212,5 +247,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button butremove;
+        private System.Windows.Forms.Button butedit;
+        private System.Windows.Forms.CheckBox chkedit;
+        private System.Windows.Forms.Button butcl;
     }
 }
