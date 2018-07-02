@@ -36,11 +36,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cbProductOwner = new System.Windows.Forms.ComboBox();
             this.panHead = new System.Windows.Forms.Panel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.PictureBox();
             this.txtLevel = new CustomerCare.GUI.Components.TextBox();
             this.txtName = new CustomerCare.GUI.Components.TextBox();
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.PictureBox();
             this.panHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -121,7 +121,7 @@
             this.cbProductOwner.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.cbProductOwner.Location = new System.Drawing.Point(218, 403);
+            this.cbProductOwner.Location = new System.Drawing.Point(218, 408);
             this.cbProductOwner.Name = "cbProductOwner";
             this.cbProductOwner.Size = new System.Drawing.Size(311, 28);
             this.cbProductOwner.TabIndex = 4;
@@ -139,6 +139,18 @@
             this.panHead.Size = new System.Drawing.Size(584, 55);
             this.panHead.TabIndex = 32;
             // 
+            // picLogo
+            // 
+            this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picLogo.Image = global::CustomerCare.Properties.Resources.Product1;
+            this.picLogo.Location = new System.Drawing.Point(11, 0);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(55, 55);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 8;
+            this.picLogo.TabStop = false;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -149,6 +161,24 @@
             this.label12.Size = new System.Drawing.Size(241, 34);
             this.label12.TabIndex = 7;
             this.label12.Text = "Product Addition";
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = global::CustomerCare.Properties.Resources.Close_32;
+            this.btnClose.Location = new System.Drawing.Point(529, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(55, 55);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnClose.TabIndex = 4;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnClose_MouseDown);
+            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
             // txtLevel
             // 
@@ -179,36 +209,6 @@
             this.txtName.Size = new System.Drawing.Size(311, 44);
             this.txtName.TabIndex = 1;
             this.txtName.Value = "";
-            // 
-            // picLogo
-            // 
-            this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picLogo.Image = global::CustomerCare.Properties.Resources.Product1;
-            this.picLogo.Location = new System.Drawing.Point(11, 0);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(55, 55);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 8;
-            this.picLogo.TabStop = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Image = global::CustomerCare.Properties.Resources.Close_32;
-            this.btnClose.Location = new System.Drawing.Point(529, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(55, 55);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnClose.TabIndex = 4;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            this.btnClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnClose_MouseDown);
-            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
-            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
             // frmProduct
             // 

@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.panContent = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbSources = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.cbTypeOf = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -43,8 +44,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbProvince = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkKid = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtTel1 = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTel2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -52,24 +55,21 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dateEpt = new System.Windows.Forms.MaskedTextBox();
             this.cbNames = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.panHead = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbTitle = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.checkKid = new System.Windows.Forms.CheckBox();
-            this.dateEpt = new System.Windows.Forms.MaskedTextBox();
             this.panContent.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panContent
@@ -85,6 +85,23 @@
             this.panContent.Size = new System.Drawing.Size(1177, 526);
             this.panContent.TabIndex = 0;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox4.Controls.Add(this.cbSources);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.cbTypeOf);
+            this.groupBox4.ForeColor = System.Drawing.Color.Black;
+            this.groupBox4.Location = new System.Drawing.Point(586, 3);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox4.Size = new System.Drawing.Size(563, 159);
+            this.groupBox4.TabIndex = 40;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Source";
+            // 
             // cbSources
             // 
             this.cbSources.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -96,13 +113,23 @@
             this.cbSources.Size = new System.Drawing.Size(377, 33);
             this.cbSources.TabIndex = 48;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(10, 97);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(159, 23);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Type of Source:";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(11, 42);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(115, 21);
+            this.label13.Size = new System.Drawing.Size(136, 23);
             this.label13.TabIndex = 47;
             this.label13.Text = "From Source:";
             // 
@@ -117,16 +144,6 @@
             this.cbTypeOf.Size = new System.Drawing.Size(378, 33);
             this.cbTypeOf.TabIndex = 46;
             this.cbTypeOf.SelectedIndexChanged += new System.EventHandler(this.cbTypeOf_SelectedIndexChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(10, 97);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(136, 21);
-            this.label11.TabIndex = 45;
-            this.label11.Text = "Type of Source:";
             // 
             // groupBox1
             // 
@@ -151,7 +168,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(17, 199);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 21);
+            this.label6.Size = new System.Drawing.Size(93, 23);
             this.label6.TabIndex = 43;
             this.label6.Text = "Address:";
             // 
@@ -170,7 +187,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(16, 149);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 21);
+            this.label2.Size = new System.Drawing.Size(119, 23);
             this.label2.TabIndex = 40;
             this.label2.Text = "Commune:";
             // 
@@ -191,7 +208,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(16, 99);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 21);
+            this.label4.Size = new System.Drawing.Size(77, 23);
             this.label4.TabIndex = 38;
             this.label4.Text = "District:";
             // 
@@ -212,7 +229,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(16, 49);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 21);
+            this.label3.Size = new System.Drawing.Size(100, 23);
             this.label3.TabIndex = 36;
             this.label3.Text = "Province:";
             // 
@@ -250,13 +267,23 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Contacts";
             // 
+            // checkKid
+            // 
+            this.checkKid.AutoSize = true;
+            this.checkKid.Location = new System.Drawing.Point(25, 282);
+            this.checkKid.Name = "checkKid";
+            this.checkKid.Size = new System.Drawing.Size(121, 27);
+            this.checkKid.TabIndex = 20;
+            this.checkKid.Text = "Has a kid";
+            this.checkKid.UseVisualStyleBackColor = true;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(21, 42);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 21);
+            this.label7.Size = new System.Drawing.Size(107, 23);
             this.label7.TabIndex = 12;
             this.label7.Text = "Tel Line 1: ";
             // 
@@ -270,13 +297,33 @@
             this.txtTel1.TabIndex = 13;
             this.txtTel1.Tag = "Tel";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd.Location = new System.Drawing.Point(288, 269);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(263, 46);
+            this.btnAdd.TabIndex = 10;
+            this.btnAdd.Text = "Save";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(21, 95);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 21);
+            this.label8.Size = new System.Drawing.Size(107, 23);
             this.label8.TabIndex = 14;
             this.label8.Text = "Tel Line 2: ";
             // 
@@ -296,7 +343,7 @@
             this.label10.Location = new System.Drawing.Point(21, 152);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 21);
+            this.label10.Size = new System.Drawing.Size(73, 23);
             this.label10.TabIndex = 16;
             this.label10.Text = "Email: ";
             // 
@@ -326,7 +373,7 @@
             this.label9.Location = new System.Drawing.Point(21, 213);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 21);
+            this.label9.Size = new System.Drawing.Size(121, 23);
             this.label9.TabIndex = 18;
             this.label9.Text = "Facebook: ";
             // 
@@ -347,6 +394,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Information";
             // 
+            // dateEpt
+            // 
+            this.dateEpt.Location = new System.Drawing.Point(169, 100);
+            this.dateEpt.Mask = "00/00/0000";
+            this.dateEpt.Name = "dateEpt";
+            this.dateEpt.Size = new System.Drawing.Size(369, 32);
+            this.dateEpt.TabIndex = 7;
+            this.dateEpt.ValidatingType = typeof(System.DateTime);
+            // 
             // cbNames
             // 
             this.cbNames.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -364,7 +420,7 @@
             this.label5.Location = new System.Drawing.Point(16, 103);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 21);
+            this.label5.Size = new System.Drawing.Size(170, 23);
             this.label5.TabIndex = 4;
             this.label5.Text = "Expected date: ";
             // 
@@ -374,29 +430,9 @@
             this.label1.Location = new System.Drawing.Point(16, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 21);
+            this.label1.Size = new System.Drawing.Size(137, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mom Name: ";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(288, 269);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(263, 46);
-            this.btnAdd.TabIndex = 10;
-            this.btnAdd.Text = "Save";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panHead
             // 
@@ -450,42 +486,6 @@
             this.lbTitle.TabIndex = 1;
             this.lbTitle.Text = "New Mom";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox4.Controls.Add(this.cbSources);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.cbTypeOf);
-            this.groupBox4.ForeColor = System.Drawing.Color.Black;
-            this.groupBox4.Location = new System.Drawing.Point(586, 3);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox4.Size = new System.Drawing.Size(563, 159);
-            this.groupBox4.TabIndex = 40;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Source";
-            // 
-            // checkKid
-            // 
-            this.checkKid.AutoSize = true;
-            this.checkKid.Location = new System.Drawing.Point(25, 282);
-            this.checkKid.Name = "checkKid";
-            this.checkKid.Size = new System.Drawing.Size(109, 25);
-            this.checkKid.TabIndex = 20;
-            this.checkKid.Text = "Has a kid";
-            this.checkKid.UseVisualStyleBackColor = true;
-            // 
-            // dateEpt
-            // 
-            this.dateEpt.Location = new System.Drawing.Point(169, 100);
-            this.dateEpt.Mask = "00/00/0000";
-            this.dateEpt.Name = "dateEpt";
-            this.dateEpt.Size = new System.Drawing.Size(369, 27);
-            this.dateEpt.TabIndex = 7;
-            this.dateEpt.ValidatingType = typeof(System.DateTime);
-            // 
             // frmMum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -494,7 +494,7 @@
             this.ClientSize = new System.Drawing.Size(1202, 787);
             this.Controls.Add(this.panHead);
             this.Controls.Add(this.panContent);
-            this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -503,6 +503,8 @@
             this.Text = "Mom Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panContent.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -512,8 +514,6 @@
             this.panHead.ResumeLayout(false);
             this.panHead.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

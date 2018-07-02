@@ -21,7 +21,7 @@ namespace SMLOGX.Core
 
         /** Config Server **/
         public static string Server { get; set; } = "localhost";
-        public static string DBName { get; set; } = "TelMarketing";
+        public static string DBName { get; set; } = "master";
         public static bool AuthType { get; set; } = false;
         public static string UserId { get; set; }
         public static string Password { get; set; }
