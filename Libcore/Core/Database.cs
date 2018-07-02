@@ -265,6 +265,7 @@ namespace SMLOGX.Core
             return false;
         }
 
+       
         // My Add
         public static bool Update(string table, string WhereClause, string columns, params object[] data)
         {
@@ -289,7 +290,7 @@ namespace SMLOGX.Core
 
                     //cmd.CommandText = "INSERT INTO " + table + "(" + columns + ") VALUES(" + final_data + ");";
                     cmd.CommandText = "Update " + table + " set " + String.Join(",", datas) + " " + WhereClause;
-                    System.Windows.Forms.MessageBox.Show(cmd.CommandText);
+                    //System.Windows.Forms.MessageBox.Show(cmd.CommandText);
                     //System.Windows.Forms.MessageBox.Show(cmd.CommandText + "\n" + final_data);
                     //return false;
                     _hasExec = cmd.ExecuteNonQuery();
