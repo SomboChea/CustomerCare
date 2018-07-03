@@ -67,9 +67,9 @@ namespace CustomerCare
                     return;
                 }
 
-                string columns = " [fullname], [username], [role_id]";
+                string columns = " [fullname], [username], [role]";
                 columns += chkedit.Checked ? ",[password]" : ",[status]";
-                Database.Update("tbl_user", "where id="+row.Cells["id"].Value,columns, txtfullname.Text.Trim(), txtusername.Text.Trim(), cbrole.SelectedIndex,chkedit.Checked? txtpassword.Text.Trim() : row.Cells["status"].Value);
+                Database.Update("tbl_user", "where id="+row.Cells["id"].Value,columns, txtfullname.Text.Trim(), txtusername.Text.Trim(), cbrole.Text,chkedit.Checked? txtpassword.Text.Trim() : row.Cells["status"].Value);
                 chkedit.Visible = false;
                 chkedit.Checked = true;
                 btnedit.Text = "Edit";
@@ -95,7 +95,7 @@ namespace CustomerCare
                 txtpassword.Text = row.Cells["password"].Value + "";
                 txtconfirm.Text = row.Cells["password"].Value + "";
                 txtusername.Text = row.Cells["username"].Value + "";
-                cbrole.SelectedIndex = int.Parse(row.Cells["role_id"].Value + "");
+                cbrole.SelectedItem = row.Cells["role"].Value+"" ;
 
                 chkedit.Visible = true;
                 btnedit.Text = "Update";
@@ -147,8 +147,8 @@ namespace CustomerCare
                 return;
             }
 
-            string columns = " [fullname], [username], [password], [role_id]";
-            Database.Insert("tbl_user", columns, txtfullname.Text.Trim(), txtusername.Text.Trim(), txtpassword.Text.Trim(), cbrole.SelectedIndex);
+            string columns = " [fullname], [username], [password], [role]";
+            Database.Insert("tbl_user", columns, txtfullname.Text.Trim(), txtusername.Text.Trim(), txtpassword.Text.Trim(), cbrole.Text);
             refresh();
         }
 
@@ -166,7 +166,7 @@ namespace CustomerCare
         private void ReloadView()
         {
             dguser.DataSource = null;
-            dguser.DataSource = Database.QueryModel("select [id], [fullname], [username], [password], [role_id], [created_at], [status] from tbl_user where status='enable'");
+            dguser.DataSource = Database.QueryModel("select [id], [fullname], [username], [password], [role], [created_at], [status] from tbl_user where status='enable'");
             dguser.Columns["password"].Visible = false;
         }
     }
