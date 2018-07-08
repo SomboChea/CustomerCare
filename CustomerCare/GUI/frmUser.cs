@@ -147,7 +147,7 @@ namespace CustomerCare
                 return;
             }
 
-            string columns = " [fullname], [username], [password], [role]";
+            string columns = " [fullname_id], [username], [password], [role]";
             Database.Insert("tbl_user", columns, txtfullname.Text.Trim(), txtusername.Text.Trim(), txtpassword.Text.Trim(), cbrole.Text);
             refresh();
         }
@@ -166,8 +166,8 @@ namespace CustomerCare
         private void ReloadView()
         {
             dguser.DataSource = null;
-            dguser.DataSource = Database.QueryModel("select [id], [fullname], [username], [password], [role], [created_at], [status] from tbl_user where status='enable'");
-            dguser.Columns["password"].Visible = false;
+            dguser.DataSource = Database.QueryModel("select [id], dbo.getname([fullname_id],5) as fullname, [username], [password], [role], [created_at], [status] from tbl_user where status='enable'");
+            //dguser.Columns["password"].Visible = false;
         }
     }
 }
