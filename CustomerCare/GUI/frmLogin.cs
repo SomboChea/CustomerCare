@@ -23,7 +23,7 @@ namespace CustomerCare
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Report.get().showReport(new Reports.Accounting.Income());
+            //Report.get().showReport(new Reports.Accounting.Income());
             return;
             //Database.DBName = "TelMarketing";
             Database.Open();

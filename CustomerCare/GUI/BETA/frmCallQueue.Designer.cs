@@ -153,9 +153,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(62, 9);
+            this.label1.Location = new System.Drawing.Point(57, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 34);
+            this.label1.Size = new System.Drawing.Size(165, 26);
             this.label1.TabIndex = 5;
             this.label1.Text = "Calling Queue";
             // 
@@ -217,7 +217,7 @@
             // 
             // frmCallQueue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 602);
             this.ControlBox = false;
