@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SMLOGX.Core
 {
-    public   class Report
+    public class Report
     {
         private static Report _report;
         public static Report get()
@@ -19,7 +19,7 @@ namespace SMLOGX.Core
             }
             return _report;
         }
-        public void showReport(ReportDocument rep,List<object> source)
+        public void showReport(ReportDocument rep,object[] source)
         {
             frmReport frm = new frmReport();
             CrystalReportViewer report = frm.getviewer();

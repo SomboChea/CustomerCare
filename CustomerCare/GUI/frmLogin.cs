@@ -2,6 +2,7 @@
 using SMLOGX.Core;
 using System;
 using System.Windows.Forms;
+using System.CodeDom.Compiler;
 
 namespace CustomerCare
 {
@@ -9,6 +10,7 @@ namespace CustomerCare
     {
         public frmLogin()
         {
+         
             InitializeComponent();
             txtPassword.txtValue.PasswordChar = '*';
             txtPassword.txtValue.KeyPress += new KeyPressEventHandler(txtPassword_KeyPress);
@@ -23,15 +25,15 @@ namespace CustomerCare
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Report.get().showReport(new Reports.Accounting.Income());
-            return;
-            //Database.DBName = "TelMarketing";
+           
+            Database.DBName = "TelMarketing";
             Database.Open();
             string[] user = { txtUsername.Value, txtPassword.Value };
             object userID = 0;
             Database.User.Table = "tbl_user";
             Database.User.Username = user[0];
             Database.User.Password = user[1];
+            
 
             if (Database.User.Login(ref userID))
             {
