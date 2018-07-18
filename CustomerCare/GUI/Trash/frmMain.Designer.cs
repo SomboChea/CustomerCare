@@ -1,6 +1,6 @@
 ﻿namespace CustomerCare
 {
-    partial class frmMain
+    partial class frmMainX
     {
         /// <summary>
         /// Required designer variable.

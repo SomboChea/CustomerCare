@@ -91,7 +91,7 @@
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.ForeColor = System.Drawing.Color.White;
-            this.lbTitle.Location = new System.Drawing.Point(63, 13);
+            this.lbTitle.Location = new System.Drawing.Point(63, 17);
             this.lbTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(322, 22);
@@ -216,7 +216,7 @@
             // 
             this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button8.BackColor = System.Drawing.Color.DeepPink;
+            this.button8.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -249,7 +249,7 @@
             // 
             this.btnViewAlert.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnViewAlert.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnViewAlert.BackColor = System.Drawing.Color.Crimson;
+            this.btnViewAlert.BackColor = System.Drawing.Color.DeepPink;
             this.btnViewAlert.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnViewAlert.FlatAppearance.BorderSize = 0;
             this.btnViewAlert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

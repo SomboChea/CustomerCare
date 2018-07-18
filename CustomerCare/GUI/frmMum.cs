@@ -13,7 +13,7 @@ namespace CustomerCare
             InitializeComponent();
 
             Function.FillComboBox(cbTypeOf, "type", "id", "SELECT * FROM tbl_refer_type");
-            Function.FillComboBox(cbNames, "name", "id", "SELECT * FROM tbl_name");
+            Function.FillComboBox(cbNames, "name", "id", "EXEC getNames 3");
             Function.SetCombo(cbProvince, cbDistrict, cbCommune, txtAddress);
         }
 
@@ -24,6 +24,8 @@ namespace CustomerCare
         
         private void btnAdd_Click(object sender, System.EventArgs e)
         {
+            bool hasKid = checkKid.Checked;
+
             string name_id = cbNames.SelectedValue+"";
             string dates = dateEpt.Text;
             string[] tels = { txtTel1.Text, txtTel2.Text};

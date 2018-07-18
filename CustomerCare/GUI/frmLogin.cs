@@ -25,8 +25,12 @@ namespace CustomerCare
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
            
             Database.DBName = "TelMarketing";
+
+            //Report.get().showReport(new Reports.Accounting.Income());
+
             Database.Open();
             string[] user = { txtUsername.Value, txtPassword.Value };
             object userID = 0;

@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace CustomerCare
 {
-    public partial class frmUser : Form
+    public partial class frmUser : MetroFramework.Forms.MetroForm
     {
         TextBox txtusername, txtpassword, txtconfirm, txtfullname;
         Button btninsert,btnclose,btnremove,btnedit,btnclear;

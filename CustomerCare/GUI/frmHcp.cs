@@ -151,10 +151,9 @@ namespace CustomerCare
             string tel_1 = txtTel_1.Text;
             string tel_2 = txtTel_2.Text;
             string email = txtEmail.Text;
-            string image = pbProfile.ImageLocation;
             string memo = txtMemo.Text;
 
-            string sql = "EXEC InsertRefer " + name_id + "," + owner_id + ",'" + tel_1 + "','" + tel_2 + "','" + image + "','" + email + "','" +  memo + "'," + type_id + "," + Temp.logger_id + "," + Function.AddAddress();
+            string sql = "EXEC InsertRefer " + name_id + "," + owner_id + ",'" + tel_1 + "','" + tel_2 + "','" +  "','" + email + "','" +  memo + "'," + type_id + "," + Temp.logger_id + "," + Function.AddAddress();
             if(Database.Exec(sql))
             {
                 MessageBox.Show("Success");
@@ -165,13 +164,6 @@ namespace CustomerCare
             }
         }
 
-        private void pbProfile_Click(object sender, EventArgs e)
-        {
-            FileDialog pd = new OpenFileDialog();
-            if(pd.ShowDialog()==DialogResult.OK)
-            {
-                pbProfile.ImageLocation = pd.FileName;
-            }
-        }
+        
     }
 }

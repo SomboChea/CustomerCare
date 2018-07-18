@@ -68,9 +68,9 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(62, 9);
+            this.label12.Location = new System.Drawing.Point(62, 13);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(273, 34);
+            this.label12.Size = new System.Drawing.Size(215, 26);
             this.label12.TabIndex = 7;
             this.label12.Text = "Mom { Name } Kids";
             // 
@@ -94,7 +94,7 @@
             // 
             // frmKids
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1267, 761);

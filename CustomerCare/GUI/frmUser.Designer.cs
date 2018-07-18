@@ -51,7 +51,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 41);
+            this.label1.Location = new System.Drawing.Point(59, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 29);
             this.label1.TabIndex = 0;
@@ -59,7 +59,7 @@
             // 
             // tffullname
             // 
-            this.tffullname.Location = new System.Drawing.Point(249, 38);
+            this.tffullname.Location = new System.Drawing.Point(281, 102);
             this.tffullname.Name = "tffullname";
             this.tffullname.Size = new System.Drawing.Size(233, 35);
             this.tffullname.TabIndex = 1;
@@ -67,7 +67,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 97);
+            this.label2.Location = new System.Drawing.Point(59, 161);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 29);
             this.label2.TabIndex = 0;
@@ -75,7 +75,7 @@
             // 
             // tfusername
             // 
-            this.tfusername.Location = new System.Drawing.Point(249, 94);
+            this.tfusername.Location = new System.Drawing.Point(281, 158);
             this.tfusername.Name = "tfusername";
             this.tfusername.Size = new System.Drawing.Size(233, 35);
             this.tfusername.TabIndex = 1;
@@ -83,7 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 146);
+            this.label3.Location = new System.Drawing.Point(59, 210);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 29);
             this.label3.TabIndex = 0;
@@ -91,7 +91,7 @@
             // 
             // tfpass
             // 
-            this.tfpass.Location = new System.Drawing.Point(249, 143);
+            this.tfpass.Location = new System.Drawing.Point(281, 207);
             this.tfpass.Name = "tfpass";
             this.tfpass.Size = new System.Drawing.Size(233, 35);
             this.tfpass.TabIndex = 1;
@@ -99,7 +99,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 209);
+            this.label4.Location = new System.Drawing.Point(59, 273);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(222, 29);
             this.label4.TabIndex = 0;
@@ -107,7 +107,7 @@
             // 
             // tfcon
             // 
-            this.tfcon.Location = new System.Drawing.Point(249, 206);
+            this.tfcon.Location = new System.Drawing.Point(281, 270);
             this.tfcon.Name = "tfcon";
             this.tfcon.Size = new System.Drawing.Size(233, 35);
             this.tfcon.TabIndex = 1;
@@ -115,7 +115,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 259);
+            this.label5.Location = new System.Drawing.Point(59, 323);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 29);
             this.label5.TabIndex = 0;
@@ -126,14 +126,14 @@
             this.comborole.FormattingEnabled = true;
             this.comborole.Items.AddRange(new object[] {
             "Admin"});
-            this.comborole.Location = new System.Drawing.Point(249, 256);
+            this.comborole.Location = new System.Drawing.Point(281, 320);
             this.comborole.Name = "comborole";
             this.comborole.Size = new System.Drawing.Size(233, 37);
             this.comborole.TabIndex = 2;
             // 
             // butadd
             // 
-            this.butadd.Location = new System.Drawing.Point(533, 38);
+            this.butadd.Location = new System.Drawing.Point(565, 102);
             this.butadd.Name = "butadd";
             this.butadd.Size = new System.Drawing.Size(151, 47);
             this.butadd.TabIndex = 3;
@@ -142,7 +142,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(533, 246);
+            this.button2.Location = new System.Drawing.Point(565, 310);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(151, 47);
             this.button2.TabIndex = 3;
@@ -154,7 +154,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 311);
+            this.dataGridView1.Location = new System.Drawing.Point(64, 375);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -163,7 +163,7 @@
             // 
             // butremove
             // 
-            this.butremove.Location = new System.Drawing.Point(533, 144);
+            this.butremove.Location = new System.Drawing.Point(565, 208);
             this.butremove.Name = "butremove";
             this.butremove.Size = new System.Drawing.Size(151, 47);
             this.butremove.TabIndex = 3;
@@ -172,7 +172,7 @@
             // 
             // butedit
             // 
-            this.butedit.Location = new System.Drawing.Point(533, 91);
+            this.butedit.Location = new System.Drawing.Point(565, 155);
             this.butedit.Name = "butedit";
             this.butedit.Size = new System.Drawing.Size(151, 47);
             this.butedit.TabIndex = 3;
@@ -183,7 +183,7 @@
             // 
             this.chkedit.AutoSize = true;
             this.chkedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.chkedit.Location = new System.Drawing.Point(249, 185);
+            this.chkedit.Location = new System.Drawing.Point(281, 249);
             this.chkedit.Name = "chkedit";
             this.chkedit.Size = new System.Drawing.Size(116, 21);
             this.chkedit.TabIndex = 5;
@@ -192,7 +192,7 @@
             // 
             // butcl
             // 
-            this.butcl.Location = new System.Drawing.Point(533, 194);
+            this.butcl.Location = new System.Drawing.Point(565, 258);
             this.butcl.Name = "butcl";
             this.butcl.Size = new System.Drawing.Size(151, 47);
             this.butcl.TabIndex = 3;
@@ -203,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 521);
+            this.ClientSize = new System.Drawing.Size(805, 634);
             this.Controls.Add(this.chkedit);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.butedit);
@@ -224,7 +224,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "frmUser";
-            this.Text = "frmUser";
+            this.Text = "Manage Users";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
