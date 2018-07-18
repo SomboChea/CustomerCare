@@ -169,11 +169,59 @@
     <Compile Include="GUI\Components\TextBox.Designer.cs">
       <DependentUpon>TextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmChangeConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmChangeConnection.Designer.cs">
+      <DependentUpon>frmChangeConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCustomerDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCustomerDetail.Designer.cs">
+      <DependentUpon>frmCustomerDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmLoginMini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLoginMini.Designer.cs">
+      <DependentUpon>frmLoginMini.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmNewCustomer.Designer.cs">
+      <DependentUpon>frmNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmProductMini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmProductMini.Designer.cs">
+      <DependentUpon>frmProductMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSelectAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSelectAddress.Designer.cs">
+      <DependentUpon>frmSelectAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSelectSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSelectSource.Designer.cs">
+      <DependentUpon>frmSelectSource.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmSettings.cs">
       <SubType>Form</SubType>
@@ -354,8 +402,32 @@
     <EmbeddedResource Include="GUI\Components\TextBox.resx">
       <DependentUpon>TextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmChangeConnection.resx">
+      <DependentUpon>frmChangeConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCustomerDetail.resx">
+      <DependentUpon>frmCustomerDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLoginMini.resx">
+      <DependentUpon>frmLoginMini.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmNewCustomer.resx">
+      <DependentUpon>frmNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmProductMini.resx">
+      <DependentUpon>frmProductMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSelectAddress.resx">
+      <DependentUpon>frmSelectAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSelectSource.resx">
+      <DependentUpon>frmSelectSource.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>
@@ -483,6 +555,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app_icon.ico" />
+    <None Include="Resources\Control Panel-04-48.png" />
+    <None Include="Resources\User-Add_Cir.png" />
+    <None Include="Resources\User-Add.png" />
+    <None Include="Resources\Search48_Bl.png" />
+    <None Include="Resources\Search48.png" />
+    <None Include="Resources\CustomerEdit.png" />
+    <None Include="Resources\Location1.png" />
+    <None Include="Resources\Product Box-03.png" />
+    <None Include="Resources\Product Box-03-WF.png" />
+    <None Include="Resources\Garbage48.png" />
+    <None Include="Resources\Document48.png" />
+    <None Include="Resources\Save48.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Database_Connection_BL_C.png" />
+    <None Include="Resources\Entry_Circle_BL_C.png" />
+    <None Include="Resources\Entry_Circle_BL.png" />
+    <None Include="Resources\Database_Connection_BL.png" />
+    <None Include="Resources\Database_Connection.png" />
+    <None Include="Resources\Entry_Circle.png" />
     <None Include="Resources\Setting.png" />
     <None Include="Resources\Group.png" />
     <None Include="Resources\Report.png" />
