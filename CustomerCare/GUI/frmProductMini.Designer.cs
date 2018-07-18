@@ -48,10 +48,10 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDelete = new MetroFramework.Controls.MetroTile();
             this.btnNew = new MetroFramework.Controls.MetroTile();
             this.btnSave = new MetroFramework.Controls.MetroTile();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgProducts)).BeginInit();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,6 +91,7 @@
             // txtProName
             // 
             this.txtProName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtProName.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtProName.Lines = new string[0];
             this.txtProName.Location = new System.Drawing.Point(26, 175);
             this.txtProName.MaxLength = 50;
@@ -99,7 +100,7 @@
             this.txtProName.PromptText = "Enter product name...";
             this.txtProName.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtProName.SelectedText = "";
-            this.txtProName.Size = new System.Drawing.Size(218, 23);
+            this.txtProName.Size = new System.Drawing.Size(218, 29);
             this.txtProName.TabIndex = 3;
             this.txtProName.UseCustomBackColor = true;
             this.txtProName.UseCustomForeColor = true;
@@ -122,9 +123,8 @@
             this.txtLevel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtLevel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.txtLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtLevel.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.txtLevel.FormattingEnabled = true;
-            this.txtLevel.ItemHeight = 19;
+            this.txtLevel.ItemHeight = 23;
             this.txtLevel.Items.AddRange(new object[] {
             "Level 1",
             "Level 2",
@@ -135,9 +135,10 @@
             this.txtLevel.Location = new System.Drawing.Point(260, 175);
             this.txtLevel.Name = "txtLevel";
             this.txtLevel.PromptText = "Choose one...";
-            this.txtLevel.Size = new System.Drawing.Size(214, 25);
+            this.txtLevel.Size = new System.Drawing.Size(214, 29);
             this.txtLevel.TabIndex = 4;
             this.txtLevel.UseSelectable = true;
+            this.txtLevel.SelectedIndexChanged += new System.EventHandler(this.txtLevel_SelectedIndexChanged);
             // 
             // metroLabel3
             // 
@@ -164,6 +165,7 @@
             // txtDesc
             // 
             this.txtDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDesc.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtDesc.Lines = new string[0];
             this.txtDesc.Location = new System.Drawing.Point(26, 232);
             this.txtDesc.MaxLength = 255;
@@ -206,7 +208,7 @@
             this.dgProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("AKbalthom KhmerLer", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -244,6 +246,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgProducts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgProducts.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("AKbalthom KhmerLer", 11.25F);
             this.dgProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgProducts.Size = new System.Drawing.Size(648, 215);
             this.dgProducts.TabIndex = 9;
@@ -298,16 +301,6 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CustomerCare.Properties.Resources.Product_Box_03;
-            this.pictureBox1.Location = new System.Drawing.Point(512, 114);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(162, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnDelete
             // 
             this.btnDelete.ActiveControl = null;
@@ -348,6 +341,16 @@
             this.btnSave.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSave.UseSelectable = true;
             this.btnSave.UseTileImage = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CustomerCare.Properties.Resources.Product_Box_03;
+            this.pictureBox1.Location = new System.Drawing.Point(512, 114);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(162, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // frmProductMini
             // 

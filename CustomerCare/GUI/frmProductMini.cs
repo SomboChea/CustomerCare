@@ -23,5 +23,10 @@ namespace CustomerCare.GUI
         {
 
         }
+
+        private void txtLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
