@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgCustomers = new MetroFramework.Controls.MetroGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panMenu = new MetroFramework.Controls.MetroPanel();
+            this.btnEdit = new MetroFramework.Controls.MetroTile();
+            this.btnDelete = new MetroFramework.Controls.MetroTile();
+            this.btnNew = new MetroFramework.Controls.MetroTile();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.cbFilterby = new MetroFramework.Controls.MetroComboBox();
             this.cbToFilter = new MetroFramework.Controls.MetroComboBox();
             this.panFilter = new MetroFramework.Controls.MetroPanel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txtSearch = new MetroFramework.Controls.MetroTextBox();
-            this.btnEdit = new MetroFramework.Controls.MetroTile();
-            this.btnDelete = new MetroFramework.Controls.MetroTile();
-            this.btnNew = new MetroFramework.Controls.MetroTile();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgCustomers)).BeginInit();
             this.panMenu.SuspendLayout();
             this.panFilter.SuspendLayout();
@@ -62,8 +62,7 @@
             // 
             // dgCustomers
             // 
-            this.dgCustomers.AllowUserToAddRows = false;
-            this.dgCustomers.AllowUserToDeleteRows = false;
+            this.dgCustomers.AllowUserToOrderColumns = true;
             this.dgCustomers.AllowUserToResizeRows = false;
             this.dgCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -73,14 +72,14 @@
             this.dgCustomers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgCustomers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgCustomers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("AKbalthom KhmerLer", 11.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -95,105 +94,32 @@
             this.Column10,
             this.Column11,
             this.Column12});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("AKbalthom KhmerLer", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgCustomers.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgCustomers.DefaultCellStyle = dataGridViewCellStyle26;
             this.dgCustomers.EnableHeadersVisualStyles = false;
             this.dgCustomers.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgCustomers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgCustomers.Location = new System.Drawing.Point(26, 195);
             this.dgCustomers.Name = "dgCustomers";
-            this.dgCustomers.ReadOnly = true;
             this.dgCustomers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCustomers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgCustomers.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dgCustomers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgCustomers.Size = new System.Drawing.Size(972, 479);
             this.dgCustomers.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Code";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Exp_Date";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Tel 1";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Tel 2";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Email";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "FB";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Other";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Address ID";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "From Source";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Status";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Logged by";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
             // 
             // panMenu
             // 
@@ -210,6 +136,53 @@
             this.panMenu.VerticalScrollbarBarColor = true;
             this.panMenu.VerticalScrollbarHighlightOnWheel = false;
             this.panMenu.VerticalScrollbarSize = 10;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.ActiveControl = null;
+            this.btnEdit.Location = new System.Drawing.Point(119, 3);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(110, 63);
+            this.btnEdit.Style = MetroFramework.MetroColorStyle.Purple;
+            this.btnEdit.TabIndex = 4;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.TileImage = global::CustomerCare.Properties.Resources.CustomerEdit;
+            this.btnEdit.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEdit.UseSelectable = true;
+            this.btnEdit.UseStyleColors = true;
+            this.btnEdit.UseTileImage = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.ActiveControl = null;
+            this.btnDelete.Location = new System.Drawing.Point(235, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(110, 63);
+            this.btnDelete.Style = MetroFramework.MetroColorStyle.Red;
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TileImage = global::CustomerCare.Properties.Resources.Garbage48;
+            this.btnDelete.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDelete.UseSelectable = true;
+            this.btnDelete.UseStyleColors = true;
+            this.btnDelete.UseTileImage = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.ActiveControl = null;
+            this.btnNew.Location = new System.Drawing.Point(3, 3);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(110, 63);
+            this.btnNew.Style = MetroFramework.MetroColorStyle.Green;
+            this.btnNew.TabIndex = 2;
+            this.btnNew.Text = "New";
+            this.btnNew.TileImage = global::CustomerCare.Properties.Resources.Document48;
+            this.btnNew.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnNew.UseSelectable = true;
+            this.btnNew.UseTileImage = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // metroLabel1
             // 
@@ -231,6 +204,7 @@
             this.cbFilterby.Size = new System.Drawing.Size(146, 25);
             this.cbFilterby.TabIndex = 4;
             this.cbFilterby.UseSelectable = true;
+            this.cbFilterby.SelectedIndexChanged += new System.EventHandler(this.cbFilterby_SelectedIndexChanged);
             // 
             // cbToFilter
             // 
@@ -243,6 +217,8 @@
             this.cbToFilter.Size = new System.Drawing.Size(146, 25);
             this.cbToFilter.TabIndex = 6;
             this.cbToFilter.UseSelectable = true;
+            this.cbToFilter.SelectedIndexChanged += new System.EventHandler(this.cbToFilter_SelectedIndexChanged);
+            this.cbToFilter.TextChanged += new System.EventHandler(this.cbToFilter_TextChanged);
             // 
             // panFilter
             // 
@@ -263,18 +239,6 @@
             this.panFilter.VerticalScrollbarBarColor = true;
             this.panFilter.VerticalScrollbarHighlightOnWheel = false;
             this.panFilter.VerticalScrollbarSize = 10;
-            // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FontSize = MetroFramework.MetroComboBoxSize.Small;
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 19;
-            this.metroComboBox1.Location = new System.Drawing.Point(411, 35);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.PromptText = "....";
-            this.metroComboBox1.Size = new System.Drawing.Size(135, 25);
-            this.metroComboBox1.TabIndex = 7;
-            this.metroComboBox1.UseSelectable = true;
             // 
             // metroLabel2
             // 
@@ -303,60 +267,90 @@
             this.txtSearch.UseCustomForeColor = true;
             this.txtSearch.UseSelectable = true;
             this.txtSearch.UseStyleColors = true;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.Click += new System.EventHandler(this.txtSearch_Click);
             // 
-            // btnEdit
+            // metroComboBox1
             // 
-            this.btnEdit.ActiveControl = null;
-            this.btnEdit.Location = new System.Drawing.Point(119, 3);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(110, 63);
-            this.btnEdit.Style = MetroFramework.MetroColorStyle.Purple;
-            this.btnEdit.TabIndex = 4;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.TileImage = global::CustomerCare.Properties.Resources.CustomerEdit;
-            this.btnEdit.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEdit.UseSelectable = true;
-            this.btnEdit.UseStyleColors = true;
-            this.btnEdit.UseTileImage = true;
+            this.metroComboBox1.FontSize = MetroFramework.MetroComboBoxSize.Small;
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 19;
+            this.metroComboBox1.Location = new System.Drawing.Point(411, 35);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.PromptText = "....";
+            this.metroComboBox1.Size = new System.Drawing.Size(135, 25);
+            this.metroComboBox1.TabIndex = 7;
+            this.metroComboBox1.UseSelectable = true;
             // 
-            // btnDelete
+            // Column12
             // 
-            this.btnDelete.ActiveControl = null;
-            this.btnDelete.Location = new System.Drawing.Point(235, 3);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(110, 63);
-            this.btnDelete.Style = MetroFramework.MetroColorStyle.Red;
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.TileImage = global::CustomerCare.Properties.Resources.Garbage48;
-            this.btnDelete.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDelete.UseSelectable = true;
-            this.btnDelete.UseStyleColors = true;
-            this.btnDelete.UseTileImage = true;
+            this.Column12.HeaderText = "Logged by";
+            this.Column12.Name = "Column12";
             // 
-            // btnNew
+            // Column11
             // 
-            this.btnNew.ActiveControl = null;
-            this.btnNew.Location = new System.Drawing.Point(3, 3);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(110, 63);
-            this.btnNew.Style = MetroFramework.MetroColorStyle.Green;
-            this.btnNew.TabIndex = 2;
-            this.btnNew.Text = "New";
-            this.btnNew.TileImage = global::CustomerCare.Properties.Resources.Document48;
-            this.btnNew.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnNew.UseSelectable = true;
-            this.btnNew.UseTileImage = true;
+            this.Column11.HeaderText = "Status";
+            this.Column11.Name = "Column11";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "From Source";
+            this.Column10.Name = "Column10";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Address ID";
+            this.Column9.Name = "Column9";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Other";
+            this.Column8.Name = "Column8";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "FB";
+            this.Column7.Name = "Column7";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Email";
+            this.Column6.Name = "Column6";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Tel 2";
+            this.Column5.Name = "Column5";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Tel 1";
+            this.Column4.Name = "Column4";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Exp_Date";
+            this.Column3.Name = "Column3";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Code";
+            this.Column1.Name = "Column1";
             // 
             // frmCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 700);
             this.Controls.Add(this.panFilter);
             this.Controls.Add(this.panMenu);
             this.Controls.Add(this.dgCustomers);
-            this.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmCustomer";
             this.Padding = new System.Windows.Forms.Padding(23, 69, 23, 23);
             this.Text = "Customers";
@@ -371,6 +365,17 @@
         #endregion
 
         private MetroFramework.Controls.MetroGrid dgCustomers;
+        private MetroFramework.Controls.MetroPanel panMenu;
+        private MetroFramework.Controls.MetroTile btnNew;
+        private MetroFramework.Controls.MetroTile btnDelete;
+        private MetroFramework.Controls.MetroTile btnEdit;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroComboBox cbFilterby;
+        private MetroFramework.Controls.MetroComboBox cbToFilter;
+        private MetroFramework.Controls.MetroPanel panFilter;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroTextBox txtSearch;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -383,16 +388,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private MetroFramework.Controls.MetroPanel panMenu;
-        private MetroFramework.Controls.MetroTile btnNew;
-        private MetroFramework.Controls.MetroTile btnDelete;
-        private MetroFramework.Controls.MetroTile btnEdit;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroComboBox cbFilterby;
-        private MetroFramework.Controls.MetroComboBox cbToFilter;
-        private MetroFramework.Controls.MetroPanel panFilter;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
-        private MetroFramework.Controls.MetroTextBox txtSearch;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
     }
 }

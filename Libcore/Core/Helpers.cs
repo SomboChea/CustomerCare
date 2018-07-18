@@ -386,6 +386,20 @@ namespace SMLOGX.Core
                 SetRedbox(ctrl);
             return result;
         }
+
+        ////public static void NumberOnlyEvent(object sender,KeyEventHandler e)
+        ////{
+        ////    if(!(Char.IsDigit((char)e.KeyValue) && e.KeyValue == 8))
+        ////    {
+        ////        e.Handled = true;
+        ////    }
+        ////}
+
+        /// <summary>
+        /// Check with many Control
+        /// </summary>
+        /// <param name="ctrl"></param>
+        /// <returns>True : is No Problem</returns>
         public static bool checkRequire(params Control[] ctrl)
         {
             bool check = true;

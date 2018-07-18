@@ -55,6 +55,8 @@ namespace SMLOGX.Core
             return false;
         }
 
+      
+
         /// <summary>
         /// Load Configuration DB Server Public
         /// </summary>
