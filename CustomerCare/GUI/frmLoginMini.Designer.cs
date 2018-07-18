@@ -36,12 +36,12 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.chkRem = new MetroFramework.Controls.MetroCheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbDBSetting = new MetroFramework.Controls.MetroLink();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSignin
@@ -58,6 +58,7 @@
             this.btnSignin.UseCustomBackColor = true;
             this.btnSignin.UseSelectable = true;
             this.btnSignin.UseStyleColors = true;
+            this.btnSignin.Click += new System.EventHandler(this.btnSignin_Click);
             // 
             // metroLabel1
             // 
@@ -161,6 +162,16 @@
             this.chkRem.UseSelectable = true;
             this.chkRem.UseStyleColors = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CustomerCare.Properties.Resources.Entry_Circle_BL_C;
+            this.pictureBox1.Location = new System.Drawing.Point(151, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // lbDBSetting
             // 
             this.lbDBSetting.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -188,16 +199,6 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.lbDBSetting_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CustomerCare.Properties.Resources.Entry_Circle_BL_C;
-            this.pictureBox1.Location = new System.Drawing.Point(151, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmLoginMini
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -215,8 +216,8 @@
             this.Text = "Sign in to Dashboard";
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
