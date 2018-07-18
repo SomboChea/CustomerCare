@@ -6,6 +6,8 @@ namespace CustomerCare
 {
     internal class Function : Helpers
     {
+        public string name;
+
         public static ComboBox ComboPro { get; set; }
         public static ComboBox ComboDis { get; set; }
         public static ComboBox ComboCom { get; set; }
