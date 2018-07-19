@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panMain = new MetroFramework.Controls.MetroPanel();
-            this.clock1 = new CustomerCare.GUI.Components.Clock();
             this.btnLocation = new MetroFramework.Controls.MetroTile();
             this.btnSetting = new MetroFramework.Controls.MetroTile();
             this.btnUser = new MetroFramework.Controls.MetroTile();
@@ -39,6 +38,7 @@
             this.btnSource = new MetroFramework.Controls.MetroTile();
             this.btnCustomer = new MetroFramework.Controls.MetroTile();
             this.btnAlert = new MetroFramework.Controls.MetroTile();
+            this.clock1 = new CustomerCare.GUI.Components.Clock();
             this.panMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,17 +72,6 @@
             this.panMain.VerticalScrollbarHighlightOnWheel = true;
             this.panMain.VerticalScrollbarSize = 15;
             // 
-            // clock1
-            // 
-            this.clock1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.clock1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.clock1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clock1.Location = new System.Drawing.Point(346, 56);
-            this.clock1.Margin = new System.Windows.Forms.Padding(4);
-            this.clock1.Name = "clock1";
-            this.clock1.Size = new System.Drawing.Size(355, 50);
-            this.clock1.TabIndex = 1;
-            // 
             // btnLocation
             // 
             this.btnLocation.ActiveControl = null;
@@ -99,6 +88,7 @@
             this.btnLocation.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.btnLocation.UseSelectable = true;
             this.btnLocation.UseTileImage = true;
+            this.btnLocation.Click += new System.EventHandler(this.btnLocation_Click);
             // 
             // btnSetting
             // 
@@ -116,6 +106,7 @@
             this.btnSetting.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.btnSetting.UseSelectable = true;
             this.btnSetting.UseTileImage = true;
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // btnUser
             // 
@@ -133,6 +124,7 @@
             this.btnUser.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.btnUser.UseSelectable = true;
             this.btnUser.UseTileImage = true;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnReport
             // 
@@ -150,6 +142,7 @@
             this.btnReport.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.btnReport.UseSelectable = true;
             this.btnReport.UseTileImage = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnProduct
             // 
@@ -167,6 +160,7 @@
             this.btnProduct.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.btnProduct.UseSelectable = true;
             this.btnProduct.UseTileImage = true;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // btnSource
             // 
@@ -184,6 +178,7 @@
             this.btnSource.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.btnSource.UseSelectable = true;
             this.btnSource.UseTileImage = true;
+            this.btnSource.Click += new System.EventHandler(this.btnSource_Click);
             // 
             // btnCustomer
             // 
@@ -201,6 +196,7 @@
             this.btnCustomer.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.btnCustomer.UseSelectable = true;
             this.btnCustomer.UseTileImage = true;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnAlert
             // 
@@ -219,6 +215,17 @@
             this.btnAlert.UseSelectable = true;
             this.btnAlert.UseTileImage = true;
             // 
+            // clock1
+            // 
+            this.clock1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.clock1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.clock1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clock1.Location = new System.Drawing.Point(346, 56);
+            this.clock1.Margin = new System.Windows.Forms.Padding(4);
+            this.clock1.Name = "clock1";
+            this.clock1.Size = new System.Drawing.Size(355, 50);
+            this.clock1.TabIndex = 1;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -232,6 +239,7 @@
             this.Name = "frmMain";
             this.Padding = new System.Windows.Forms.Padding(30, 83, 30, 28);
             this.Text = "Dashboard - {Username}";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.panMain.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

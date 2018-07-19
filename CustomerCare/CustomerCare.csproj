@@ -224,6 +224,12 @@
     <Compile Include="GUI\frmProductMini.Designer.cs">
       <DependentUpon>frmProductMini.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmSelectAddress.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,6 +454,9 @@
     <EmbeddedResource Include="GUI\frmProductMini.resx">
       <DependentUpon>frmProductMini.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSelectAddress.resx">
       <DependentUpon>frmSelectAddress.cs</DependentUpon>
     </EmbeddedResource>
@@ -583,6 +592,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app_icon.ico" />
+    <None Include="Resources\Accounting128.png" />
+    <None Include="Resources\ProductBox48.png" />
+    <None Include="Resources\Meeting2.png" />
+    <None Include="Resources\Customer.png" />
     <None Include="Resources\Control Panel-04-48.png" />
     <None Include="Resources\User-Add_Cir.png" />
     <None Include="Resources\User-Add.png" />

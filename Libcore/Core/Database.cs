@@ -434,7 +434,7 @@ namespace SMLOGX.Core
                 }
                 catch (Exception ex)
                 {
-                    Log.Write(ex.Message, "Database.Exec");
+                    Log.Write(ex.Message, "Database.Exec , "+sql_exec);
                 }
             }
             return false;

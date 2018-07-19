@@ -214,6 +214,7 @@
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Sign in to Dashboard";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLoginMini_FormClosed);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -382,8 +382,8 @@ namespace SMLOGX.Core
             {
                 result = ((ComboBox)ctrl).Text.Trim() != "";
             }
-            if (!result)
-                SetRedbox(ctrl);
+            //if (!result)
+                //SetRedbox(ctrl);
             return result;
         }
 
