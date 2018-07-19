@@ -67,6 +67,7 @@ namespace CustomerCare.GUI
             dpDOB.Value = DateTime.Now;
             txtSearch.Text = "";
             btnSave.Text = "Save";
+            rowEditing = false;
         }
 
         private void Insert_Update_Mom()
@@ -100,13 +101,14 @@ namespace CustomerCare.GUI
             return true;
         }
 
-        string DefaultSelectSql { get; set; } = "Select \"order\",Name,Sex,Date_of_Birth,sex_id from viewKidsByMom where status=1";
+        string DefaultSelectSql { get; set; } = "Select kid_id, \"order\",Name,Sex,Date_of_Birth,sex_id from viewKidsByMom where status=1";
 
         public void ReloadGridView(string mid)
         {
             string sql = DefaultSelectSql + " and mom_id=" + mid;
             dgKids.DataSource = Database.QueryModel(sql);
             dgKids.Columns["sex_id"].Visible = false;
+            dgKids.Columns["kid_id"].Visible = false;
         }
 
         private void metroLabel2_Click(object sender, EventArgs e)
@@ -141,6 +143,8 @@ namespace CustomerCare.GUI
             {
                 dgKids.DataSource = Database.QueryModel(DefaultSelectSql+" and mom_id="+id);
                 dgKids.Columns["sex_id"].Visible = false;
+            dgKids.Columns["kid_id"].Visible = false;
+
                 return;
             }
             dgKids.DataSource = Database.QueryModel(DefaultSelectSql + " and mom_id=" + id + " and Name like '%" + txtSearch.Text + "%'");
@@ -150,16 +154,16 @@ namespace CustomerCare.GUI
         private void btnSave_Click(object sender, EventArgs e)
         {
            
-                string col = "";
+                string col = " [name_id], [sex], [dob], [order]";
 
                 string name_id = Database.QueryScalar(@"DECLARE @id int=0 exec @id=insertName '"+txtKidName.Text+"', 4 select @id") + "";
                 //Helpers.ShowMsg(name_id);
 
                 if (rowEditing)
                 {
-                    Database.Update("tbl_kid", "Where id=" + dgKids.SelectedRows[0].Cells[1], col, name_id, txtTel1.Text, txtTel2.Text);
+                    Database.Update("tbl_kid", "Where id=" + dgKids.SelectedRows[0].Cells["kid_id"].Value+"", col,name_id,cbGender.SelectedIndex,dpDOB.Value.ToShortDateString(),txtKidOrder.Text);
                     //id = Database.GetLastId("tbl_mom") + "";
-
+                    
                     ReloadGridView(id);
                     Clear();
                     rowEditing = false;
@@ -168,7 +172,7 @@ namespace CustomerCare.GUI
              
                
 
-                string kid_data = string.Join(",", id, txtKidName.Text, cbGender.SelectedIndex + "", dpDOB.Value.ToString("yyyy-MM-dd"), txtKidOrder.Text);
+                string kid_data = MString.implode(",","'", id, txtKidName.Text, cbGender.SelectedIndex + "", dpDOB.Value.ToString("yyyy-MM-dd"), txtKidOrder.Text);
                 Database.Exec("exec insertKid " + kid_data);
 
          

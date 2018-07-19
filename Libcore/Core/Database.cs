@@ -295,6 +295,7 @@ namespace SMLOGX.Core
                     //System.Windows.Forms.MessageBox.Show(cmd.CommandText);
                     //System.Windows.Forms.MessageBox.Show(cmd.CommandText + "\n" + final_data);
                     //return false;
+   
                     _hasExec = cmd.ExecuteNonQuery();
                     cmd.Dispose();
 
@@ -302,7 +303,7 @@ namespace SMLOGX.Core
                 }
                 catch (Exception ex)
                 {
-                    Log.Write(ex.Message, "Database.Insert");
+                    Log.Write(ex.Message, "Database.Update");
                 }
             }
 

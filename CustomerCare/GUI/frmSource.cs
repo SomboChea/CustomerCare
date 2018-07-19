@@ -18,5 +18,10 @@ namespace CustomerCare.GUI
         {
             InitializeComponent();
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            new frmNewSource().ShowDialog();
+        }
     }
 }

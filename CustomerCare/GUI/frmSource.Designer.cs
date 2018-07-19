@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgSources = new MetroFramework.Controls.MetroGrid();
-            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
             this.cbSearchby = new MetroFramework.Controls.MetroComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +44,10 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.btnNew = new MetroFramework.Controls.MetroTile();
-            this.btnEdit = new MetroFramework.Controls.MetroTile();
             this.btnDelete = new MetroFramework.Controls.MetroTile();
+            this.btnEdit = new MetroFramework.Controls.MetroTile();
+            this.btnNew = new MetroFramework.Controls.MetroTile();
+            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgSources)).BeginInit();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -65,14 +65,14 @@
             this.dgSources.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgSources.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgSources.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgSources.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgSources.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgSources.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgSources.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -85,14 +85,14 @@
             this.Column8,
             this.Column9,
             this.Column10});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgSources.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgSources.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgSources.EnableHeadersVisualStyles = false;
             this.dgSources.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgSources.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -100,40 +100,19 @@
             this.dgSources.Name = "dgSources";
             this.dgSources.ReadOnly = true;
             this.dgSources.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgSources.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgSources.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgSources.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgSources.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("AKbalthom KhmerLer", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgSources.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgSources.Size = new System.Drawing.Size(978, 495);
             this.dgSources.TabIndex = 0;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtSearch.Icon = global::CustomerCare.Properties.Resources.Search48_Bl;
-            this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(615, 141);
-            this.txtSearch.MaxLength = 50;
-            this.txtSearch.Multiline = true;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PromptText = "Enter text to search";
-            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(386, 35);
-            this.txtSearch.TabIndex = 12;
-            this.txtSearch.UseCustomBackColor = true;
-            this.txtSearch.UseCustomForeColor = true;
-            this.txtSearch.UseSelectable = true;
-            this.txtSearch.UseStyleColors = true;
             // 
             // cbSearchby
             // 
@@ -234,18 +213,20 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // btnNew
+            // btnDelete
             // 
-            this.btnNew.ActiveControl = null;
-            this.btnNew.Location = new System.Drawing.Point(3, 3);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(121, 69);
-            this.btnNew.TabIndex = 2;
-            this.btnNew.Text = "New";
-            this.btnNew.TileImage = global::CustomerCare.Properties.Resources.Document48;
-            this.btnNew.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnNew.UseSelectable = true;
-            this.btnNew.UseTileImage = true;
+            this.btnDelete.ActiveControl = null;
+            this.btnDelete.Location = new System.Drawing.Point(257, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(121, 69);
+            this.btnDelete.Style = MetroFramework.MetroColorStyle.Red;
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TileImage = global::CustomerCare.Properties.Resources.Garbage48;
+            this.btnDelete.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDelete.UseSelectable = true;
+            this.btnDelete.UseStyleColors = true;
+            this.btnDelete.UseTileImage = true;
             // 
             // btnEdit
             // 
@@ -262,20 +243,40 @@
             this.btnEdit.UseStyleColors = true;
             this.btnEdit.UseTileImage = true;
             // 
-            // btnDelete
+            // btnNew
             // 
-            this.btnDelete.ActiveControl = null;
-            this.btnDelete.Location = new System.Drawing.Point(257, 3);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(121, 69);
-            this.btnDelete.Style = MetroFramework.MetroColorStyle.Red;
-            this.btnDelete.TabIndex = 5;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.TileImage = global::CustomerCare.Properties.Resources.Garbage48;
-            this.btnDelete.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDelete.UseSelectable = true;
-            this.btnDelete.UseStyleColors = true;
-            this.btnDelete.UseTileImage = true;
+            this.btnNew.ActiveControl = null;
+            this.btnNew.Location = new System.Drawing.Point(3, 3);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(121, 69);
+            this.btnNew.TabIndex = 2;
+            this.btnNew.Text = "New";
+            this.btnNew.TileImage = global::CustomerCare.Properties.Resources.Document48;
+            this.btnNew.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnNew.UseSelectable = true;
+            this.btnNew.UseTileImage = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtSearch.Icon = global::CustomerCare.Properties.Resources.Search48_Bl;
+            this.txtSearch.Lines = new string[0];
+            this.txtSearch.Location = new System.Drawing.Point(615, 141);
+            this.txtSearch.MaxLength = 50;
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PromptText = "Enter text to search";
+            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(386, 35);
+            this.txtSearch.TabIndex = 12;
+            this.txtSearch.UseCustomBackColor = true;
+            this.txtSearch.UseCustomForeColor = true;
+            this.txtSearch.UseSelectable = true;
+            this.txtSearch.UseStyleColors = true;
             // 
             // frmSource
             // 
