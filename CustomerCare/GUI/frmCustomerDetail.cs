@@ -23,7 +23,11 @@ namespace CustomerCare.GUI
             dgKids.Columns.Clear();
             // If open as edit or new
             edit = false;
+            dgKids.SelectionChanged += DgKids_SelectionChanged; ;
         }
+
+   
+
         public frmCustomerDetail(string mom_id,string mom_name,string t1,string t2)
         {
             InitializeComponent();
@@ -36,7 +40,15 @@ namespace CustomerCare.GUI
             txtTel1.Text = t1;
             txtTel2.Text = t2;
 
+            dgKids.SelectionChanged += DgKids_SelectionChanged; ;
+
+
             edit = true;
+        }
+
+        private void DgKids_SelectionChanged(object sender, EventArgs e)
+        {
+            
         }
 
         public bool edit { get; set; } = false;
@@ -57,8 +69,8 @@ namespace CustomerCare.GUI
 
         private void Insert_Update_Mom()
         {
-            string name_id  = Database.QueryScalar(@"DECLARE @id int=0 exec @id=insertName 'myothername', 1 select @id")+"";
-            Helpers.ShowMsg(name_id);
+            string name_id  = Database.QueryScalar(@"DECLARE @id int=0 exec @id=insertName '"+txtMomName.Text+"', 3 select @id")+"";
+            //Helpers.ShowMsg(name_id);
             string col = "name_id,tel_1,tel_2";
             if (id == null)
             {
@@ -84,11 +96,14 @@ namespace CustomerCare.GUI
            
             return check;
         }
-        string DefaultSelectSql { get; set; } = "Select \"order\",Name,Sex,Date_of_Birth from viewKidsByMom where status=1";
+
+        string DefaultSelectSql { get; set; } = "Select \"order\",Name,Sex,Date_of_Birth,sex_id from viewKidsByMom where status=1";
+
         public void ReloadGridView(string mid)
         {
             string sql = DefaultSelectSql + " and mom_id=" + mid;
             dgKids.DataSource = Database.QueryModel(sql);
+            dgKids.Columns["sex_id"].Visible = false;
         }
 
         private void metroLabel2_Click(object sender, EventArgs e)
@@ -116,12 +131,14 @@ namespace CustomerCare.GUI
             ReloadGridView(id);
             Clear();
         }
-
+        private bool rowEditing { get; set; } = false;
+        private int rowEditingIndex;
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             if (txtSearch.Text.Trim() == "")
             {
                 dgKids.DataSource = Database.QueryModel(DefaultSelectSql+" and mom_id="+id);
+                dgKids.Columns["sex_id"].Visible = false;
                 return;
             }
             dgKids.DataSource = Database.QueryModel(DefaultSelectSql + " and mom_id" + id + " and Name like '%" + txtSearch.Text + "%'");
