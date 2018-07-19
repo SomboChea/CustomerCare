@@ -153,6 +153,21 @@ namespace CustomerCare
             refresh();
         }
 
+        private void cmbpro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbdis_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbcom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void Cbpro_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbcomm.DataSource = null;

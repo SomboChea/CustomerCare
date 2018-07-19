@@ -18,13 +18,14 @@ namespace CustomerCare.GUI
     {
         public frmCustomerQuickAdd()
         {
-            Database.Open();
             InitializeComponent();
             Helpers.FillComboBox(cbFromSource,"name", "id","SELECT id,name FROM viewSources");
             Helpers.FillComboBox(cbSourceType, "type", "id", "SELECT id,type FROM tbl_refer_type");
         }
 
-        private bool SourceIsContained() => Database.QueryScalar("SELECT id FROM viewSources WHERE id = '" + cbFromSource.SelectedValue + "'") != null;
+        private bool SourceIsContained() => 
+            Database.QueryScalar("SELECT id FROM viewSources WHERE id = '" + 
+                cbFromSource.SelectedValue + "'") != null;
 
         private void PanInfoMoveUpDown(bool tf) =>
             //UP is false
@@ -35,17 +36,17 @@ namespace CustomerCare.GUI
 
         private void CheckingSource() => PanInfoMoveUpDown(panType.Visible = PanTypeIsShow());
 
-        private string CheckSourceAdd()
-        {
-            return SourceIsContained() ? cbFromSource.SelectedValue +"" : Database.QueryScalar("EXEC insertQuickSource '"+cbFromSource.Text+"',"+cbSourceType.SelectedValue+","+Temp.logger_id) + "";
-        }
+        private string CheckSourceAdd() => 
+            SourceIsContained() ? 
+            cbFromSource.SelectedValue + "" : 
+            Database.QueryScalar("EXEC insertQuickSource '" +
+                cbFromSource.Text + "'," + cbSourceType.SelectedValue + "," +
+                Temp.logger_id) + "";
 
         Mom mom = new Mom();
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-          
-           
             mom.Name = txtName.Text;
             mom.Tel_1 = txtTel1.Text;
             mom.Other = txtInfo.Text;
@@ -55,19 +56,18 @@ namespace CustomerCare.GUI
 
             if (chkHasKid.Checked)
                 PopUpAddKid();
-            this.Close();
+            else
+            {
+                string sss = mom.Id != null ? "Success" : "Failed";
+                MetroMessageBox.Show(this, sss);
+            }
         }
 
         private void PopUpAddKid() => new frmCustomerDetail(mom.Id, mom.Name, mom.Tel_1, null).ShowDialog();
 
-        private void cbFromSource_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CheckingSource();
-        }
+        private void cbFromSource_SelectedIndexChanged(object sender, EventArgs e) => CheckingSource();
 
-        private void cbFromSource_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            CheckingSource();
-        }
+        private void cbFromSource_KeyPress(object sender, KeyPressEventArgs e) => CheckingSource();
+
     }
 }

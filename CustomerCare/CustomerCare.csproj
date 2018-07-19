@@ -212,6 +212,12 @@
     <Compile Include="GUI\frmNewCustomer.Designer.cs">
       <DependentUpon>frmNewCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmNewSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmNewSource.Designer.cs">
+      <DependentUpon>frmNewSource.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmProductMini.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,10 +266,10 @@
     <Compile Include="GUI\Trash\frmDBSetting.Designer.cs">
       <DependentUpon>frmDBSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmHcp.cs">
+    <Compile Include="GUI\Trash\frmHcp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmHcp.Designer.cs">
+    <Compile Include="GUI\Trash\frmHcp.Designer.cs">
       <DependentUpon>frmHcp.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmLocations.cs">
@@ -436,6 +442,9 @@
     <EmbeddedResource Include="GUI\frmNewCustomer.resx">
       <DependentUpon>frmNewCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmNewSource.resx">
+      <DependentUpon>frmNewSource.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmProductMini.resx">
       <DependentUpon>frmProductMini.cs</DependentUpon>
     </EmbeddedResource>
@@ -460,7 +469,7 @@
     <EmbeddedResource Include="GUI\Trash\frmDBSetting.resx">
       <DependentUpon>frmDBSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmHcp.resx">
+    <EmbeddedResource Include="GUI\Trash\frmHcp.resx">
       <DependentUpon>frmHcp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLocations.resx">
