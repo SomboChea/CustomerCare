@@ -21,6 +21,14 @@ namespace CustomerCare.GUI
             InitializeComponent();
         }
 
+        private string  SourceID { get; set; }
+        public frmNewSource(string _sourceID,DataGridViewCellCollection cell)
+        {
+            InitializeComponent();
+            this.Text = "Edit Source";
+            SourceID = _sourceID;
+        }
+
         private void frmNewSource_Load(object sender, EventArgs e)
         {
             cbProvince.DataSource = null;
@@ -49,11 +57,21 @@ namespace CustomerCare.GUI
             type = cbType.Text;
             memo = txtMemo.Text;
 
-            string id = Database.QueryScalar("EXEC insertSource '" +
-                name + "','" + owner + "','" + tel_1 + "','" + tel_2 + 
-                "','" + email + "','" + memo + "',null,'" + address_id + 
-                "','" + type_id + "','"+ Temp.logger_id + "'") + "";
-
+            string id;
+            if (SourceID == null)
+            {
+                 id = Database.QueryScalar("EXEC insertSource '" +
+                    name + "','" + owner + "','" + tel_1 + "','" + tel_2 +
+                    "','" + email + "','" + memo + "',null,'" + address_id +
+                    "','" + type_id + "','" + Temp.logger_id + "'") + "";
+            }
+            else
+            {
+                string source_name_id = Database.GetName_ID(name, "1");
+                string source_owner_id= Database.GetName_ID(name, "2");
+                string col= "[name_id], [owner_id], [tel_1], [tel_2], [email], [memo], [image], [address_id], [type_id], [logger_id]";
+                id=Database.Update("tbl_refer", " Where id=" + SourceID,col,source_name_id,source_owner_id,tel_1,tel_2,email,memo,address_id,type_id,Temp.logger_id)?"not null":null;
+            }
             string success = id != null ? "Success" : "Failed";
             MetroMessageBox.Show(this, success);
         }
