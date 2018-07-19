@@ -124,7 +124,7 @@ namespace CustomerCare.GUI
                 dgKids.DataSource = Database.QueryModel(DefaultSelectSql+" and mom_id="+id);
                 return;
             }
-            dgKids.DataSource=Database.QueryModel(DefaultSelectSql+" and mom_id"+id+" and Name like '%"+txtSearch.Text+"%'")
+            dgKids.DataSource = Database.QueryModel(DefaultSelectSql + " and mom_id" + id + " and Name like '%" + txtSearch.Text + "%'");
         }
 
         private void btnSave_Click(object sender, EventArgs e)
