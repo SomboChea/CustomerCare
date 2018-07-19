@@ -125,10 +125,58 @@ namespace CustomerCare.GUI
                 return;
             }
             dgKids.DataSource = Database.QueryModel(DefaultSelectSql + " and mom_id" + id + " and Name like '%" + txtSearch.Text + "%'");
+<<<<<<< HEAD
+=======
+            dgKids.Columns["sex_id"].Visible = false;
+>>>>>>> 0a20c7f10ce686d97cac3c03dfe7b454c681c827
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (btnSave.Text == "Save")
+            {
+                string col = "";
+
+                string name_id = Database.QueryScalar(@"DECLARE @id int=0 exec @id=insertName '"+txtKidName.Text+"', 4 select @id") + "";
+                //Helpers.ShowMsg(name_id);
+                string col = "";
+                if (id == null)
+                {
+                    Database.Update("tbl_kid","Where id="+dgKids.SelectedRows[0].Cells[], col, name_id, txtTel1.Text, txtTel2.Text);
+                    id = Database.GetLastId("tbl_mom") + "";
+                }
+
+                btnSave.Text = "Edit";
+                rowEditing = false;
+                //Helpers.ShowMsg("Edit");
+            }
+            else
+            {
+                if (dgKids.SelectedRows.Count <= 0)
+                {
+                    return;
+                }
+                DataGridViewCellCollection cell = dgKids.SelectedRows[0].Cells;
+                txtKidName.Text = cell["Name"].Value + "";
+                txtKidOrder.Text = cell["Order"].Value + "";
+                cbGender.SelectedIndex = int.Parse(cell["sex_id"].Value + "");
+                dpDOB.Value = DateTime.Parse(cell["Date_of_Birth"].Value+"");
+                btnSave.Text = "Save";
+                rowEditing = true;
+                rowEditingIndex = dgKids.SelectedRows[0].Index;
+                //Helpers.ShowMsg("Save");
+            }
+        }
+
+        private void dgKids_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+            rowEditing = false;
 
         }
     }
