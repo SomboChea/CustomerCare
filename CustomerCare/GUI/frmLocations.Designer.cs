@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.panHead = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbTitle = new System.Windows.Forms.Label();
             this.btnRemove = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,6 +42,8 @@
             this.listprovince = new System.Windows.Forms.ListBox();
             this.listdistrict = new System.Windows.Forms.ListBox();
             this.listcomm = new System.Windows.Forms.ListBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,35 +61,6 @@
             this.panHead.Name = "panHead";
             this.panHead.Size = new System.Drawing.Size(1039, 45);
             this.panHead.TabIndex = 2;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::CustomerCare.Properties.Resources.Close_32;
-            this.btnClose.Location = new System.Drawing.Point(998, -2);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(41, 45);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CustomerCare.Properties.Resources.Tiles;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // lbTitle
             // 
@@ -205,6 +176,7 @@
             this.cmbpro.Name = "cmbpro";
             this.cmbpro.Size = new System.Drawing.Size(263, 26);
             this.cmbpro.TabIndex = 19;
+            this.cmbpro.SelectedIndexChanged += new System.EventHandler(this.cmbpro_SelectedIndexChanged);
             // 
             // cmbdis
             // 
@@ -217,6 +189,7 @@
             this.cmbdis.Name = "cmbdis";
             this.cmbdis.Size = new System.Drawing.Size(263, 26);
             this.cmbdis.TabIndex = 19;
+            this.cmbdis.SelectedIndexChanged += new System.EventHandler(this.cmbdis_SelectedIndexChanged);
             // 
             // cmbcom
             // 
@@ -229,6 +202,7 @@
             this.cmbcom.Name = "cmbcom";
             this.cmbcom.Size = new System.Drawing.Size(263, 26);
             this.cmbcom.TabIndex = 19;
+            this.cmbcom.SelectedIndexChanged += new System.EventHandler(this.cmbcom_SelectedIndexChanged);
             // 
             // listprovince
             // 
@@ -264,6 +238,35 @@
             this.listcomm.Name = "listcomm";
             this.listcomm.Size = new System.Drawing.Size(263, 580);
             this.listcomm.TabIndex = 20;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::CustomerCare.Properties.Resources.Close_32;
+            this.btnClose.Location = new System.Drawing.Point(998, -2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(41, 45);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CustomerCare.Properties.Resources.Tiles;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // frmLocations
             // 

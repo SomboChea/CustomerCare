@@ -31,20 +31,20 @@
             this.btnSave = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtHost = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.txtUsername = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.cbAuthType = new MetroFramework.Controls.MetroComboBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.panUser = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panUser = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.btnTest = new MetroFramework.Controls.MetroButton();
             this.panButton = new MetroFramework.Controls.MetroPanel();
             this.metroPanel1.SuspendLayout();
-            this.panUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panUser.SuspendLayout();
             this.panButton.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,22 +90,22 @@
             this.txtHost.UseSelectable = true;
             this.txtHost.UseStyleColors = true;
             // 
-            // metroTextBox1
+            // txtUsername
             // 
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(6, 29);
-            this.metroTextBox1.MaxLength = 20;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.PromptText = "Username here...";
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.Size = new System.Drawing.Size(171, 23);
-            this.metroTextBox1.TabIndex = 5;
-            this.metroTextBox1.UseCustomBackColor = true;
-            this.metroTextBox1.UseCustomForeColor = true;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.UseStyleColors = true;
+            this.txtUsername.Lines = new string[0];
+            this.txtUsername.Location = new System.Drawing.Point(6, 29);
+            this.txtUsername.MaxLength = 20;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PromptText = "Username here...";
+            this.txtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.Size = new System.Drawing.Size(171, 23);
+            this.txtUsername.TabIndex = 5;
+            this.txtUsername.UseCustomBackColor = true;
+            this.txtUsername.UseCustomForeColor = true;
+            this.txtUsername.UseSelectable = true;
+            this.txtUsername.UseStyleColors = true;
             // 
             // metroLabel2
             // 
@@ -134,22 +134,22 @@
             this.cbAuthType.UseSelectable = true;
             this.cbAuthType.SelectedIndexChanged += new System.EventHandler(this.cbAuthType_SelectedIndexChanged);
             // 
-            // metroTextBox2
+            // txtPassword
             // 
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(6, 86);
-            this.metroTextBox2.MaxLength = 20;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '*';
-            this.metroTextBox2.PromptText = "Password here...";
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.Size = new System.Drawing.Size(171, 23);
-            this.metroTextBox2.TabIndex = 7;
-            this.metroTextBox2.UseCustomBackColor = true;
-            this.metroTextBox2.UseCustomForeColor = true;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.UseStyleColors = true;
+            this.txtPassword.Lines = new string[0];
+            this.txtPassword.Location = new System.Drawing.Point(6, 86);
+            this.txtPassword.MaxLength = 20;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PromptText = "Password here...";
+            this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.Size = new System.Drawing.Size(171, 23);
+            this.txtPassword.TabIndex = 7;
+            this.txtPassword.UseCustomBackColor = true;
+            this.txtPassword.UseCustomForeColor = true;
+            this.txtPassword.UseSelectable = true;
+            this.txtPassword.UseStyleColors = true;
             // 
             // metroPanel1
             // 
@@ -171,13 +171,23 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CustomerCare.Properties.Resources.Database_Connection_BL_C;
+            this.pictureBox1.Location = new System.Drawing.Point(160, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // panUser
             // 
             this.panUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panUser.Controls.Add(this.metroLabel4);
             this.panUser.Controls.Add(this.metroLabel3);
-            this.panUser.Controls.Add(this.metroTextBox2);
-            this.panUser.Controls.Add(this.metroTextBox1);
+            this.panUser.Controls.Add(this.txtPassword);
+            this.panUser.Controls.Add(this.txtUsername);
             this.panUser.HorizontalScrollbarBarColor = true;
             this.panUser.HorizontalScrollbarHighlightOnWheel = false;
             this.panUser.HorizontalScrollbarSize = 10;
@@ -194,16 +204,6 @@
             this.panUser.VerticalScrollbarSize = 10;
             this.panUser.Visible = false;
             // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(3, 4);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(71, 19);
-            this.metroLabel3.TabIndex = 10;
-            this.metroLabel3.Text = "Username";
-            // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
@@ -214,15 +214,15 @@
             this.metroLabel4.TabIndex = 11;
             this.metroLabel4.Text = "Password";
             // 
-            // pictureBox1
+            // metroLabel3
             // 
-            this.pictureBox1.Image = global::CustomerCare.Properties.Resources.Database_Connection_BL_C;
-            this.pictureBox1.Location = new System.Drawing.Point(160, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel3.Location = new System.Drawing.Point(3, 4);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(71, 19);
+            this.metroLabel3.TabIndex = 10;
+            this.metroLabel3.Text = "Username";
             // 
             // btnTest
             // 
@@ -272,9 +272,9 @@
             this.Text = "Connection Properties";
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panUser.ResumeLayout(false);
             this.panUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panButton.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -285,10 +285,10 @@
         private MetroFramework.Controls.MetroButton btnSave;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox txtHost;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox txtUsername;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroComboBox cbAuthType;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox txtPassword;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroPanel panUser;
         private MetroFramework.Controls.MetroLabel metroLabel4;

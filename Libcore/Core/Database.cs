@@ -21,12 +21,16 @@ namespace SMLOGX.Core
 
         /** Config Server **/
         public static string Server { get; set; } = "localhost";
-        public static string DBName { get; set; } = "master";
+        public static string DBName { get; set; } = "Telmarketing";
         public static bool AuthType { get; set; } = false;
         public static string UserId { get; set; }
         public static string Password { get; set; }
         private static string[] Sections = { "Windows Authentication", "SQL Server Authentication" };
 
+        public static string GetName_ID(string name,string type) {
+            string name_id = Database.QueryScalar(@"DECLARE @id int=0 exec @id=insertName '" + name + "', "+type+" select @id") + "";
+            return name_id;
+        }
         /// <summary>
         /// Setting Configuration DB Server
         /// </summary>
@@ -295,6 +299,7 @@ namespace SMLOGX.Core
                     //System.Windows.Forms.MessageBox.Show(cmd.CommandText);
                     //System.Windows.Forms.MessageBox.Show(cmd.CommandText + "\n" + final_data);
                     //return false;
+   
                     _hasExec = cmd.ExecuteNonQuery();
                     cmd.Dispose();
 
@@ -302,7 +307,7 @@ namespace SMLOGX.Core
                 }
                 catch (Exception ex)
                 {
-                    Log.Write(ex.Message, "Database.Insert");
+                    Log.Write(ex.Message, "Database.Update");
                 }
             }
 
@@ -434,7 +439,7 @@ namespace SMLOGX.Core
                 }
                 catch (Exception ex)
                 {
-                    Log.Write(ex.Message, "Database.Exec");
+                    Log.Write(ex.Message, "Database.Exec , "+sql_exec);
                 }
             }
             return false;

@@ -64,6 +64,8 @@
     <Compile Include="Core\Database.cs" />
     <Compile Include="Core\Helpers.cs" />
     <Compile Include="Core\IBaseSystem.cs" />
+    <Compile Include="Core\IModel.cs" />
+    <Compile Include="Core\Model.cs" />
     <Compile Include="Core\Report.cs" />
     <Compile Include="frmReport.cs">
       <SubType>Form</SubType>

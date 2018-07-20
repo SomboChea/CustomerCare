@@ -63,6 +63,16 @@ namespace CustomerCare.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Accounting128 {
+            get {
+                object obj = ResourceManager.GetObject("Accounting128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_New {
             get {
                 object obj = ResourceManager.GetObject("Add-New", resourceCulture);
@@ -176,6 +186,16 @@ namespace CustomerCare.Properties {
         internal static System.Drawing.Bitmap Control_Panel_04_48 {
             get {
                 object obj = ResourceManager.GetObject("Control Panel-04-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Customer {
+            get {
+                object obj = ResourceManager.GetObject("Customer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,6 +403,16 @@ namespace CustomerCare.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Meeting2 {
+            get {
+                object obj = ResourceManager.GetObject("Meeting2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu {
             get {
                 object obj = ResourceManager.GetObject("menu", resourceCulture);
@@ -456,6 +486,16 @@ namespace CustomerCare.Properties {
         internal static System.Drawing.Bitmap Product2 {
             get {
                 object obj = ResourceManager.GetObject("Product2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProductBox48 {
+            get {
+                object obj = ResourceManager.GetObject("ProductBox48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

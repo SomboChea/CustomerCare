@@ -30,5 +30,10 @@ namespace CustomerCare.GUI
             //UP is false
             //DOWN is true
             panContact.Location = new Point(panContact.Location.X, tf ? 270 : 230);
+
+        private void selectSource_Click(object sender, EventArgs e)
+        {
+            new frmSelectSource().ShowDialog();
+        }
     }
 }

@@ -35,7 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CustomerCare.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>app_icon.ico</ApplicationIcon>
@@ -181,6 +182,12 @@
     <Compile Include="GUI\frmCustomerDetail.Designer.cs">
       <DependentUpon>frmCustomerDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmCustomerQuickAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCustomerQuickAdd.Designer.cs">
+      <DependentUpon>frmCustomerQuickAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmLoginMini.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,11 +212,23 @@
     <Compile Include="GUI\frmNewCustomer.Designer.cs">
       <DependentUpon>frmNewCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmNewSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmNewSource.Designer.cs">
+      <DependentUpon>frmNewSource.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmProductMini.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmProductMini.Designer.cs">
       <DependentUpon>frmProductMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmSelectAddress.cs">
       <SubType>Form</SubType>
@@ -229,28 +248,34 @@
     <Compile Include="GUI\frmSettings.Designer.cs">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSource.Designer.cs">
+      <DependentUpon>frmSource.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Trash\frmAddress.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Trash\frmAddress.Designer.cs">
       <DependentUpon>frmAddress.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmDashboard.cs">
+    <Compile Include="GUI\Trash\frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmDashboard.Designer.cs">
+    <Compile Include="GUI\Trash\frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmDBSetting.cs">
+    <Compile Include="GUI\Trash\frmDBSetting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmDBSetting.Designer.cs">
+    <Compile Include="GUI\Trash\frmDBSetting.Designer.cs">
       <DependentUpon>frmDBSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmHcp.cs">
+    <Compile Include="GUI\Trash\frmHcp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmHcp.Designer.cs">
+    <Compile Include="GUI\Trash\frmHcp.Designer.cs">
       <DependentUpon>frmHcp.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmLocations.cs">
@@ -265,10 +290,10 @@
     <Compile Include="GUI\Trash\frmKid.Designer.cs">
       <DependentUpon>frmKid.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmLogin.cs">
+    <Compile Include="GUI\Trash\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmLogin.Designer.cs">
+    <Compile Include="GUI\Trash\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Trash\frmMain.cs">
@@ -277,16 +302,16 @@
     <Compile Include="GUI\Trash\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmMum.cs">
+    <Compile Include="GUI\Trash\frmMum.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmMum.Designer.cs">
+    <Compile Include="GUI\Trash\frmMum.Designer.cs">
       <DependentUpon>frmMum.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmKids.cs">
+    <Compile Include="GUI\Trash\frmKids.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmKids.Designer.cs">
+    <Compile Include="GUI\Trash\frmKids.Designer.cs">
       <DependentUpon>frmKids.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Trash\frmPosition.cs">
@@ -295,10 +320,10 @@
     <Compile Include="GUI\Trash\frmPosition.Designer.cs">
       <DependentUpon>frmPosition.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmProduct.cs">
+    <Compile Include="GUI\Trash\frmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmProduct.Designer.cs">
+    <Compile Include="GUI\Trash\frmProduct.Designer.cs">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmQuickLuanch.cs">
@@ -408,6 +433,9 @@
     <EmbeddedResource Include="GUI\frmCustomerDetail.resx">
       <DependentUpon>frmCustomerDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCustomerQuickAdd.resx">
+      <DependentUpon>frmCustomerQuickAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLoginMini.resx">
       <DependentUpon>frmLoginMini.cs</DependentUpon>
     </EmbeddedResource>
@@ -420,8 +448,14 @@
     <EmbeddedResource Include="GUI\frmNewCustomer.resx">
       <DependentUpon>frmNewCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmNewSource.resx">
+      <DependentUpon>frmNewSource.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmProductMini.resx">
       <DependentUpon>frmProductMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSelectAddress.resx">
       <DependentUpon>frmSelectAddress.cs</DependentUpon>
@@ -432,16 +466,19 @@
     <EmbeddedResource Include="GUI\frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSource.resx">
+      <DependentUpon>frmSource.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Trash\frmAddress.resx">
       <DependentUpon>frmAddress.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmDashboard.resx">
+    <EmbeddedResource Include="GUI\Trash\frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmDBSetting.resx">
+    <EmbeddedResource Include="GUI\Trash\frmDBSetting.resx">
       <DependentUpon>frmDBSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmHcp.resx">
+    <EmbeddedResource Include="GUI\Trash\frmHcp.resx">
       <DependentUpon>frmHcp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLocations.resx">
@@ -450,22 +487,22 @@
     <EmbeddedResource Include="GUI\Trash\frmKid.resx">
       <DependentUpon>frmKid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmLogin.resx">
+    <EmbeddedResource Include="GUI\Trash\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Trash\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmMum.resx">
+    <EmbeddedResource Include="GUI\Trash\frmMum.resx">
       <DependentUpon>frmMum.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmKids.resx">
+    <EmbeddedResource Include="GUI\Trash\frmKids.resx">
       <DependentUpon>frmKids.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Trash\frmPosition.resx">
       <DependentUpon>frmPosition.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmProduct.resx">
+    <EmbeddedResource Include="GUI\Trash\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmQuickLuanch.resx">
@@ -555,6 +592,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app_icon.ico" />
+    <None Include="Resources\Accounting128.png" />
+    <None Include="Resources\ProductBox48.png" />
+    <None Include="Resources\Meeting2.png" />
+    <None Include="Resources\Customer.png" />
     <None Include="Resources\Control Panel-04-48.png" />
     <None Include="Resources\User-Add_Cir.png" />
     <None Include="Resources\User-Add.png" />

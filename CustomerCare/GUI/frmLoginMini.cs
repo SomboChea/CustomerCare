@@ -41,14 +41,14 @@ namespace CustomerCare.GUI
             if (Database.User.Login(ref userID))
             {
                 Temp.logger_id = int.Parse(userID + "");
-                Temp.logger_fullname = Database.QueryScalar("SELECT fullname FROM tbl_user WHERE id = " + Temp.logger_id) + "";
-                new frmDashboard().Show();
+                Temp.logger_fullname = Database.QueryScalar("SELECT name FROM viewUsers WHERE id = " + Temp.logger_id) + "";
+                new frmMain().Show();
                 Temp.frm_login = this;
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Please try to login again!");
+                MetroMessageBox.Show(this,"Please try to login again!");
             }
         }
 
@@ -75,5 +75,9 @@ namespace CustomerCare.GUI
             }
         }
 
+        private void frmLoginMini_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            App.ExitAll();
+        }
     }
 }

@@ -36,24 +36,24 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.chkHaveKid = new MetroFramework.Controls.MetroCheckBox();
             this.panContact = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.txtTel1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.txtTel2 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.txtEmail = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.txtFacebook = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.txtEmail = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.txtTel2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.txtTel1 = new MetroFramework.Controls.MetroTextBox();
             this.selectSource = new MetroFramework.Controls.MetroTextBox();
             this.selectAddress = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtOther = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.panExpected = new MetroFramework.Controls.MetroPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panContact.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panExpected.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -165,61 +165,33 @@
             this.panContact.VerticalScrollbarHighlightOnWheel = false;
             this.panContact.VerticalScrollbarSize = 10;
             // 
-            // metroLabel4
+            // metroLabel7
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(0, 5);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(66, 19);
-            this.metroLabel4.TabIndex = 5;
-            this.metroLabel4.Text = "Tel Line 1";
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel7.Location = new System.Drawing.Point(0, 104);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(67, 19);
+            this.metroLabel7.TabIndex = 11;
+            this.metroLabel7.Text = "Facebook";
             // 
-            // txtTel1
+            // txtFacebook
             // 
-            this.txtTel1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtTel1.Lines = new string[0];
-            this.txtTel1.Location = new System.Drawing.Point(115, 5);
-            this.txtTel1.MaxLength = 50;
-            this.txtTel1.Name = "txtTel1";
-            this.txtTel1.PasswordChar = '\0';
-            this.txtTel1.PromptText = "Enter phone number here...";
-            this.txtTel1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtTel1.SelectedText = "";
-            this.txtTel1.Size = new System.Drawing.Size(292, 27);
-            this.txtTel1.TabIndex = 4;
-            this.txtTel1.UseCustomBackColor = true;
-            this.txtTel1.UseCustomForeColor = true;
-            this.txtTel1.UseSelectable = true;
-            this.txtTel1.UseStyleColors = true;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel5.Location = new System.Drawing.Point(0, 38);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(66, 19);
-            this.metroLabel5.TabIndex = 7;
-            this.metroLabel5.Text = "Tel Line 2";
-            // 
-            // txtTel2
-            // 
-            this.txtTel2.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtTel2.Lines = new string[0];
-            this.txtTel2.Location = new System.Drawing.Point(115, 38);
-            this.txtTel2.MaxLength = 50;
-            this.txtTel2.Name = "txtTel2";
-            this.txtTel2.PasswordChar = '\0';
-            this.txtTel2.PromptText = "Enter phone number here...";
-            this.txtTel2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtTel2.SelectedText = "";
-            this.txtTel2.Size = new System.Drawing.Size(292, 27);
-            this.txtTel2.TabIndex = 6;
-            this.txtTel2.UseCustomBackColor = true;
-            this.txtTel2.UseCustomForeColor = true;
-            this.txtTel2.UseSelectable = true;
-            this.txtTel2.UseStyleColors = true;
+            this.txtFacebook.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtFacebook.Lines = new string[0];
+            this.txtFacebook.Location = new System.Drawing.Point(115, 104);
+            this.txtFacebook.MaxLength = 50;
+            this.txtFacebook.Name = "txtFacebook";
+            this.txtFacebook.PasswordChar = '\0';
+            this.txtFacebook.PromptText = "Enter facebook here...";
+            this.txtFacebook.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtFacebook.SelectedText = "";
+            this.txtFacebook.Size = new System.Drawing.Size(292, 27);
+            this.txtFacebook.TabIndex = 10;
+            this.txtFacebook.UseCustomBackColor = true;
+            this.txtFacebook.UseCustomForeColor = true;
+            this.txtFacebook.UseSelectable = true;
+            this.txtFacebook.UseStyleColors = true;
             // 
             // metroLabel6
             // 
@@ -249,33 +221,61 @@
             this.txtEmail.UseSelectable = true;
             this.txtEmail.UseStyleColors = true;
             // 
-            // metroLabel7
+            // metroLabel5
             // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel7.Location = new System.Drawing.Point(0, 104);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(67, 19);
-            this.metroLabel7.TabIndex = 11;
-            this.metroLabel7.Text = "Facebook";
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel5.Location = new System.Drawing.Point(0, 38);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel5.TabIndex = 7;
+            this.metroLabel5.Text = "Tel Line 2";
             // 
-            // txtFacebook
+            // txtTel2
             // 
-            this.txtFacebook.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtFacebook.Lines = new string[0];
-            this.txtFacebook.Location = new System.Drawing.Point(115, 104);
-            this.txtFacebook.MaxLength = 50;
-            this.txtFacebook.Name = "txtFacebook";
-            this.txtFacebook.PasswordChar = '\0';
-            this.txtFacebook.PromptText = "Enter facebook here...";
-            this.txtFacebook.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtFacebook.SelectedText = "";
-            this.txtFacebook.Size = new System.Drawing.Size(292, 27);
-            this.txtFacebook.TabIndex = 10;
-            this.txtFacebook.UseCustomBackColor = true;
-            this.txtFacebook.UseCustomForeColor = true;
-            this.txtFacebook.UseSelectable = true;
-            this.txtFacebook.UseStyleColors = true;
+            this.txtTel2.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtTel2.Lines = new string[0];
+            this.txtTel2.Location = new System.Drawing.Point(115, 38);
+            this.txtTel2.MaxLength = 50;
+            this.txtTel2.Name = "txtTel2";
+            this.txtTel2.PasswordChar = '\0';
+            this.txtTel2.PromptText = "Enter phone number here...";
+            this.txtTel2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTel2.SelectedText = "";
+            this.txtTel2.Size = new System.Drawing.Size(292, 27);
+            this.txtTel2.TabIndex = 6;
+            this.txtTel2.UseCustomBackColor = true;
+            this.txtTel2.UseCustomForeColor = true;
+            this.txtTel2.UseSelectable = true;
+            this.txtTel2.UseStyleColors = true;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel4.Location = new System.Drawing.Point(0, 5);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel4.TabIndex = 5;
+            this.metroLabel4.Text = "Tel Line 1";
+            // 
+            // txtTel1
+            // 
+            this.txtTel1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtTel1.Lines = new string[0];
+            this.txtTel1.Location = new System.Drawing.Point(115, 5);
+            this.txtTel1.MaxLength = 50;
+            this.txtTel1.Name = "txtTel1";
+            this.txtTel1.PasswordChar = '\0';
+            this.txtTel1.PromptText = "Enter phone number here...";
+            this.txtTel1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTel1.SelectedText = "";
+            this.txtTel1.Size = new System.Drawing.Size(292, 27);
+            this.txtTel1.TabIndex = 4;
+            this.txtTel1.UseCustomBackColor = true;
+            this.txtTel1.UseCustomForeColor = true;
+            this.txtTel1.UseSelectable = true;
+            this.txtTel1.UseStyleColors = true;
             // 
             // selectSource
             // 
@@ -296,6 +296,7 @@
             this.selectSource.UseCustomForeColor = true;
             this.selectSource.UseSelectable = true;
             this.selectSource.UseStyleColors = true;
+            this.selectSource.Click += new System.EventHandler(this.selectSource_Click);
             // 
             // selectAddress
             // 
@@ -327,17 +328,6 @@
             this.metroLabel8.Size = new System.Drawing.Size(140, 19);
             this.metroLabel8.TabIndex = 13;
             this.metroLabel8.Text = "Customer Address ID";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::CustomerCare.Properties.Resources.User_Add_Cir;
-            this.pictureBox1.Location = new System.Drawing.Point(380, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 125);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
             // 
             // txtOther
             // 
@@ -387,6 +377,17 @@
             this.panExpected.VerticalScrollbarHighlightOnWheel = false;
             this.panExpected.VerticalScrollbarSize = 10;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::CustomerCare.Properties.Resources.User_Add_Cir;
+            this.pictureBox1.Location = new System.Drawing.Point(380, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmNewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,9 +410,9 @@
             this.Text = "New Customer";
             this.panContact.ResumeLayout(false);
             this.panContact.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panExpected.ResumeLayout(false);
             this.panExpected.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
