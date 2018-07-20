@@ -30,7 +30,7 @@ namespace CustomerCare.GUI
         private void PanInfoMoveUpDown(bool tf) =>
             //UP is false
             //DOWN is true
-            panInfo.Location = new Point(panInfo.Location.X, tf ? 350 : 270);
+            panInfo.Location = new Point(panInfo.Location.X, tf ? (panType.Location.Y + panType.Height) : panType.Location.Y - panType.Height + panInfo.Height);
 
         private bool PanTypeIsShow() => !SourceIsContained();
 
@@ -47,6 +47,10 @@ namespace CustomerCare.GUI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(panInfo.Height + "");
+            MessageBox.Show(panInfo.Location.Y + "");
+            MessageBox.Show(panType.Location.Y + "");
+            return;
             mom.Name = txtName.Text;
             mom.Tel_1 = txtTel1.Text;
             mom.Other = txtInfo.Text;

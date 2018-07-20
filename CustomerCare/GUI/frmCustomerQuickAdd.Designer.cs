@@ -49,9 +49,10 @@
             // btnSave
             // 
             this.btnSave.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnSave.Location = new System.Drawing.Point(514, 480);
+            this.btnSave.Location = new System.Drawing.Point(685, 591);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(114, 38);
+            this.btnSave.Size = new System.Drawing.Size(152, 47);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.UseCustomBackColor = true;
@@ -65,9 +66,10 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(34, 90);
+            this.metroLabel1.Location = new System.Drawing.Point(45, 111);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(141, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(148, 25);
             this.metroLabel1.TabIndex = 1;
             this.metroLabel1.Text = "Customer Name";
             // 
@@ -75,7 +77,8 @@
             // 
             this.txtName.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtName.Lines = new string[0];
-            this.txtName.Location = new System.Drawing.Point(38, 128);
+            this.txtName.Location = new System.Drawing.Point(51, 158);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.MaxLength = 50;
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
@@ -83,7 +86,7 @@
             this.txtName.PromptText = "Enter customer name here...";
             this.txtName.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(271, 34);
+            this.txtName.Size = new System.Drawing.Size(361, 42);
             this.txtName.TabIndex = 2;
             this.txtName.UseCustomBackColor = true;
             this.txtName.UseCustomForeColor = true;
@@ -95,7 +98,8 @@
             // 
             this.txtTel1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtTel1.Lines = new string[0];
-            this.txtTel1.Location = new System.Drawing.Point(42, 221);
+            this.txtTel1.Location = new System.Drawing.Point(56, 272);
+            this.txtTel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTel1.MaxLength = 50;
             this.txtTel1.Multiline = true;
             this.txtTel1.Name = "txtTel1";
@@ -103,7 +107,7 @@
             this.txtTel1.PromptText = "eg: 012345678";
             this.txtTel1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtTel1.SelectedText = "";
-            this.txtTel1.Size = new System.Drawing.Size(271, 34);
+            this.txtTel1.Size = new System.Drawing.Size(361, 42);
             this.txtTel1.TabIndex = 4;
             this.txtTel1.UseCustomBackColor = true;
             this.txtTel1.UseCustomForeColor = true;
@@ -116,9 +120,10 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(38, 183);
+            this.metroLabel2.Location = new System.Drawing.Point(51, 225);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(124, 25);
+            this.metroLabel2.Size = new System.Drawing.Size(132, 25);
             this.metroLabel2.TabIndex = 3;
             this.metroLabel2.Text = "Contact Line 1";
             // 
@@ -127,9 +132,10 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(350, 183);
+            this.metroLabel3.Location = new System.Drawing.Point(467, 225);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(113, 25);
+            this.metroLabel3.Size = new System.Drawing.Size(118, 25);
             this.metroLabel3.TabIndex = 5;
             this.metroLabel3.Text = "From Source";
             // 
@@ -137,9 +143,10 @@
             // 
             this.chkHasKid.AutoSize = true;
             this.chkHasKid.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.chkHasKid.Location = new System.Drawing.Point(353, 128);
+            this.chkHasKid.Location = new System.Drawing.Point(471, 158);
+            this.chkHasKid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkHasKid.Name = "chkHasKid";
-            this.chkHasKid.Size = new System.Drawing.Size(98, 25);
+            this.chkHasKid.Size = new System.Drawing.Size(102, 25);
             this.chkHasKid.TabIndex = 7;
             this.chkHasKid.Text = "Have Kid";
             this.chkHasKid.UseSelectable = true;
@@ -148,7 +155,8 @@
             // 
             this.txtInfo.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtInfo.Lines = new string[0];
-            this.txtInfo.Location = new System.Drawing.Point(3, 38);
+            this.txtInfo.Location = new System.Drawing.Point(4, 47);
+            this.txtInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtInfo.MaxLength = 50;
             this.txtInfo.Multiline = true;
             this.txtInfo.Name = "txtInfo";
@@ -156,7 +164,7 @@
             this.txtInfo.PromptText = "Take some information...";
             this.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtInfo.SelectedText = "";
-            this.txtInfo.Size = new System.Drawing.Size(585, 81);
+            this.txtInfo.Size = new System.Drawing.Size(780, 100);
             this.txtInfo.TabIndex = 9;
             this.txtInfo.UseCustomBackColor = true;
             this.txtInfo.UseCustomForeColor = true;
@@ -168,9 +176,10 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(-3, 0);
+            this.metroLabel4.Location = new System.Drawing.Point(-4, 0);
+            this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(106, 25);
+            this.metroLabel4.Size = new System.Drawing.Size(111, 25);
             this.metroLabel4.TabIndex = 8;
             this.metroLabel4.Text = "Information";
             // 
@@ -180,9 +189,10 @@
             this.cbFromSource.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbFromSource.Font = new System.Drawing.Font("AKbalthom KhmerLer", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFromSource.FormattingEnabled = true;
-            this.cbFromSource.Location = new System.Drawing.Point(353, 221);
+            this.cbFromSource.Location = new System.Drawing.Point(471, 272);
+            this.cbFromSource.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbFromSource.Name = "cbFromSource";
-            this.cbFromSource.Size = new System.Drawing.Size(275, 35);
+            this.cbFromSource.Size = new System.Drawing.Size(365, 42);
             this.cbFromSource.TabIndex = 10;
             this.cbFromSource.SelectedIndexChanged += new System.EventHandler(this.cbFromSource_SelectedIndexChanged);
             this.cbFromSource.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbFromSource_KeyPress);
@@ -193,14 +203,16 @@
             this.panType.Controls.Add(this.metroLabel5);
             this.panType.HorizontalScrollbarBarColor = true;
             this.panType.HorizontalScrollbarHighlightOnWheel = false;
-            this.panType.HorizontalScrollbarSize = 10;
-            this.panType.Location = new System.Drawing.Point(350, 256);
+            this.panType.HorizontalScrollbarSize = 12;
+            this.panType.Location = new System.Drawing.Point(467, 315);
+            this.panType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panType.Name = "panType";
-            this.panType.Size = new System.Drawing.Size(278, 92);
+            this.panType.Size = new System.Drawing.Size(370, 110);
             this.panType.TabIndex = 11;
+            this.panType.UseCustomForeColor = true;
             this.panType.VerticalScrollbarBarColor = true;
             this.panType.VerticalScrollbarHighlightOnWheel = false;
-            this.panType.VerticalScrollbarSize = 10;
+            this.panType.VerticalScrollbarSize = 13;
             // 
             // cbSourceType
             // 
@@ -209,9 +221,10 @@
             this.cbSourceType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSourceType.Font = new System.Drawing.Font("AKbalthom KhmerLer", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSourceType.FormattingEnabled = true;
-            this.cbSourceType.Location = new System.Drawing.Point(3, 55);
+            this.cbSourceType.Location = new System.Drawing.Point(4, 65);
+            this.cbSourceType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbSourceType.Name = "cbSourceType";
-            this.cbSourceType.Size = new System.Drawing.Size(275, 35);
+            this.cbSourceType.Size = new System.Drawing.Size(365, 42);
             this.cbSourceType.TabIndex = 14;
             // 
             // metroLabel5
@@ -219,9 +232,10 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel5.Location = new System.Drawing.Point(0, 11);
+            this.metroLabel5.Location = new System.Drawing.Point(0, 14);
+            this.metroLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(108, 25);
+            this.metroLabel5.Size = new System.Drawing.Size(114, 25);
             this.metroLabel5.TabIndex = 13;
             this.metroLabel5.Text = "Source Type";
             // 
@@ -231,20 +245,21 @@
             this.panInfo.Controls.Add(this.txtInfo);
             this.panInfo.HorizontalScrollbarBarColor = true;
             this.panInfo.HorizontalScrollbarHighlightOnWheel = false;
-            this.panInfo.HorizontalScrollbarSize = 10;
-            this.panInfo.Location = new System.Drawing.Point(39, 350);
+            this.panInfo.HorizontalScrollbarSize = 12;
+            this.panInfo.Location = new System.Drawing.Point(52, 432);
+            this.panInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panInfo.Name = "panInfo";
-            this.panInfo.Size = new System.Drawing.Size(589, 123);
+            this.panInfo.Size = new System.Drawing.Size(785, 151);
             this.panInfo.TabIndex = 12;
             this.panInfo.VerticalScrollbarBarColor = true;
             this.panInfo.VerticalScrollbarHighlightOnWheel = false;
-            this.panInfo.VerticalScrollbarSize = 10;
+            this.panInfo.VerticalScrollbarSize = 13;
             // 
             // frmCustomerQuickAdd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 550);
+            this.ClientSize = new System.Drawing.Size(899, 677);
             this.Controls.Add(this.panInfo);
             this.Controls.Add(this.panType);
             this.Controls.Add(this.cbFromSource);
@@ -255,10 +270,12 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.btnSave);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Movable = false;
             this.Name = "frmCustomerQuickAdd";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
