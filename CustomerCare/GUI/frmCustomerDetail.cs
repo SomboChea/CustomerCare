@@ -156,7 +156,7 @@ namespace CustomerCare.GUI
                 string col = "";
                 if (id == null)
                 {
-                    Database.Update("tbl_kid","Where id="+dgKids.SelectedRows[0].Cells[], col, name_id, txtTel1.Text, txtTel2.Text);
+                    Database.Update("tbl_kid","Where id="+dgKids.SelectedRows[0].Cells["id"].Value, col, name_id, txtKidOrder.Text, cbGender.SelectedIndex,dpDOB.Value.ToShortDateString());
                     id = Database.GetLastId("tbl_mom") + "";
                 }
 
