@@ -21,12 +21,16 @@ namespace SMLOGX.Core
 
         /** Config Server **/
         public static string Server { get; set; } = "localhost";
-        public static string DBName { get; set; } = "master";
+        public static string DBName { get; set; } = "Telmarketing";
         public static bool AuthType { get; set; } = false;
         public static string UserId { get; set; }
         public static string Password { get; set; }
         private static string[] Sections = { "Windows Authentication", "SQL Server Authentication" };
 
+        public static string GetName_ID(string name,string type) {
+            string name_id = Database.QueryScalar(@"DECLARE @id int=0 exec @id=insertName '" + name + "', "+type+" select @id") + "";
+            return name_id;
+        }
         /// <summary>
         /// Setting Configuration DB Server
         /// </summary>
