@@ -6,55 +6,106 @@ using System.Threading.Tasks;
 
 namespace CustomerCare
 {
-    class Meanitry : IMeanitry
+    class Meanitry : IMeanitry, IConvertible
     {
         private static IMeanitry _instance = null;
-        public static IMeanitry GetInstance()
+
+        public static T Get<T>()
         {
             if (_instance == null)
                 _instance = new Meanitry();
-
-            return (Meanitry)_instance;
+            return (T)Convert.ChangeType(_instance, typeof(T));
         }
 
-        public void SetInstance(IMeanitry instance)
+        public virtual void Print()
         {
-            _instance = instance;
+            Console.WriteLine("System has printed in Meanitry");
         }
 
-        public void print()
+        TypeCode IConvertible.GetTypeCode()
         {
-            
+            throw new NotImplementedException();
+        }
+
+        bool IConvertible.ToBoolean(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
+        }
+
+        byte IConvertible.ToByte(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
+        }
+
+        char IConvertible.ToChar(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
+        }
+
+        DateTime IConvertible.ToDateTime(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
+        }
+
+        decimal IConvertible.ToDecimal(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
+        }
+
+        double IConvertible.ToDouble(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
+        }
+
+        short IConvertible.ToInt16(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
+        }
+
+        int IConvertible.ToInt32(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
+        }
+
+        long IConvertible.ToInt64(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
+        }
+
+        sbyte IConvertible.ToSByte(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
+        }
+
+        float IConvertible.ToSingle(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
+        }
+
+        string IConvertible.ToString(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
+        }
+
+        object IConvertible.ToType(Type conversionType, IFormatProvider provider)
+        {
+            return _instance;
+        }
+
+        ushort IConvertible.ToUInt16(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
+        }
+
+        uint IConvertible.ToUInt32(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
+        }
+
+        ulong IConvertible.ToUInt64(IFormatProvider provider)
+        {
+            throw new NotImplementedException();
         }
     }
-
-    class MyClass
-    {
-        public void print()
-        {
-            Console.WriteLine("My Class is here!");
-        }
-    }
-
-    class SubMyClass : MyClass
-    {
-        public void print()
-        {
-            Console.WriteLine("Sub My Class is here!");
-        }
-    }
-
-    class Pro {
-
-        public void getData()
-        {
-            SubMyClass sub = new SubMyClass();
-            sub.print();
-        }
-
-    }
-
-    class Pro2
-    {
-    }
+   
 }

@@ -161,10 +161,10 @@ namespace CustomerCare.GUI
 
                 if (rowEditing)
                 {
-<<<<<<< HEAD
-                    Database.Update("tbl_kid","Where id="+dgKids.SelectedRows[0].Cells["id"].Value, col, name_id, txtKidOrder.Text, cbGender.SelectedIndex,dpDOB.Value.ToShortDateString());
-                    id = Database.GetLastId("tbl_mom") + "";
-=======
+
+                    //Database.Update("tbl_kid","Where id="+dgKids.SelectedRows[0].Cells["id"].Value, col, name_id, txtKidOrder.Text, cbGender.SelectedIndex,dpDOB.Value.ToShortDateString());
+                    //id = Database.GetLastId("tbl_mom") + "";
+
                     Database.Update("tbl_kid", "Where id=" + dgKids.SelectedRows[0].Cells["kid_id"].Value+"", col,name_id,cbGender.SelectedIndex,dpDOB.Value.ToShortDateString(),txtKidOrder.Text);
                     //id = Database.GetLastId("tbl_mom") + "";
                     
@@ -172,7 +172,6 @@ namespace CustomerCare.GUI
                     Clear();
                     rowEditing = false;
                     return;
->>>>>>> 1ec6c23c8d62aa70a5cf9141c2112e54def29a5b
                 }
              
                
