@@ -214,6 +214,11 @@ namespace SMLOGX.Core
             }
         }
 
+        public void test()
+        {
+
+        }
+
         public void Show()
         {
             throw new NotImplementedException();

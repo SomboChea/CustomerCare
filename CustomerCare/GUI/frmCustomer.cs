@@ -107,6 +107,7 @@ namespace CustomerCare.GUI
         {
             frmCustomerDetail frm = new frmCustomerDetail();
             frm.ShowDialog();
+         
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

@@ -8,6 +8,9 @@ namespace CustomerCare
 {
     interface IMeanitry
     {
-        void SetInstance(IMeanitry instance);
+        //T Get<T>();
+        //T Get<T>(object instance);
+        //T Get<T>(IMeanitry instance);
+        void Print();
     }
 }
