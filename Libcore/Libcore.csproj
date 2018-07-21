@@ -65,7 +65,10 @@
     <Compile Include="Core\Helpers.cs" />
     <Compile Include="Core\IBaseSystem.cs" />
     <Compile Include="Core\IModel.cs" />
+    <Compile Include="Core\Helpers\Log.cs" />
     <Compile Include="Core\Model.cs" />
+    <Compile Include="Core\Helpers\MParser.cs" />
+    <Compile Include="Core\Helpers\Other.cs" />
     <Compile Include="Core\Report.cs" />
     <Compile Include="frmReport.cs">
       <SubType>Form</SubType>
@@ -80,5 +83,6 @@
       <DependentUpon>frmReport.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
