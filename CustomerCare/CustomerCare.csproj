@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{92A5E55A-8E0E-4CAF-A48E-5D94B2675882}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>CustomerCare</RootNamespace>
     <AssemblyName>CustomerCare</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -35,7 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CustomerCare.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>app_icon.ico</ApplicationIcon>
@@ -256,6 +257,30 @@
     <Compile Include="GUI\frmSource.Designer.cs">
       <DependentUpon>frmSource.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Trash\BETA\frmCallDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Trash\BETA\frmCallDetail.Designer.cs">
+      <DependentUpon>frmCallDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Trash\BETA\frmCallQueue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Trash\BETA\frmCallQueue.Designer.cs">
+      <DependentUpon>frmCallQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucDataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucDataGridView.Designer.cs">
+      <DependentUpon>ucDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucPregnent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucPregnent.Designer.cs">
+      <DependentUpon>ucPregnent.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Trash\frmAddress.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -354,7 +379,6 @@
     </Compile>
     <Compile Include="IMeanitry.cs" />
     <Compile Include="Meanitry.cs" />
-    <Compile Include="Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reporting.cs" />
@@ -474,6 +498,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSource.resx">
       <DependentUpon>frmSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Trash\BETA\frmCallDetail.resx">
+      <DependentUpon>frmCallDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Trash\BETA\frmCallQueue.resx">
+      <DependentUpon>frmCallQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucDataGridView.resx">
+      <DependentUpon>ucDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucPregnent.resx">
+      <DependentUpon>ucPregnent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Trash\frmAddress.resx">
       <DependentUpon>frmAddress.cs</DependentUpon>
