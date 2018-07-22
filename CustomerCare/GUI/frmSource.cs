@@ -26,6 +26,7 @@ namespace CustomerCare.GUI
         private void btnNew_Click(object sender, EventArgs e)
         {
             frmNewSource frm = new frmNewSource();
+   
             frm.ShowDialog();
             ReloadGridview();
         }
@@ -38,11 +39,11 @@ namespace CustomerCare.GUI
         /// <summary>
         /// all column 
         /// </summary>
-        public string sqlColumn { get; set; } = "id Code,	src_name Name,	src_owner Owner,	src_tel1 Tel_1,	src_tel2 Tel_2,	src_mail Email,	src_memo Memo,	src_address Location,	srctype Type,	user_fullname Logged_by,src_logged log_id,	id,src_address_id,srctype_id";
+        //public string sqlColumn { get; set; } = "id Code,	src_name Name,	src_owner Owner,	src_tel1 Tel_1,	src_tel2 Tel_2,	src_mail Email,	src_memo Memo,	src_address Location,	srctype Type,	user_fullname Logged_by,src_logged log_id,	id,src_address_id,srctype_id";
         /// <summary>
         /// default Select to gridview statement
         /// </summary>
-        public string sqlSelect { get; set; } = @"Select id Code,	src_name Name,	src_owner Owner,	src_tel1 Tel_1,	src_tel2 Tel_2,	src_mail Email,	src_memo Memo,	src_address Location,	srctype Type,	user_fullname Logged_by,src_logged log_id,	id,src_address_id,srctype_id from viewSource2";
+        public string sqlSelect { get; set; } = @"Select address ,('SR'+right('00000'+CONVERT([nvarchar](6),[id]),(6))) Code,	Name,	 Owner,	 Tel_1,	 Tel_2,	 Email,	 Memo,	 Location,	 Type,	 Logged_by, logged_id,	id,type_id,aid,pid,cid,did from viewSource2";
 
         /// <summary>
         /// Reload Data from Database
@@ -51,6 +52,12 @@ namespace CustomerCare.GUI
         {
             dgSources.DataSource = Database.QueryModel(sqlSelect);
             HideColumn();
+            cbSearchby.Items.Clear();
+            foreach(DataGridViewColumn col in dgSources.Columns)
+            {
+                if (col.Visible)
+                    cbSearchby.Items.Add(col.HeaderText);
+            }
         }
 
         /// <summary>
@@ -58,10 +65,20 @@ namespace CustomerCare.GUI
         /// </summary>
         private void HideColumn()
         {
-            dgSources.Columns["id"].Visible = false;
-            dgSources.Columns["log_id"].Visible = false;
-            dgSources.Columns["src_address_id"].Visible = false;
-            dgSources.Columns["srctype_id"].Visible = false;
+            try
+            {
+                dgSources.Columns["id"].Visible = false;
+                dgSources.Columns["logged_id"].Visible = false;
+                dgSources.Columns["type_id"].Visible = false;
+                dgSources.Columns["pid"].Visible = false;
+                dgSources.Columns["did"].Visible = false;
+                dgSources.Columns["cid"].Visible = false;
+                dgSources.Columns["aid"].Visible = false;
+                dgSources.Columns["address"].Visible = false;
+            }catch(Exception e)
+            {
+                Log.Write(e.Message, "FrmSource -> Method : HideColumn() ");
+            }
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -95,7 +112,8 @@ namespace CustomerCare.GUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Helpers.ShowMsg(cbSearchby.Text);
+            Database.Update("tbl_refer","Where id="+dgSources.SelectedRows[0].Cells["id"].Value, "status", "0");
+            ReloadGridview();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -106,7 +124,9 @@ namespace CustomerCare.GUI
             }
 
             frmNewSource frm = new frmNewSource(dgSources.SelectedRows[0].Cells["id"].Value+"",dgSources.SelectedRows[0].Cells);
+        
             frm.ShowDialog();
+            this.Show();
             ReloadGridview();
         }
     }

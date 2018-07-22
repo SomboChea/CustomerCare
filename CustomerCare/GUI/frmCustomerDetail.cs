@@ -153,37 +153,38 @@ namespace CustomerCare.GUI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-           
-                string col = " [name_id], [sex], [dob], [order]";
+            // Note , Merge Not Sure
 
-                string name_id = Database.QueryScalar(@"DECLARE @id int=0 exec @id=insertName '"+txtKidName.Text+"', 4 select @id") + "";
-                //Helpers.ShowMsg(name_id);
+            string col = " [name_id], [sex], [dob], [order]";
 
-                if (rowEditing)
-                {
+            string name_id = Database.QueryScalar(@"DECLARE @id int=0 exec @id=insertName '" + txtKidName.Text + "', 4 select @id") + "";
+            //Helpers.ShowMsg(name_id);
 
-                    //Database.Update("tbl_kid","Where id="+dgKids.SelectedRows[0].Cells["id"].Value, col, name_id, txtKidOrder.Text, cbGender.SelectedIndex,dpDOB.Value.ToShortDateString());
-                    //id = Database.GetLastId("tbl_mom") + "";
+            if (rowEditing)
+            {
 
-                    Database.Update("tbl_kid", "Where id=" + dgKids.SelectedRows[0].Cells["kid_id"].Value+"", col,name_id,cbGender.SelectedIndex,dpDOB.Value.ToShortDateString(),txtKidOrder.Text);
-                    //id = Database.GetLastId("tbl_mom") + "";
-                    
-                    ReloadGridView(id);
-                    Clear();
-                    rowEditing = false;
-                    return;
-                }
-             
-               
+                //Database.Update("tbl_kid", "Where id=" + dgKids.SelectedRows[0].Cells["id"].Value, col, name_id, txtKidOrder.Text, cbGender.SelectedIndex, dpDOB.Value.ToShortDateString());
+                //    id = Database.GetLastId("tbl_mom") + "";
 
-                string kid_data = MString.implode(",","'", id, txtKidName.Text, cbGender.SelectedIndex + "", dpDOB.Value.ToString("yyyy-MM-dd"), txtKidOrder.Text);
-                Database.Exec("exec insertKid " + kid_data);
+                Database.Update("tbl_kid", "Where id=" + dgKids.SelectedRows[0].Cells["kid_id"].Value + "", col, name_id, cbGender.SelectedIndex, dpDOB.Value.ToShortDateString(), txtKidOrder.Text);
+                //id = Database.GetLastId("tbl_mom") + "";
 
-         
+                ReloadGridView(id);
+                Clear();
                 rowEditing = false;
-                //Helpers.ShowMsg("Edit");
-            
-           
+                return;
+            }
+
+
+
+            string kid_data = MString.implode(",", "'", id, txtKidName.Text, cbGender.SelectedIndex + "", dpDOB.Value.ToString("yyyy-MM-dd"), txtKidOrder.Text);
+            Database.Exec("exec insertKid " + kid_data);
+
+
+            rowEditing = false;
+            //Helpers.ShowMsg("Edit");
+
+
         }
 
         private void dgKids_CellContentClick(object sender, DataGridViewCellEventArgs e)
