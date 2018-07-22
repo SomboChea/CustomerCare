@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Function.cs" />
-<<<<<<< HEAD
+
     <Compile Include="GUI\Trash\BETA\frmCallDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,8 +93,7 @@
     <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucPregnent.Designer.cs">
       <DependentUpon>ucPregnent.cs</DependentUpon>
     </Compile>
-=======
->>>>>>> b5062fc327b9b0735b840860372c298e3fcd5cb8
+    
     <Compile Include="GUI\Components\Alert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,7 +401,7 @@
     <Compile Include="STR\People.cs" />
     <Compile Include="STR\Tag.cs" />
     <Compile Include="STR\Temp.cs" />
-<<<<<<< HEAD
+    
     <EmbeddedResource Include="GUI\Trash\BETA\frmCallDetail.resx">
       <DependentUpon>frmCallDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -415,8 +414,7 @@
     <EmbeddedResource Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucPregnent.resx">
       <DependentUpon>ucPregnent.cs</DependentUpon>
     </EmbeddedResource>
-=======
->>>>>>> b5062fc327b9b0735b840860372c298e3fcd5cb8
+    
     <EmbeddedResource Include="GUI\Components\Alert.resx">
       <DependentUpon>Alert.cs</DependentUpon>
     </EmbeddedResource>
