@@ -67,28 +67,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Function.cs" />
-    <Compile Include="GUI\BETA\frmCallDetail.cs">
+    <Compile Include="GUI\Trash\BETA\frmCallDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\BETA\frmCallDetail.Designer.cs">
+    <Compile Include="GUI\Trash\BETA\frmCallDetail.Designer.cs">
       <DependentUpon>frmCallDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\BETA\frmCallQueue.cs">
+    <Compile Include="GUI\Trash\BETA\frmCallQueue.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\BETA\frmCallQueue.Designer.cs">
+    <Compile Include="GUI\Trash\BETA\frmCallQueue.Designer.cs">
       <DependentUpon>frmCallQueue.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\BETA\UC_CALL_QUEUE\ucDataGridView.cs">
+    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucDataGridView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\BETA\UC_CALL_QUEUE\ucDataGridView.Designer.cs">
+    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucDataGridView.Designer.cs">
       <DependentUpon>ucDataGridView.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\BETA\UC_CALL_QUEUE\ucPregnent.cs">
+    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucPregnent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\BETA\UC_CALL_QUEUE\ucPregnent.Designer.cs">
+    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucPregnent.Designer.cs">
       <DependentUpon>ucPregnent.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Components\Alert.cs">
@@ -375,16 +375,16 @@
     <Compile Include="STR\People.cs" />
     <Compile Include="STR\Tag.cs" />
     <Compile Include="STR\Temp.cs" />
-    <EmbeddedResource Include="GUI\BETA\frmCallDetail.resx">
+    <EmbeddedResource Include="GUI\Trash\BETA\frmCallDetail.resx">
       <DependentUpon>frmCallDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\BETA\frmCallQueue.resx">
+    <EmbeddedResource Include="GUI\Trash\BETA\frmCallQueue.resx">
       <DependentUpon>frmCallQueue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\BETA\UC_CALL_QUEUE\ucDataGridView.resx">
+    <EmbeddedResource Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucDataGridView.resx">
       <DependentUpon>ucDataGridView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\BETA\UC_CALL_QUEUE\ucPregnent.resx">
+    <EmbeddedResource Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucPregnent.resx">
       <DependentUpon>ucPregnent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Components\Alert.resx">
