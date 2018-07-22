@@ -42,13 +42,13 @@ namespace CustomerCare.GUI
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            new frmProduct().Show();
+            //new frmProduct().Show();
             this.Dispose();
         }
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            new frmUser().Show();
+            new FrmUser().Show();
             this.Dispose();
         }
 

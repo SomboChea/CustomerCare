@@ -67,33 +67,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Components\Clock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Components\Clock.Designer.cs">
+      <DependentUpon>Clock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Function.cs" />
-
-    <Compile Include="GUI\Trash\BETA\frmCallDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\BETA\frmCallDetail.Designer.cs">
-      <DependentUpon>frmCallDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\BETA\frmCallQueue.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\BETA\frmCallQueue.Designer.cs">
-      <DependentUpon>frmCallQueue.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucDataGridView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucDataGridView.Designer.cs">
-      <DependentUpon>ucDataGridView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucPregnent.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucPregnent.Designer.cs">
-      <DependentUpon>ucPregnent.cs</DependentUpon>
-    </Compile>
-    
     <Compile Include="GUI\Components\Alert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,71 +86,17 @@
     <Compile Include="GUI\Components\Blur.Designer.cs">
       <DependentUpon>Blur.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Components\Clock.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Components\Clock.Designer.cs">
-      <DependentUpon>Clock.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Components\ComOverlay.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Components\ComOverlay.Designer.cs">
       <DependentUpon>ComOverlay.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Components\Demo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Components\Demo.Designer.cs">
-      <DependentUpon>Demo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Components\frmUserOnline.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Components\frmUserOnline.Designer.cs">
-      <DependentUpon>frmUserOnline.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Components\ImageButton.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Components\ImageButton.Designer.cs">
-      <DependentUpon>ImageButton.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Components\SMXButton.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Components\SMXButton.Designer.cs">
-      <DependentUpon>SMXButton.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Components\Item.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Components\Item.Designer.cs">
-      <DependentUpon>Item.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Components\Overlay.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Components\Overlay.Designer.cs">
       <DependentUpon>Overlay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Components\smxClose.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Components\smxClose.Designer.cs">
-      <DependentUpon>smxClose.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Components\smxItem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Components\smxItem.Designer.cs">
-      <DependentUpon>smxItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Components\TextBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Components\TextBox.Designer.cs">
-      <DependentUpon>TextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmChangeConnection.cs">
       <SubType>Form</SubType>
@@ -256,119 +182,17 @@
     <Compile Include="GUI\frmSource.Designer.cs">
       <DependentUpon>frmSource.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Trash\BETA\frmCallDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\BETA\frmCallDetail.Designer.cs">
-      <DependentUpon>frmCallDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\BETA\frmCallQueue.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\BETA\frmCallQueue.Designer.cs">
-      <DependentUpon>frmCallQueue.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucDataGridView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucDataGridView.Designer.cs">
-      <DependentUpon>ucDataGridView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucPregnent.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucPregnent.Designer.cs">
-      <DependentUpon>ucPregnent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\frmAddress.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\frmAddress.Designer.cs">
-      <DependentUpon>frmAddress.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\frmDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\frmDashboard.Designer.cs">
-      <DependentUpon>frmDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\frmDBSetting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\frmDBSetting.Designer.cs">
-      <DependentUpon>frmDBSetting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\frmHcp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\frmHcp.Designer.cs">
-      <DependentUpon>frmHcp.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\frmLocations.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmLocations.Designer.cs">
       <DependentUpon>frmLocations.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Trash\frmKid.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\frmKid.Designer.cs">
-      <DependentUpon>frmKid.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\frmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\frmMum.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\frmMum.Designer.cs">
-      <DependentUpon>frmMum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\frmKids.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\frmKids.Designer.cs">
-      <DependentUpon>frmKids.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\frmPosition.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\frmPosition.Designer.cs">
-      <DependentUpon>frmPosition.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\frmProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\frmProduct.Designer.cs">
-      <DependentUpon>frmProduct.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\frmQuickLuanch.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmQuickLuanch.Designer.cs">
       <DependentUpon>frmQuickLuanch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\frmRetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\frmRetail.Designer.cs">
-      <DependentUpon>frmRetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Trash\frmStaff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Trash\frmStaff.Designer.cs">
-      <DependentUpon>frmStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmUser.cs">
       <SubType>Form</SubType>
@@ -401,59 +225,20 @@
     <Compile Include="STR\People.cs" />
     <Compile Include="STR\Tag.cs" />
     <Compile Include="STR\Temp.cs" />
-    
-    <EmbeddedResource Include="GUI\Trash\BETA\frmCallDetail.resx">
-      <DependentUpon>frmCallDetail.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Components\Clock.resx">
+      <DependentUpon>Clock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\BETA\frmCallQueue.resx">
-      <DependentUpon>frmCallQueue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucDataGridView.resx">
-      <DependentUpon>ucDataGridView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucPregnent.resx">
-      <DependentUpon>ucPregnent.cs</DependentUpon>
-    </EmbeddedResource>
-    
     <EmbeddedResource Include="GUI\Components\Alert.resx">
       <DependentUpon>Alert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Components\Blur.resx">
       <DependentUpon>Blur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Components\Clock.resx">
-      <DependentUpon>Clock.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Components\ComOverlay.resx">
       <DependentUpon>ComOverlay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Components\Demo.resx">
-      <DependentUpon>Demo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Components\frmUserOnline.resx">
-      <DependentUpon>frmUserOnline.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Components\ImageButton.resx">
-      <DependentUpon>ImageButton.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Components\SMXButton.resx">
-      <DependentUpon>SMXButton.cs</DependentUpon>
-      <LastGenOutput>SMXButton1.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Components\Item.resx">
-      <DependentUpon>Item.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Components\Overlay.resx">
       <DependentUpon>Overlay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Components\smxClose.resx">
-      <DependentUpon>smxClose.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Components\smxItem.resx">
-      <DependentUpon>smxItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Components\TextBox.resx">
-      <DependentUpon>TextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmChangeConnection.resx">
       <DependentUpon>frmChangeConnection.cs</DependentUpon>
@@ -497,65 +282,14 @@
     <EmbeddedResource Include="GUI\frmSource.resx">
       <DependentUpon>frmSource.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\BETA\frmCallDetail.resx">
-      <DependentUpon>frmCallDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\BETA\frmCallQueue.resx">
-      <DependentUpon>frmCallQueue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucDataGridView.resx">
-      <DependentUpon>ucDataGridView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\BETA\UC_CALL_QUEUE\ucPregnent.resx">
-      <DependentUpon>ucPregnent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\frmAddress.resx">
-      <DependentUpon>frmAddress.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\frmDashboard.resx">
-      <DependentUpon>frmDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\frmDBSetting.resx">
-      <DependentUpon>frmDBSetting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\frmHcp.resx">
-      <DependentUpon>frmHcp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLocations.resx">
       <DependentUpon>frmLocations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\frmKid.resx">
-      <DependentUpon>frmKid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\frmMum.resx">
-      <DependentUpon>frmMum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\frmKids.resx">
-      <DependentUpon>frmKids.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\frmPosition.resx">
-      <DependentUpon>frmPosition.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\frmProduct.resx">
-      <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmQuickLuanch.resx">
       <DependentUpon>frmQuickLuanch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\frmRetail.resx">
-      <DependentUpon>frmRetail.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Trash\frmStaff.resx">
-      <DependentUpon>frmStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

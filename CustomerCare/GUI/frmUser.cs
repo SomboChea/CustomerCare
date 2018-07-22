@@ -1,12 +1,11 @@
 ﻿using SMLOGX.Core;
-using System.Windows.Forms;
 
-namespace CustomerCare
+namespace CustomerCare.GUI
 {
-    public partial class frmUser : MetroFramework.Forms.MetroForm
+    public partial class FrmUser : MetroFramework.Forms.MetroForm
     {
         
-        public frmUser()
+        public FrmUser()
         {
             Database.Open();
 

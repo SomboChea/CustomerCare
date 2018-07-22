@@ -1,6 +1,6 @@
-﻿namespace CustomerCare
+﻿namespace CustomerCare.GUI
 {
-    partial class frmUser
+    partial class FrmUser
     {
         /// <summary>
         /// Required designer variable.
@@ -387,7 +387,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Movable = false;
-            this.Name = "frmUser";
+            this.Name = "FrmUser";
             this.Resizable = false;
             this.Text = "Manage Users";
             ((System.ComponentModel.ISupportInitialize)(this.dgUsers)).EndInit();

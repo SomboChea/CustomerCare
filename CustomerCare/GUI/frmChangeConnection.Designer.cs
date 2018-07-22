@@ -52,9 +52,10 @@
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Location = new System.Drawing.Point(225, 0);
+            this.btnSave.Location = new System.Drawing.Point(300, 0);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 25);
+            this.btnSave.Size = new System.Drawing.Size(100, 31);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.UseCustomBackColor = true;
@@ -67,23 +68,25 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(49, 100);
+            this.metroLabel1.Location = new System.Drawing.Point(65, 123);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(150, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(160, 20);
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Hostname / IP Address";
             // 
             // txtHost
             // 
             this.txtHost.Lines = new string[0];
-            this.txtHost.Location = new System.Drawing.Point(52, 125);
+            this.txtHost.Location = new System.Drawing.Point(69, 154);
+            this.txtHost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtHost.MaxLength = 20;
             this.txtHost.Name = "txtHost";
             this.txtHost.PasswordChar = '\0';
             this.txtHost.PromptText = "eg: 127.0.0.1";
             this.txtHost.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtHost.SelectedText = "";
-            this.txtHost.Size = new System.Drawing.Size(300, 23);
+            this.txtHost.Size = new System.Drawing.Size(400, 28);
             this.txtHost.TabIndex = 3;
             this.txtHost.UseCustomBackColor = true;
             this.txtHost.UseCustomForeColor = true;
@@ -93,14 +96,15 @@
             // txtUsername
             // 
             this.txtUsername.Lines = new string[0];
-            this.txtUsername.Location = new System.Drawing.Point(6, 29);
+            this.txtUsername.Location = new System.Drawing.Point(8, 36);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.MaxLength = 20;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PromptText = "Username here...";
             this.txtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(171, 23);
+            this.txtUsername.Size = new System.Drawing.Size(228, 28);
             this.txtUsername.TabIndex = 5;
             this.txtUsername.UseCustomBackColor = true;
             this.txtUsername.UseCustomForeColor = true;
@@ -111,9 +115,10 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(49, 158);
+            this.metroLabel2.Location = new System.Drawing.Point(65, 194);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(99, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(106, 20);
             this.metroLabel2.TabIndex = 4;
             this.metroLabel2.Text = "Authentication";
             // 
@@ -122,14 +127,15 @@
             this.cbAuthType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbAuthType.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.cbAuthType.FormattingEnabled = true;
-            this.cbAuthType.ItemHeight = 19;
+            this.cbAuthType.ItemHeight = 21;
             this.cbAuthType.Items.AddRange(new object[] {
             "Windows Authentication",
             "SQL Server Authentication"});
-            this.cbAuthType.Location = new System.Drawing.Point(52, 180);
+            this.cbAuthType.Location = new System.Drawing.Point(69, 222);
+            this.cbAuthType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbAuthType.Name = "cbAuthType";
             this.cbAuthType.PromptText = "Choose one ...";
-            this.cbAuthType.Size = new System.Drawing.Size(300, 25);
+            this.cbAuthType.Size = new System.Drawing.Size(399, 27);
             this.cbAuthType.TabIndex = 6;
             this.cbAuthType.UseSelectable = true;
             this.cbAuthType.SelectedIndexChanged += new System.EventHandler(this.cbAuthType_SelectedIndexChanged);
@@ -137,14 +143,15 @@
             // txtPassword
             // 
             this.txtPassword.Lines = new string[0];
-            this.txtPassword.Location = new System.Drawing.Point(6, 86);
+            this.txtPassword.Location = new System.Drawing.Point(8, 106);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.MaxLength = 20;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PromptText = "Password here...";
             this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(171, 23);
+            this.txtPassword.Size = new System.Drawing.Size(228, 28);
             this.txtPassword.TabIndex = 7;
             this.txtPassword.UseCustomBackColor = true;
             this.txtPassword.UseCustomForeColor = true;
@@ -162,21 +169,23 @@
             this.metroPanel1.Controls.Add(this.metroLabel2);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(23, 75);
+            this.metroPanel1.HorizontalScrollbarSize = 12;
+            this.metroPanel1.Location = new System.Drawing.Point(31, 92);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(398, 340);
+            this.metroPanel1.Size = new System.Drawing.Size(531, 418);
             this.metroPanel1.TabIndex = 8;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.VerticalScrollbarSize = 13;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CustomerCare.Properties.Resources.Database_Connection_BL_C;
-            this.pictureBox1.Location = new System.Drawing.Point(160, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(213, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox1.Size = new System.Drawing.Size(93, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -190,10 +199,11 @@
             this.panUser.Controls.Add(this.txtUsername);
             this.panUser.HorizontalScrollbarBarColor = true;
             this.panUser.HorizontalScrollbarHighlightOnWheel = false;
-            this.panUser.HorizontalScrollbarSize = 10;
-            this.panUser.Location = new System.Drawing.Point(52, 217);
+            this.panUser.HorizontalScrollbarSize = 12;
+            this.panUser.Location = new System.Drawing.Point(69, 267);
+            this.panUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panUser.Name = "panUser";
-            this.panUser.Size = new System.Drawing.Size(300, 120);
+            this.panUser.Size = new System.Drawing.Size(399, 147);
             this.panUser.TabIndex = 9;
             this.panUser.UseCustomBackColor = true;
             this.panUser.UseCustomForeColor = true;
@@ -201,16 +211,17 @@
             this.panUser.VerticalScrollbar = true;
             this.panUser.VerticalScrollbarBarColor = true;
             this.panUser.VerticalScrollbarHighlightOnWheel = false;
-            this.panUser.VerticalScrollbarSize = 10;
+            this.panUser.VerticalScrollbarSize = 13;
             this.panUser.Visible = false;
             // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(3, 61);
+            this.metroLabel4.Location = new System.Drawing.Point(4, 75);
+            this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(67, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(70, 20);
             this.metroLabel4.TabIndex = 11;
             this.metroLabel4.Text = "Password";
             // 
@@ -218,9 +229,10 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(3, 4);
+            this.metroLabel3.Location = new System.Drawing.Point(4, 5);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(71, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(75, 20);
             this.metroLabel3.TabIndex = 10;
             this.metroLabel3.Text = "Username";
             // 
@@ -229,8 +241,9 @@
             this.btnTest.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTest.Location = new System.Drawing.Point(0, 0);
+            this.btnTest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(109, 25);
+            this.btnTest.Size = new System.Drawing.Size(145, 31);
             this.btnTest.TabIndex = 9;
             this.btnTest.Text = "Test connection";
             this.btnTest.UseCustomBackColor = true;
@@ -246,26 +259,29 @@
             this.panButton.Controls.Add(this.btnSave);
             this.panButton.HorizontalScrollbarBarColor = true;
             this.panButton.HorizontalScrollbarHighlightOnWheel = false;
-            this.panButton.HorizontalScrollbarSize = 10;
-            this.panButton.Location = new System.Drawing.Point(75, 430);
+            this.panButton.HorizontalScrollbarSize = 12;
+            this.panButton.Location = new System.Drawing.Point(100, 529);
+            this.panButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panButton.Name = "panButton";
-            this.panButton.Size = new System.Drawing.Size(300, 25);
+            this.panButton.Size = new System.Drawing.Size(400, 31);
             this.panButton.TabIndex = 10;
             this.panButton.VerticalScrollbarBarColor = true;
             this.panButton.VerticalScrollbarHighlightOnWheel = false;
-            this.panButton.VerticalScrollbarSize = 10;
+            this.panButton.VerticalScrollbarSize = 13;
             // 
             // frmChangeConnection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 508);
+            this.ClientSize = new System.Drawing.Size(592, 625);
             this.Controls.Add(this.panButton);
             this.Controls.Add(this.metroPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Movable = false;
             this.Name = "frmChangeConnection";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
