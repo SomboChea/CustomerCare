@@ -20,6 +20,20 @@ namespace SMLOGX.Core
     /// </summary>
     public class Helpers : IHelper
     {
+        public static void FilterGridview(Form binding, DataGridView dg,string column,string text)
+        {
+            CurrencyManager currency = (CurrencyManager)binding.BindingContext[dg.DataSource];
+            currency.SuspendBinding();
+            foreach (DataGridViewRow row in dg.Rows)
+            {
+                // Use for Programmatically filter Column
+                // get value of specific columnn every row
+                // compare
+                row.Visible = row.Cells[column].Value.ToString().ToLower().Contains(text);
+            }
+            // 
+            currency.ResumeBinding();
+        }
         public static Region Circle(Control control)
         {
             System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();

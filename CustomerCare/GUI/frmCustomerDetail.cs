@@ -41,9 +41,9 @@ namespace CustomerCare.GUI
             txtTel1.Text = t1;
             txtTel2.Text = t2;
 
-            dgKids.SelectionChanged += DgKids_SelectionChanged; ;
 
-           
+            dgKids.SelectionChanged += DgKids_SelectionChanged;
+            dgKids.MultiSelect = false;
             edit = true;
         }
 
@@ -92,11 +92,11 @@ namespace CustomerCare.GUI
         /// <returns>True : All is fine</returns>
         private bool verify()
         {
-            bool check;
-           
-            check = Helpers.checkRequire(txtKidName, txtKidOrder, txtMomName, txtTel1, cbGender, dpDOB);
 
-
+            Control[] ctrls = { txtKidName, txtKidOrder, cbGender, dpDOB };
+            foreach (Control c in ctrls)
+                if (c.Text.Trim().Equals(""))
+                    return false;
             //return check;
             return true;
         }
@@ -139,24 +139,28 @@ namespace CustomerCare.GUI
         private int rowEditingIndex;
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
+            
             if (txtSearch.Text.Trim() == "")
             {
-                dgKids.DataSource = Database.QueryModel(DefaultSelectSql+" and mom_id="+id);
+                dgKids.DataSource = Database.QueryModel(DefaultSelectSql + " and mom_id=" + id);
                 dgKids.Columns["sex_id"].Visible = false;
-            dgKids.Columns["kid_id"].Visible = false;
-
+                dgKids.Columns["kid_id"].Visible = false;
                 return;
             }
-            dgKids.DataSource = Database.QueryModel(DefaultSelectSql + " and mom_id=" + id + " and Name like '%" + txtSearch.Text + "%'");
-
+            //dgKids.DataSource = Database.QueryModel(DefaultSelectSql + " and mom_id=" + id + " and Name like '%" + txtSearch.Text + "%'");
+            Helpers.FilterGridview(this, dgKids, "Name", txtSearch.Text.Trim().ToLower());
         }
 
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // Note , Merge Not Sure
-
+            if(!verify())
+            {
+                MetroMessageBox.Show(this, "Please Fill All Kid Requirment");
+                return;
+            }
+         
             string col = " [name_id], [sex], [dob], [order]";
-
             string name_id = Database.QueryScalar(@"DECLARE @id int=0 exec @id=insertName '" + txtKidName.Text + "', 4 select @id") + "";
             //Helpers.ShowMsg(name_id);
 
@@ -180,11 +184,10 @@ namespace CustomerCare.GUI
             string kid_data = MString.implode(",", "'", id, txtKidName.Text, cbGender.SelectedIndex + "", dpDOB.Value.ToString("yyyy-MM-dd"), txtKidOrder.Text);
             Database.Exec("exec insertKid " + kid_data);
 
-
+            ReloadGridView(id);
+            Clear();
             rowEditing = false;
             //Helpers.ShowMsg("Edit");
-
-
         }
 
         private void dgKids_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -194,8 +197,7 @@ namespace CustomerCare.GUI
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            Clear();
-            rowEditing = false;
+            
 
         }
 
@@ -220,6 +222,27 @@ namespace CustomerCare.GUI
         private void txtSearch_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtKidOrder_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == 8))
+                e.Handled = true;
+            
+        }
+
+        private void dgKids_SelectionChanged_1(object sender, EventArgs e)
+        {
+            if (dgKids.SelectedRows.Count <= 0)
+            {
+                return;
+            }
+            rowEditing = true;
+            DataGridViewCellCollection cell = dgKids.SelectedRows[0].Cells;
+            txtKidName.Text = cell["Name"].Value+"";
+            txtKidOrder.Text = cell["Order"].Value + "";
+            cbGender.Text = cell["Sex"].Value + "";
+            dpDOB.Value = DateTime.Parse(cell["Date_of_Birth"].Value + "");
         }
     }
 }

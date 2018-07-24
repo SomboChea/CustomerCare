@@ -96,18 +96,8 @@ namespace CustomerCare.GUI
             string column = cbSearchby.Text;
             // Currency manager , I dont know too
             // without this will cause Error
-            CurrencyManager currency = (CurrencyManager)BindingContext[dgSources.DataSource];
-            currency.SuspendBinding();
-           
-            foreach (DataGridViewRow row in dgSources.Rows)
-            {
-                // Use for Programmatically filter Column
-                // get value of specific columnn every row
-                // compare
-                row.Visible = row.Cells[column].Value.ToString().ToLower().Contains(txtSearch.Text.ToLower());
-            }
-            // 
-            currency.ResumeBinding();
+            
+            Helpers.FilterGridview(this, dgSources, column, txtSearch.Text.ToLower().Trim());
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
