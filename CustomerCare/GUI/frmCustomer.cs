@@ -115,6 +115,7 @@ namespace CustomerCare.GUI
             if (dgCustomers.SelectedRows.Count <= 0)
                 return;
             // get all cell of selected row
+            
             DataGridViewCellCollection cell = dgCustomers.SelectedRows[0].Cells;
             frmCustomerDetail frm = new frmCustomerDetail(cell["Code"].Value + "",cell["Name"].Value+"",cell["Tel_1"].Value+"",cell["Tel_2"].Value+"");
             frm.ShowDialog();
